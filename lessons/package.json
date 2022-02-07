@@ -1,5 +1,5 @@
 {
-  "name": "lessons",
+  "name": "@pataruco/lessons",
   "version": "0.0.0",
   "description": "All markdown lessons",
   "author": "Pedro Martin <pataruco@gmail.com>",
@@ -20,5 +20,6 @@
   ],
   "dependencies": {
     "@types/node": "^17.0.16"
-  }
+  },
+  "types": "./dist/index.d.ts"
 }

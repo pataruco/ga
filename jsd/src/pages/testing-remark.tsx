@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import '../styles/slide-index.scss';
 
+import { jsd } from '@pataruco/lessons';
+
+console.log({ jsd, installfest: jsd.installFest });
+
 const { PUBLIC_URL } = process.env;
 
 interface SlidesDeckProps {
@@ -61,35 +65,13 @@ const createSlideNavigation = (slide: Slide) => {
   }
 };
 
-const TestingRemark: React.FC<SlidesDeckProps> = ({ slidesDeckName }) => {
+const TestingRemark: React.FC = () => {
   useEffect(() => {
     // @ts-ignore
     const slides = remark.create({
       // sourceUrl: `${PUBLIC_URL}/slides/${slidesDeckName}.md`,
-      source: `class: frontpage
-
-<div>
-  <h2>JavaScript Development</h2>
-  <hr/>
-  <h1>00 Welcome and Installfest</h1>
-</div>
-
----
-
-## Learning Objectives
-
-In this lesson, you will:
-
-- Get to know your classmates, instructors, and staff members.
-- Differentiate between the Internet and the World Wide Web.
-- Summarize the client-server model and explain how a DNS Lookup works.
-- Explain the structure of the course and tools that will be used.
-- Discuss the benchmarks for assessments in terms of class participation, homework, and unit projects.
-- Install and configure Node.js, Yarn, Git, and other command line tools.
-- Identify common issues that might arise and solutions that will be used during the course.
-- Practice programmatic thinking by writing pseudocode.
-
----`,
+      sourceUrl: jsd.FinalProjectLab.default,
+      // source: jsd.installFest,
       count: false,
       highlightLines: false,
       highlightSpans: true,
@@ -109,7 +91,7 @@ In this lesson, you will:
       // Injecting navigation to menu
       createSlideNavigation(slide),
     );
-  }, [slidesDeckName]);
+  }, []);
 
   return null;
 };
