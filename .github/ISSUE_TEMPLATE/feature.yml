@@ -1,16 +1,12 @@
 name: New Feature
 description: Set a story
-title: '[Feature]: '
+title: 'Feature: '
 labels: ['feature']
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: feature-name
+    id: Description
     attributes:
-      label: Feature name
+      label: Description
       description: Describe what you want to see
       placeholder: what you see!
       value: User story
