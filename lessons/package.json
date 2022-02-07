@@ -4,5 +4,21 @@
   "description": "All markdown lessons",
   "author": "Pedro Martin <pataruco@gmail.com>",
   "homepage": "https://github.com/pataruco/ga#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "build": "yarn tsc  --outDir dist",
+    "prebuild": "rm -rf ./dist",
+    "postbuild": "yarn ts-node ./scripts/copy-md-files.ts"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@types/node": "^17.0.16"
+  }
 }
