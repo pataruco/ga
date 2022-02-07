@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "JSD | GA London",
+  "name": "JavaScript Development Course | General Assembly London",
+  "description": "Course content slides for JavaScript Development, created by Pedro Martin",
   "icons": [
     {
       "src": "favicon.ico",

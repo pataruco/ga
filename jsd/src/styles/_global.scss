@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: var(--sans-serif);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--black);
+  text-decoration-line: underline;
+  text-decoration-color: var(--ga-red);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+
+  &:hover {
+    color: var(--ga-red);
+  }
+
+  &:focus,
+  &:active {
+    color: var(--black);
+    text-decoration-color: var(--black);
+  }
+
+  &.external-link {
+    &::after {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cdefs/%3E%3Cg fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M2 2h3v1H3v6h6V7h1v3H2z'/%3E%3Cpath d='M6.211 2H10v3.789L8.579 4.368 6.447 6.5 5.5 5.553l2.132-2.132z'/%3E%3C/g%3E%3C/svg%3E");
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &.download-link {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 131.102 92.126'%3E%3Cpath d='M86.753 53.163v11.232H46.105V53.163h-7.813v14.534c0 1.822 1.746 3.3 3.912 3.3h48.449c2.164 0 3.912-1.476 3.912-3.3V53.163h-7.812zm-21.04-1.113L54.528 40.624s-1.701-1.358.144-1.358h6.303v-16.63s-.25-.81 1.193-.81h8.872c1.04 0 1.017.682 1.017.682v16.415h5.818c2.24 0 .553 1.422.553 1.422S68.91 51.024 67.584 52.144c-.955.812-1.87-.095-1.87-.095z'/%3E%3C/svg%3E%0A");
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+p,
+li {
+  line-height: 1.35;
+  max-width: 85ch;
+}
+
+blockquote {
+  margin-left: 1rem;
+  border-left: 2px solid var(--ga-red);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+table {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+table tr:not(:last-child) td,
+table tr th {
+  border-bottom: 1px solid;
+}
+
+table tr td:not(:last-child),
+table tr th:not(:last-child) {
+  border-right: 1px solid;
+}
+
+table td,
+table th {
+  padding: 0.5em;
+  text-align: start;
+}
+
+table th {
+  text-align: center;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px monospace;
+  line-height: normal;
+  line-height: 10px;
+  color: #24292f;
+  vertical-align: middle;
+  background-color: #f6f8fa;
+  border: solid 1px rgba(175, 184, 193, 0.2);
+  border-bottom-color: rgba(175, 184, 193, 0.2);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(175, 184, 193, 0.2);
+}
