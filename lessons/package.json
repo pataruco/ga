@@ -1,0 +1,8 @@
+{
+  "name": "lessons",
+  "version": "0.0.0",
+  "description": "All markdown lessons",
+  "author": "Pedro Martin <pataruco@gmail.com>",
+  "homepage": "https://github.com/pataruco/ga#readme",
+  "license": "MIT"
+}
