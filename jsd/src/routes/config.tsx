@@ -3,6 +3,11 @@ import SlidesDeck from '../components/slides-deck';
 import Title from '../components/title';
 import Loading from '../pages/loading';
 
+import { jsd } from '@pataruco/lessons';
+import type { Lesson } from '@pataruco/lessons';
+
+const getLessonPath = (lessonName: Lesson) => jsd[lessonName].default;
+
 // Lessons
 // Path: week-n/lesson-n
 export const lessonRoutes = [
@@ -11,7 +16,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={1} lesson={0} />
-        <SlidesDeck slidesDeckName="00-installfest" />
+        <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
       </>
     ),
   },
@@ -20,7 +25,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={1} lesson={1} />
-        <SlidesDeck slidesDeckName="01-the-command-line-data-types" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('01-the-command-line-data-types')}
+        />
       </>
     ),
   },
@@ -29,7 +36,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={2} lesson={2} />
-        <SlidesDeck slidesDeckName="02-arrays-loops" />
+        <SlidesDeck slidesDeckPath={getLessonPath('02-arrays-loops')} />
       </>
     ),
   },
@@ -38,7 +45,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={2} lesson={3} />
-        <SlidesDeck slidesDeckName="03-conditionals-functions" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('03-conditionals-functions')}
+        />
       </>
     ),
   },
@@ -47,7 +56,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={3} lesson={4} />
-        <SlidesDeck slidesDeckName="04-objects-json" />
+        <SlidesDeck slidesDeckPath={getLessonPath('04-objects-json')} />
       </>
     ),
   },
@@ -56,7 +65,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={3} lesson={5} />
-        <SlidesDeck slidesDeckName="05-slackbot-lab" />
+        <SlidesDeck slidesDeckPath={getLessonPath('05-slackbot-lab')} />
       </>
     ),
   },
@@ -65,7 +74,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={4} lesson={6} />
-        <SlidesDeck slidesDeckName="06-the-dom" />
+        <SlidesDeck slidesDeckPath={getLessonPath('06-the-dom')} />
       </>
     ),
   },
@@ -74,7 +83,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={4} lesson={7} />
-        <SlidesDeck slidesDeckName="07-dom-events" />
+        <SlidesDeck slidesDeckPath={getLessonPath('07-dom-events')} />
       </>
     ),
   },
@@ -83,7 +92,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={5} lesson={8} />
-        <SlidesDeck slidesDeckName="08-asynchronous-javascript" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('08-asynchronous-javascript')}
+        />
       </>
     ),
   },
@@ -92,7 +103,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={5} lesson={9} />
-        <SlidesDeck slidesDeckName="09-advanced-apis" />
+        <SlidesDeck slidesDeckPath={getLessonPath('09-advanced-apis')} />
       </>
     ),
   },
@@ -101,7 +112,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={6} lesson={10} />
-        <SlidesDeck slidesDeckName="10-templating-lab" />
+        <SlidesDeck slidesDeckPath={getLessonPath('10-templating-lab')} />
       </>
     ),
   },
@@ -110,7 +121,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={6} lesson={11} />
-        <SlidesDeck slidesDeckName="11-feedr-lab" />
+        <SlidesDeck slidesDeckPath={getLessonPath('11-feedr-lab')} />
       </>
     ),
   },
@@ -119,7 +130,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={7} lesson={12} />
-        <SlidesDeck slidesDeckName="12-intro-to-firebase-and-crud" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('12-intro-to-firebase-and-crud')}
+        />
       </>
     ),
   },
@@ -128,7 +141,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={7} lesson={13} />
-        <SlidesDeck slidesDeckName="13-intro-to-firebase-and-crud" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('13-intro-to-firebase-and-crud')}
+        />
       </>
     ),
   },
@@ -137,7 +152,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={8} lesson={14} />
-        <SlidesDeck slidesDeckName="14-prototypal-inheritance" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('14-prototypal-inheritance')}
+        />
       </>
     ),
   },
@@ -146,7 +163,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={8} lesson={15} />
-        <SlidesDeck slidesDeckName="15-closures-this" />
+        <SlidesDeck slidesDeckPath={getLessonPath('15-closures-this')} />
       </>
     ),
   },
@@ -155,7 +172,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={9} lesson={16} />
-        <SlidesDeck slidesDeckName="16-deploying-your-app" />
+        <SlidesDeck slidesDeckPath={getLessonPath('16-deploying-your-app')} />
       </>
     ),
   },
@@ -164,7 +181,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={9} lesson={17} />
-        <SlidesDeck slidesDeckName="17-student-choice" />
+        <SlidesDeck slidesDeckPath={getLessonPath('17-student-choice')} />
       </>
     ),
   },
@@ -173,7 +190,7 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={10} lesson={18} />
-        <SlidesDeck slidesDeckName="18-final-project-lab" />
+        <SlidesDeck slidesDeckPath={getLessonPath('18-final-project-lab')} />
       </>
     ),
   },
@@ -182,7 +199,9 @@ export const lessonRoutes = [
     element: () => (
       <>
         <Title week={10} lesson={19} />
-        <SlidesDeck slidesDeckName="19-final-project-presentations" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('19-final-project-presentations')}
+        />
       </>
     ),
   },
@@ -217,7 +236,9 @@ export const bonusLessonRoutes = [
     element: () => (
       <>
         <Title title="Bonus Lesson | Installfest macOS" />
-        <SlidesDeck slidesDeckName="bonus-lesson-installfest-macos" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('bonus-lesson-installfest-macos')}
+        />
       </>
     ),
   },
@@ -226,7 +247,9 @@ export const bonusLessonRoutes = [
     element: () => (
       <>
         <Title title="Bonus Lesson | Installfest Windows" />
-        <SlidesDeck slidesDeckName="bonus-lesson-installfest-windows" />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('bonus-lesson-installfest-windows')}
+        />
       </>
     ),
   },
@@ -235,7 +258,7 @@ export const bonusLessonRoutes = [
     element: () => (
       <>
         <Title title="Bonus Lesson | jQuery" />
-        <SlidesDeck slidesDeckName="bonus-lesson-jquery" />
+        <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-jquery')} />
       </>
     ),
   },
@@ -244,7 +267,7 @@ export const bonusLessonRoutes = [
     element: () => (
       <>
         <Title title="Bonus Lesson | React" />
-        <SlidesDeck slidesDeckName="bonus-lesson-react" />
+        <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-react')} />
       </>
     ),
   },

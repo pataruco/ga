@@ -10,7 +10,6 @@ import {
 import ErrorPage from '../pages/404';
 import '../styles/site-index.scss';
 import About from '../pages/about';
-import TestingRemark from '../pages/testing-remark';
 
 const LessonsRouteComponents = lessonRoutes.map(
   ({ path, element: Component }, key) => (
@@ -43,7 +42,6 @@ const Router = () => (
       {WeekRouteComponents}
       {BonusLessonsComponents}
       {LessonsRouteComponents}
-      <Route path="/testing-remark" element={<TestingRemark />} />
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
