@@ -1,6 +1,6 @@
 {
   "npmClient": "yarn",
-  "packages": ["jsd"],
+  "packages": ["jsd", "lessons"],
   "version": "0.0.0",
   "useWorkspaces": true
 }

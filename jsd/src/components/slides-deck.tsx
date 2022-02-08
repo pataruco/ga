@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import '../styles/slide-index.scss';
-const { PUBLIC_URL } = process.env;
 
 interface SlidesDeckProps {
-  slidesDeckName: string;
+  slidesDeckPath: string;
 }
 
 interface GetSlideIndex {
@@ -60,33 +59,37 @@ const createSlideNavigation = (slide: Slide) => {
   }
 };
 
-const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckName }) => {
-  useEffect(() => {
-    // @ts-ignore
-    const slides = remark.create({
-      sourceUrl: `${PUBLIC_URL}/slides/${slidesDeckName}.md`,
-      count: false,
-      highlightLines: false,
-      highlightSpans: true,
-      highlightStyle: 'atom-one-dark',
-      navigation: {
-        click: false,
-        scroll: false,
-        touch: true,
-      },
-      ratio: '16:9',
-      // ratio: '64:35', // browser aspect ratio
-      slideNumberFormat: '',
-    });
+const instantiateSlides = async (slidesDeckPath: string) => {
+  // @ts-ignore
+  const slides = await remark.create({
+    sourceUrl: slidesDeckPath,
+    count: false,
+    highlightLines: false,
+    highlightSpans: true,
+    highlightStyle: 'atom-one-dark',
+    navigation: {
+      click: false,
+      scroll: false,
+      touch: true,
+    },
+    ratio: '16:9',
+    // ratio: '64:35', // browser aspect ratio
+    slideNumberFormat: '',
+  });
 
-    // listening on slide show
-    slides.on('showSlide', (slide: Slide) =>
-      // Injecting navigation to menu
-      createSlideNavigation(slide),
-    );
-  }, [slidesDeckName]);
+  // listening on slide show
+  slides.on('showSlide', (slide: Slide) =>
+    // Injecting navigation to menu
+    createSlideNavigation(slide),
+  );
+};
+
+const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckPath }) => {
+  useEffect(() => {
+    instantiateSlides(slidesDeckPath);
+  }, [slidesDeckPath]);
 
   return null;
 };
 
-export default SlidesDeck;
+export default memo(SlidesDeck);
