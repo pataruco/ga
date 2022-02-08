@@ -18,10 +18,11 @@
     "typescript": "~4.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,6 +49,7 @@
     "@types/styled-components": "^5.1.22",
     "@types/testing-library__dom": "^7.5.0",
     "markdown-loader": "^8.0.0",
+    "react-snap": "^1.23.0",
     "sass": "^1.49.7"
   }
 }

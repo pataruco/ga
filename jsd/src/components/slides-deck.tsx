@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import '../styles/slide-index.scss';
 
 interface SlidesDeckProps {
@@ -86,33 +86,10 @@ const instantiateSlides = async (slidesDeckPath: string) => {
 
 const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckPath }) => {
   useEffect(() => {
-    // // @ts-ignore
-    // const slides = remark.create({
-    //   sourceUrl: slidesDeckPath,
-    //   count: false,
-    //   highlightLines: false,
-    //   highlightSpans: true,
-    //   highlightStyle: 'atom-one-dark',
-    //   navigation: {
-    //     click: false,
-    //     scroll: false,
-    //     touch: true,
-    //   },
-    //   ratio: '16:9',
-    //   // ratio: '64:35', // browser aspect ratio
-    //   slideNumberFormat: '',
-    // });
-
-    // // listening on slide show
-    // slides.on('showSlide', (slide: Slide) =>
-    //   // Injecting navigation to menu
-    //   createSlideNavigation(slide),
-    // );
-
     instantiateSlides(slidesDeckPath);
   }, [slidesDeckPath]);
 
   return null;
 };
 
-export default SlidesDeck;
+export default memo(SlidesDeck);
