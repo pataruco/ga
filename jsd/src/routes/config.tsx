@@ -3,8 +3,8 @@ import SlidesDeck from '../components/slides-deck';
 import Title from '../components/title';
 import Loading from '../pages/loading';
 
-import { jsd } from '@pataruco/lessons';
-import type { Lesson } from '@pataruco/lessons';
+import { jsd } from '@shared/lessons';
+import type { Lesson } from '@shared/lessons';
 
 const getLessonPath = (lessonName: Lesson) => jsd[lessonName].default;
 

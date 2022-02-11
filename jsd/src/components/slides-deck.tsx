@@ -1,5 +1,5 @@
+import '@shared/styles/dist/slides';
 import React, { memo, useEffect } from 'react';
-import '../styles/slide-index.scss';
 
 interface SlidesDeckProps {
   slidesDeckPath: string;

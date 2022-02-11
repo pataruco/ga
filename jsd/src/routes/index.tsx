@@ -1,3 +1,4 @@
+import '@shared/styles/dist/site';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../pages/home';
 import {
@@ -8,7 +9,6 @@ import {
   bonusLessonRoutes,
 } from './config';
 import ErrorPage from '../pages/404';
-import '../styles/site-index.scss';
 import About from '../pages/about';
 
 const LessonsRouteComponents = lessonRoutes.map(

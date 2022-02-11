@@ -1,0 +1,23 @@
+{
+  "name": "@shared/styles",
+  "version": "0.0.0",
+  "description": "All Styles",
+  "author": "Pedro Martin <pataruco@gmail.com>",
+  "homepage": "https://github.com/pataruco/ga#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "build": "yarn tsc  --outDir dist",
+    "postbuild": "yarn ts-node ./scripts/copy-files.ts",
+    "postinstall": "yarn build",
+    "prebuild": "rm -rf ./dist"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts"
+}

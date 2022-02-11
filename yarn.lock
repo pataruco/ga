@@ -2763,14 +2763,14 @@
   integrity sha512-zWt4SDDv1S9WRBNxLFxFRHxdD9tvH8f5/kg5/IaLFdnSNXsDY4eL3Q3XXN+VxUnWIhyVFDwcsmAprvwXoM/ClA==
 
 "@types/node@^12.20.43":
-  version "12.20.43"
-  resolved "https://registry.npmjs.org/@types/node/-/node-12.20.43.tgz"
-  integrity sha512-HCfJdaYqJX3BCzeihgZrD7b85Cu05OC/GVJ4kEYIflwUs4jbnUlLLWoq7hw1LBcdvUyehO+gr6P5JQ895/2ZfA==
+  version "12.20.45"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.45.tgz#f4980d177999299d99cd4b290f7f39366509a44f"
+  integrity sha512-1Jg2Qv5tuxBqgQV04+wO5u+wmSHbHgpORCJdeCLM+E+YdPElpdHhgywU+M1V1InL8rfOtpqtOjswk+uXTKwx7w==
 
 "@types/node@^17.0.16":
-  version "17.0.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.16.tgz#e3733f46797b9df9e853ca9f719c8a6f7b84cd26"
-  integrity sha512-ydLaGVfQOQ6hI1xK2A5nVh8bl0OGoIfYMxPWHqqYe9bTkWCfqiVvZoh2I/QF2sNSkZzZyROBoTefIEI+PB6iIA==
+  version "17.0.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.17.tgz#a8ddf6e0c2341718d74ee3dc413a13a042c45a0c"
+  integrity sha512-e8PUNQy1HgJGV3iU/Bp2+D/DXh3PYeyli8LgIwsQcs1Ar1LoaWHSIT6Rw+H2rNJmiq6SNWiDytfx8+gYj7wDHw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -7925,11 +7925,6 @@ lerna@^4.0.0:
     "@lerna/version" "4.0.0"
     import-local "^3.0.2"
     npmlog "^4.1.2"
-
-lessons@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lessons/-/lessons-1.0.0.tgz#2e982f46d31e2383f9fdeda41de695b271afe0b7"
-  integrity sha1-LpgvRtMeI4P5/e2kHeaVsnGv4Lc=
 
 leven@^3.1.0:
   version "3.1.0"
