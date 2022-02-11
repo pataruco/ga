@@ -1,5 +1,5 @@
 {
-  "name": "@pataruco/lessons",
+  "name": "@shared/lessons",
   "version": "0.0.0",
   "description": "All markdown lessons",
   "author": "Pedro Martin <pataruco@gmail.com>",
@@ -11,8 +11,9 @@
   },
   "scripts": {
     "build": "yarn tsc  --outDir dist",
-    "prebuild": "rm -rf ./dist",
-    "postbuild": "yarn ts-node ./scripts/copy-files.ts"
+    "postbuild": "yarn ts-node ./scripts/copy-files.ts",
+    "postinstall": "yarn build",
+    "prebuild": "rm -rf ./dist"
   },
   "main": "./dist/index.js",
   "files": [

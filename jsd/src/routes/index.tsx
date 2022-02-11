@@ -1,4 +1,4 @@
-import '@pataruco/styles/dist/site';
+import '@shared/styles/dist/site';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../pages/home';
 import {

@@ -7926,21 +7926,6 @@ lerna@^4.0.0:
     import-local "^3.0.2"
     npmlog "^4.1.2"
 
-less@~1.4.0:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/less/-/less-1.4.2.tgz#b7deefe98a3a87bee364411b3df2d1efe5a412d0"
-  integrity sha1-t97v6Yo6h77jZEEbPfLR7+WkEtA=
-  optionalDependencies:
-    mime "1.2.x"
-    mkdirp "~0.3.4"
-    request ">=2.12.0"
-    ycssmin ">=1.0.1"
-
-lessons@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lessons/-/lessons-1.0.0.tgz#2e982f46d31e2383f9fdeda41de695b271afe0b7"
-  integrity sha1-LpgvRtMeI4P5/e2kHeaVsnGv4Lc=
-
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/leven/-/leven-3.1.0.tgz"
@@ -8383,11 +8368,6 @@ mime-types@^2.1.12, mime-types@^2.1.27, mime-types@^2.1.31, mime-types@~2.1.17, 
   dependencies:
     mime-db "1.51.0"
 
-mime@1.2.x:
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-1.2.11.tgz#58203eed86e3a5ef17aed2b7d9ebd47f0a60dd10"
-  integrity sha1-WCA+7Ybjpe8XrtK32evUfwpg3RA=
-
 mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
@@ -8574,11 +8554,6 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
-
-mkdirp@~0.3.4:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
-  integrity sha1-3j5fiWHIjHh+4TaN+EmsRBPsqNc=
 
 modify-values@^1.0.0:
   version "1.0.1"
@@ -10634,7 +10609,7 @@ renderkid@^3.0.0:
     lodash "^4.17.21"
     strip-ansi "^6.0.1"
 
-request@>=2.12.0, request@^2.88.0, request@^2.88.2:
+request@^2.88.0, request@^2.88.2:
   version "2.88.2"
   resolved "https://registry.npmjs.org/request/-/request-2.88.2.tgz"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -11593,13 +11568,6 @@ stylehacks@^5.0.3:
   dependencies:
     browserslist "^4.16.6"
     postcss-selector-parser "^6.0.4"
-
-styles@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/styles/-/styles-0.2.1.tgz#84927ba447faa6f249ecd20adf0bb85fad3a5141"
-  integrity sha1-hJJ7pEf6pvJJ7NIK3wu4X606UUE=
-  dependencies:
-    less "~1.4.0"
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
@@ -12893,11 +12861,6 @@ yauzl@^2.10.0:
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
-
-ycssmin@>=1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ycssmin/-/ycssmin-1.0.1.tgz#7cdde8db78cfab00d2901c3b2301e304faf4df16"
-  integrity sha1-fN3o23jPqwDSkBw7IwHjBPr03xY=
 
 yn@3.1.1:
   version "3.1.1"

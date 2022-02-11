@@ -1,4 +1,4 @@
-import '@pataruco/styles/dist/slides';
+import '@shared/styles/dist/slides';
 import React, { memo, useEffect } from 'react';
 
 interface SlidesDeckProps {
