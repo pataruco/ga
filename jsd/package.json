@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
+    "@shared/components": "^0.0.0",
     "@shared/lessons": "^0.0.0",
     "@shared/styles": "^0.0.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -49,7 +50,6 @@
     "@types/react-redux": "^7.1.22",
     "@types/styled-components": "^5.1.22",
     "@types/testing-library__dom": "^7.5.0",
-    "markdown-loader": "^8.0.0",
     "react-snap": "^1.23.0",
     "sass": "^1.49.7"
   }

@@ -1,4 +1,3 @@
-import * as SiteStyles from './site';
-import * as SlideStyles from './slides';
+import Footer from './footer';
 
-export { SiteStyles, SlideStyles };
+export { Footer };
