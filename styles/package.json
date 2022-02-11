@@ -1,7 +1,7 @@
 {
-  "name": "@pataruco/lessons",
+  "name": "@pataruco/styles",
   "version": "0.0.0",
-  "description": "All markdown lessons",
+  "description": "All Styles",
   "author": "Pedro Martin <pataruco@gmail.com>",
   "homepage": "https://github.com/pataruco/ga#readme",
   "license": "MIT",
@@ -18,8 +18,5 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "@types/node": "^17.0.16"
-  },
   "types": "./dist/index.d.ts"
 }

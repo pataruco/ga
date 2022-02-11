@@ -30,7 +30,8 @@
   "version": "1.0.0",
   "workspaces": [
     "jsd",
-    "lessons"
+    "lessons",
+    "styles"
   ],
   "dependencies": {
     "eslint-config-prettier": "^8.3.0"

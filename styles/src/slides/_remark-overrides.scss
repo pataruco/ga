@@ -1,0 +1,30 @@
+.remark-container {
+  background: var(--white);
+
+  .remark-slide-content {
+    padding: 1em;
+  }
+
+  .remark-slide-content.center.middle {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .agenda ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .remark-inline-code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: var(--inline-code-grey);
+    border-radius: 3px;
+  }
+
+  .remark-code-span-highlighted {
+    background-color: var(--code-hightlight);
+  }
+}
