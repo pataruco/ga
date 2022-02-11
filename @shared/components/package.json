@@ -1,0 +1,27 @@
+{
+  "name": "@shared/components",
+  "version": "0.0.0",
+  "description": "All components",
+  "author": "Pedro Martin <pataruco@gmail.com>",
+  "homepage": "https://github.com/pataruco/ga#readme",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc  --outDir dist",
+    "prebuild": "rm -rf ./dist"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.2.1",
+    "styled-components": "^5.3.3"
+  }
+}
