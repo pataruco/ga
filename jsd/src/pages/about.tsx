@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../components/title';
 import Header from '../components/header';
 import {
   Footer,
   GitHubLogo,
   LinkedinLogo,
   TwitterLogo,
+  Title,
 } from '@shared/components';
 import Page from '../components/page';
 

@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { SlidesDeck } from '@shared/components';
-import Title from '../components/title';
+import { SlidesDeck, Title } from '@shared/components';
 import Loading from '../pages/loading';
 
 import { jsd } from '@shared/lessons';

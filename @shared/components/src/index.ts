@@ -10,6 +10,9 @@ import TwitterLogo from './icons/twitter';
 // Slides deck
 import SlidesDeck from './slides-deck';
 
+// Title
+import Title from './title';
+
 export {
   Footer,
   GaLogo,
@@ -18,5 +21,6 @@ export {
   GitHubLogo,
   LinkedinLogo,
   SlidesDeck,
+  Title,
   TwitterLogo,
 };
