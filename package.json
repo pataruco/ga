@@ -29,7 +29,7 @@
   },
   "version": "1.0.0",
   "workspaces": [
-    "jsd",
+    "@websites/*",
     "@shared/*"
   ],
   "dependencies": {

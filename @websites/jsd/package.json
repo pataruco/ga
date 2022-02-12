@@ -1,5 +1,5 @@
 {
-  "name": "jsd",
+  "name": "@websites/jsd",
   "version": "0.1.0",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
