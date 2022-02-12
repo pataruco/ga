@@ -13,8 +13,9 @@ describe('Footer', () => {
 
   describe('Timestamp', () => {
     it('should render when REACT_APP_TIMESTAMP is defined', () => {
-      process.env.REACT_APP_TIMESTAMP = '1617263539';
+      process.env.REACT_APP_TIMESTAMP = '1643409645';
       const { getByText } = render(<TimeStamp />);
+
       expect(getByText(/Updated at/i)).toBeInTheDocument();
     });
   });

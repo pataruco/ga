@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/header';
-import Footer from '../components/footer';
+import { Footer } from '@shared/components';
 import Page from '../components/page';
 
 const StyledMain = styled.main`

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../components/title';
 import Header from '../components/header';
-import Footer from '../components/footer';
+import { Footer, Title } from '@shared/components';
 import Page from '../components/page';
 
 const StyledMain = styled.main`
@@ -11,7 +10,7 @@ const StyledMain = styled.main`
 
 const ErrorPage: React.FC = () => (
   <Page>
-    <Title title="404" />
+    <Title courseName="JSD" title="404" />
     <Header />
     <StyledMain>
       <h1>Page not found &#128542;</h1>

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../components/title';
 import Header from '../components/header';
-import Footer from '../components/footer';
+import { Footer, Title } from '@shared/components';
 import Page from '../components/page';
 import { Link } from 'react-router-dom';
 import { bonusLessons } from '../components/header';
@@ -23,7 +22,7 @@ const Lessons = bonusLessons.map(([name, path], key) => (
 
 const About: React.FC = () => (
   <Page>
-    <Title title="About" />
+    <Title courseName="JSD" title="Bonus Lessons" />
     <Header />
     <StyledMain>
       <h1>Bonus Lessons</h1>

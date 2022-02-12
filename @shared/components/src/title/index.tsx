@@ -5,16 +5,17 @@ interface TitleProps {
   week?: number;
   lesson?: number;
   title?: string;
+  courseName: string;
 }
 
-const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
+const Title: React.FC<TitleProps> = ({ week, lesson, title, courseName }) => {
   let component;
   switch (true) {
     case week && Number.isFinite(week) && lesson && Number.isFinite(lesson):
       component = (
         <Helmet>
           <title>
-            Lesson {`${lesson}`} | Week {`${week}`} | JSD | GA London
+            Lesson {`${lesson}`} | Week {`${week}`} | {courseName} | GA London
           </title>
         </Helmet>
       );
@@ -22,14 +23,18 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
     case week && Number.isFinite(week):
       component = (
         <Helmet>
-          <title>Week {`${week}`} | JSD | GA London</title>
+          <title>
+            Week {`${week}`} | {courseName} | GA London
+          </title>
         </Helmet>
       );
       break;
     case typeof title === 'string':
       component = (
         <Helmet>
-          <title>{title} | JSD | GA London</title>
+          <title>
+            {title} | {courseName} | GA London
+          </title>
         </Helmet>
       );
       break;
@@ -37,7 +42,7 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title }) => {
     default:
       component = (
         <Helmet>
-          <title>JSD | GA London</title>
+          <title>{courseName} | GA London</title>
         </Helmet>
       );
       break;
