@@ -60,6 +60,7 @@ const createSlideNavigation = (slide: Slide) => {
 };
 
 const instantiateSlides = async (slidesDeckPath: string) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const slides = await remark.create({
     sourceUrl: slidesDeckPath,

@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import SlidesDeck from '../components/slides-deck';
+import { SlidesDeck } from '@shared/components';
 import Title from '../components/title';
 import Loading from '../pages/loading';
 
