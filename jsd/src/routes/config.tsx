@@ -15,7 +15,7 @@ export const lessonRoutes = [
     path: '/week-1/lesson-0',
     element: () => (
       <>
-        <Title week={1} lesson={0} />
+        <Title courseName="JSD" week={1} lesson={0} />
         <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
       </>
     ),
@@ -24,7 +24,7 @@ export const lessonRoutes = [
     path: '/week-1/lesson-1',
     element: () => (
       <>
-        <Title week={1} lesson={1} />
+        <Title courseName="JSD" week={1} lesson={1} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('01-the-command-line-data-types')}
         />
@@ -35,7 +35,7 @@ export const lessonRoutes = [
     path: '/week-2/lesson-2',
     element: () => (
       <>
-        <Title week={2} lesson={2} />
+        <Title courseName="JSD" week={2} lesson={2} />
         <SlidesDeck slidesDeckPath={getLessonPath('02-arrays-loops')} />
       </>
     ),
@@ -44,7 +44,7 @@ export const lessonRoutes = [
     path: '/week-2/lesson-3',
     element: () => (
       <>
-        <Title week={2} lesson={3} />
+        <Title courseName="JSD" week={2} lesson={3} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('03-conditionals-functions')}
         />
@@ -55,7 +55,7 @@ export const lessonRoutes = [
     path: '/week-3/lesson-4',
     element: () => (
       <>
-        <Title week={3} lesson={4} />
+        <Title courseName="JSD" week={3} lesson={4} />
         <SlidesDeck slidesDeckPath={getLessonPath('04-objects-json')} />
       </>
     ),
@@ -64,7 +64,7 @@ export const lessonRoutes = [
     path: '/week-3/lesson-5',
     element: () => (
       <>
-        <Title week={3} lesson={5} />
+        <Title courseName="JSD" week={3} lesson={5} />
         <SlidesDeck slidesDeckPath={getLessonPath('05-slackbot-lab')} />
       </>
     ),
@@ -73,7 +73,7 @@ export const lessonRoutes = [
     path: '/week-4/lesson-6',
     element: () => (
       <>
-        <Title week={4} lesson={6} />
+        <Title courseName="JSD" week={4} lesson={6} />
         <SlidesDeck slidesDeckPath={getLessonPath('06-the-dom')} />
       </>
     ),
@@ -82,7 +82,7 @@ export const lessonRoutes = [
     path: '/week-4/lesson-7',
     element: () => (
       <>
-        <Title week={4} lesson={7} />
+        <Title courseName="JSD" week={4} lesson={7} />
         <SlidesDeck slidesDeckPath={getLessonPath('07-dom-events')} />
       </>
     ),
@@ -91,7 +91,7 @@ export const lessonRoutes = [
     path: '/week-5/lesson-8',
     element: () => (
       <>
-        <Title week={5} lesson={8} />
+        <Title courseName="JSD" week={5} lesson={8} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('08-asynchronous-javascript')}
         />
@@ -102,7 +102,7 @@ export const lessonRoutes = [
     path: '/week-5/lesson-9',
     element: () => (
       <>
-        <Title week={5} lesson={9} />
+        <Title courseName="JSD" week={5} lesson={9} />
         <SlidesDeck slidesDeckPath={getLessonPath('09-advanced-apis')} />
       </>
     ),
@@ -111,7 +111,7 @@ export const lessonRoutes = [
     path: '/week-6/lesson-10',
     element: () => (
       <>
-        <Title week={6} lesson={10} />
+        <Title courseName="JSD" week={6} lesson={10} />
         <SlidesDeck slidesDeckPath={getLessonPath('10-templating-lab')} />
       </>
     ),
@@ -120,7 +120,7 @@ export const lessonRoutes = [
     path: '/week-6/lesson-11',
     element: () => (
       <>
-        <Title week={6} lesson={11} />
+        <Title courseName="JSD" week={6} lesson={11} />
         <SlidesDeck slidesDeckPath={getLessonPath('11-feedr-lab')} />
       </>
     ),
@@ -129,7 +129,7 @@ export const lessonRoutes = [
     path: '/week-7/lesson-12',
     element: () => (
       <>
-        <Title week={7} lesson={12} />
+        <Title courseName="JSD" week={7} lesson={12} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('12-intro-to-firebase-and-crud')}
         />
@@ -140,7 +140,7 @@ export const lessonRoutes = [
     path: '/week-7/lesson-13',
     element: () => (
       <>
-        <Title week={7} lesson={13} />
+        <Title courseName="JSD" week={7} lesson={13} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('13-intro-to-firebase-and-crud')}
         />
@@ -151,7 +151,7 @@ export const lessonRoutes = [
     path: '/week-8/lesson-14',
     element: () => (
       <>
-        <Title week={8} lesson={14} />
+        <Title courseName="JSD" week={8} lesson={14} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('14-prototypal-inheritance')}
         />
@@ -162,7 +162,7 @@ export const lessonRoutes = [
     path: '/week-8/lesson-15',
     element: () => (
       <>
-        <Title week={8} lesson={15} />
+        <Title courseName="JSD" week={8} lesson={15} />
         <SlidesDeck slidesDeckPath={getLessonPath('15-closures-this')} />
       </>
     ),
@@ -171,7 +171,7 @@ export const lessonRoutes = [
     path: '/week-9/lesson-16',
     element: () => (
       <>
-        <Title week={9} lesson={16} />
+        <Title courseName="JSD" week={9} lesson={16} />
         <SlidesDeck slidesDeckPath={getLessonPath('16-deploying-your-app')} />
       </>
     ),
@@ -180,7 +180,7 @@ export const lessonRoutes = [
     path: '/week-9/lesson-17',
     element: () => (
       <>
-        <Title week={9} lesson={17} />
+        <Title courseName="JSD" week={9} lesson={17} />
         <SlidesDeck slidesDeckPath={getLessonPath('17-student-choice')} />
       </>
     ),
@@ -189,7 +189,7 @@ export const lessonRoutes = [
     path: '/week-10/lesson-18',
     element: () => (
       <>
-        <Title week={10} lesson={18} />
+        <Title courseName="JSD" week={10} lesson={18} />
         <SlidesDeck slidesDeckPath={getLessonPath('18-final-project-lab')} />
       </>
     ),
@@ -198,7 +198,7 @@ export const lessonRoutes = [
     path: '/week-10/lesson-19',
     element: () => (
       <>
-        <Title week={10} lesson={19} />
+        <Title courseName="JSD" week={10} lesson={19} />
         <SlidesDeck
           slidesDeckPath={getLessonPath('19-final-project-presentations')}
         />
@@ -219,7 +219,7 @@ export const weekRoutes = weeks.map((weekNumber) => ({
     const Content = lazy(() => import(`../pages/weeks/${weekNumber}`));
     return (
       <>
-        <Title week={weekNumber} />
+        <Title courseName="JSD" week={weekNumber} />
         <Suspense fallback={<Loading />}>
           <Content />
         </Suspense>
@@ -235,7 +235,7 @@ export const bonusLessonRoutes = [
     path: '/bonus-lessons/installfest-macos',
     element: () => (
       <>
-        <Title title="Bonus Lesson | Installfest macOS" />
+        <Title courseName="JSD" title="Bonus Lesson | Installfest macOS" />
         <SlidesDeck
           slidesDeckPath={getLessonPath('bonus-lesson-installfest-macos')}
         />
@@ -246,7 +246,7 @@ export const bonusLessonRoutes = [
     path: '/bonus-lessons/installfest-windows',
     element: () => (
       <>
-        <Title title="Bonus Lesson | Installfest Windows" />
+        <Title courseName="JSD" title="Bonus Lesson | Installfest Windows" />
         <SlidesDeck
           slidesDeckPath={getLessonPath('bonus-lesson-installfest-windows')}
         />
@@ -257,7 +257,7 @@ export const bonusLessonRoutes = [
     path: '/bonus-lessons/jquery',
     element: () => (
       <>
-        <Title title="Bonus Lesson | jQuery" />
+        <Title courseName="JSD" title="Bonus Lesson | jQuery" />
         <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-jquery')} />
       </>
     ),
@@ -266,7 +266,7 @@ export const bonusLessonRoutes = [
     path: '/bonus-lessons/react',
     element: () => (
       <>
-        <Title title="Bonus Lesson | React" />
+        <Title courseName="JSD" title="Bonus Lesson | React" />
         <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-react')} />
       </>
     ),
@@ -281,7 +281,7 @@ export const FinalProjectRoute = {
     const Content = lazy(() => import('../pages/final-project-brief'));
     return (
       <>
-        <Title title="Final project brief" />
+        <Title courseName="JSD" title="Final project brief" />
         <Suspense fallback={<Loading />}>
           <Content />
         </Suspense>
@@ -298,7 +298,7 @@ export const BonusLessonsRoute = {
     const Content = lazy(() => import('../pages/bonus-lessons'));
     return (
       <>
-        <Title title="Bonus Lessons" />
+        <Title courseName="JSD" title="Bonus Lessons" />
         <Suspense fallback={<Loading />}>
           <Content />
         </Suspense>

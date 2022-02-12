@@ -23,7 +23,7 @@ const Lessons = bonusLessons.map(([name, path], key) => (
 
 const About: React.FC = () => (
   <Page>
-    <Title title="About" />
+    <Title courseName="JSD" title="Bonus Lessons" />
     <Header />
     <StyledMain>
       <h1>Bonus Lessons</h1>

@@ -30,7 +30,7 @@ const StyledMain = styled.main`
 
 const Home: React.FC = () => (
   <Page>
-    <Title title="Home" />
+    <Title courseName="JSD" title="Home" />
     <Header />
     <StyledMain>
       <h1>Welcome to JSD London 🇬🇧 </h1>

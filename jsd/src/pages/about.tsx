@@ -34,7 +34,7 @@ const StyledMain = styled.main`
 
 const About: React.FC = () => (
   <Page>
-    <Title title="About" />
+    <Title courseName="JSD" title="About" />
     <Header />
     <StyledMain>
       <h1>About</h1>

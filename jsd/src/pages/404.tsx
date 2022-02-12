@@ -11,7 +11,7 @@ const StyledMain = styled.main`
 
 const ErrorPage: React.FC = () => (
   <Page>
-    <Title title="404" />
+    <Title courseName="JSD" title="404" />
     <Header />
     <StyledMain>
       <h1>Page not found &#128542;</h1>

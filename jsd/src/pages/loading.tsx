@@ -22,7 +22,7 @@ const StyledMain = styled.main`
 
 const Loading: React.FC = () => (
   <Page>
-    <Title title="Loading..." />
+    <Title courseName="JSD" title="Loading..." />
     <Header />
     <StyledMain>
       <h1>
