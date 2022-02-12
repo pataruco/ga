@@ -1,0 +1,66 @@
+/*
+Breakpoints:
+700px for tablets
+1000px for desktop
+*/
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+img,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+main {
+  padding: 10px;
+}
+
+picture {
+  display: block;
+  max-width: 25%;
+}
+
+/* tablet */
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  main {
+    padding: 15px 25px;
+  }
+
+  section {
+    align-items: center;
+    display: flex;
+  }
+
+  div {
+    margin-left: 30px;
+  }
+
+  picture {
+    flex-basis: 25%;
+  }
+}
+
+/* desktop */
+
+@media screen and (min-width: 1001px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  section {
+    flex-basis: calc(33% - 60px);
+  }
+}

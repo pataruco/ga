@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+article {
+  max-width: 50%;
+  margin: 0 auto;
+}
+h2 {
+  text-align: center;
+}
+
+.glide__arrow {
+  border: none;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.glide__arrow--left {
+  transform: rotate(135deg);
+}
+
+.glide__arrow--right {
+  transform: rotate(-45deg);
+}
+
+.glide__bullet {
+  border: 1px solid;
+}
+
+.glide__bullet--active {
+  background-color: black;
+}

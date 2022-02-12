@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --base-space: 1.25rem;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--base-space);
+  border: 1px solid grey;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav {
+  flex-basis: 100%;
+  align-self: center;
+  max-width: 50%;
+}
+
+header ul {
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header nav + a {
+  display: none;
+}
+
+main {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  padding: var(--base-space);
+}
+
+article {
+  border-bottom: 1px solid grey;
+  clear: both;
+  margin-bottom: var(--base-space);
+  overflow: auto;
+  padding-bottom: var(--base-space);
+}
+
+article:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+article picture {
+  float: left;
+  margin-right: var(--base-space);
+  max-width: 250px;
+}
+
+article p:last-of-type a {
+  display: block;
+  text-align: end;
+}
+
+footer {
+  border: 1px solid grey;
+  clear: both;
+  padding: var(--base-space);
+}
+
+menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    position: relative;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header nav + a {
+    display: block;
+    align-self: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid red;
+  }
+
+  header nav + a:focus,
+  header nav + a:hover {
+    border-bottom: 2px solid grey;
+  }
+
+  menu {
+    background-color: white;
+    border: 1px solid;
+    bottom: 0;
+    display: block;
+    margin: 0;
+    padding: var(--base-space);
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    transition: all ease 0.2s;
+  }
+
+  menu > a {
+    text-transform: capitalize;
+    border-bottom: 2px solid red;
+  }
+
+  menu > a:focus,
+  menu > a:hover {
+    border-bottom: 2px solid grey;
+  }
+
+  menu ul li {
+    margin-bottom: calc(var(--base-space) / 3);
+  }
+
+  .menu-open menu {
+    transform: translateX(-300px);
+  }
+}

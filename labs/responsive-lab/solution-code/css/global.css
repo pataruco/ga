@@ -1,0 +1,53 @@
+/*
+ * Lay this page out - make it responsive, flex, position and media queries where needed.
+ *
+ * Colors-
+ * Green: #14a96d
+ * White: #fff
+ * Light gray: #f4f5f6
+ * Border gray: #cfd7de
+ * Dark text: #1b1f23
+ * Lighter text: #66727c
+ * Blue for links: #06748a
+ * Blue for hovered links: #033641
+ */
+
+/* Globals */
+
+:root {
+  --green: #14a96d;
+  --white: #fff;
+  --light-gray: #f4f5f6;
+  --border-gray: #cfd7de;
+  --dark-text: #1b1f23;
+  --lighter-text: #66727c;
+  --blue-for-links: #06748a;
+  --blue-for-hovered-links: #033641;
+  --content-wrapper-width: 1170px;
+  --radius: 4px;
+  --border-line: 1px solid var(--border-gray);
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 100%;
+}
+
+img,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+picture {
+  display: block;
+}
+
+a {
+  color: var(--blue-for-links);
+}
+
+a:hover {
+  color: var(--blue-for-hovered-links);
+}

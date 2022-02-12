@@ -1,0 +1,98 @@
+.services .row {
+  justify-content: space-between;
+}
+
+.services .row > * {
+  max-width: 470px;
+}
+
+.services--list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services--list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.services--list picture {
+  width: 42px;
+  margin-right: 1.125rem;
+}
+
+.services--list h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.services--list p {
+  margin: 0;
+  color: var(--lighter-text);
+}
+
+.service--setings-card {
+  border-radius: var(--radius);
+  border: var(--border-line);
+  color: var(--lighter-text);
+}
+
+.service--setings-card div {
+  padding: 1.25rem;
+  display: flex;
+  background-color: var(--light-gray);
+  align-items: center;
+  border-bottom: var(--border-line);
+}
+
+.service--setings-card div picture {
+  max-width: 2rem;
+  margin-right: 1.25rem;
+}
+
+.service--setings-card ul {
+  margin: 0;
+  padding: 1.25rem;
+  list-style: none;
+  list-style-position: outside;
+}
+
+.service--setings-card li {
+  margin: 0;
+  margin-bottom: 1.25rem;
+}
+
+.service--setings-card li:before {
+  content: '\2714';
+  color: var(--green);
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.service--setings-card .button {
+  max-width: calc(100% - (1.25rem * 2));
+  margin: 0 auto;
+  padding: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.services--settings > p {
+  color: var(--lighter-text);
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .services .row {
+    flex-direction: column;
+  }
+
+  .services .row > * {
+    max-width: unset;
+  }
+
+  .service--setings-card .button {
+    padding: 1.25rem 0;
+  }
+}

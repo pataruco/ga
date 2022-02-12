@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffe;
+  border: 3px solid black;
+  font-family: sans-serif;
+  max-width: 50vw;
+  padding: 0 30px;
+  margin: auto;
+}
+
+h1 {
+  font-family: serif;
+}
+
+h3 {
+  color: #887;
+}
+
+h4 {
+  color: #887;
+}
+
+a {
+  color: #900;
+}
+
+img {
+  border: 3px solid black;
+}
