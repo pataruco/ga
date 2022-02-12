@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from '../components/title';
 import Header from '../components/header';
-import { Footer } from '@shared/components';
+import {
+  Footer,
+  GitHubLogo,
+  LinkedinLogo,
+  TwitterLogo,
+} from '@shared/components';
 import Page from '../components/page';
-import GitHub from '../components/icons/github';
-import LinkedIn from '../components/icons/linkedin';
-import Twitter from '../components/icons/twitter';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -112,7 +114,7 @@ const About: React.FC = () => (
             rel="noreferrer"
           >
             <picture>
-              <GitHub />
+              <GitHubLogo />
             </picture>
           </a>
         </li>
@@ -123,7 +125,7 @@ const About: React.FC = () => (
             rel="noreferrer"
           >
             <picture>
-              <LinkedIn />
+              <LinkedinLogo />
             </picture>
           </a>
         </li>
@@ -134,7 +136,7 @@ const About: React.FC = () => (
             rel="noreferrer"
           >
             <picture>
-              <Twitter />
+              <TwitterLogo />
             </picture>
           </a>
         </li>

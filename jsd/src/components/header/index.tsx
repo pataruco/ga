@@ -10,7 +10,7 @@ import {
   selectNavigationMenu,
   openMobileMenu,
 } from '../../redux/navigation-menu';
-import GALogoTextWhite from '../icons/ga-text-white';
+import { GALogoTextWhite } from '@shared/components';
 import { weeks } from '../../routes/config';
 
 const StyledHeader = styled.header`
