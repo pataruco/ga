@@ -1,0 +1,117 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: black;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 160%;
+  font-weight: 300;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    font-weight: 700;
+    color: #d14348;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+em {
+    font-weight: 700;
+    font-size: 140%;
+    color: #f3d350;
+    font-style: normal;
+}
+
+
+section {
+  background-image: url('../images/sunrise.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+section h2 {
+  color: #bfc406;
+  background-color: rgba(128, 128, 128, 0.75);
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+
+      height: 100vh;
+      max-height: 800px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header .tagline {
+      display: block;
+      color: #fff;
+      max-width: 40em;
+      line-height: 140%;
+      font-size: 2.5rem;
+  }
+  .header .tagline h1 {
+      display: none;
+  }
+  .header .tagline em {
+      font-size: 140%;
+      color: #f3d350;
+      font-style: normal;
+  }
+}

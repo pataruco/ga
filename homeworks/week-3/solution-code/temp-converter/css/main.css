@@ -1,0 +1,54 @@
+body {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: Georgia, serif;
+}
+
+.converter-container {
+  width: 340px;
+  margin: 0 auto;
+}
+
+input {
+  margin-right: 10px;
+  padding: 10px;
+  border: 3px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: #afafaf;
+  outline: none;
+}
+
+button {
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: #f26629;
+  cursor: pointer;
+}
+
+/* Error styles
+   ================================================================ */
+
+/* This class shoud be added to the input if the user has not entered a value */
+.error {
+  border-color: red;
+}
+
+/* This error message should fade in if the user has not entered a value */
+.error-message {
+  color: white;
+  border: 3px solid red;
+  border-radius: 4px;
+  display: none; /*Hidden by default*/
+  background-color: rgba(255, 0, 0, .6);
+  padding: 10px;
+}
