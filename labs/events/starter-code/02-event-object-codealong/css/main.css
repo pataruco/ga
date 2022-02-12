@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Global Overrides
+========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* ==========================================================================
+   Global Styles
+========================================================================== */
+html {
+	font-size: 16px;
+}
+
+body {
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+/* ==========================================================================
+   Header Styles
+========================================================================== */
+header {
+	background-color: #F7F7F7;
+	padding-bottom:  3.75rem;
+}
+
+h1 {
+	font-family: 'Libre Baskerville', serif;
+	color: #401935;
+	font-size:  3.75rem;
+}
+
+header p {
+	display: inline-block;
+	border: 1px solid black;
+	max-width: 30%;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1rem;
+	color: #222;
+	text-transform: none;
+	font-weight: 400;
+	letter-spacing: 0;
+	padding: 1em;
+	line-height: 1.5;
+	margin: 1em;
+}
+
+#r {
+	background-color: rgba(255,0,0,0.3);
+}
+#b {
+	background-color: rgba(0,0,255,0.3);
+}
+#y {
+	background-color: rgba(255,255,0,0.3);
+}
+
+/* ==========================================================================
+   Nav Styles
+========================================================================== */
+.nav-wrapper {
+	background-color: #191919;
+	margin-bottom:  3.75rem;
+}
+
+.nav-wrapper a {
+	color: #5E5E5E;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+nav a {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	letter-spacing: .08em;
+	padding: 1.25rem 1.875rem;
+	display: inline-block;
+}
+
+.active {
+	color: #fff;
+}
+
+.hamburger {
+	background-color: black;
+	font-size: 1.688rem;
+	padding: 0.625rem 1.25rem;
+	display: none;
+}
+
+
+/* ==========================================================================
+   Albums
+========================================================================== */
+
+.albums {
+	padding: 1.875rem 1.25rem;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+section {
+	min-width: 22%;
+	min-height: 6em;
+	margin: 1em;
+}
+
+.bright {
+	background-color: #E8C531;
+}
+
+h2 {
+	font-size: 1.125rem;
+	font-weight: 500;
+	margin-bottom: 0.625rem;
+}
+
+h3 {
+	font-size: 1.125rem;
+	font-weight: 300;
+	font-style: italic;
+	color: #E2B8D7;
+}
+
+p {
+	color: #873672;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	font-weight: 600;
+}
+
+img {
+	max-width: 100%;
+}
+
+.red {
+	background-color: red;
+}
+.blue {
+	background-color: blue;
+}
+.yellow {
+	background-color: yellow;
+}
+
+.hidden {
+	display: none;
+}
+
+/* ==========================================================================
+   Media Styles
+========================================================================== */
+
+@media only screen and (max-width: 960px) {
+	section {
+		width: 33.333%;
+		padding: 0 2% 1.25rem;
+	}
+
+	nav a {
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+	}
+
+}
+
+
+@media only screen and (max-width: 660px) {
+	html {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	header p {
+		font-size: 1.4rem;
+		padding: 0 1rem;
+	}
+
+	.nav-wrapper {
+		text-align: right;
+	}
+
+	.hamburger {
+		display: inline-block;
+	}
+
+	nav {
+		display: none;
+	}
+
+	section {
+		width: 50%;
+	}
+
+}
+
+
+
+@media only screen and (max-width: 450px) {
+	section {
+		width: 100%;
+	}
+
+}

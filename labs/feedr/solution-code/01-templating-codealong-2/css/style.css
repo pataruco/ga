@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.sessions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.session {
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #d8ecf2;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 400px;
+}
+
+.session .label {
+  font-weight: bold;
+}

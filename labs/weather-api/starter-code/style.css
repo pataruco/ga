@@ -1,0 +1,166 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+}
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 1em 2em;
+  background: #eee;
+  box-shadow: inset 0 0 20px #ccc;
+  border-bottom: 2px solid;
+}
+header::before,
+header::after {
+  content: '';
+  position: absolute;
+  background-size: cover;
+}
+header::before {
+  top: 30px;
+  left: 5%;
+  width: 75px;
+  height: 75px;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/699973-icon-5-cloud-sun-rain-512.png');
+  animation: float 10s infinite alternate ease-in-out;
+}
+header::after {
+  top: 50px;
+  right: 10%;
+  width: 50px;
+  height: 50px;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/700454-icon-40-clouds-128.png');
+  animation: drift 10s 1s infinite alternate ease-in-out;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20%) scale(1.05);
+  }
+}
+@keyframes drift {
+  0% {
+    transform: translateX(0) scale(1.05);
+  }
+  100% {
+    transform: translateX(30%);
+  }
+}
+label {
+  display: none;
+}
+::placeholder {
+  color: #000;
+  font-style: italic;
+}
+form {
+  display: flex;
+}
+input[type='search'] {
+  width: 200px;
+  padding: 0.75em 1em 0.75em 1.5em;
+  color: #333;
+  background: none;
+  border: 2px solid;
+  border-right: 0;
+  border-radius: 20px 0 0 20px;
+  transition: 0.3s;
+}
+input[type='search']:hover,
+input[type='search']:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+input[type='submit'] {
+  padding: 0.75em 1.5em 0.75em 1em;
+  color: #333;
+  border: 2px solid #333;
+  background: #fff;
+  border-radius: 0 20px 20px 0;
+  transition: 0.3s;
+}
+input[type='submit']:hover,
+input[type='submit']:focus {
+  background: #333;
+  color: #fff;
+  outline: none;
+}
+.weather {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #333;
+  background-size: 150% auto;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+  filter: saturate(0) contrast(1.3);
+  animation: moveBackground 2s alternate infinite ease-in-out;
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 30% 50%;
+  }
+  100% {
+    background-position: 70% 50%;
+  }
+}
+.cloud {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://images.unsplash.com/photo-1559145857-ef40d6e4e253?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1850&q=80');
+}
+.clear {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url('https://images.unsplash.com/photo-1514423140760-4479e12ca0cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
+  filter: saturate(1.2);
+}
+.sun {
+  background-image: linear-gradient(rgba(200, 123, 10, 0.2), rgba(0, 0, 0, 0.3)),
+    url('https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80');
+  filter: saturate(1.2);
+}
+.rain {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://images.unsplash.com/photo-1438449805896-28a666819a20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
+}
+.wind {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://images.unsplash.com/photo-1505672678657-cc7037095e60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
+}
+.snow {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url('https://images.unsplash.com/photo-1528763423420-17b742aca946?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=935&q=80');
+}
+.weather-temp {
+  display: block;
+  font-size: 200px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+.weather-temp sup {
+  font-size: 125px;
+  font-weight: 100;
+}
+.weather-description {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2;
+}

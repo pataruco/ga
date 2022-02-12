@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Global Overrides
+========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+/* ==========================================================================
+   Global Styles
+========================================================================== */
+html {
+  font-size: 100%;
+}
+
+body {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Header Styles
+========================================================================== */
+header {
+  background-color: #f7f7f7;
+  padding-bottom: 3.75rem;
+}
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  color: #401935;
+  font-size: 3.75rem;
+}
+
+header p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  color: #222;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 0 6.25rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Nav Styles
+========================================================================== */
+.nav-wrapper {
+  background-color: #191919;
+  margin-bottom: 3.75rem;
+}
+
+.nav-wrapper a {
+  color: #5e5e5e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 1.25rem 1.875rem;
+  display: inline-block;
+}
+
+nav .active {
+  color: #fff;
+}
+
+.hamburger {
+  background-color: black;
+  font-size: 1.688rem;
+  padding: 0.625rem 1.25rem;
+  display: none;
+}
+
+/* ==========================================================================
+   Albums
+========================================================================== */
+
+main {
+  flex: 1 auto;
+}
+
+.albums {
+  background-color: #401935;
+  padding: 1.875rem 1.25rem;
+  color: white;
+}
+
+section {
+  padding-top: 15px;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #e2b8d7;
+}
+
+p {
+  color: #873672;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+.bright {
+  background-color: yellow;
+  color: green;
+}
+
+/* ==========================================================================
+   Footer styles
+========================================================================== */
+footer {
+  padding: 0.3125rem 1.25rem;
+  background-color: #1b0b17;
+  color: white;
+}
+
+/* ==========================================================================
+   Media Styles
+========================================================================== */
+
+@media only screen and (max-width: 960px) {
+  section {
+    width: 33.333%;
+    padding: 0 2% 1.25rem;
+  }
+
+  nav a {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+
+  .nav-wrapper {
+    text-align: right;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  section {
+    width: 100%;
+  }
+}

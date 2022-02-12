@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sessions {
+  padding: 1em;
+  display: inline-block;
+  background-color: #d8ecf2;
+  border-radius: 10px;
+}
+
+.sessions .label {
+  font-weight: bold;
+}

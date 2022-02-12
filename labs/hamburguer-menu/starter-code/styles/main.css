@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #541c36;
+  color: white;
+}
+
+h1 span {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 3rem;
+  vertical-align: middle;
+  /* Set an infinite pulse animation  */
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header li {
+  margin-left: 0.75rem;
+}
+
+header a {
+  color: white;
+  text-decoration: 2px underline;
+}
+
+header .button {
+  display: none;
+}
+
+.button {
+  appearance: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: white;
+  text-decoration: 2px solid underline;
+  /* Set transition for hover and active states */
+}
+
+.button:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+main {
+  flex: 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  background: linear-gradient(45deg, #ff4e55, #d3206e);
+}
+
+main p {
+  text-align: center;
+  text-shadow: 2px 2px 5px #333;
+  color: white;
+  font-size: 4rem;
+}
+
+footer {
+  padding: 1.25rem;
+  background-color: black;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+body > nav {
+  position: absolute;
+  width: 200px;
+  background-color: #3a4449;
+  bottom: 0;
+  top: 0;
+  padding: 1.25rem;
+  color: white;
+  right: -200px;
+  /* Write a transition t */
+}
+
+body.menu-is-open > nav {
+  /* Write a transform that make the nav appear on screen  */
+}
+
+body > nav li {
+  list-style: none;
+  margin-bottom: 0.75rem;
+}
+
+body > nav a {
+  color: white;
+  text-decoration: 2px underline;
+}
+
+@media screen and (max-width: 800px) {
+  header nav {
+    display: none;
+  }
+
+  header .button {
+    display: block;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  20%,
+  30% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+}

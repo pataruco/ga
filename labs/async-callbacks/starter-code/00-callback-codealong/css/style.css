@@ -1,0 +1,51 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+}
+
+button {
+  display: inline-block;
+  font-size: 0.6em;
+}
+
+.buttons {
+  text-align: center;
+}
+
+#greetBtn {
+  background-color: lightgoldenrodyellow;
+}
+
+#nametagBtn {
+  background-color: lightpink;
+}
+
+#greetText {
+  font-size: 2em;
+  text-align: center;
+}
+
+#nametagText {
+  width: 500px;
+  height: 300px;
+  margin: 50px auto;
+  border: 1px solid lightgray;
+  border-radius: 25px;
+  text-align: center;
+  display: grid;
+}
+
+#nametagText div {
+  background-color: red;
+  border-radius: 25px 25px 0 0;
+  margin: 0 0 auto 0;
+}
+
+#nametagText span {
+  font-size: 2em;
+  margin: auto;
+}
+
+#greetText.hidden, #nametagText.hidden {
+  display: none;
+}

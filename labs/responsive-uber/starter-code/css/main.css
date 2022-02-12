@@ -1,0 +1,10 @@
+/*
+Breakpoints:
+700px for tablets
+1000px for desktop
+*/
+
+body {
+	margin:0;
+	font-family: 'Nanum Gothic', sans-serif;
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/normalise.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>FEWD | Vanilla JS accordion</title>
+  </head>
+  <body>
+    <header>
+      <h1>Star Wars opening crawl</h1>
+    </header>
+    <dl role="presentation">
+      <dt aria-expanded="false" aria-controls="episode-i">
+        <h2>
+          Episode I
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-i" role="region">
+        <article>
+          <p>
+            Turmoil has engulfed the Galactic Republic. The taxation of trade
+            routes to outlying star systems is in dispute.
+          </p>
+          <p>
+            Hoping to resolve the matter with a blockade of deadly battleships,
+            the greedy Trade Federation has stopped all shipping to the small
+            planet of Naboo.
+          </p>
+          <p>
+            While the congress of the Republic endlessly debates this alarming
+            chain of events, the Supreme Chancellor has secretly dispatched two
+            Jedi Knights, the guardians of peace and justice in the galaxy, to
+            settle the conflict....
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-ii">
+        <h2>
+          Episode II
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-ii" role="region">
+        <article>
+          <p>
+            There is unrest in the Galactic Senate. Several thousand solar
+            systems have declared their intentions to leave the Republic.
+          </p>
+          <p>
+            This Separatist movement, under the leadership of the mysterious
+            Count Dooku, has made it difficult for the limited number of Jedi
+            Knights to maintain peace and order in the galaxy.
+          </p>
+          <p>
+            Senator Amidala, the former Queen of Naboo, is returning to the
+            Galactic Senate to vote on the critical issue of creating an ARMY OF
+            THE REPUBLIC to assist the overwhelmed Jedi...
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-iii">
+        <h2>
+          Episode III
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-iii" role="region">
+        <article>
+          <p>
+            War! The Republic is crumbling under attacks by the ruthless Sith
+            Lord, Count Dooku. There are heroes on both sides. Evil is
+            everywhere. In a stunning move, the fiendish droid leader, General
+            Grievous, has swept into the Republic capital and kidnapped
+            Chancellor Palpatine, leader of the Galactic Senate.
+          </p>
+          <p>
+            As the Separatist Droid Army attempts to flee the besieged capital
+            with their valuable hostage, two Jedi Knights lead a desperate
+            mission to rescue the captive Chancellor....
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-iv">
+        <h2>
+          Episode VI
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-iv" role="region">
+        <article>
+          <p>
+            It is a period of civil war. Rebel spaceships, striking from a
+            hidden base, have won their first victory against the evil Galactic
+            Empire.
+          </p>
+          <p>
+            During the battle, Rebel [lowercase "r" in original releases] spies
+            managed to steal secret plans to the Empire's ultimate weapon, the
+            DEATH STAR, an armored space station with enough power to destroy an
+            entire planet.
+          </p>
+          <p>
+            Pursued by the Empire's sinister agents, Princess Leia races home
+            aboard her starship, custodian of the stolen plans that can save her
+            people and restore freedom to the galaxy....
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-v">
+        <h2>
+          Episode V
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-v" role="region">
+        <article>
+          <p>
+            It is a dark time for the Rebellion. Although the Death Star has
+            been destroyed, Imperial troops have driven the Rebel forces from
+            their hidden base and pursued them across the galaxy.
+          </p>
+          <p>
+            Evading the dreaded Imperial Starfleet, a group of freedom fighters
+            led by Luke Skywalker have established a new secret base on the
+            remote ice world of Hoth. The evil lord Darth Vader, obsessed with
+            finding young Skywalker, has dispatched thousands of remote probes
+            into the far reaches of space....
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-vi">
+        <h2>
+          Episode VI
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-vi" role="region">
+        <article>
+          <p>
+            Luke Skywalker has returned to his home planet of Tatooine in an
+            attempt to rescue his friend Han Solo from the clutches of the vile
+            gangster Jabba the Hutt.
+          </p>
+          <p>
+            Little does Luke know that the GALACTIC EMPIRE had secretly begun
+            construction on a new armored space station even more powerful than
+            the first dreaded Death Star.
+          </p>
+          <p>
+            When completed, this ultimate weapon would spell certain doom for
+            the small band of rebels struggling to restore freedom to the
+            galaxy...
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-vii">
+        <h2>
+          Episode VII
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-vii" role="region">
+        <article>
+          <p>
+            Luke Skywalker has vanished. In his absence, the sinister FIRST
+            ORDER has risen from the ashes of the Empire and will not rest until
+            Skywalker, the last Jedi, has been destroyed.
+          </p>
+          <p>
+            With the support of the REPUBLIC, General Leia Organa leads a brave
+            RESISTANCE. She is desperate to find her brother Luke and gain his
+            help in restoring peace and justice to the galaxy.
+          </p>
+          <p>
+            Leia has sent her most daring pilot on a secret mission to Jakku,
+            where an old ally has discovered a clue to Luke's whereabouts....
+          </p>
+        </article>
+      </dd>
+      <dt aria-expanded="false" aria-controls="episode-viii">
+        <h2>
+          Episode VIII
+        </h2>
+        <button>
+          <span></span>
+          <span></span>
+        </button>
+      </dt>
+      <dd id="episode-viii" role="region">
+        <article>
+          <p>
+            The FIRST ORDER reigns. Having decimated the peaceful Republic,
+            Supreme Leader Snoke now deploys his merciless legions to seize
+            military control of the galaxy. Only General Leia Organa's band of
+            RESISTANCE fighters stand against the rising tyranny, certain that
+            Jedi Master Luke Skywalker will return and restore a spark of hope
+            to the fight.
+          </p>
+          <p>
+            But the Resistance has been exposed. As the First Order speeds
+            toward the Rebel base, the brave heroes mount a desperate escape....
+          </p>
+        </article>
+      </dd>
+    </dl>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

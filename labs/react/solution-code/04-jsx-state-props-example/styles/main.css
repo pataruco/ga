@@ -1,0 +1,29 @@
+@import './normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 1.25rem;
+}
+
+.buttons {
+  display: flex;
+  padding: 0;
+}
+
+.buttons button {
+  padding: 0.25 0.75rem;
+  appearance: none;
+  border: 1px solid;
+}
+
+.buttons button:first-of-type {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Form lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/style.css"
+    />
+  </head>
+
+  <body>
+    <form action="/register" method="post">
+      <section class="details">
+        <h2>Your Contact Info</h2>
+
+        <div class="row">
+          <div class="column left">
+            <label for="name">
+              First name
+            </label>
+          </div>
+          <div class="column right">
+            <input
+              type="text"
+              for="firstname"
+              id="name"
+              placeholder="First name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column left">
+            <label for="lastname">
+              Last name
+            </label>
+          </div>
+          <div class="column right">
+            <input
+              type="text"
+              for="lastname"
+              id="lastname"
+              placeholder="Last name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row more-details">
+          <div class="column left">
+            <label for="phone">
+              Phone number
+            </label>
+          </div>
+          <div class="column right">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="0700 456 7890"
+              pattern="[0-9]{5}\s[0-9]{3}\s[0-9]{3}"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column left">
+            <label for="address">
+              Address
+            </label>
+          </div>
+          <div class="column right address">
+            <input
+              type="text"
+              id="address"
+              name="address-first-line"
+              placeholder="Street"
+              required
+            />
+            <input
+              type="text"
+              id="address"
+              name="address-second-line"
+              placeholder="Address line 2"
+              required
+            />
+            <input
+              type="text"
+              id="address"
+              name="address-town"
+              placeholder="Town"
+              required
+            />
+            <input
+              type="text"
+              id="address"
+              name="address-postcode"
+              placeholder="Postcode"
+              required
+              pattern="([Gg][Ii][Rr]
+          0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})
+      "
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills and interests</h2>
+        <div class="row">
+          <div class="column left">
+            <label for="course">
+              Course
+            </label>
+          </div>
+          <div class="column right">
+            <select name="course" id="course">
+              <option label="Select One" disabled selected>Select one</option>
+              <optgroup label="Web Development">
+                <option value="front-end">Front end</option>
+                <option value="back-end">Back end</option>
+              </optgroup>
+              <optgroup label="Design">
+                <option value="ux-design">User experience</option>
+                <option value="visual-design">Visual design</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column left">
+            <label for="past-experience">
+              Past experience
+            </label>
+          </div>
+          <div class="column right">
+            <textarea
+              name="past-experience"
+              id="past-experience"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Anything else</h2>
+        <div class="row">
+          <div class="column left">
+            <label for="referral">
+              Referral
+            </label>
+          </div>
+          <div class="column right">
+            <select name="referral" id="referral">
+              <option disabled selected>None</option>
+              <option value="friend">Friend</option>
+              <option value="instructor">Instructor</option>
+              <option value="online">Online</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column left">
+            <label for="comments">
+              Comments
+            </label>
+          </div>
+          <div class="column right">
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row">
+          <div class="column left buttons">
+            <input type="button" value="Save draft" />
+            <input type="submit" value="Submit" />
+          </div>
+        </div>
+      </section>
+    </form>
+  </body>
+</html>

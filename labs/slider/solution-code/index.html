@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/glide.css" />
+    <link rel="stylesheet" href="./styles/glide.theme.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Slider with Glide</title>
+  </head>
+  <body>
+    <header>
+      <h1>Slider plugin</h1>
+      <p>
+        On this case we are using a library called
+        <a href="https://glidejs.com" target="_blank">Glide</a>
+      </p>
+    </header>
+    <main>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <article>
+                <picture>
+                  <img
+                    src="https://vignette.wikia.nocookie.net/starwars/images/8/80/X-wing_Fathead.png/revision/latest/scale-to-width-down/2000?cb=20161004003846"
+                    alt="X-Wing"
+                  />
+                </picture>
+                <h2>X-Wing</h2>
+              </article>
+            </li>
+            <li class="glide__slide">
+              <article>
+                <picture>
+                  <img
+                    src="https://vignette.wikia.nocookie.net/disney/images/6/6d/Y_Wing_Fighter_SWCT.png/revision/latest/scale-to-width-down/516?cb=20170607092417"
+                    alt="Y-Wing"
+                  />
+                </picture>
+                <h2>Y-Wing</h2>
+              </article>
+            </li>
+            <li class="glide__slide">
+              <article>
+                <picture>
+                  <img
+                    src="https://vignette.wikia.nocookie.net/starwars/images/8/8d/A-wing_DICE.png/revision/latest?cb=20161021230115"
+                    alt="A-Wing"
+                  />
+                </picture>
+                <h2>A-Wing</h2>
+              </article>
+            </li>
+            <li class="glide__slide">
+              <article>
+                <picture>
+                  <img
+                    src="https://vignette.wikia.nocookie.net/star-wars-canon/images/6/60/B-Wing_Starfighter.png/revision/latest?cb=20151102222051"
+                    alt="B-Wing"
+                  />
+                </picture>
+                <h2>B-Wing</h2>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            prev
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            next
+          </button>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts/glide.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

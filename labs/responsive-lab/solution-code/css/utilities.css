@@ -1,0 +1,39 @@
+/* utilities */
+
+.content-wrapper {
+  max-width: var(--content-wrapper-width);
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  flex-basis: 100%;
+}
+
+.button {
+  display: block;
+  color: var(--white);
+  background-color: var(--green);
+  border-radius: var(--radius);
+  text-decoration: none;
+  text-align: center;
+}
+
+/* This declaration is applied via JavaScript */
+.button.button--red {
+  background-color: red;
+}
+
+.section {
+  padding: 90px 1.25rem 0;
+}
+
+.section .content-wrapper > h2 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 90px;
+}

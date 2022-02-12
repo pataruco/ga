@@ -1,0 +1,62 @@
+.hero {
+  background-image: url(../img/hero.jpg);
+  min-height: 720px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.25rem;
+}
+
+.hero .content-wrapper {
+  width: 100%;
+}
+
+.hero .content-wrapper > div {
+  width: 50%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 2rem;
+}
+
+.hero .button {
+  padding: 1.5rem;
+  max-width: 340px;
+}
+
+/* This declaration is applied via JavaScript */
+.hero.cat {
+  background-image: url('https://www.rover.com/blog/wp-content/uploads/2019/07/pretty-bombay-cat.jpg');
+}
+
+@media screen and (max-width: 600px) {
+  .hero,
+  .hero.cat {
+    background-image: unset;
+    min-height: unset;
+  }
+
+  .hero .content-wrapper > div {
+    width: 100%;
+  }
+
+  .hero h1 {
+    display: none;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .hero .button {
+    max-width: unset;
+    padding: 1.125rem 0;
+  }
+}

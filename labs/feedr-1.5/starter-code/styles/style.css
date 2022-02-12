@@ -1,0 +1,237 @@
+/* General styles */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #fe052c;
+  --dark-red: #cc0020;
+  --white: #fff;
+  --dark-grey: #ccc;
+  --light-grey: #eee;
+  --black: #000;
+  --metal-blue: #097fb2;
+  --base-space: 1.25rem;
+}
+
+html {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utilities */
+
+.hidden,
+[hidden] {
+  display: none;
+}
+
+/* Header styles */
+header {
+  background-color: #fe052c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--base-space);
+  align-items: center;
+}
+
+header h1 {
+  color: var(--white);
+  margin: 0;
+}
+
+header nav {
+  width: 33.33%;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header form select {
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  padding: 0.15em 0.25em;
+}
+
+header form select:focus {
+  background-color: var(--light-grey);
+  border: 2px solid var(--light-grey);
+}
+
+header form button[type='submit'] {
+  appearance: none;
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  padding: 0.15em 0.25em;
+}
+
+header form input[type='search'] {
+  appearance: none;
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  padding: 0.15em 0.25em;
+}
+
+header form button[type='submit']:hover,
+header form button[type='submit']:focus,
+header form input[type='search']:hover,
+header form input[type='search']:focus {
+  background-color: var(--light-grey);
+  border: 2px solid var(--light-grey);
+}
+
+header form button[type='submit']:active,
+header form input[type='search']:active {
+  color: var(--white);
+  background-color: var(--dark-red);
+  border: 2px solid var(--dark-red);
+}
+
+/* Main Section */
+
+main.container {
+  margin-top: 5rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Individual Article Styling */
+.article {
+  border-bottom: 1px solid #ccc;
+  transition: 0.2s all;
+  display: flex;
+  padding: 1.25rem;
+}
+
+.article:hover {
+  padding: 1.25rem calc(1.2 * 1.25rem);
+  background-color: #eee;
+}
+
+.article .featured-image {
+  width: 12.5%;
+  max-width: 60px;
+  margin-right: 1.25rem;
+}
+
+.article .featured-image img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.article .article-content {
+  width: 70%;
+}
+
+.article .article-content a {
+  text-decoration: none;
+}
+
+.article .article-content h2 {
+  margin-top: 0;
+  color: #fe052c;
+}
+
+.article .article-content h3 {
+  margin: 0;
+  color: #666;
+}
+
+.article .impressions {
+  width: 15%;
+  font-size: 30px;
+  margin-top: 15px;
+  text-align: right;
+  color: #097fb2;
+}
+
+/* Pop up*/
+
+.pop-up {
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.pop-up .close-popup {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  color: #fe052c;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.pop-up .close-popup:hover,
+.pop-up .close-popup:focus {
+  color: white;
+  text-decoration: none;
+  background-color: #fe052c;
+  border: 1px solid #fe052c;
+}
+
+.pop-up .close-popup:active {
+  color: #fe052c;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.pop-up.loader {
+  background-image: url(../images/ajax_loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pop-up.loader .container {
+  display: none;
+}
+
+.pop-up .container {
+  margin-top: 80px;
+}
+
+.pop-up h1 {
+  margin-bottom: 0;
+}
+
+.pop-up .pop-up-action {
+  padding: 10px;
+  background-color: #fe052c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transform: 0.2s all;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.pop-up .pop-up-action:hover {
+  color: #fe052c;
+  background: #fff;
+}

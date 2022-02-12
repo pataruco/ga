@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+}
+
+.experimenting {
+    text-align: center;
+    cursor: pointer;
+    width: 40rem;
+    font-size: 50px;
+    color: red;
+    border: 1px solid pink;
+}
+
+.experimenting:hover {
+    color: pink;
+}
+.experimenting:active {
+    background-color: orange;
+}
