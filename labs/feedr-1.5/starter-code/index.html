@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Feedr @ GA</title>
+    <link
+      rel="stylesheet"
+      href="styles/normalize.css"
+      media="screen"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/style.css"
+      media="screen"
+      charset="utf-8"
+    />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Feedr</h1>
+        <form id="feeder-form">
+          <label for="feedr-select" class="hidden">Choose Feed:</label>
+          <select name="feed" id="feedr-select">
+            <option value="">Please choose a feeder</option>
+            <option value="rick-and-morty">Rick and Morty</option>
+          </select>
+        </form>
+
+        <form>
+          <label for="search" class="hidden">Search</label>
+          <input type="search" name="search" id="search" />
+          <button type="submit">search</button>
+        </form>
+      </div>
+    </header>
+
+    <main id="js-main" class="container">
+      <article class="article">
+        <picture class="featured-image">
+          <img src="images/article_placeholder_1.jpg" alt="" />
+        </picture>
+        <section class="article-content">
+          <h2>Test article title</h2>
+          <h3>Lifestyle</h3>
+        </section>
+        <p class="impressions">526</p>
+      </article>
+
+      <article class="article">
+        <picture class="featured-image">
+          <img src="images/article_placeholder_1.jpg" alt="" />
+        </picture>
+        <section class="article-content">
+          <h2>Test article title</h2>
+          <h3>Lifestyle</h3>
+        </section>
+        <p class="impressions">526</p>
+      </article>
+    </main>
+
+    <!-- classes: loader hidden pop-up -->
+    <div class="pop-up loader hidden" id="js-pop-up">
+      <button href="#" class="close-popup" id="js-close-pop-up-button">
+        close
+      </button>
+      <div id="js-pop-up-content" class="container">
+        <h2>Article title here</h2>
+        <p>Article description/content here.</p>
+        <a href="#" class="pop-up-action" target="_blank" rel="noopener"
+          >Read more from source</a
+        >
+      </div>
+    </div>
+
+    <script src="js/index.js" type="module"></script>
+  </body>
+</html>

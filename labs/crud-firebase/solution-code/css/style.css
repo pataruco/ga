@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 66vw;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+form label,
+form textarea {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+form textarea {
+  width: 50%;
+  max-width: 80ch;
+  height: 5rem;
+  padding: 0.5rem;
+  border: 2px solid black;
+}
+
+form button[type='submit'] {
+  border: 2px solid white;
+  padding: 0.5rem;
+  color: white;
+  background-color: black;
+}
+
+form button[type='submit']:active {
+  border: 2px solid black;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  width: 50%;
+  max-width: 80ch;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border: 2px solid;
+  padding: 1.25rem;
+}
+
+li > * {
+  max-width: calc(50% - 1.25rem);
+}
+
+li p:first {
+  margin-right: 1rem;
+  word-wrap: break-word;
+}
+
+li div {
+  display: flex;
+  align-items: center;
+}
+
+li div button[type='button'] {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+li div button[type='button']:active,
+li div button[type='button']:focus {
+  text-shadow: 1px 1px 1px black;
+}
+
+li div > *:not(button:last-of-type) {
+  margin-right: 1rem;
+}

@@ -1,0 +1,35 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+}
+
+button, input {
+  display: inline-block;
+  font-size: 0.6em;
+}
+
+input {
+  width: 3em;
+}
+
+.buttons, .inputs {
+  text-align: center;
+}
+
+#operator {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#greetBtn {
+  background-color: lightgoldenrodyellow;
+}
+
+#nametagBtn {
+  background-color: lightpink;
+}
+
+#result {
+  padding: 1em;
+  text-align: center;
+  font-size: 2em;
+}
