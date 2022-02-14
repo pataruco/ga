@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* colours */
+  --almost-black: #121212;
+  --dark-blue: #033048;
+  --light-gray: #606161;
+  --white: #f0efef;
+  --yellow: #f9e42e;
+  /* font weights */
+  --extra-bold: 800;
+  --semi-bold: 600;
+  --light: 300;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  background-color: var(--light-gray);
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  min-height: 700px;
+  padding-top: 40px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: var(--extra-bold);
+  margin-top: 0;
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: var(--semi-bold);
+  margin: 115px 0 85px;
+  text-align: center;
+}
+
+.button {
+  border-radius: 5px;
+  display: block;
+  font-size: 14px;
+  font-weight: var(--extra-bold);
+  margin: 0 auto;
+  max-width: 260px;
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.hero a {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+}
+
+.benefits {
+  color: var(--light-gray);
+  padding: 100px 0 80px;
+  font-size: var(--light);
+  font-size: 13px;
+}
+
+.benefits h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: var(--semi-bold);
+  color: var(--dark-blue);
+}
+
+.quote {
+  padding: 80px 0 100px;
+  color: var(--white);
+  background-image: url(../images/testimonial-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 18px;
+}
+.quote blockquote {
+  max-width: 570px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote p {
+  font-weight: var(--light);
+  font-style: italic;
+}
+
+.quote footer {
+  font-weight: var(--semi-bold);
+}
+
+.cta {
+  background-color: var(--yellow);
+  padding: 30px 0;
+}
+
+.cta a {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  font-size: 12px;
+}
+
+.footer {
+  background-color: var(--almost-black);
+  padding: 70px 0 40px;
+  text-align: center;
+}
+
+.footer p:first-of-type {
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: 24px;
+  font-weight: var(--extra-bold);
+  color: var(--yellow);
+}
+
+.footer a {
+  display: inline-block;
+  width: 40px;
+}
+
+.footer a:first-of-type {
+  margin-right: 55px;
+}
+
+.footer p:last-of-type {
+  margin-top: 80px;
+  font-size: 9px;
+  font-weight: var(--semi-bold);
+  color: var(--white);
+}
