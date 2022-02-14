@@ -28,5 +28,5 @@ jobs:
         with:
           args: deploy --dir=./@websites/jsd/build --prod
         env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_JSD_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_JSD_AUTH_TOKEN }}
+          NETLIFY_JSD_SITE_ID: ${{ secrets.NETLIFY_JSD_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
