@@ -20,8 +20,10 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          yarn policies set-version 1.18.0
           yarn 
-          lerna exec yarn && lerna link
+          yarn lerna exec yarn 
+          yarn lerna bootrap --hoist
           yarn workspace @websites/jsd build
 
       - name: Deploy 🚀
