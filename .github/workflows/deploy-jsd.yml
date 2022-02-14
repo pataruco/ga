@@ -1,10 +1,10 @@
-name: deploy
+name: Deploy JSD
 on:
   push:
     tags:
       - 'JSD*'
 jobs:
-  build-and-deploy:
+  deploy-jsd:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -21,7 +21,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           yarn 
-          yarn lerna bootstrap
+          lerna exec yarn && lerna link
           yarn workspace @websites/jsd build
 
       - name: Deploy 🚀

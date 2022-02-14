@@ -25,7 +25,7 @@
   "private": true,
   "repository": "git@github.com:pataruco/ga.git",
   "scripts": {
-    "postinstall": "husky install; lerna exec -- yarn && lerna link"
+    "postinstall": "husky install"
   },
   "version": "1.0.0",
   "workspaces": [
