@@ -23,7 +23,7 @@ jobs:
           yarn policies set-version 1.18.0
           yarn 
           yarn lerna exec yarn 
-          yarn lerna bootrap --hoist
+          yarn lerna bootstrap
           yarn workspace @websites/jsd build
 
       - name: Deploy 🚀
