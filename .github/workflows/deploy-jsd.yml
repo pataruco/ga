@@ -20,9 +20,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn policies set-version 1.18.0
-          yarn 
-          yarn lerna exec yarn 
+          yarn
+          yarn lerna run --scope '@shared/**' build
           yarn lerna bootstrap
           yarn workspace @websites/jsd build
 
