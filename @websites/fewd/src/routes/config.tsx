@@ -13,7 +13,7 @@ const getLessonPath = (lessonName: FEWDLesson) => fewd[lessonName].default;
 export const lessonRoutes = [
   {
     path: '/week-1/lesson-1',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={1} lesson={1} />
         <SlidesDeck slidesDeckPath={getLessonPath('01-html-basics')} />
@@ -22,7 +22,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-1/lesson-2',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={1} lesson={2} />
         <SlidesDeck
@@ -33,7 +33,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-2/lesson-3',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={2} lesson={3} />
         <SlidesDeck slidesDeckPath={getLessonPath('03-box-model')} />
@@ -42,7 +42,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-2/lesson-4',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={2} lesson={4} />
         <SlidesDeck
@@ -53,7 +53,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-3/lesson-5',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={3} lesson={5} />
         <SlidesDeck slidesDeckPath={getLessonPath('05-flexbox')} />
@@ -62,7 +62,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-3/lesson-6',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={3} lesson={6} />
         <SlidesDeck slidesDeckPath={getLessonPath('06-positioning')} />
@@ -71,7 +71,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-4/lesson-7',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={4} lesson={7} />
         <SlidesDeck slidesDeckPath={getLessonPath('07-responsive')} />
@@ -80,7 +80,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-4/lesson-8',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={4} lesson={8} />
         <SlidesDeck slidesDeckPath={getLessonPath('08-responsive-lab')} />
@@ -89,7 +89,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-5/lesson-9',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={5} lesson={9} />
         <SlidesDeck slidesDeckPath={getLessonPath('09-intro-to-js')} />
@@ -98,7 +98,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-5/lesson-10',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={5} lesson={10} />
         <SlidesDeck
@@ -109,7 +109,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-6/lesson-11',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={6} lesson={11} />
         <SlidesDeck
@@ -120,7 +120,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-6/lesson-12',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={6} lesson={12} />
         <SlidesDeck slidesDeckPath={getLessonPath('12-arrays-loops')} />
@@ -129,7 +129,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-7/lesson-13',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={7} lesson={13} />
         <SlidesDeck slidesDeckPath={getLessonPath('13-animations')} />
@@ -138,7 +138,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-7/lesson-14',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={7} lesson={14} />
         <SlidesDeck slidesDeckPath={getLessonPath('14-plugins')} />
@@ -147,7 +147,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-8/lesson-15',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={8} lesson={15} />
         <SlidesDeck slidesDeckPath={getLessonPath('15-forms')} />
@@ -156,7 +156,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-8/lesson-16',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={8} lesson={16} />
         <SlidesDeck slidesDeckPath={getLessonPath('16-api')} />
@@ -165,7 +165,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-9/lesson-17',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={9} lesson={17} />
         <SlidesDeck slidesDeckPath={getLessonPath('17-git-sass')} />
@@ -174,7 +174,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-9/lesson-18',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={9} lesson={18} />
         <SlidesDeck slidesDeckPath={getLessonPath('18-a11y-svg')} />
@@ -183,7 +183,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-10/lesson-19',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={10} lesson={19} />
         <SlidesDeck slidesDeckPath={getLessonPath('19-bootstrap')} />
@@ -192,7 +192,7 @@ export const lessonRoutes = [
   },
   {
     path: '/week-10/lesson-20',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" week={10} lesson={20} />
         <SlidesDeck slidesDeckPath={getLessonPath('20-final-presentations')} />
@@ -203,155 +203,31 @@ export const lessonRoutes = [
 
 // Weeks
 // Path: week-n
-export const weekRoutes = [
-  {
-    path: '/week-1',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/1'));
-      return (
-        <>
-          <Title courseName="FEWD" week={1} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
+export const weeks = new Array(10) // Set number of weeks
+  .fill(1)
+  .map((item, i) => item + i);
+
+export const weekRoutes = weeks.map((weekNumber) => ({
+  path: `/week-${weekNumber}`,
+  element: () => {
+    const Content = lazy(() => import(`../pages/weeks/${weekNumber}`));
+    return (
+      <>
+        <Title courseName="JSD" week={weekNumber} />
+        <Suspense fallback={<Loading />}>
+          <Content />
+        </Suspense>
+      </>
+    );
   },
-  {
-    path: '/week-2',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/2'));
-      return (
-        <>
-          <Title courseName="FEWD" week={2} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-3',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/3'));
-      return (
-        <>
-          <Title courseName="FEWD" week={3} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-4',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/4'));
-      return (
-        <>
-          <Title courseName="FEWD" week={4} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-5',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/5'));
-      return (
-        <>
-          <Title courseName="FEWD" week={5} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-6',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/6'));
-      return (
-        <>
-          <Title courseName="FEWD" week={6} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-7',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/7'));
-      return (
-        <>
-          <Title courseName="FEWD" week={7} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-8',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/8'));
-      return (
-        <>
-          <Title courseName="FEWD" week={8} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-9',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/9'));
-      return (
-        <>
-          <Title courseName="FEWD" week={9} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-  {
-    path: '/week-10',
-    component: () => {
-      const Content = lazy(() => import('../pages/weeks/10'));
-      return (
-        <>
-          <Title courseName="FEWD" week={10} />
-          <Suspense fallback={<Loading />}>
-            <Content />
-          </Suspense>
-        </>
-      );
-    },
-  },
-];
+}));
 
 // Bonus lessons
 // Path: /bonus-lessons/n
 export const bonusLessonRoutes = [
   {
     path: '/bonus-lessons/grids',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" title="Bonus Lesson | Grids" />
         <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-grids')} />
@@ -360,7 +236,7 @@ export const bonusLessonRoutes = [
   },
   {
     path: '/bonus-lessons/tables',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" title="Bonus Lesson | Tables" />
         <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-tables')} />
@@ -369,7 +245,7 @@ export const bonusLessonRoutes = [
   },
   {
     path: '/bonus-lessons/javascript-history',
-    component: () => (
+    element: () => (
       <>
         <Title courseName="FEWD" title="Bonus Lesson | JavaScript history" />
         <SlidesDeck slidesDeckPath={getLessonPath('bonus-lesson-js-history')} />
@@ -383,7 +259,7 @@ export const bonusLessonRoutes = [
 
 export const FinalProjectRoute = {
   path: '/final-project-brief',
-  component: () => {
+  element: () => {
     const Content = lazy(() => import('../pages/final-project-brief'));
     return (
       <>
@@ -400,7 +276,7 @@ export const FinalProjectRoute = {
 // Path: //bonus-lessons
 export const BonusLessonsRoute = {
   path: '/bonus-lessons',
-  component: () => {
+  element: () => {
     const Content = lazy(() => import('../pages/bonus-lessons'));
     return (
       <>

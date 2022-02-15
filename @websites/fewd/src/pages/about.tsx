@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/header';
+import Page from '../components/page';
+
 import {
+  Title,
   Footer,
   GitHubLogo,
   LinkedinLogo,
   TwitterLogo,
-  Title,
 } from '@shared/components';
-import Page from '../components/page';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -34,7 +35,7 @@ const StyledMain = styled.main`
 
 const About: React.FC = () => (
   <Page>
-    <Title courseName="JSD" title="About" />
+    <Title courseName="FEWD" title="About" />
     <Header />
     <StyledMain>
       <h1>About</h1>
@@ -80,15 +81,15 @@ const About: React.FC = () => (
       </p>
 
       <p>
-        The content on the slides is my adaption from official JSD curriculum
-        and the experiences I have had as a teacher assistant and lead
-        instructor in the last 6 years of teaching.
+        The content on the slides is my adaption from official FEWD 3.0
+        curriculum and the experiences I have had as a teacher assistant and
+        lead instructor in the last 6 years of teaching.
       </p>
 
       <p>
         The code for this website and the content of the slides are available on{' '}
         <a
-          href="https://github.com/pataruco/jsd"
+          href="https://github.com/pataruco/fewd"
           target="_blank"
           rel="noreferrer"
           className="external-link"

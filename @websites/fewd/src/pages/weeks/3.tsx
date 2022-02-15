@@ -2,45 +2,46 @@ import Week from '../../components/week';
 
 const resources = [
   [
-    'JavaScript Object Basics',
-    'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics',
+    'CSS Tricks: Complete Guide to Flexbox',
+    'https://css-tricks.com/snippets/css/a-guide-to-flexbox/',
   ],
   [
-    'Objects - The Modern JavaScript Tutorial',
-    'https://javascript.info/object',
+    'Scotch: Visual Guide to CSS3 Flexbox',
+    'https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties',
   ],
   [
-    'Back To Basics: JavaScript Object Syntax',
-    'https://www.sitepoint.com/back-to-basics-javascript-object-syntax/',
+    'Interneting is Hard: Flexbox',
+    'https://internetingishard.com/html-and-css/flexbox/',
   ],
   [
-    'JSON',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON',
+    'MDN: Flexbox',
+    'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox',
+  ],
+  ['Flexbox Froggy 🐸', 'http://flexboxfroggy.com/'],
+  [
+    'Detailed CSS positioning',
+    'http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/',
   ],
   [
-    'MDN Using NPM',
-    'https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#using_npm',
-  ],
-  [
-    'JavaScript modules',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules',
+    'A List Apart: CSS positioning 101',
+    'http://alistapart.com/article/css-positioning-101',
   ],
 ];
 
 const bonuses = [
   [
-    'Working with Environment Variables in Node.js',
-    'https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html',
+    "Complete Code Academy's Learn Git course",
+    'https://www.codecademy.com/learn/learn-git',
   ],
 ];
 
 const weekConfig = {
   bonuses,
-  firstLessonTitle: 'Objects and JSON',
+  firstLessonTitle: 'Flexbox',
   resources,
-  secondLessonTitle: 'Slack Bot lab 🤖 🧪',
+  secondLessonTitle: 'Positioning',
   weekNumber: 3,
-  homeworkPath: '/week-3/lesson-5#4',
+  homeworkPath: '/week-3/lesson-6#27',
 };
 
 const Week3 = () => <Week {...weekConfig} />;

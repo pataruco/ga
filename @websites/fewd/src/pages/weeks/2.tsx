@@ -2,36 +2,72 @@ import Week from '../../components/week';
 
 const resources = [
   [
-    'MDN: Array',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
+    'CSS Tricks: The CSS Box Model',
+    'https://css-tricks.com/the-css-box-model/',
   ],
   [
-    'MDN: Expressions and operators',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators',
+    'MDN: Introduction to the Box model',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model',
   ],
   [
-    'MDN: Equality comparisons and sameness',
-    'https://developer.mozilla.org/en/docs/Web/JavaScript/Equality_comparisons_and_sameness',
+    'MDN: Box sizing',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing',
   ],
   [
-    'JavaScript equality table',
-    'https://dorey.github.io/JavaScript-Equality-Table/',
+    'MDN: Margin collapse',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing',
   ],
   [
-    'MDN: Logical operators',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators',
+    'The revenge of the IE Box model',
+    'https://www.jefftk.com/p/the-revenge-of-the-ie-box-model',
   ],
   [
-    'Tuts+: What is type coercion?',
-    'http://code.tutsplus.com/articles/the-beginners-guide-to-type-coercion-what-is-coercion--cms-21917',
+    'CSS Tricks:  What you should know about collapsing margins',
+    'https://css-tricks.com/what-you-should-know-about-collapsing-margins/',
+  ],
+  [
+    'Sitepoint: Collapsing margins',
+    'https://www.sitepoint.com/collapsing-margins/',
+  ],
+  [
+    'MDN: Pseudo elements',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements',
+  ],
+  [
+    'MDN: Pseudo classes',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes',
+  ],
+  [
+    'CSS Tricks: :nth-child recipes',
+    'https://css-tricks.com/useful-nth-child-recipies/',
+  ],
+  [
+    'CSS Tricks: Child and Sibling Selectors',
+    'https://css-tricks.com/child-and-sibling-selectors/',
+  ],
+  [
+    'MDN: CSS Specificty',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity',
+  ],
+  [
+    'MDN: CSS Selectors',
+    'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors',
+  ],
+];
+
+const bonuses = [
+  [
+    'Read through opening the Box Model',
+    'http://learn.shayhowe.com/html-css/opening-the-box-model/',
   ],
 ];
 
 const weekConfig = {
-  firstLessonTitle: 'Arrays & loops',
-  homeworkPath: '/week-2/lesson-3#21',
+  bonuses,
+  firstLessonTitle: 'Box model',
+  homeworkPath: '/week-2/lesson-4#22',
   resources,
-  secondLessonTitle: 'Functions, scope & conditionals',
+  secondLessonTitle: 'CSS Selectors, Specificity & Floats',
   weekNumber: 2,
 };
 

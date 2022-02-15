@@ -2,36 +2,45 @@ import Week from '../../components/week';
 
 const resources = [
   [
-    'MDN: Sending form data',
-    'https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data',
+    'MDN: JavaScript Introduction',
+    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction',
   ],
   [
-    'MDN: Using Fetch',
-    'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch',
+    'MDN: Learning JavaScript',
+    'https://developer.mozilla.org/en-US/Learn/JavaScript',
   ],
   [
-    'MDN: Using Promises',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises',
+    'Stack Overflow: When should I use a semicolon after curly braces?',
+    'http://stackoverflow.com/questions/2717949/when-should-i-use-a-semicolon-after-curly-braces',
   ],
   [
-    'MDN: try...catch',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch',
+    'MDN: Document',
+    'https://developer.mozilla.org/en-US/docs/Web/API/Document',
+  ],
+  ['MDN: Window', 'https://developer.mozilla.org/en-US/docs/Web/API/Window'],
+  ['MDN: Web APIs', 'https://developer.mozilla.org/en-US/docs/Web/API'],
+  [
+    'MDN: Event object',
+    'https://developer.mozilla.org/en-US/docs/Web/API/Event',
   ],
 ];
 
 const bonuses = [
   [
-    'We have a problem with promises ',
-    'https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html',
+    'Read through MDN JavaScript Basics',
+    'https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics',
+  ],
+  [
+    "Start Code Academy's Introduction to JavaScript",
+    'https://www.codecademy.com/learn/introduction-to-javascript',
   ],
 ];
 
 const weekConfig = {
+  firstLessonTitle: 'Intro to JavaScript',
   bonuses,
-  firstLessonTitle: 'Asynchronous programming',
-  homeworkPath: '/week-5/lesson-9#7',
   resources,
-  secondLessonTitle: 'TfL API Lab 🚇 🧪',
+  secondLessonTitle: 'Document Object Model (DOM)',
   weekNumber: 5,
 };
 

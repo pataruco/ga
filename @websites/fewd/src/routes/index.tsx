@@ -13,19 +13,19 @@ import About from '../pages/about';
 
 const LessonsRouteComponents = lessonRoutes.map(
   ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
+    <Route path={path} element={Component} key={key} />
   ),
 );
 
 const WeekRouteComponents = weekRoutes.map(
   ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
+    <Route path={path} element={Component} key={key} />
   ),
 );
 
 const BonusLessonsComponents = bonusLessonRoutes.map(
   ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
+    <Route path={path} element={Component} key={key} />
   ),
 );
 
@@ -35,14 +35,14 @@ const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
 const Router = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path={finalProjectRoute} element={<FinalProject />} />
-      <Route path={bonusLessonsRoute} element={<BonusLessons />} />
+      <Route path="/" element={Home} />
+      <Route path="/about" element={About} />
+      <Route path={finalProjectRoute} element={FinalProject} />
+      <Route path={bonusLessonsRoute} element={BonusLessons} />
       {WeekRouteComponents}
       {BonusLessonsComponents}
       {LessonsRouteComponents}
-      <Route path="/*" element={<ErrorPage />} />
+      <Route path="/*" element={ErrorPage} />
     </Routes>
   </BrowserRouter>
 );

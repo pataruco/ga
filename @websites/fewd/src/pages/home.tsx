@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Footer, Title } from '@shared/components';
-
 import Header from '../components/header';
 import styled from 'styled-components';
 import Page from '../components/page';
+import { Title, Footer } from '@shared/components';
 
 const Weeks = [
-  'Installfest, the command Line & data Types',
-  'Arrays, loops, conditionals & functions',
-  'Objects & JSON, Slack bot lab 🤖 🧪',
-  'The DOM',
-  'Asynchronous programming & TfL API lab 🚇 🧪',
-  'Template and Feedr lab 🧪',
-  'Intro to Firebase and CRUD',
-  'Prototypal inheritance & closures & this',
-  'Deploying your app & student choice',
-  'Final project lab 🧪 & Final project Presentations 🎉',
+  'HTML & CSS Basics',
+  'Box Model, CSS Selectors, Specificity & Floats',
+  'Flexbox & Positioning',
+  'Responsive Web development',
+  'Intro to JavaScript & Document Object Model (DOM)',
+  'Conditional statements, arrays & loops',
+  'CSS animations & JavaScript plugins',
+  `Forms & API Requests and Responses`,
+  'Git, Sass, Accessibility and SVG',
+  'UI libraries & Final Presentations',
 ];
 
 const StyledMain = styled.main`
@@ -29,10 +28,10 @@ const StyledMain = styled.main`
 
 const Home: React.FC = () => (
   <Page>
-    <Title courseName="JSD" title="Home" />
+    <Title courseName="FEWD" title="Home" />
     <Header />
     <StyledMain>
-      <h1>Welcome to JSD London 🇬🇧 </h1>
+      <h1>Welcome to FEWD London 🇬🇧 </h1>
       <nav>
         <ul>
           {Weeks.map((week, i) => (

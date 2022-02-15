@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/header';
-import { Footer, Title } from '@shared/components';
-
 import Page from '../components/page';
+
+import { Title, Footer } from '@shared/components';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -21,7 +21,7 @@ const StyledMain = styled.main`
 
 const Loading: React.FC = () => (
   <Page>
-    <Title courseName="JSD" title="Loading..." />
+    <Title courseName="FEWD" title="Loading..." />
     <Header />
     <StyledMain>
       <h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/header';
-import { Footer } from '@shared/components';
+import { Title, Footer } from '@shared/components';
 import Page from '../components/page';
 
 const StyledMain = styled.main`
@@ -21,158 +21,116 @@ const StyledMain = styled.main`
     background-color: rgba(27, 31, 35, 0.05);
     border-radius: 6px;
   }
-
-  table {
-    margin-top: 1.25rem;
-  }
 `;
 
 const FinalProjectBrief: React.FC = () => (
   <Page>
+    <Title courseName="FEWD" title="Final project brief" />
     <Header />
     <StyledMain>
       <article>
-        <h1>JSD final project brief</h1>
+        <h1>FEWD final project brief</h1>
+        <p>
+          The final project for FEWD will be to design and build a website of
+          your choice. This project will test your knowledge of front-end web
+          development, and it encapsulates everything you’ve learned in this
+          course. The result will be a site that can be used in your portfolio.
+        </p>
+        <p>The objective of this project is to:</p>
+        <ul>
+          <li>To demonstrate understanding of HTML, CSS and JS</li>
+          <li>
+            To apply your knowledge by building a website from the ground up.
+          </li>
+        </ul>
         <section>
-          <h2>Overview</h2>
-          <p>
-            For the final project, you'll be designing and building a web app of
-            your choice.
-          </p>
-          <p>
-            This project will test your knowledge of JavaScript and ask you to
-            apply everything you've learned in this course.
-          </p>
-          <p>
-            The result will be a web app that you can add to your portfolio.
-          </p>
-          <p>
-            You could create anything from: a blog users can comment on; an app
-            that allows users to search for social media posts; or even an
-            application that logs users geolocations.
-          </p>
-          <p>
-            Work with your instructor to create project goals that are realistic
-            given the scope and timing of the class.
-          </p>
-        </section>
-        <section>
-          <h2>Technical Requirements</h2>
-          <p>
-            Use JavaScript to correctly structure the code for a web
-            application:
-          </p>
+          <h2>Core requirements</h2>
+          <h3>Semantic HTML</h3>
           <ul>
+            <li>Demonstrate the process to plan and build your website</li>
             <li>
-              Structure your application to be a SPA (single page application)
+              Use HTML to correctly describe the content and structure of the
+              page
             </li>
-            <li>Make HTTP requests to your own Firebase URL</li>
-            <li>Make at least one HTTP request to a third-party server</li>
-            <li>CRUD functionality should be present</li>
-            <li>Use vanilla JS to perform DOM manipulation</li>
-            <li>Listen for events and add interactivity based on user input</li>
+            <li>
+              Use HTML5 structural elements (<code>header</code>,{' '}
+              <code>footer</code>, <code>main</code>, <code>nav</code>,{' '}
+              <code>section</code>, etc.).
+            </li>
+            <li>Demonstrates correct use of classes and IDs</li>
+            <li>Selects appropriate tags to markup content.</li>
           </ul>
-          <h3>Hosting</h3>
-          <p>App must be hosted on either GitHub Pages</p>
-        </section>
-        <section>
-          <h2>Necessary Deliverables</h2>
+          <h3>Styled with CSS</h3>
+          <ul>
+            <li>Demonstrate apply fonts, color to a page.</li>
+            <li>Demonstrate use of the box model and flexbox.</li>
+            <li>Uses responsive design (optional)</li>
+          </ul>
+          <h3>Interactive</h3>
           <ul>
             <li>
-              A <span className="bold">production ready web application</span>,
-              SPA, hosted live on the web.
-            </li>
-            <li>
-              A{' '}
-              <span className="bold">new git repository hosted on Github</span>,
-              where codebase is maintained
-            </li>
-            <li>
-              A 5-10 minute <span className="bold">presentation</span> including
-              3 technical hurdles, 2 new things you learned, Q&A.
+              Make use of JavaScript events to add interactivity to the page.
             </li>
           </ul>
         </section>
         <section>
-          <h2>Suggested Ways to Get Started</h2>
-          <ul>
+          <h2>Milestones</h2>
+          <ol>
             <li>
-              Think of a problem in the world, or even in your personal life,
-              and apply what you've learned to build an application that can
-              help solve the issue.
+              <span className="bold">Week 06</span>: Project proposal /
+              wireframes
             </li>
             <li>
-              Research different APIs (i.e. twitter) and see what kind of
-              information you can use from them.
+              <span className="bold">Week 08</span>: HTML structure and pseudo
+              code
             </li>
-          </ul>
+            <li>
+              <span className="bold">Week 09</span>: First Draft
+            </li>
+            <li>
+              <span className="bold">Week 10</span>: Presentation!
+            </li>
+          </ol>
         </section>
         <section>
-          <h2>Project Feedback + Evaluation</h2>
-          <ul>
-            <li>
-              <span className="bold">Technical Requirements</span>: Did you
-              deliver a project that met all the technical requirements? Given
-              what the class has covered so far, did you build something that
-              was reasonably complex?
-            </li>
-            <li>
-              <span className="bold">Creativity</span>: Did you added a personal
-              spin or creative element into your project submission?
-            </li>
-            <li>
-              <span className="bold">Code Quality</span>: Did you follow code
-              style guidance and best practices covered in class, such as tab
-              indentation, DRYness, and semantic naming? Did you comment your
-              code?
-            </li>
-            <li>
-              <span className="bold">Problem Solving</span>: Are you able to
-              defend why you implemented your solution in a certain way?
-            </li>
-            <li>
-              <span className="bold">Total</span>: Your instructor will give you
-              a total score on your project between
-              <table>
-                <thead>
-                  <tr>
-                    <th>Score</th>
-                    <th>Expectations</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <span className="bold">0</span>
-                    </td>
-                    <td>
-                      <span className="italic">Does not meet expectations</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className="bold">1</span>
-                    </td>
-                    <td>
-                      <span className="italic">
-                        Meets expectactions, good job
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <span className="bold">2</span>
-                    </td>
-                    <td>
-                      <span className="italic">
-                        Exceeds expectations, you wonderful creature!
-                      </span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </li>
-          </ul>
+          <h2>Deliverables</h2>
+          <p>Project folder with HTML/CSS, JS and all necessary assets.</p>
+        </section>
+        <section>
+          <h2>Scope / Expectations</h2>
+          <p>
+            We suggest starting with a{' '}
+            <span className="italic">single page</span> of a website - eg. the
+            homepage.
+          </p>
+          <p>
+            If you have time and the inclination, do feel free to build out
+            multiple pages and functionality.
+          </p>
+          <p>
+            Following industry best practices of clean and readable code is
+            advised but not essential. The goal is not to write perfect,
+            professional code, it's to build something that you want to build so
+            you have something tangible to show for your new found skills.
+          </p>
+        </section>
+        <section>
+          <h2>Grading</h2>
+          <p>There is no grade or mark, or pass or fail.</p>
+          <p>
+            Use the project as an opportunity to create something that{' '}
+            <span className="bold">YOU</span> want to create. Experiment with
+            what we've learned and have fun!
+          </p>
+        </section>
+        <section>
+          <h2>Time commitment</h2>
+          <p>
+            From week 5 onwards there will be no official homework. Use the out
+            of class time to work on your project. We suggest spending
+            approximately 5 hours per week on your project but commit whatever
+            time you can.
+          </p>
         </section>
       </article>
     </StyledMain>

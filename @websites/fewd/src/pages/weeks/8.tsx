@@ -2,35 +2,57 @@ import Week from '../../components/week';
 
 const resources = [
   [
-    'MDN: for...in',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in',
+    'MDN: Input',
+    'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input',
   ],
   [
-    'MDN: prototype call',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call',
+    'HTML5 Doctor: Input Types',
+    'http://html5doctor.com/html5-forms-input-types/',
+  ],
+  ['Input Types', 'https://robertnyman.com/html5/forms/input-types.html'],
+  [
+    'MDN: Textarea',
+    'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea',
   ],
   [
-    'MDN: Inheritance in JavaScript',
-    'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance',
+    'CSS Tricks: Creating great web forms',
+    'https://css-tricks.com/tips-for-creating-great-web-forms/',
   ],
   [
-    'MDN: Inheritance and the prototype chain',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain',
+    'MDN: Sending form data',
+    'https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data',
   ],
   [
-    'MDN: Closures',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures',
+    'HTML Goodies: So you want to build a form?',
+    'http://www.htmlgoodies.com/tutorials/forms/article.php/3479121',
+  ],
+];
+
+const bonuses = [
+  ['Try a challenge on Frontend Mentor', 'https://www.frontendmentor.io'],
+  [
+    "Read Shay Howe's Building Forms",
+    'http://learn.shayhowe.com/html-css/building-forms/',
   ],
   [
-    'MDN: this',
-    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this',
+    "Read MDN's Your First HTML Form article",
+    'https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form',
+  ],
+  [
+    'Read through Writing your best code',
+    'http://learn.shayhowe.com/html-css/writing-your-best-code/',
+  ],
+  [
+    "Complete Code Academy's  Make a website course",
+    'https://www.codecademy.com/learn/make-a-website',
   ],
 ];
 
 const weekConfig = {
-  firstLessonTitle: 'Prototypal Inheritance',
+  bonuses,
+  firstLessonTitle: 'Forms',
   resources,
-  secondLessonTitle: 'Closures & this',
+  secondLessonTitle: 'API Requests and Responses',
   weekNumber: 8,
 };
 

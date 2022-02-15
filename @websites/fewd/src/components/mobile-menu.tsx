@@ -92,7 +92,7 @@ const CloseLink: React.FC<{ to: string; children: React.ReactNode }> = ({
 
 const Weeks: React.FC = () => (
   <ul>
-    {weeksIterator.map((week, i) => (
+    {weeksIterator.map((week: string, i) => (
       <li key={i}>
         <CloseLink to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
           <span>
