@@ -132,10 +132,9 @@ export const Weeks: React.FC = () => {
 };
 
 export const bonusLessons = [
-  ['Installfest macOS', '/bonus-lessons/installfest-macos'],
-  ['Installfest Windows', '/bonus-lessons/installfest-windows'],
-  ['jQuery', '/bonus-lessons/jquery'],
-  ['React', '/bonus-lessons/react'],
+  ['CSS grids', '/bonus-lessons/grids'],
+  ['HTML tables', '/bonus-lessons/tables'],
+  ['JavaScript history', '/bonus-lessons/javascript-history'],
 ];
 
 const BonusLessons: React.FC = () => {
