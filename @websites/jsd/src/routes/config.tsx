@@ -3,9 +3,9 @@ import { SlidesDeck, Title } from '@shared/components';
 import Loading from '../pages/loading';
 
 import { jsd } from '@shared/lessons';
-import type { Lesson } from '@shared/lessons';
+import type { JSDLesson } from '@shared/lessons';
 
-const getLessonPath = (lessonName: Lesson) => jsd[lessonName].default;
+const getLessonPath = (lessonName: JSDLesson) => jsd[lessonName].default;
 
 // Lessons
 // Path: week-n/lesson-n
