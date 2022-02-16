@@ -1,0 +1,99 @@
+@font-face {
+  font-family: Circular;
+  font-weight: 400;
+  font-style: normal;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-book.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-book.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-book.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-book.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 400;
+  font-style: italic;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bookitalic.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bookitalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bookitalic.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bookitalic.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 800;
+  font-style: normal;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-black.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-black.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-black.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-black.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 800;
+  font-style: italic;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-blackitalic.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-blackitalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-blackitalic.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-blackitalic.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 700;
+  font-style: normal;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bold.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bold.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bold.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 700;
+  font-style: italic;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bolditalic.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bolditalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bolditalic.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-bolditalic.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 500;
+  font-style: normal;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-medium.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-medium.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-medium.ttf')
+      format('truetype');
+}
+@font-face {
+  font-family: Circular;
+  font-weight: 500;
+  font-style: italic;
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-mediumitalic.eot');
+  src: url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-mediumitalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-mediumitalic.woff')
+      format('woff'),
+    url('//ga-static-assets-s3.global.ssl.fastly.net/fonts/circular/lineto-circular-mediumitalic.ttf')
+      format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700|Source+Sans+Pro:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
