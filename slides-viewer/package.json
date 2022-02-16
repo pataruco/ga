@@ -1,0 +1,25 @@
+{
+  "name": "slides-viewer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@shared/lessons": "^0.0.0",
+    "@shared/styles": "^0.0.0",
+    "@types/inquirer": "^8.2.0",
+    "@types/inquirer-fuzzy-path": "^2.3.3",
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "inquirer": "^8.2.0",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.6.0",
+    "svg-url-loader": "^7.1.1",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.69.0"
+  },
+  "scripts": {
+    "present": "yarn ts-node ./src/index.ts"
+  }
+}
