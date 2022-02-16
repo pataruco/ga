@@ -1,7 +1,6 @@
 // import 'https://remarkjs.com/downloads/remark-latest.min.js';
 import 'normalize.css';
-import '../styles/index.css';
-import hackStyles from './hack-styles';
+import '@shared/styles/dist/slides';
 
 import { fewd } from '@shared/lessons';
 import type { FEWDLesson } from '@shared/lessons';
@@ -45,8 +44,7 @@ const getSlidePath = async () => {
     slideSettings.sourceUrl = getLessonPath('01-html-basics');
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
-    const slideshow = remark.create(slideSettings);
-    hackStyles(slideshow);
+    remark.create(slideSettings);
   }
 };
 

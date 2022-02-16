@@ -13,6 +13,8 @@
     "inquirer-fuzzy-path": "^2.3.0",
     "mini-css-extract-plugin": "^2.5.3",
     "normalize.css": "^8.0.1",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.6.0",
     "svg-url-loader": "^7.1.1",
     "ts-loader": "^9.2.6",
     "webpack": "^5.69.0"
