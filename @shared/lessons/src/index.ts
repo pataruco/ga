@@ -17,7 +17,12 @@ export type JSDLesson = keyof JSDCourse;
 export type FEWDCourse = typeof fewd;
 export type FEWDLesson = keyof FEWDCourse;
 
-export type SEIESCourse = typeof unit1 | typeof unit2 | typeof unit4;
-export type SEIESLesson = keyof SEIESCourse;
+export interface SEIES {
+  unit1: typeof unit1;
+  unit2: typeof unit2;
+  unit4: typeof unit4;
+}
+export type SEIESUnit = keyof SEIES;
+export type SEIESLesson = keyof SEIESUnit;
 
 export { fewd, jsd, seiEs };

@@ -14,7 +14,7 @@
   "description": "Monorepo for all my lessons for General Assembly",
   "license": "MIT",
   "lint-staged": {
-    "*.{js,json,yml,md}": [
+    "*.{js,json,yml,md,css,scss}": [
       "yarn prettier --write"
     ],
     "*.{ts,tsx}": [

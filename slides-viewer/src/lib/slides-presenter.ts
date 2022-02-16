@@ -1,11 +1,7 @@
-// import 'https://remarkjs.com/downloads/remark-latest.min.js';
 import 'normalize.css';
 import '@shared/styles/dist/slides';
 
-import { fewd } from '@shared/lessons';
-import type { FEWDLesson } from '@shared/lessons';
-
-const getLessonPath = (lessonName: FEWDLesson) => fewd[lessonName].default;
+import { getLessonPath } from './get-lesson-path';
 
 interface SlideSettings {
   count: boolean;
@@ -37,15 +33,15 @@ const slideSettings: SlideSettings = {
   slideNumberFormat: '',
 };
 
-const getSlidePath = async () => {
+const main = async () => {
   const response = await fetch(document.location.href);
   const slidePath = response.headers.get('X-SLIDES_PATH');
   if (slidePath) {
-    slideSettings.sourceUrl = getLessonPath('01-html-basics');
+    slideSettings.sourceUrl = getLessonPath(slidePath) as string;
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     remark.create(slideSettings);
   }
 };
 
-getSlidePath().then();
+main();
