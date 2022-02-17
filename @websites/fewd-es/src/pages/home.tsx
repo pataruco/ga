@@ -1,23 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { memo } from 'react';
 import { Footer, Title } from '@shared/components';
 
 import Header from '../components/header';
 import styled from 'styled-components';
 import Page from '../components/page';
-
-const Weeks = [
-  'Installfest, the command Line & data Types',
-  'Arrays, loops, conditionals & functions',
-  'Objects & JSON, Slack bot lab 🤖 🧪',
-  'The DOM',
-  'Asynchronous programming & TfL API lab 🚇 🧪',
-  'Template and Feedr lab 🧪',
-  'Intro to Firebase and CRUD',
-  'Prototypal inheritance & closures & this',
-  'Deploying your app & student choice',
-  'Final project lab 🧪 & Final project Presentations 🎉',
-];
+import ResourcesPerWeekTableRow from '../components/resources-per-week-table-row';
+import { routesByWeek } from '../routes/config';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -27,27 +15,31 @@ const StyledMain = styled.main`
   }
 `;
 
+const tableHeaders = ['Semana', 'Lección', 'Lección', 'Taller', 'Tarea'];
+
+const TableHeaders = tableHeaders.map((header, i) => (
+  <th key={`${header}` + i}>{header}</th>
+));
+
 const Home: React.FC = () => (
   <Page>
-    <Title courseName="JSD" title="Home" />
+    <Title courseName="FEWD ES" title="Home" />
     <Header />
     <StyledMain>
-      <h1>Welcome to JSD London 🇬🇧 </h1>
-      <nav>
-        <ul>
-          {Weeks.map((week, i) => (
-            <li key={i}>
-              Week {i + 1}:{' '}
-              <Link key={i} to={`week-${i + 1}`}>
-                {week}
-              </Link>
-            </li>
+      <h1>FEWD en español </h1>
+      <table>
+        <thead>
+          <tr>{TableHeaders}</tr>
+        </thead>
+        <tbody>
+          {routesByWeek.map((routeByWeek, i) => (
+            <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
           ))}
-        </ul>
-      </nav>
+        </tbody>
+      </table>
     </StyledMain>
     <Footer />
   </Page>
 );
 
-export default Home;
+export default memo(Home);

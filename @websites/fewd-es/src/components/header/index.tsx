@@ -104,7 +104,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const weeksIterator = weeks.fill('Week');
+export const weeksIterator = weeks.fill('Semana');
 
 export const Weeks: React.FC = () => {
   const { weekIsOpen } = useSelector(selectNavigationMenu);
@@ -199,10 +199,10 @@ const Header: React.FC = () => {
       <nav onMouseLeave={close}>
         <ul>
           <li>
-            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
+            <button onMouseEnter={handleWeeksOnMouseEnter}>Semanas</button>
             <Weeks />
           </li>
-          <li>
+          {/* <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
               Bonus lessons
             </button>
@@ -213,7 +213,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <button onClick={handleOnOpenMobileMenuClick}>Menu</button>

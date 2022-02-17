@@ -21,11 +21,11 @@ const StyledMain = styled.main`
 
 const Loading: React.FC = () => (
   <Page>
-    <Title courseName="JSD" title="Loading..." />
+    <Title courseName="JSD" title="Cargando..." />
     <Header />
     <StyledMain>
       <h1>
-        Loading{' '}
+        Cargando ...{' '}
         <span role="img" aria-labelledby="sandwatch">
           ⌛️
         </span>

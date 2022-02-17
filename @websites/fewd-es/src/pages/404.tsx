@@ -10,10 +10,10 @@ const StyledMain = styled.main`
 
 const ErrorPage: React.FC = () => (
   <Page>
-    <Title courseName="JSD" title="404" />
+    <Title courseName="FEWD ES" title="404" />
     <Header />
     <StyledMain>
-      <h1>Page not found &#128542;</h1>
+      <h1>404 Página no encontrada &#128542;</h1>
     </StyledMain>
     <Footer />
   </Page>

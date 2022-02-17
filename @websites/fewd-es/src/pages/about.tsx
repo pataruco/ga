@@ -39,7 +39,7 @@ const About: React.FC = () => (
     <Title courseName="FEWD ES" title="About" />
     <Header />
     <StyledMain>
-      <h1>About me</h1>
+      <h1 lang="en">About me</h1>
       <p>¡Me encanta enseñar!</p>
 
       <p>
@@ -83,7 +83,10 @@ const About: React.FC = () => (
       <p>
         El contenido de las diapositivas es mi adaptación del plan de estudios
         oficial de{' '}
-        <abbr title="Desarrollo de front end por sus siglas en inglés">
+        <abbr
+          title="Desarrollo de front end por sus siglas en inglés"
+          lang="en"
+        >
           FEWD
         </abbr>
         , sazonado con un poquito de{' '}
@@ -92,6 +95,7 @@ const About: React.FC = () => (
           target="_blank"
           rel="noreferrer"
           className="external-link"
+          lang="en"
         >
           React.
         </a>{' '}

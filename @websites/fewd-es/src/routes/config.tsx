@@ -7,6 +7,8 @@ import type { JSDLesson } from '@shared/lessons';
 
 const getLessonPath = (lessonName: JSDLesson) => jsd[lessonName].default;
 
+const COURSE_NAME = 'FEWD ES';
+
 // Lessons
 // Path: week-n/lesson-n
 export const lessonRoutes = [
@@ -305,3 +307,57 @@ export const BonusLessonsRoute = {
     );
   },
 };
+
+interface LessonRoute {
+  name: string;
+  path: string;
+  element: () => JSX.Element;
+}
+
+export interface RoutesByWeek {
+  weekNumber: number;
+  lesson1: LessonRoute;
+  lesson2: LessonRoute;
+  workshops?: {
+    name: string;
+    path: string;
+  };
+  homework?: {
+    name: string;
+    path: string;
+  };
+}
+
+export const routesByWeek: RoutesByWeek[] = [
+  {
+    weekNumber: 1,
+    lesson1: {
+      name: 'Bienvenida e Intro a HTML',
+      path: '/week-1/lesson-1',
+      element: () => (
+        <>
+          <Title courseName={COURSE_NAME} week={1} lesson={1} />
+          <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
+        </>
+      ),
+    },
+    lesson2: {
+      name: 'HTML avanzado e Into a CSS',
+      path: '/week-1/lesson-2',
+      element: () => (
+        <>
+          <Title courseName={COURSE_NAME} week={1} lesson={1} />
+          <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
+        </>
+      ),
+    },
+    workshops: {
+      name: 'Receta de galletas',
+      path: '',
+    },
+    homework: {
+      name: 'Curriculum vitae',
+      path: '',
+    },
+  },
+];
