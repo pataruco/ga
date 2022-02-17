@@ -11,7 +11,7 @@ import {
   openMobileMenu,
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
-import { weeks } from '../../routes/config';
+import { routesByWeek } from '../../routes/config';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -104,8 +104,6 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const weeksIterator = weeks.fill('Semana');
-
 export const Weeks: React.FC = () => {
   const { weekIsOpen } = useSelector(selectNavigationMenu);
   const dispatch = useDispatch();
@@ -118,12 +116,10 @@ export const Weeks: React.FC = () => {
 
   return (
     <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {weeksIterator.map((week, i) => (
+      {routesByWeek.map(({ weekNumber }, i) => (
         <li key={i}>
-          <Link to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
-            <span onClick={close}>
-              {week} {i + 1}
-            </span>
+          <Link to={`/week-${weekNumber}}`} key={i}>
+            <span onClick={close}>Semana {i + 1}</span>
           </Link>
         </li>
       ))}

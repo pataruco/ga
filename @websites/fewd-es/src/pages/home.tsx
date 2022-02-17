@@ -13,6 +13,19 @@ const StyledMain = styled.main`
   li {
     margin-bottom: 0.5rem;
   }
+
+  table tbody {
+    tr {
+      &:nth-of-type(even):hover {
+        background-color: var(--inline-code-grey);
+      }
+
+      & td:first-of-type {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
 `;
 
 const tableHeaders = ['Semana', 'Lección', 'Lección', 'Taller', 'Tarea'];
@@ -32,6 +45,9 @@ const Home: React.FC = () => (
           <tr>{TableHeaders}</tr>
         </thead>
         <tbody>
+          {routesByWeek.map((routeByWeek, i) => (
+            <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
+          ))}
           {routesByWeek.map((routeByWeek, i) => (
             <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
           ))}

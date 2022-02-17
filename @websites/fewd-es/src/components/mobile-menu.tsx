@@ -6,7 +6,8 @@ import {
   selectNavigationMenu,
   closeMobileMenu,
 } from '../redux/navigation-menu';
-import { weeksIterator, bonusLessons } from './header';
+import { bonusLessons } from './header';
+import { routesByWeek } from '../routes/config';
 
 const width = '250px';
 
@@ -92,12 +93,10 @@ const CloseLink: React.FC<{ to: string; children: React.ReactNode }> = ({
 
 const Weeks: React.FC = () => (
   <ul>
-    {weeksIterator.map((week, i) => (
+    {routesByWeek.map(({ weekNumber }, i) => (
       <li key={i}>
-        <CloseLink to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
-          <span>
-            {week} {i + 1}
-          </span>
+        <CloseLink to={`week-${weekNumber}`} key={i}>
+          <span>Semana {i + 1}</span>
         </CloseLink>
       </li>
     ))}
