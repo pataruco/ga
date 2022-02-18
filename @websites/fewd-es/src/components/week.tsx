@@ -39,22 +39,22 @@ const Note: React.FC = () => (
   <footer className="notes">
     <p>
       <small>
-        <strong>Note</strong>: Follow this instructions to navigate lesson
-        slides
+        <strong>Nota</strong>: Sigue las siguientes instrucctiones para navegar
+        las diapositivas
       </small>
     </p>
 
     <ul>
       <li>
         <small>
-          Use <kbd>&#8595;</kbd>, <kbd>&#8594;</kbd>, <kbd>PgDn</kbd>,
-          <kbd>Spacebar</kbd>, <kbd>J</kbd> to go next slide.
+          Usa <kbd>&#8595;</kbd>, <kbd>&#8594;</kbd>, <kbd>PgDn</kbd>,
+          <kbd>Espacio</kbd>, <kbd>J</kbd> para ir a la diapositiva siguiente.
         </small>
       </li>
       <li>
         <small>
-          Use <kbd>&#8593;</kbd>, <kbd>&#8592;</kbd>, <kbd>PgUp</kbd>,{' '}
-          <kbd>K</kbd> to go to previous slide.
+          Usa <kbd>&#8593;</kbd>, <kbd>&#8592;</kbd>, <kbd>PgUp</kbd>,{' '}
+          <kbd>K</kbd> para ir a la diapositiva anterior.
         </small>
       </li>
     </ul>
@@ -77,19 +77,19 @@ const Week: React.FC<WeekProps> = ({
 
   return (
     <WeekPage>
-      <h1>Week {weekNumber}</h1>
+      <h1>Semana {weekNumber}</h1>
 
       <details>
         <summary>
-          <h2>Lessons</h2>
+          <h2>Lecciones</h2>
         </summary>
         <ul>
           <li>
-            Lesson {firstLesson}:{' '}
+            Lección {firstLesson}:{' '}
             <Link to={firstLessonPath}>{firstLessonTitle}</Link>
           </li>
           <li>
-            Lesson {secondLesson}:{' '}
+            Lección {secondLesson}:{' '}
             <Link to={secondLessonPath}>{secondLessonTitle}</Link>
           </li>
         </ul>
@@ -99,7 +99,7 @@ const Week: React.FC<WeekProps> = ({
       {resources ? (
         <details>
           <summary>
-            <h2>Useful resources</h2>
+            <h2>Recursos útiles</h2>
           </summary>
           <ListOfDetails details={resources} />
         </details>
@@ -108,7 +108,7 @@ const Week: React.FC<WeekProps> = ({
       {bonuses ? (
         <details>
           <summary>
-            <h2>Bonus materials</h2>
+            <h2>Materiales extras</h2>
           </summary>
           <ListOfDetails details={bonuses} />
         </details>
@@ -116,7 +116,7 @@ const Week: React.FC<WeekProps> = ({
 
       {homeworkPath ? (
         <p className="homework">
-          <Link to={homeworkPath}>Homework</Link>
+          <Link to={homeworkPath}>Tarea(s)</Link>
         </p>
       ) : null}
     </WeekPage>

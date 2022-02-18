@@ -2,8 +2,6 @@ import React from 'react';
 import type { RoutesByWeek } from '../routes/config';
 import { Link } from 'react-router-dom';
 
-// TODO: change empty cell for a tooltip
-
 const ResourcesPerWeekTableRow: React.FC<RoutesByWeek> = ({
   weekNumber,
   lesson1: { name: name1, path: path1 },

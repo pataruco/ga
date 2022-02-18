@@ -88,7 +88,7 @@ export const routesByWeek: RoutesByWeek[] = [
       ),
     },
     workshops: {
-      name: 'Receta de galletas',
+      name: 'Installfest',
       path: '',
     },
     homework: {

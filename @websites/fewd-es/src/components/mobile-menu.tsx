@@ -132,19 +132,19 @@ const MobileMenu: React.FC = () => {
       <ul>
         <li>
           <details>
-            <summary>Weeks</summary>
+            <summary>Semanas</summary>
             <Weeks />
           </details>
         </li>
-        <li>
+        {/* <li>
           <details>
-            <summary>Bonus Lessons</summary>
+            <summary>Lecciones extras</summary>
             <BonusLessons />
           </details>
         </li>
         <li>
-          <CloseLink to="/final-project-brief">Final Project</CloseLink>
-        </li>
+          <CloseLink to="/final-project-brief">Proyecto final</CloseLink>
+        </li> */}
         <li>
           <CloseLink to="/about">About</CloseLink>
         </li>
