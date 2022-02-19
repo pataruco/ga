@@ -1,8 +1,6 @@
 import 'normalize.css';
 import '@shared/styles/dist/slides';
 
-import { getLessonPath } from './get-lesson-path';
-
 interface SlideSettings {
   count: boolean;
   highlightLines?: boolean;
@@ -37,13 +35,7 @@ const main = async () => {
   const response = await fetch(document.location.href);
   const slidePath = response.headers.get('X-SLIDES_PATH');
   if (slidePath) {
-    console.log({ slidePath });
-
-    // TODO: cleanup
-    // We can serve lessons using serve
-
     const path = slidePath.split('/src').pop();
-    // slideSettings.sourceUrl = getLessonPath(slidePath) as string;
     slideSettings.sourceUrl = `http://localhost:3000/src/${path}`;
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
@@ -51,4 +43,6 @@ const main = async () => {
   }
 };
 
-main();
+main()
+  .then()
+  .catch((error) => console.error(error));
