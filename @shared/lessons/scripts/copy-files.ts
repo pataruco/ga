@@ -1,7 +1,7 @@
 import { extname, resolve } from 'path';
 import { readdir, cp } from 'fs/promises';
 
-// inspired from https://stackoverflow.com/a/45130990/4842303
+// inspired by https://stackoverflow.com/a/45130990/4842303
 export async function* getFilePaths(dir: string): AsyncGenerator<string> {
   const dirents = await readdir(dir, { withFileTypes: true });
   for (const dirent of dirents) {

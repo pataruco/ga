@@ -6,7 +6,6 @@
   "homepage": "https://github.com/pataruco/ga#readme",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^7.0.0",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   },
@@ -16,10 +15,7 @@
     "postinstall": "yarn build",
     "prebuild": "yarn destroy-build",
     "prestart": "yarn destroy-build",
-    "destroy-build": "rm -rf ./dist",
-    "start": "concurrently --kill-others \"yarn watch:compile\" \"yarn watch:copy-files\"",
-    "watch:compile": "yarn tsc --watch --outDir dist",
-    "watch:copy-files": "yarn ts-node ./scripts/copy-watched-files.ts"
+    "destroy-build": "rm -rf ./dist"
   },
   "main": "./dist/index.js",
   "files": [
