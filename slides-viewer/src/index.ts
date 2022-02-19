@@ -18,7 +18,7 @@ const start = async () => {
       itemType: 'file',
       message: 'Select a slide:',
       name: 'source',
-      rootPath: '../node_modules/@shared/lessons/dist',
+      rootPath: '../node_modules/@shared/lessons/src',
       type: 'fuzzypath',
     },
   ]);
