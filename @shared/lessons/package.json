@@ -13,7 +13,9 @@
     "build": "yarn tsc  --outDir dist",
     "postbuild": "yarn ts-node ./scripts/copy-files.ts",
     "postinstall": "yarn build",
-    "prebuild": "rm -rf ./dist"
+    "prebuild": "rm -rf ./dist",
+    "prestart": "rm -rf ./dist",
+    "start": "yarn tsc --watch --outDir dist"
   },
   "main": "./dist/index.js",
   "files": [

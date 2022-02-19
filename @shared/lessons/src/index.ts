@@ -3,6 +3,7 @@ import { jsd } from './jsd';
 import { unit1 } from './sei-es/unit-1';
 import { unit2 } from './sei-es/unit-2';
 import { unit4 } from './sei-es/unit-4';
+import { fewdEs } from './fewd-es';
 
 const seiEs = {
   unit1,
@@ -25,4 +26,7 @@ export interface SEIES {
 export type SEIESUnit = keyof SEIES;
 export type SEIESLesson = keyof SEIESUnit;
 
-export { fewd, jsd, seiEs };
+export type FEWDESCourse = typeof fewdEs;
+export type FEWDESLesson = keyof FEWDCourse;
+
+export { fewd, jsd, seiEs, fewdEs };
