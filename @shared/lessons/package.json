@@ -14,9 +14,12 @@
     "build": "yarn tsc  --outDir dist",
     "postbuild": "yarn ts-node ./scripts/copy-files.ts",
     "postinstall": "yarn build",
-    "prebuild": "rm -rf ./dist",
-    "prestart": "rm -rf ./dist",
-    "start": "concurrently --kill-others \"yarn tsc --watch --outDir dist\" \"yarn ts-node ./scripts/copy-watched-files.ts\""
+    "prebuild": "yarn destroy-build",
+    "prestart": "yarn destroy-build",
+    "destroy-build": "rm -rf ./dist",
+    "start": "concurrently --kill-others \"yarn watch:compile\" \"yarn watch:copy-files\"",
+    "watch:compile": "yarn tsc --watch --outDir dist",
+    "watch:copy-files": "yarn ts-node ./scripts/copy-watched-files.ts"
   },
   "main": "./dist/index.js",
   "files": [
