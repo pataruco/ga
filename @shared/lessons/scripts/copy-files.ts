@@ -1,6 +1,5 @@
-import { extname } from 'path';
+import { extname, resolve } from 'path';
 import { readdir, cp } from 'fs/promises';
-import { resolve } from 'path';
 
 // inspired from https://stackoverflow.com/a/45130990/4842303
 export async function* getFilePaths(dir: string): AsyncGenerator<string> {

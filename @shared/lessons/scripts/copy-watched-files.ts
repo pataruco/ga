@@ -1,18 +1,19 @@
 import { watch, cp } from 'fs/promises';
-import { extname } from 'path';
+import { extname, resolve } from 'path';
 
 const ac = new AbortController();
 const { signal } = ac;
-// setTimeout(() => ac.abort(), 10000);
+const DIST_FOLDER = './dist';
+const SRC_FOLDER = './src';
 
 const isMd = (file: string) => extname(file) === '.md';
 const isChange = (eventType: string) => eventType === 'change';
-const toDistFolder = (filename: string) => `./dist/${filename}`;
-const fromSrcFolder = (filename: string) => `./src/${filename}`;
+const toDistFolder = (filename: string) => resolve(DIST_FOLDER, filename);
+const fromSrcFolder = (filename: string) => resolve(SRC_FOLDER, filename);
 
 const watchMarkdownFiles = async () => {
   try {
-    const watcher = watch('./src', { recursive: true, signal });
+    const watcher = watch(SRC_FOLDER, { recursive: true, signal });
 
     for await (const { eventType, filename } of watcher) {
       if (isChange(eventType) && isMd(filename)) {
@@ -24,7 +25,6 @@ const watchMarkdownFiles = async () => {
       }
     }
   } catch (error) {
-    console.error(error);
     ac.abort();
     throw error;
   }
