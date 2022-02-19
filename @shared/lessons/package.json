@@ -6,6 +6,7 @@
   "homepage": "https://github.com/pataruco/ga#readme",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   },
@@ -15,7 +16,7 @@
     "postinstall": "yarn build",
     "prebuild": "rm -rf ./dist",
     "prestart": "rm -rf ./dist",
-    "start": "yarn tsc --watch --outDir dist"
+    "start": "concurrently --kill-others \"yarn tsc --watch --outDir dist\" \"yarn ts-node ./scripts/copy-watched-files.ts\""
   },
   "main": "./dist/index.js",
   "files": [
