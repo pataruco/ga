@@ -1,16 +1,30 @@
 import inquirer from 'inquirer';
 import webpack from 'webpack';
 import webpackDevServer from 'webpack-dev-server';
-import webpackConfig from '../config/webpack.config.dev';
+import webpackConfig from './config/webpack.config.dev';
 import inquirerFuzzyPath from 'inquirer-fuzzy-path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 inquirer.registerPrompt('fuzzypath', inquirerFuzzyPath);
 
-// Exclude readme files
-const excludePath = (nodePath: string) => nodePath.includes('readme.md');
+const tsAndJsFiles = /\.[tj]s$/i;
 
-const start = async () => {
+// Exclude readme files
+const excludePath = (nodePath: string) =>
+  nodePath.includes('readme.md') || nodePath.match(tsAndJsFiles);
+
+const plugins = webpackConfig.plugins?.concat(
+  new HtmlWebpackPlugin({
+    template: './slides-viewer/template.html',
+  }),
+);
+
+const config: webpack.Configuration = {
+  ...webpackConfig,
+  plugins,
+};
+
+const main = async () => {
   // Get Source
   const prompt = await inquirer.prompt([
     {
@@ -18,36 +32,27 @@ const start = async () => {
       itemType: 'file',
       message: 'Select a slide:',
       name: 'source',
-      rootPath: '../node_modules/@shared/lessons/src',
+      rootPath: './src',
       type: 'fuzzypath',
     },
   ]);
 
   const { source } = prompt;
 
-  const plugins = webpackConfig.plugins?.concat(
-    new HtmlWebpackPlugin({
-      template: './src/template.html',
-    }),
-  );
-
   // Running webpack server
-  const config: webpack.Configuration = {
-    ...webpackConfig,
-    plugins,
-  };
   const compiler = webpack(config);
+
   const server = new webpackDevServer(compiler, {
     headers: {
       'X-SLIDES_PATH': source,
     },
     open: true,
+    port: 0,
   });
 
-  // port 0 enable to pick a random number
-  server.listen(0, 'localhost', (error) => console.error(error));
+  await server.start();
 };
 
-if (module.children) {
-  start().then();
-}
+main()
+  .then()
+  .catch((error) => console.error(error));

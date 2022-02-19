@@ -2,7 +2,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import webpack from 'webpack';
 
-const sourceIndex = path.resolve(__dirname, '../src/lib/slides-presenter.ts');
+const sourceIndex = path.resolve(__dirname, '../lib/slides-presenter.ts');
 
 const config: webpack.Configuration = {
   mode: 'development',
@@ -54,7 +54,7 @@ const config: webpack.Configuration = {
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../public'),
   },
   externalsType: 'commonjs',
 };

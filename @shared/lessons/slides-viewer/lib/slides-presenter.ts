@@ -31,12 +31,16 @@ const slideSettings: SlideSettings = {
   slideNumberFormat: '',
 };
 
+const getSourceUrl = (slidePath: string) => {
+  const path = slidePath.split('/src').pop();
+  return `http://localhost:8000/${path}`;
+};
+
 const main = async () => {
   const response = await fetch(document.location.href);
   const slidePath = response.headers.get('X-SLIDES_PATH');
   if (slidePath) {
-    const path = slidePath.split('/src').pop();
-    slideSettings.sourceUrl = `http://localhost:3000/src/${path}`;
+    slideSettings.sourceUrl = getSourceUrl(slidePath);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     remark.create(slideSettings);

@@ -31,7 +31,6 @@
   "version": "1.0.0",
   "workspaces": [
     "@websites/**",
-    "@shared/**",
-    "slides-viewer"
+    "@shared/**"
   ]
 }
