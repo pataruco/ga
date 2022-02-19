@@ -1,9 +1,10 @@
-import { fewd, seiEs, jsd } from '@shared/lessons';
-import type { FEWDLesson, JSDLesson } from '@shared/lessons';
+import { fewd, seiEs, jsd, fewdEs } from '@shared/lessons';
+import type { FEWDLesson, JSDLesson, FEWDESLesson } from '@shared/lessons';
 
 const isFewd = (slidePath: string) => slidePath.includes('/fewd/');
 const isJsd = (slidePath: string) => slidePath.includes('/jsd/');
 const isSeiEs = (slidePath: string) => slidePath.includes('/sei-es/');
+const isFewdEs = (slidePath: string) => slidePath.includes('/fewd-es/');
 
 const lessonName = (slidePath: string) =>
   slidePath.split('/').pop()?.replace('.md', '');
@@ -34,6 +35,9 @@ export const getLessonPath = (slidePath: string): unknown => {
       break;
     case isJsd(slidePath):
       path = jsd[lessonName(slidePath) as JSDLesson].default;
+      break;
+    case isFewdEs(slidePath):
+      path = fewdEs[lessonName(slidePath) as FEWDESLesson].default;
       break;
   }
 

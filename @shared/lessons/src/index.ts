@@ -27,6 +27,6 @@ export type SEIESUnit = keyof SEIES;
 export type SEIESLesson = keyof SEIESUnit;
 
 export type FEWDESCourse = typeof fewdEs;
-export type FEWDESLesson = keyof FEWDCourse;
+export type FEWDESLesson = keyof FEWDESCourse;
 
 export { fewd, jsd, seiEs, fewdEs };
