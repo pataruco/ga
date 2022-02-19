@@ -37,7 +37,14 @@ const main = async () => {
   const response = await fetch(document.location.href);
   const slidePath = response.headers.get('X-SLIDES_PATH');
   if (slidePath) {
-    slideSettings.sourceUrl = getLessonPath(slidePath) as string;
+    console.log({ slidePath });
+
+    // TODO: cleanup
+    // We can serve lessons using serve
+
+    const path = slidePath.split('/src').pop();
+    // slideSettings.sourceUrl = getLessonPath(slidePath) as string;
+    slideSettings.sourceUrl = `http://localhost:3000/src/${path}`;
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     remark.create(slideSettings);
