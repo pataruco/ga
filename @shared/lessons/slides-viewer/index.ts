@@ -7,8 +7,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 inquirer.registerPrompt('fuzzypath', inquirerFuzzyPath);
 
+const tsAndJsFiles = /\.[tj]s$/i;
+
 // Exclude readme files
-const excludePath = (nodePath: string) => nodePath.includes('readme.md');
+const excludePath = (nodePath: string) =>
+  nodePath.includes('readme.md') || nodePath.match(tsAndJsFiles);
 
 const plugins = webpackConfig.plugins?.concat(
   new HtmlWebpackPlugin({
