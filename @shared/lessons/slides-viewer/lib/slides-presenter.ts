@@ -1,4 +1,5 @@
 import 'normalize.css';
+import '@shared/styles/dist/site';
 import '@shared/styles/dist/slides';
 
 interface SlideSettings {
