@@ -2,7 +2,7 @@ name: Deploy JSD
 on:
   push:
     tags:
-      - 'JSD.*'
+      - 'JSD*'
 jobs:
   build-and-deploy-website:
     runs-on: ubuntu-latest
