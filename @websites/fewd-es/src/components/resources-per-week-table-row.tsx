@@ -1,5 +1,5 @@
 import React from 'react';
-import type { RoutesByWeek } from '../routes/config';
+import type { RoutesByWeek } from '../@types/routes';
 import { Link } from 'react-router-dom';
 
 const ResourcesPerWeekTableRow: React.FC<RoutesByWeek> = ({
