@@ -219,8 +219,7 @@ Una semana normal
 ## Cosas administrativas
 
 - Los estudiantes deben tratar a todos los miembros del personal y otros estudiantes con respeto y dignidad.
-- Si un estudiante es disruptivo con a la comunidad, se le puede pedirá que se retire
-
+- Si un estudiante es disruptivo con a la comunidad, se le pedirá que se retire.
 - Asegúrate de haber leído y formado el Código de conducta para estudiantes y <a href="https://fundacionadecco.org/wp-content/uploads/2021/12/bases-becas-fundacion-adecco-ga-2022.pdf" class="external-link">las bases de la convocatoria de la beca</a>
 
   - Se admitirá un máximo de 3 faltas debidamente justificadas. Superada las 3 faltas se considera falta de aprovechamiento del curso y se anulará la inscripción.
@@ -264,5 +263,5 @@ class: frontpage
 <div>
   <h2>Front-End Web Development</h2>
   <hr/>
-  <h1>End of presentation</h1>
+  <h1>Final de la presentación</h1>
 </div>

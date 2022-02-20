@@ -32,10 +32,6 @@ const StyledHeader = styled.header`
     list-style: none;
   }
 
-  nav {
-    min-width: 25%;
-  }
-
   nav > ul {
     display: flex;
     position: relative;
