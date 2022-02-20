@@ -5,6 +5,8 @@ import Loading from '../../pages/loading';
 import { RoutesByWeek } from '../../@types/routes';
 
 import { week1Route } from './weeks/1';
+import { COURSE_NAME } from '../../lib/get-lesson-path';
+import { Route } from 'react-router-dom';
 
 // Final project
 // Path: /final-project-brief
@@ -42,3 +44,48 @@ export const BonusLessonsRoute = {
 
 // Instructional resources by week
 export const routesByWeek: RoutesByWeek[] = [week1Route];
+
+export const WeekRouteComponents = routesByWeek.map(
+  ({ weekNumber, resources, bonuses, lesson1, lesson2, homework }, key) => {
+    const Week = lazy(() => import('../../components/week'));
+
+    const props = {
+      bonuses,
+      firstLessonPath: lesson1.path,
+      firstLessonTitle: lesson1.name,
+      homeworkPath: homework?.path,
+      resources,
+      secondLessonPath: lesson2.path,
+      secondLessonTitle: lesson2.name,
+      weekNumber,
+    };
+
+    const Component = () => (
+      <>
+        <Title courseName={COURSE_NAME} week={weekNumber} />
+        <Suspense fallback={<Loading />}>
+          <Week {...props} />
+        </Suspense>
+      </>
+    );
+
+    return (
+      <Route path={`week-${weekNumber}`} element={<Component />} key={key} />
+    );
+  },
+);
+
+export const LessonRouteComponents = routesByWeek
+  .map(
+    (
+      {
+        lesson1: { path: path1, element: Element1 },
+        lesson2: { path: path2, element: Element2 },
+      },
+      key,
+    ) => [
+      <Route path={path1} element={<Element1 />} key={key} />,
+      <Route path={path2} element={<Element2 />} key={Math.random()} />,
+    ],
+  )
+  .flat();

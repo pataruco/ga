@@ -9,7 +9,11 @@ export const week1Route: RoutesByWeek = {
     path: '/week-1/lesson-1',
     element: () => (
       <>
-        <Title courseName={COURSE_NAME} week={1} lesson={1} />
+        <Title
+          courseName={COURSE_NAME}
+          week={1}
+          title="Bienvenida e Intro a HTML"
+        />
         <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
       </>
     ),
@@ -19,7 +23,11 @@ export const week1Route: RoutesByWeek = {
     path: '/week-1/lesson-2',
     element: () => (
       <>
-        <Title courseName={COURSE_NAME} week={1} lesson={1} />
+        <Title
+          courseName={COURSE_NAME}
+          week={1}
+          title="HTML avanzado e Into a CSS"
+        />
         <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
       </>
     ),
