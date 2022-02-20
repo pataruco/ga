@@ -48,9 +48,6 @@ const Home: React.FC = () => (
           {routesByWeek.map((routeByWeek, i) => (
             <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
           ))}
-          {routesByWeek.map((routeByWeek, i) => (
-            <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
-          ))}
         </tbody>
       </table>
     </StyledMain>

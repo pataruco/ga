@@ -8,14 +8,19 @@ import {
   BonusLessonsRouteComponents,
 } from './config';
 
+import { BonusLessonsRoute } from './config/bonus-lessons';
+
+const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
+
 const Router = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path={bonusLessonsRoute} element={<BonusLessons />} />
       {WeekRouteComponents}
       {LessonRouteComponents}
       {BonusLessonsRouteComponents}
-      <Route path="/about" element={<About />} />
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>

@@ -12,6 +12,7 @@ import {
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
 import { routesByWeek } from '../../routes/config';
+import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -123,13 +124,6 @@ export const Weeks: React.FC = () => {
   );
 };
 
-export const bonusLessons = [
-  ['Installfest macOS', '/bonus-lessons/installfest-macos'],
-  ['Installfest Windows', '/bonus-lessons/installfest-windows'],
-  ['jQuery', '/bonus-lessons/jquery'],
-  ['React', '/bonus-lessons/react'],
-];
-
 const BonusLessons: React.FC = () => {
   const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
   const dispatch = useDispatch();
@@ -141,8 +135,7 @@ const BonusLessons: React.FC = () => {
 
   return (
     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {bonusLessons.map((lesson, i) => {
-        const [name, path] = lesson;
+      {bonusLessonRoutes.map(({ name, path }, i) => {
         return (
           <li key={i}>
             <Link to={path} key={i}>
@@ -194,13 +187,13 @@ const Header: React.FC = () => {
             <button onMouseEnter={handleWeeksOnMouseEnter}>Semanas</button>
             <Weeks />
           </li>
-          {/* <li>
+          <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
-              Bonus lessons
+              Lecciones adicionales
             </button>
             <BonusLessons />
           </li>
-          <li>
+          {/* <li>
             <Link to="/final-project-brief">Final project</Link>
           </li> */}
           <li>
