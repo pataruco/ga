@@ -2,7 +2,7 @@ name: Deploy FEWD ES 🇪🇸
 on:
   push:
     tags:
-      - 'FEWDES*'
+      - 'FEWD-ES.*'
 jobs:
   build-and-deploy-website:
     runs-on: ubuntu-latest
