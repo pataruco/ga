@@ -16,7 +16,7 @@ export const week1Route: RoutesByWeek = {
           week={weekNumber}
           title="Bienvenida e Intro a HTML"
         />
-        <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
+        <SlidesDeck slidesDeckPath={getLessonPath('01-welcome')} />
       </>
     ),
   },
@@ -30,7 +30,7 @@ export const week1Route: RoutesByWeek = {
           week={weekNumber}
           title="HTML avanzado e Into a CSS"
         />
-        <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
+        <SlidesDeck slidesDeckPath={getLessonPath('01-welcome')} />
       </>
     ),
   },
