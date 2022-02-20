@@ -2,16 +2,18 @@ import { SlidesDeck, Title } from '@shared/components';
 import { RoutesByWeek } from '../../../@types/routes';
 import { COURSE_NAME, getLessonPath } from '../../../lib/get-lesson-path';
 
+const weekNumber = 1;
+
 export const week1Route: RoutesByWeek = {
-  weekNumber: 1,
+  weekNumber,
   lesson1: {
     name: 'Bienvenida e Intro a HTML',
-    path: '/week-1/lesson-1',
+    path: `/week-${weekNumber}/intro-to-html`,
     element: () => (
       <>
         <Title
           courseName={COURSE_NAME}
-          week={1}
+          week={weekNumber}
           title="Bienvenida e Intro a HTML"
         />
         <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
@@ -20,12 +22,12 @@ export const week1Route: RoutesByWeek = {
   },
   lesson2: {
     name: 'HTML avanzado e Into a CSS',
-    path: '/week-1/lesson-2',
+    path: `/week-${weekNumber}/intro-to-css`,
     element: () => (
       <>
         <Title
           courseName={COURSE_NAME}
-          week={1}
+          week={weekNumber}
           title="HTML avanzado e Into a CSS"
         />
         <SlidesDeck slidesDeckPath={getLessonPath('00-installfest')} />
