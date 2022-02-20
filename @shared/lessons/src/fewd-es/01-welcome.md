@@ -1,6 +1,10 @@
-# .center[Bienvenidos a <br>Software Engineer Immersive<br> en Español]
+class: frontpage
 
-.logo[![](https://pataruco.github.io/ga-assets/assets/logos/ga.svg)]
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Bienvenida y orientación</h1>
+</div>
 
 ---
 
@@ -8,7 +12,7 @@
 
 - Introducción a General Assembly (GA)
 - El equipo
-- Sobre Software Engineer Immersive en Español (SEI-ES)
+- Sobre FEWD-ES
 - Cómo tener éxito en este programa
 - Cosas administrativas
 - Preguntas y respuestas
@@ -21,7 +25,7 @@
 
 ## Sobre General Assembly
 
-General Assembly es pionera en educación y transformación profesional, especializada en las disciplinas digitales:
+General Assembly es una institución pionera en educación y transformación profesional, especializada en las siguientes disciplinas digitales:
 
 - AI/Data Science
 - Digital Marketing
@@ -29,9 +33,7 @@ General Assembly es pionera en educación y transformación profesional, especia
 - Software Engineering
 - UX Design.
 
-Actuando como la principal fuente de capacitación y transición profesional, fomentan una comunidad global de profesionales que persiguen aquellas carreras que les apasionan.
-
-GA trabaja con estudiantes de manera online y presencial a través de 20 campus en 6 países distintos, ayudando además a las empresas a buscar, evaluar y transformar el talento.
+GA trabaja con estudiantes de manera online y presencial a través de 39 campus en 8 países distintos, ayudando además a las empresas a buscar, evaluar y transformar el talento.
 
 ---
 
@@ -75,12 +77,11 @@ Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Ath
 
 #### Pedro Martín
 
-<img 
-src="https://images.prismic.io/rb-website/c144d08007acb8db7a06c633b3fe6f8add28c6ff_pedro_jpg.jpg" 
-alt="Pedro Martin" 
-style="max-width: 20%;">
+Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización benéfica para mejorar la integración social en los barrios marginales de Caracas.
 
-Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización benéfica para mejorar la integración social en los barrios marginales de Caracas. Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant 👨🏻‍🏫. Todavía estoy enseñando, ahora como Instructor (_Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
+Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant 👨🏻‍🏫.
+
+Todavía estoy enseñando, ahora como Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
 
 ---
 
@@ -110,74 +111,11 @@ style="max-width: 20%;">
 
 ---
 
-## El equipo
+## Sobre FEWD-ES
 
-### Productores
-
-#### Mike Belither
-
-<img 
-src="https://ca.slack-edge.com/T3LPPP2A1-URREHG3EU-5f56f65605d0-512" 
-alt="Mike Belither" 
-style="max-width: 20%;">
-
----
-
-## El equipo
-
-### Productores
-
-#### Marlene Marin
-
-<img 
-src="https://ca.slack-edge.com/T024JRAUL-U9SSM2X6Y-5d23e42673f6-512" 
-alt="Marlene Marin" 
-style="max-width: 20%;">
-
----
-
-## El equipo
-
-### Productores
-
-#### Guilherme Barana
-
-<img 
-src="https://ca.slack-edge.com/T018VAD0BAA-U019G5RQNUR-34af107d98ea-512" 
-alt="Guilherme Barana" 
-style="max-width: 20%;">
-
-Responsable de la relación con clientes en España y programas en el país.
-
----
-
-## Sobre Software Engineer Immersive en Español (SEI-ES)
-
-- Desde el **31 de agosto** al **20 de noviembre** (12 semanas)
-- Clases de lunes a viernes de **9 AM** a **5 PM** (GMT +1)
+- Desde el **7 de marzo** al **16 de julio** (19 semanas)
+- Clases de lunes a miércoles de **6:30 PM** a **9:30PM** (GMT +1)
 - Tareas, proyectos y asistencia son obligatorios
-  > ⚠️ _Trabajarás en cosas la mayoría de las noches de los días laborables, así que espera hasta el fin de semana para comenzar ese nuevo programa en Netflix_.
-
----
-
-class: table
-
-## Sobre Software Engineer Immersive en Español (SEI-ES)
-
-### Un día normal
-
-| Hora     | Actividad              |
-| -------- | ---------------------- |
-| 9:00 AM  | Standup 🧍‍♀️             |
-| 9:30 AM  | Clases 🎓              |
-| 11:00 AM | Break 🏖                |
-| 11:15 AM | Lab / Code Along 🧪    |
-| 12:30 PM | Almuerzo 🍽             |
-| 1:30 PM  | Clases 🎓              |
-| 3:00 PM  | Break 🏖                |
-| 3:15 PM  | Lab / Code Along 🧪    |
-| 4:45 PM  | Asignación de tarea 📓 |
-| 5:00 PM  | Cierre 🏁              |
 
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 
@@ -185,11 +123,51 @@ class: table
 
 ---
 
-## Sobre Software Engineer Immersive en Español (SEI-ES)
+## Para la obtención de certificado 🔖
 
-### Configuración del espacio de trabajo
+1. Completa el 80% de las tareas
+2. No pierdas mas de **3** clases
+3. Presenta tus proyectos (mitad y final de curso)
 
-#### Ubicación ideal:
+---
+
+class: table
+
+## Sobre FEWD-ES
+
+Una semana normal
+
+| Día       | Actividad                                   |
+| --------- | ------------------------------------------- |
+| Lunes     | Clases 🎓                                   |
+| Martes    | Clases 🎓 / Asignación de tarea 📓          |
+| Miércoles | Lab / Code Along 🧪 / Ayuda para las tareas |
+
+> ⚠️ _Los horarios son GMT +1_ 🌎 🕰
+
+> ⚠️ El equipo instruccional está basado en Londres 🇬🇧 (GMT 0)
+
+---
+
+## Tareas
+
+- Asignadas cada **martes**,
+- Limite de entrega **domingo**
+- Espera comentarios de tarea en 5 días
+- La evaluación es completa o incompleta
+- Tareas entregadas tarde no recibirán comentarios
+
+---
+
+## Sugerencias para el éxito de este programa
+
+- Pregunta todo lo que quieras, no hay preguntas tontas
+- Retate a ti mismo
+- Completa las tareas a tiempo
+
+---
+
+## Espacio ideal:
 
 - Tranquilo con mínimas distracciones
 - Bien iluminado
@@ -199,81 +177,28 @@ class: table
 
 ---
 
-## Sobre Software Engineer Immersive en Español (SEI-ES)
+## Lo que utilizaremos
 
-### Herramientas
+.row[
+.col[### Herramientas
 
 - Slack
 - Zoom
 - Chrome / Firefox Developer Edition
-- VSCode
-
-### Servicios
+- VSCode]
+  .col[### Servicios
 
 - Slack
 - Zoom
 - GitHub Enterprise
-- GitHub
+- GitHub]
+  ]
 
 ---
 
 ## ¿Cómo tener éxito en este programa?
 
-Cumplir con los requisitos básicos de:
-
-- Puntualidad
-- Asistencia
-- Envío de tareas
-- Calidad de proyectos
-
-Sigue las recomendaciones de los instructores si identificas problemas.
-
-Si corres el riesgo de no estar todavía listo para el mercado laboral, te brindaremos orientación sobre cómo continuar con tu desarrollo más allá del curso.
-
----
-
-## ¿Cómo tener éxito en este programa?
-
-### Se un buen ser humano, estas habilidades realmente ayudan
-
-- Colaboración y generosidad
-- Proactivo e ingenioso
-- Intelectualmente curioso
-- Humilde
-- Conciencia de sí mismo
-- Empatía por los demás
-- Trabaja duro
-- Sé amable
-
----
-
-## ¿Cómo tener éxito en este programa?
-
-### Testimonio de graduados en el programa
-
-- Alex
-- Gabriel
-- Pedro
-- Mike
-
----
-
-## ¿Cómo tener éxito en este programa?
-
-Puedes sentirse incómodo pero definitivamente funciona ...
-
-### Abraza un mentalidad de crecimiento
-
-<img
-src="https://www.infocusleadership.ca/wp-content/uploads/2018/01/Emotional-cycle-768x576.jpg"
-alt="Ciclos emocionales del cambio"
-style="max-width: 50%;">
-
----
-
-## ¿Cómo tener éxito en este programa?
-
-### ¿Qué estadio de aprendizaje crees que vas a llegar?
+¿Qué estadio de aprendizaje crees que vas a llegar?
 
 1. No sé que no sé
 2. Sé que no sé
@@ -284,8 +209,6 @@ style="max-width: 50%;">
 
 ## ¿Cómo tener éxito en este programa?
 
-### ¿Qué estadio de aprendizaje crees que vas a llegar?
-
 1. No sé que no sé
 2. **Sé que no sé**
 3. **Sé que sé**
@@ -295,25 +218,23 @@ style="max-width: 50%;">
 
 ## Cosas administrativas
 
-### Código de conducta
-
-- Asegúrate de haber leído el Código de conducta para estudiantes.
 - Los estudiantes deben tratar a todos los miembros del personal y otros estudiantes con respeto y dignidad.
-- Si un estudiante es disruptivo con a la comunidad, se le puede pedirá que se retire
+- Si un estudiante es disruptivo con a la comunidad, se le pedirá que se retire.
+- Asegúrate de haber leído y formado el Código de conducta para estudiantes y <a href="https://fundacionadecco.org/wp-content/uploads/2021/12/bases-becas-fundacion-adecco-ga-2022.pdf" class="external-link">las bases de la convocatoria de la beca</a>
 
----
+  - Se admitirá un máximo de 3 faltas debidamente justificadas. Superada las 3 faltas se considera falta de aprovechamiento del curso y se anulará la inscripción.
+  - Además de las conexiones a las clases, para el correcto aprovechamiento del curso es necesario un estimado de 2 horas de trabajo personal para complementar las tareas complementarias
 
-# .center[Break]
-
-## .center[15 min]
-
-### .center[🏖 🚽 🚰]
+> <small> El inclumplimiento de los compromisos de asistencia y/o aprovechamiento por parte del alumno conllevará a la expulsion del curso y la Fundación Adecco exigirá el pago completo del programa valorado en 6000 euros</small>
 
 ---
 
 ## Presentaciones aletorias
 
 El equipo instruccional creó este [seleccionador aleatorio 🎲](https://pataruco.github.io/random-picker/?), aquí sortearemos quien será el próximo responder lo siguiente
+
+.row[
+.col[
 
 ### Preguntas
 
@@ -322,25 +243,25 @@ El equipo instruccional creó este [seleccionador aleatorio 🎲](https://pataru
 - Helado favorito
 - ¿Por qué estás aquí?
 - ¿Qué esperas de este curso?
+  ]
+  .col[
 
-### Sobre tu experiencia vital sin decirnos cuales son, envíanos por Slack
+### Envía por Slack
+
+Sobre tu experiencia vital sin decirnos cuales son
 
 - 2 verdades
 - 1 mentira
 
----
-
-## Contrato de valor agregado (_Full value contract_):
-
-[Página Web](https://pages.git.generalassemb.ly/sei-es/01-full-value-contract/)
-
-1. Estar aquí.
-2. Estar seguro.
-3. Ser honesto.
-4. Establecer metas.
-5. Cuida de tí mismo y los demás.
-6. Dejar ir y seguir adelante.
+  ]
+  ]
 
 ---
 
-.logo[![](https://pataruco.github.io/ga-assets/assets/logos/ga.svg)]
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Final de la presentación</h1>
+</div>

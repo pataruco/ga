@@ -3,12 +3,14 @@ import WeekPage from './week-page';
 import { Link } from 'react-router-dom';
 
 export interface WeekProps {
-  weekNumber: number;
-  resources?: string[][];
   bonuses?: string[][];
+  firstLessonPath: string;
   firstLessonTitle: string;
-  secondLessonTitle: string;
   homeworkPath?: string;
+  resources?: string[][];
+  secondLessonPath: string;
+  secondLessonTitle: string;
+  weekNumber: number;
 }
 
 interface ListOfDetailsProps {
@@ -68,13 +70,9 @@ const Week: React.FC<WeekProps> = ({
   firstLessonTitle,
   secondLessonTitle,
   homeworkPath,
+  firstLessonPath,
+  secondLessonPath,
 }) => {
-  const secondLesson = weekNumber * 2 - 1;
-  const firstLesson = secondLesson - 1;
-
-  const firstLessonPath = `/week-${weekNumber}/lesson-${firstLesson}`;
-  const secondLessonPath = `/week-${weekNumber}/lesson-${secondLesson}`;
-
   return (
     <WeekPage>
       <h1>Semana {weekNumber}</h1>
@@ -85,12 +83,10 @@ const Week: React.FC<WeekProps> = ({
         </summary>
         <ul>
           <li>
-            Lección {firstLesson}:{' '}
-            <Link to={firstLessonPath}>{firstLessonTitle}</Link>
+            Lección: <Link to={firstLessonPath}>{firstLessonTitle}</Link>
           </li>
           <li>
-            Lección {secondLesson}:{' '}
-            <Link to={secondLessonPath}>{secondLessonTitle}</Link>
+            Lección: <Link to={secondLessonPath}>{secondLessonTitle}</Link>
           </li>
         </ul>
         <Note />
