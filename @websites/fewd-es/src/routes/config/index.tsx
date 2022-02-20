@@ -7,6 +7,7 @@ import { RoutesByWeek } from '../../@types/routes';
 import { week1Route } from './weeks/1';
 import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { Route } from 'react-router-dom';
+import { bonusLessonRoutes } from './bonus-lessons';
 
 // Final project
 // Path: /final-project-brief
@@ -17,23 +18,6 @@ export const FinalProjectRoute = {
     return (
       <>
         <Title courseName="JSD" title="Final project brief" />
-        <Suspense fallback={<Loading />}>
-          <Content />
-        </Suspense>
-      </>
-    );
-  },
-};
-
-// Bonus lessons pags
-// Path: //bonus-lessons
-export const BonusLessonsRoute = {
-  path: '/bonus-lessons',
-  element: () => {
-    const Content = lazy(() => import('../../pages/bonus-lessons'));
-    return (
-      <>
-        <Title courseName="JSD" title="Bonus Lessons" />
         <Suspense fallback={<Loading />}>
           <Content />
         </Suspense>
@@ -89,3 +73,9 @@ export const LessonRouteComponents = routesByWeek
     ],
   )
   .flat();
+
+export const BonusLessonsRouteComponents = bonusLessonRoutes.map(
+  ({ path, element: Element }, key) => (
+    <Route path={path} element={<Element />} key={key} />
+  ),
+);

@@ -7,39 +7,31 @@ const weekNumber = 1;
 export const week1Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
-    name: 'Bienvenida e Intro a HTML',
+    name: 'Bienvenida y orientación',
     path: `/week-${weekNumber}/intro-to-html`,
     element: () => (
       <>
         <Title
           courseName={COURSE_NAME}
           week={weekNumber}
-          title="Bienvenida e Intro a HTML"
+          title="Bienvenida y orientación"
         />
         <SlidesDeck slidesDeckPath={getLessonPath('01-welcome')} />
       </>
     ),
   },
   lesson2: {
-    name: 'HTML avanzado e Into a CSS',
+    name: 'Installfest',
     path: `/week-${weekNumber}/intro-to-css`,
     element: () => (
       <>
-        <Title
-          courseName={COURSE_NAME}
-          week={weekNumber}
-          title="HTML avanzado e Into a CSS"
-        />
-        <SlidesDeck slidesDeckPath={getLessonPath('01-welcome')} />
+        <Title courseName={COURSE_NAME} week={weekNumber} title="Installfest" />
+        <SlidesDeck slidesDeckPath={getLessonPath('02-installfest')} />
       </>
     ),
   },
   workshops: {
     name: 'Installfest',
-    path: '',
-  },
-  homework: {
-    name: 'Curriculum vitae',
     path: '',
   },
   resources: [
