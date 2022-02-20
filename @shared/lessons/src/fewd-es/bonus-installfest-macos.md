@@ -406,3 +406,13 @@ Mover ambos al máximo.
 ## Cierre
 
 No te preocupes sino recuerdas cómo hacer todo esto. Si necesita configurar una nueva máquina en el futuro, ¡podemos enviarte estas instruccciones!
+
+---
+
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Final de la presentación</h1>
+</div>
