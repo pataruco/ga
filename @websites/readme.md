@@ -6,15 +6,15 @@ Websites for courses that I teach at [GA][ga] London 🇬🇧 created with [Reac
 
 ## Courses
 
-### [@websites/fewd](./@websites/fewd/readme.md)
+### [@websites/fewd](./fewd/readme.md)
 
 Website with the custom domain [**https://fewd.pataruco.dev**][site] for Front-end Development course.
 
-### [@websites/fewd-es](./@websites/fewd-es/readme.md)
+### [@websites/fewd-es](./fewd-es/readme.md)
 
 Website with the custom domain [**https://fewd-es.pataruco.dev**][site-fewd-es] for Front-end Development Español 🇪🇸 course.
 
-### [@websites/jsd](./@shared/jsd/readme.md)
+### [@websites/jsd](./jsd/readme.md)
 
 Website with the custom domain [**https://jsd.pataruco.dev**][site-jsd] for JavaScript Development course.
 
