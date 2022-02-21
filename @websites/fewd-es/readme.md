@@ -1,6 +1,6 @@
 [![Deploy FEWD ES 🇪🇸](https://github.com/pataruco/ga/actions/workflows/deploy-fewd-es.yml/badge.svg)](https://github.com/pataruco/ga/actions/workflows/deploy-fewd-es.yml)
 
-# @websites/fewd
+# @websites/fewd-es
 
 ## What it is?
 
