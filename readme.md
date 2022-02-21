@@ -18,13 +18,13 @@ It is divided:
 - [@websites/fewd-es](./@websites/fewd-es/readme.md): [React][react] app hosted in [Netlify][netlify] with the custom domain [**https://fewd-es.pataruco.dev**][site-fewd-es] for Front-end Development Español 🇪🇸 course.
 - [@websites/jsd](./@websites/jsd/readme.md): [React][react] app hosted in [Netlify][netlify] with the custom domain [**https://jsd.pataruco.dev**][site-jsd] for JavaScript Development 🇪🇸 course.
 
-### homeworks/
+### [labs/](./labs/readme.md)
 
-- [Labs](./labs/readme.md): Labs & exercises for each lesson.
+Labs & exercises for each lesson.
 
-### labs/
+### [homeworks/](./homeworks/readme.md)
 
-- [Homeworks](./homeworks/readme.md): Exercises for students outside class.
+Exercises for students outside class.
 
 ## How to install
 
