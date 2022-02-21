@@ -6,7 +6,7 @@ Is a **monorepo** with content for all the courses that I teach at [General Asse
 
 It is divided:
 
-### @shared/
+### [@shared/](./@shared/readme.md)
 
 - [@shared/components](./@shared/components/readme.md): shared [React][react] components for different [@websites][@websites] in this repo.
 - [@shared/lessons](./@shared/lessons/readme.md): all lessons as a NPM package written in Markdown formatted with Remark [syntax][remark-syntax].
