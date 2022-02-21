@@ -48,7 +48,7 @@ It is divided:
 
 ## Deployment
 
-A [Github action][gh-actions] per [website][@websites]is set to deal with deployments to prod.
+A [Github action][gh-actions] per [website][@websites] is set to deal with deployments to production.
 
 Read more about in the readme of each [website][@websites]
 
