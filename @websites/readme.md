@@ -29,12 +29,6 @@ Website with the custom domain [**https://jsd.pataruco.dev**][site-jsd] for Java
 [react]: https://reactjs.org/
 [netlify]: https://www.netlify.com/
 [ga]: https://generalassemb.ly/locations/london
-[gh-actions]: https://github.com/features/actions
-[remark]: https://github.com/gnab/remark/
-[remark-syntax]: https://github.com/gnab/remark/wiki/Markdown
-[git-tag]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
 [site]: https://fewd.pataruco.dev/
 [site-fewd-es]: https://fewd-es.pataruco.dev/
 [site-jsd]: https://jsd.pataruco.dev/
-[@websites]: ./@websites/readme.md
-[@shared/lessons]: ./@shared/lessons/readme.md
