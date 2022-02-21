@@ -28,7 +28,7 @@ A [Github action][gh-actions] is set to deal with deployments to prod. To trigge
   git push --tags
   ```
 
-- You can check CI/CD build [here](https://github.com/pataruco/ga/actions/workflows/deploy-fewd.yml?query=workflow%3ACI)
+- You can check [CI/CD build](https://github.com/pataruco/ga/actions/workflows/deploy-fewd.yml?query=workflow%3ACI)
 
 - Make a tea 🫖
 
