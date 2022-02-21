@@ -6,6 +6,12 @@ Yarn/Lerna workspace for shared [React][react] components for different [@websit
 
 ## Build
 
+```sh
+yarn workspace @shared/lessons build
+yarn
+yarn lerna bootstrap
+```
+
 To build this package:
 
 ```sh

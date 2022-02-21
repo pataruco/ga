@@ -29,6 +29,8 @@ Then from the root of the monorepo type on your terminal
 
 ```sh
 yarn workspace @shared/lessons build
+yarn
+yarn lerna bootstrap
 ```
 
 Once it is built you can added to a [@website][@websites] just adding it in the their `package.json`
