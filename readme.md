@@ -1,8 +1,8 @@
 # GA
 
-## What it is?
+## What is it
 
-Is a **monorepo** with content for all the courses I teach at [General Assembly London][ga] 🇬🇧
+Is a **monorepo** with content for all the courses that I teach at [General Assembly London][ga] 🇬🇧
 
 It is divided:
 

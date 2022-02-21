@@ -1,5 +1,7 @@
 # @shared/components
 
+## What is it
+
 Yarn/Lerna workspace for shared [React][react] components for different [@websites][@websites] in this repo.
 
 ## Build
@@ -23,7 +25,7 @@ Once it is built you can added to a [@website][@websites] just adding it in the 
 ```json
 {
   // ...
-  "@shared/lessons": "^0.0.0"
+  "@shared/components": "^0.0.0"
   // ...
 }
 ```
