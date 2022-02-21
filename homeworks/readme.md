@@ -59,4 +59,9 @@ Rest of commands
 | `get-starter-download-path`  | Copy in clipboard GitHub starter code download path for a given lab (`make get-starter-download-path application=node`)   |
 | `zip-all`                    | create all zips for folders                                                                                               |
 
----
+## Index
+
+- [Relaxr 1](./relaxr-1)
+- [Relaxr 2](./relaxr-2)
+
+... and more

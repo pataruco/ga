@@ -12,11 +12,11 @@ It is divided:
 - [@shared/lessons](./@shared/lessons/readme.md): all lessons as a NPM package written in Markdown formatted with Remark [syntax][remark-syntax].
 - [@shared/styles](./@shared/styles/readme.md): styles for for different [@websites][@websites] and [lesson slides][@shared/lessons].
 
-### @websites/
+### [@websites/](./@websites/readme.md)
 
 - [@websites/fewd](./@websites/fewd/readme.md): [React][react] app hosted in [Netlify][netlify] with the custom domain [**https://fewd.pataruco.dev**][site] for Front-end Development course.
 - [@websites/fewd-es](./@websites/fewd-es/readme.md): [React][react] app hosted in [Netlify][netlify] with the custom domain [**https://fewd-es.pataruco.dev**][site-fewd-es] for Front-end Development Español 🇪🇸 course.
-- [@websites/jsd](./@shared/jsd/readme.md): [React][react] app hosted in [Netlify][netlify] with the custom domain [**https://jsd.pataruco.dev**][site-jsd] for JavaScript Development 🇪🇸 course.
+- [@websites/jsd](./@websites/jsd/readme.md): [React][react] app hosted in [Netlify][netlify] with the custom domain [**https://jsd.pataruco.dev**][site-jsd] for JavaScript Development 🇪🇸 course.
 
 ### homeworks/
 
