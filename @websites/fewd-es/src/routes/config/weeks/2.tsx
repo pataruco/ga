@@ -34,10 +34,14 @@ export const week2Route: RoutesByWeek = {
       </>
     ),
   },
-  // workshops: {
-  //   name: 'Installfest',
-  //   path: `/week-${weekNumber}/installfest`,
-  // },
+  workshops: {
+    name: 'Repositorio de tareas y Receta de galletas',
+    path: `/week-${weekNumber}/intro-to-html#46`,
+  },
+  homework: {
+    name: 'Fan fiction CV',
+    path: `/week-${weekNumber}/intro-to-html#47`,
+  },
   resources: [
     ['Intro to HTML', 'https://developer.mozilla.org/en-US/docs/Web/HTML'],
     [

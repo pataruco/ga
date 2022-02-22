@@ -543,3 +543,46 @@ class: frontpage
   <hr/>
   <h1>Final de presentación</h1>
 </div>
+
+---
+
+class: lab
+
+# Labs
+
+- Bifurcar (_fork_) el repositorio de tareas y seguir las instrucciones de instalación
+- Completar el laboratorio <a href="https://github.com/pataruco/ga/raw/main/labs/cookie-recipe/cookie-recipe-starter-code.zip" class="download-link">receta de galletas</a>
+- Iniciar la tarea
+
+---
+
+class: code-along
+
+## Homework
+
+### Fan Fiction CV
+
+Elige una película que te guste y crea una página web sobre el CV de uno de los personajes.
+
+Aquí hay unos ejemplos
+
+- [Darth Vader](https://www.giraffecvs.co.uk/wp-content/uploads/2013/05/CVDarthVader_rev8-page-001.jpg)
+- [Disney](https://ohmy.disney.com/movies/2017/02/27/imaginary-disney-character-resumes/)
+
+---
+
+class: code-along
+
+## Homework
+
+### Requerimientos técnicos
+
+- Usa elementos estructurales HTML5 s (`nav`, `header`, `footer`)
+- Usa elementos y clases en CSS para añadir estilo a tu página
+- Sigue las convenciones de nomenclatura, manten la coherencia entre los archivos `.html` y `.css` y usa las mejores prácticas para nombrar clases
+- Usa un `título` único y una sola etiqueta `h1`
+- Usa imágenes usando etiquetas `img` que incluyen atributos únicos `alt`
+- Use una hoja de estilo CSS externa para diseñar su página
+- Seleccione al menos 5 elementos en la página y aplique al menos 5 propiedades CSS diferentes (`font-size`, `color`, `font-family`, `background`, `text-decoration`) a estos elementos
+- Usa al menos 6 etiquetas HTML diferentes (`h1`, `h2`, `h3`, `blockquote`, `p`, `ul`, `ol`, `a`, `img`)
+- Sangre elementos anidados para aumentar la legibilidad de su código

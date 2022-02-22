@@ -29,7 +29,10 @@ export const FinalProjectRoute = {
 export const routesByWeek: RoutesByWeek[] = [week1Route, week2Route];
 
 export const WeekRouteComponents = routesByWeek.map(
-  ({ weekNumber, resources, bonuses, lesson1, lesson2, homework }, key) => {
+  (
+    { weekNumber, resources, bonuses, lesson1, lesson2, homework, workshops },
+    key,
+  ) => {
     const Week = lazy(() => import('../../components/week'));
 
     const props = {
@@ -41,6 +44,7 @@ export const WeekRouteComponents = routesByWeek.map(
       secondLessonPath: lesson2.path,
       secondLessonTitle: lesson2.name,
       weekNumber,
+      workshopPath: workshops?.path,
     };
 
     const Component = () => (

@@ -42,13 +42,13 @@ delete-zip: ## delete zips for starter and solution code (make delete-zip applic
 	@$(PRINT_OK)
 
 get-solution-download-path: ## Copy in clipboard GitHub solution code download path for a given lab (make get-solution-download-path application=node)
-	@(echo https://github.com/pataruco/jsd/raw/master/${folder}/${application}/${application}-solution-code.zip | pbcopy)
+	@(echo https://github.com/pataruco/ga/raw/main${folder}/${application}/${application}-solution-code.zip | pbcopy)
 	@$(PRINT_LINE)
 	@$(PRINT_OK)
 	@(printf "path copied in the clipboard 📋\n")
 
 get-starter-download-path: ## Copy in clipboard GitHub starter code download path for a given lab (make get-starter-download-path application=node)
-	@(echo https://github.com/pataruco/jsd/raw/master/${folder}/${application}/${application}-starter-code.zip | pbcopy)
+	@(echo https://github.com/pataruco/ga/raw/main${folder}/${application}/${application}-starter-code.zip | pbcopy)
 	@$(PRINT_LINE)
 	@$(PRINT_OK)
 	@(printf "path copied in the clipboard 📋\n")
