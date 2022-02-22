@@ -88,5 +88,17 @@ export const week2Route: RoutesByWeek = {
       'Read through Getting to know CSS',
       'https://learn.shayhowe.com/html-css/getting-to-know-css/',
     ],
+    [
+      'Watch Intro to GitHub video',
+      'https://www.youtube.com/watch?v=vDv5K5PbvO8',
+    ],
+    [
+      "Complete Code Academy's Learn Git course",
+      'https://www.codecademy.com/learn/learn-git',
+    ],
+    [
+      'Complete Egghead course: Start Building Accessible Web Applications Today',
+      'https://egghead.io/courses/start-building-accessible-web-applications-today',
+    ],
   ],
 };
