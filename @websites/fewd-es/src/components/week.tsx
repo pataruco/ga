@@ -11,6 +11,7 @@ export interface WeekProps {
   secondLessonPath: string;
   secondLessonTitle: string;
   weekNumber: number;
+  workshopPath?: string;
 }
 
 interface ListOfDetailsProps {
@@ -64,14 +65,15 @@ const Note: React.FC = () => (
 );
 
 const Week: React.FC<WeekProps> = ({
-  weekNumber,
-  resources,
   bonuses,
-  firstLessonTitle,
-  secondLessonTitle,
-  homeworkPath,
   firstLessonPath,
+  firstLessonTitle,
+  homeworkPath,
+  resources,
   secondLessonPath,
+  secondLessonTitle,
+  weekNumber,
+  workshopPath,
 }) => {
   return (
     <WeekPage>
@@ -113,6 +115,12 @@ const Week: React.FC<WeekProps> = ({
       {homeworkPath ? (
         <p className="homework">
           <Link to={homeworkPath}>Tarea(s)</Link>
+        </p>
+      ) : null}
+
+      {workshopPath ? (
+        <p className="homework">
+          <Link to={workshopPath}>Taller(es)</Link>
         </p>
       ) : null}
     </WeekPage>
