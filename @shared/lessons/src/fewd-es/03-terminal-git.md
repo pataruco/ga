@@ -157,118 +157,124 @@ class: frontpage
 
 ---
 
+## Version control
+
+Have you ever lost or overwritten some work that took you ages?
+
+---
+
+## Version control
+
+**Version control** is a system that enables you to take regular _snapshots_ of your work in progress called _commits_. This enables:
+
+- Recording the history of a project
+- Constant backups of your work
+- A more organised development workflow
+- A safer way to collaborate with others
+- Tools for publishing your work online
+
+---
+
+## Version control
+
+- Keeping your code organised helps you be more efficient.
+- Keeping your work backed up helps you stay sane.
+- Going back over the history of a project helps you learn.
+
+---
+
 ## Git
 
-[Git](https://git-scm.com/) es:
-
-- Un programa que ejecutas desde la línea de comando
-- Un sistema distribuido de control de versiones
-
-Los programadores usan Git para poder mantener el historial de todos los cambios en tu código. Esto significa que pueden revertir los cambios (o cambiar a versiones anteriores) tan atrás en el tiempo hasta comenzaron a usar Git en tu proyecto.
-
-¿Sabes cómo Google Docs te permite tener un "historial de versiones" y moverse entre diferentes versiones cuando lo desee? ¡Git te permite hacer eso con cualquier carpeta, y tu contenido, en tu computadora!
-
-Una base de código en Git se conoce como un **repositorio**, o **repo**, para abreviar.
-
-Git fue creado por [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), el desarrollador principal de Linux.
+Git is a version control system (VCS) that saves the state of your project's files and folders; basically, it takes a **'snapshot'** of what all your files look like at a given moment and stores a reference to that **'snapshot'**.
 
 ---
 
 ## GitHub
 
-[GitHub](https://github.com/) es:
+GitHub is a platform that makes it easy to manage git repositories. It provides a graphical interface to help you review and manage your code repos.
 
-- Un servicio de alojamiento para repositorios Git
-- Una interfaz web para explorar repositorios de Git
-- Una red social de programadores.
-  - Todos tenemos cuentas individuales y ponemos nuestras bases de códigos en nuestra cuenta de GitHub
-  - Puedes seguir a los usuarios y destacar tus proyectos favoritos
-- Un lugar donde los desarrolladores pueden acceder a bases de códigos públicas
+The files are hosted in the cloud so you can share the finished product with other people.
 
 ---
 
-### ¿Puedes usar git sin GitHub?
+## Why are Git & GitHub valuable?
 
-Git es un software que permite el control de versiones en carpetas locales en tu computadora. GitHub es un lugar para alojar sus repositorios Git de forma remota. Ciertamente puede tener archivos locales, que utilizan Git, que no se envían ni se almacenan en GitHub.
-
-¡Lea [esto](http://stackoverflow.com/questions/11816424/understanding-the-basics-of-git-and-github) cuando tenga tiempo!
-
----
-
-## Demo: ¿Por qué Git es difícil de entender?
-
-Git es difícil de entender porque describir 'cómo' funciona requeriría el uso de palabras extrañas y de sonido técnico como:
-
-- [Gráfico acíclico dirigido](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
-- [SHA-1](https://en.wikipedia.org/wiki/SHA-1)
-- Blob
-- árbol (tree)
-
-Sin embargo, en realidad no necesita saber cómo funciona para poder usarlo.
+- Stores a history of the code, which allows developers to go back in time if something breaks
+- Allows multiple developers to work on the same project
+- GitHub tracks changes so you can see who worked on what (and who broke what)
+- GitHub allows for feedback to be given on the code, which can increase code quality
 
 ---
 
-## ¿Árboles?
+## The lingo
 
-.row[
-.col[Aunque no necesita saber cómo funcionan, es útil saber que tu repositorio local consta de tres "árboles" (_trees_) mantenidos por Git.
-
-- **Directorio de trabajo** (_Working Directory_): como cualquier otra carpeta en tu máquina; solo contiene los archivos reales
-- **Índice** (_Index_): actúa como un área de preparación (un área que contiene archivos "listos" para ser versionados)
-- **HEAD**: apunta a la última confirmación que has realizado (la última "versión" del código que has almacenado usando git)]
-  .col[![flujo de trabajo](https://cloud.githubusercontent.com/assets/40461/8221736/f1f7e972-1559-11e5-9dcb-66b44139ee6f.png)]
-  ]
+- **Repository/Repo**: a central location in which data - typically about a project - is stored and managed
+- **Clone**: download data/code from the cloud to your local machine (laptop, computer, etc.)
+- **Commit**: save a version of your project to git
+- **Branch**: create an additional track for the code that is separate from the 'master' branch. This allows you to work on a feature/issue without affecting the main code until your feature is finished.
 
 ---
 
-### ¿Tantos comandos?
+## Commits
 
-También hay muchos comandos que puedes usar en Git.
-Puede echar un vistazo a una lista de los comandos disponibles ejecutando:
+Think of each commit as if you copied your whole project folder and saved it somewhere safe.
 
-```sh
-git help -a
-```
+This folder is labeled with a unique ID and recorded in a chronological timeline.
 
-Aunque hay muchos comandos, en el curso realmente solo necesitaremos unos 10.
+If you want to view what a file looked like at any point in history you can open up the folder with a certain commit ID and take a look at the files inside.
 
 ---
 
-## Ciclo de vida del archivo Git
+## Commits
 
-.row[
-.col[
-![ciclo de vida](https://cloud.githubusercontent.com/assets/40461/8226866/62730b4c-159a-11e5-89cd-20b72ed1de45.png)
+Instead of making a complete copy of your project for every snapshot, Version control systems can just save the differences between files.
 
-]
-
-.col[
-Hay 4 etapas principales del archivo controlado de versión de Git:
-
-1. **Sin seguimiento** (_Untracked_): cuando un archivo está "sin seguimiento", Git no está "viendo" este archivo; el archivo no se agregará en la próxima confirmación
-2. **En etapas** (_Staged_): los archivos en etapas aún no se han confirmado en la memoria, pero están "en cubierta", por así decirlo, para tu próxima confirmación
-3. **Sin modificar** (_Unmodified_): el archivo ya se ha confirmado y no ha cambiado desde la última confirmación
-4. **Modificado** (_Unmodified_): tiene cambios en el archivo desde la última vez que se confirmó, deberá volver a organizarlos para que los cambios se agreguen en la próxima confirmación
-
-]
-]
+This keeps the history small in file size and quick to work with.
 
 ---
 
-## Ciclo de vida del archivo Git
+## Version control process
 
-.row[
-.col[
-![ciclo de vida](https://cloud.githubusercontent.com/assets/40461/8226866/62730b4c-159a-11e5-89cd-20b72ed1de45.png)
+A typical git workflow goes like this:
 
-]
-.col[
-Una vez que ha confirmado un archivo y queda "sin modificar", tu contenido se guarda en la memoria de Git.
+- Create a project folder
+- Initialize it as a git project
+- Write some code
+- Check the status of what files/folders have changed
+- Mark one or more files to be added into the next snapshot
 
-- **No guardado en la memoria de git** (_Not saved in git memory_): tu archivo no se guarda hasta que lo guarda en la memoria de Git
-- **Guardado en la memoria de git** (_Saved in git memory_): solo una vez que ha confirmado un archivo, se guarda en la memoria de Git
-  ]
-  ]
+---
+
+## Version control process
+
+- Take a snapshot and write a message describing what you did and why
+- Write some more code
+- Create the next snapshot
+- Rinse and repeat often
+- Push your changes to an online repository
+
+---
+
+## Version control process
+
+Commit often even as you experiment.
+
+Push regularly once everything is in good shape.
+
+---
+
+## Commit messages
+
+Think of each commit message like an email. You have a brief subject and (an optional) longer description to describe what you did and why
+
+---
+
+## GitHub
+
+- Open an account on [GitHub](https://github.com/join)
+- Sign up
+- Download [GitHub desktop](https://desktop.github.com/)
+- Associate your GitHub account with GitHub desktop
 
 ---
 
@@ -573,5 +579,3 @@ class: frontpage
   <hr/>
   <h1>Final de presentación</h1>
 </div>
-
----
