@@ -1,10 +1,9 @@
 import { lazy, Suspense } from 'react';
 import { Title } from '@shared/components';
 import Loading from '../../pages/loading';
-
 import { RoutesByWeek } from '../../@types/routes';
-
 import { week1Route } from './weeks/1';
+import { week2Route } from './weeks/2';
 import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { Route } from 'react-router-dom';
 import { bonusLessonRoutes } from './bonus-lessons';
@@ -27,7 +26,7 @@ export const FinalProjectRoute = {
 };
 
 // Instructional resources by week
-export const routesByWeek: RoutesByWeek[] = [week1Route];
+export const routesByWeek: RoutesByWeek[] = [week1Route, week2Route];
 
 export const WeekRouteComponents = routesByWeek.map(
   ({ weekNumber, resources, bonuses, lesson1, lesson2, homework }, key) => {
