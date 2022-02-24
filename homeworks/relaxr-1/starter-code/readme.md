@@ -70,5 +70,5 @@ Your job is to build out the CSS - using the information below - for the page!
   ```
 - Semibold `9px`
   ```txt
-  Copyright 2020. Relaxr.
+  Copyright 2022. Relaxr.
   ```
