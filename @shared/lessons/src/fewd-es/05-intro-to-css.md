@@ -3,10 +3,8 @@ class: frontpage
 <div>
   <h2>Front-End Web Development</h2>
   <hr/>
-  <h1>Intro to CSS</h1>
+  <h1>Intro a CSS</h1>
 </div>
-
----
 
 ---
 
@@ -137,33 +135,28 @@ Usando estilos en línea
 
 ---
 
-## Bloques de construcción CSS
+## Bloques de construcción
 
-### Declaraciones
+.row[
+.col[
 
-.image-half[![](https://mdn.mozillademos.org/files/3665/css%20syntax%20-%20declaration.png)]
-
----
-
-## Bloques de construcción CSS
-
-### Bloques de declaración
-
-.image-half[![](https://mdn.mozillademos.org/files/3667/css%20syntax%20-%20declarations%20block.png)]
-
----
-
-## Bloques de construcción CSS
-
-### Selectores y reglas
-
-.image-half[![](https://mdn.mozillademos.org/files/3668/css%20syntax%20-%20ruleset.png)]
+- Propiedad
+- Valor de propiedad
+- Selector
+- Declaración
+  ]
+  .col[
+  ![](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png)
+  ]
+  ]
 
 ---
 
 ## Colores CSS
 
-Hay muchas formas de especificar el color en CSS. Los mismos valores de color se pueden usar en todas partes en CSS, ya sea que esté especificando el color del texto, el color de fondo o cualquier otra cosa.
+Hay muchas formas de especificar el color en CSS.
+
+Los mismos valores de color se pueden usar en todas partes en CSS
 
 El sistema de color estándar disponible en las computadoras modernas es de 24 bits, lo que permite la visualización de aproximadamente **16,7 millones** de colores distintos a través de una combinación de diferentes canales **rojo** 🔴, **verde** 🟢 y **azul** 🔵 con 256 diferentes valores por canal
 
@@ -412,7 +405,7 @@ Juntemos todas las piezas
 
 ## Instrucciones
 
-1. Descarga el código de inicio zip [archivo](https://github.com/pataruco/ga-fewd-assets/raw/master/cookie-recipe/cookie-recipe-starter-code.zip)
+1. Descarga el código de inicio zip [archivo](https://github.com/pataruco/ga/raw/main/labs/cookie-recipe/cookie-recipe-starter-code.zip)
 2. Abra el archivo **instrucciones.md** y siga los pasos
 
 ---
@@ -427,3 +420,13 @@ Juntemos todas las piezas
 - La familia de fuentes para el h1 es `serif` y el resto es`sans-serif`
 - Bonificación: el borde de la página y alrededor de la imagen es negro
 - El ancho máximo del contenido es "800px" y debe estar centrado en la página.
+
+---
+
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Final de la presentación</h1>
+</div>
