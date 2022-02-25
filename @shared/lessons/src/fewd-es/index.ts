@@ -8,6 +8,8 @@ import * as introToCss from './05-intro-to-css.md';
 import * as boxModel from './06-box-model.md';
 import * as selectorsSpecifictyFloats from './07-css-selectors-specificity-float.md';
 import * as flexbox from './08-flexbox.md';
+import * as grids from './09-grids.md';
+import * as positioning from './10-positioning.md';
 
 export const fewdEs = {
   '01-welcome': welcome,
@@ -18,6 +20,8 @@ export const fewdEs = {
   '06-box-model': boxModel,
   '07-css-selectors-specificity-float.md': selectorsSpecifictyFloats,
   '08-flexbox': flexbox,
+  '09-grids': grids,
+  '10-positioning': positioning,
   'bonus-installfest-macos': installfestMacos,
   'bonus-installfest-windows': installfestWindows,
 };

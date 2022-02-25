@@ -17,7 +17,7 @@ export const week3Route: RoutesByWeek = {
     ),
   },
   lesson2: {
-    name: 'Model de caja',
+    name: 'Modelo de caja',
     path: `/week-${weekNumber}/box-model`,
     element: () => (
       <>
