@@ -341,7 +341,7 @@ class: frontpage
 
 ---
 
-class: labs
+class: lab
 
 # Labs
 
