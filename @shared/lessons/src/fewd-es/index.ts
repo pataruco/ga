@@ -6,6 +6,8 @@ import * as terminalGit from './03-terminal-git.md';
 import * as introToHtml from './04-intro-to-html.md';
 import * as introToCss from './05-intro-to-css.md';
 import * as boxModel from './06-box-model.md';
+import * as selectorsSpecifictyFloats from './07-css-selectors-specificity-float.md';
+import * as flexbox from './08-flexbox.md';
 
 export const fewdEs = {
   '01-welcome': welcome,
@@ -14,6 +16,8 @@ export const fewdEs = {
   '04-intro-to-html': introToHtml,
   '05-intro-to-css': introToCss,
   '06-box-model': boxModel,
+  '07-css-selectors-specificity-float.md': selectorsSpecifictyFloats,
+  '08-flexbox': flexbox,
   'bonus-installfest-macos': installfestMacos,
   'bonus-installfest-windows': installfestWindows,
 };

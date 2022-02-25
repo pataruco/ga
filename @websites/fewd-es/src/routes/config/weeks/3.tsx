@@ -67,30 +67,6 @@ export const week3Route: RoutesByWeek = {
       'Sitepoint: Collapsing margins',
       'https://www.sitepoint.com/collapsing-margins/',
     ],
-    [
-      'MDN: Pseudo elements',
-      'https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements',
-    ],
-    [
-      'MDN: Pseudo classes',
-      'https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes',
-    ],
-    [
-      'CSS Tricks: :nth-child recipes',
-      'https://css-tricks.com/useful-nth-child-recipies/',
-    ],
-    [
-      'CSS Tricks: Child and Sibling Selectors',
-      'https://css-tricks.com/child-and-sibling-selectors/',
-    ],
-    [
-      'MDN: CSS Specificty',
-      'https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity',
-    ],
-    [
-      'MDN: CSS Selectors',
-      'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors',
-    ],
   ],
   bonuses: [
     [
