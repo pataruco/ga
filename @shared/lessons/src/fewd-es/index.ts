@@ -10,6 +10,7 @@ import * as selectorsSpecifictyFloats from './07-css-selectors-specificity-float
 import * as flexbox from './08-flexbox.md';
 import * as grids from './09-grids.md';
 import * as positioning from './10-positioning.md';
+import * as responsive from './11-responsive-web-development.md';
 
 export const fewdEs = {
   '01-welcome': welcome,
@@ -22,6 +23,7 @@ export const fewdEs = {
   '08-flexbox': flexbox,
   '09-grids': grids,
   '10-positioning': positioning,
+  '11-responsive-web-development': responsive,
   'bonus-installfest-macos': installfestMacos,
   'bonus-installfest-windows': installfestWindows,
 };
