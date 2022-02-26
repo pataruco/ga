@@ -8,7 +8,7 @@ export const week4Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
     name: 'Selectores, especificidad & floats',
-    path: `/week-${weekNumber}/css-selectors-specificity-float`,
+    path: `/lessons/css-selectors-specificity-float`,
     element: () => (
       <>
         <Title
@@ -26,7 +26,7 @@ export const week4Route: RoutesByWeek = {
   },
   lesson2: {
     name: 'Flexbox',
-    path: `/week-${weekNumber}/flexbox`,
+    path: `/lessons/flexbox`,
     element: () => (
       <>
         <Title courseName={COURSE_NAME} week={weekNumber} title="Flexbox" />
@@ -36,11 +36,11 @@ export const week4Route: RoutesByWeek = {
   },
   workshops: {
     name: 'Relaxr 2',
-    path: `/week-${weekNumber}/flexbox#25`,
+    path: `/lessons/flexbox#25`,
   },
   homework: {
     name: 'Relaxr 2',
-    path: `/week-${weekNumber}/flexbox#26`,
+    path: `/lessons/flexbox#26`,
   },
   resources: [
     [

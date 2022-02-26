@@ -31,7 +31,7 @@ const getAnchorProps = (pathname: string) => {
   const [firstWord, secondWord] = pageToNavigate.split('-');
   return {
     pageToNavigate,
-    text: `${firstWord} ${secondWord}`,
+    text: `${firstWord} ${secondWord ?? ''}`,
   };
 };
 
