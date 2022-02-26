@@ -8,7 +8,7 @@ export const week2Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
     name: 'Terminal, Git & GitHub',
-    path: `/week-${weekNumber}/terminal-git`,
+    path: `/lessons/terminal-git`,
     element: () => (
       <>
         <Title
@@ -22,7 +22,7 @@ export const week2Route: RoutesByWeek = {
   },
   lesson2: {
     name: 'Intro a HTML',
-    path: `/week-${weekNumber}/intro-to-html`,
+    path: `/lessons/intro-to-html`,
     element: () => (
       <>
         <Title
@@ -36,11 +36,11 @@ export const week2Route: RoutesByWeek = {
   },
   workshops: {
     name: 'Repositorio de tareas y Receta de galletas',
-    path: `/week-${weekNumber}/intro-to-html#46`,
+    path: `/lessons/intro-to-html#46`,
   },
   homework: {
     name: 'Fan fiction CV',
-    path: `/week-${weekNumber}/intro-to-html#47`,
+    path: `/lessons/intro-to-html#47`,
   },
   resources: [
     ['Intro to HTML', 'https://developer.mozilla.org/en-US/docs/Web/HTML'],

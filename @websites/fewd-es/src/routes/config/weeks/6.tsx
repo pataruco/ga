@@ -8,7 +8,7 @@ export const week6Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
     name: 'Desarrollo Web responsivo',
-    path: `/week-${weekNumber}/responsive-web-development`,
+    path: `/lessons/responsive-web-development`,
     element: () => (
       <>
         <Title
@@ -24,7 +24,7 @@ export const week6Route: RoutesByWeek = {
   },
   lesson2: {
     name: 'Formularios',
-    path: `/week-${weekNumber}/forms`,
+    path: `/lessons/forms`,
     element: () => (
       <>
         <Title courseName={COURSE_NAME} week={weekNumber} title="Forms" />
@@ -34,11 +34,11 @@ export const week6Route: RoutesByWeek = {
   },
   workshops: {
     name: 'Forms y Huddle',
-    path: `/week-${weekNumber}/forms#16`,
+    path: `/lessons/forms#16`,
   },
   homework: {
     name: 'Huddle',
-    path: `/week-${weekNumber}/forms#17`,
+    path: `/lessons/forms#17`,
   },
   resources: [
     [

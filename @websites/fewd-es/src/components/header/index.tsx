@@ -115,7 +115,7 @@ export const Weeks: React.FC = () => {
     <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
       {routesByWeek.map(({ weekNumber }, i) => (
         <li key={i}>
-          <Link to={`/week-${weekNumber}`} key={i}>
+          <Link to={`/lessons`} key={i}>
             <span onClick={close}>Semana {i + 1}</span>
           </Link>
         </li>
