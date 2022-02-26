@@ -1,5 +1,5 @@
 import { Footer, Title } from '@shared/components';
-import { memo } from 'react';
+import { memo, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/header';
@@ -23,14 +23,14 @@ const Lessons = routesByWeek.map(
     },
     key,
   ) => (
-    <>
-      <li key={Math.random() + key}>
+    <Fragment key={key}>
+      <li>
         <Link to={path1}>{name1}</Link>
       </li>
-      <li key={Math.random() + key}>
+      <li>
         <Link to={path2}>{name2}</Link>
       </li>
-    </>
+    </Fragment>
   ),
 );
 
