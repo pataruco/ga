@@ -30,10 +30,10 @@ export const week7Route: RoutesByWeek = {
       </>
     ),
   },
-  // workshops: {
-  //   name: 'Forms y Huddle',
-  //   path: `/lessons/forms#16`,
-  // },
+  workshops: {
+    name: 'Bike Wheels',
+    path: `/lessons/sass-svg/#42`,
+  },
   // homework: {
   //   name: 'Huddle',
   //   path: `/lessons/forms#17`,

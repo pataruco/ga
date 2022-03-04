@@ -585,9 +585,11 @@ class: frontpage
 
 ---
 
-class: code-along
+class: labs
 
 # Labs
+
+- [Bike wheels 🚴🏻‍♀️](https://github.com/pataruco/ga/raw/main/labs/bike-wheels/bike-wheels-starter-code.zip)
 
 ---
 

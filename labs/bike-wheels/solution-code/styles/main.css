@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@keyframes spin-me {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.thing-to-spin {
+  transform-origin: center;
+  animation-name: spin-me;
+  animation-iteration-count: infinite;
+  animation-duration: 2000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
