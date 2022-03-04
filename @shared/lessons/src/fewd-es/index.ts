@@ -12,6 +12,8 @@ import * as grids from './09-grids.md';
 import * as positioning from './10-positioning.md';
 import * as responsive from './11-responsive-web-development.md';
 import * as forms from './12-forms.md';
+import * as animations from './13-animations.md';
+import * as sassSvg from './14-sass-svg.md';
 
 export const fewdEs = {
   '01-welcome': welcome,
@@ -24,8 +26,10 @@ export const fewdEs = {
   '08-flexbox': flexbox,
   '09-grids': grids,
   '10-positioning': positioning,
-  '12-forms': forms,
   '11-responsive-web-development': responsive,
+  '12-forms': forms,
+  '13-animations': animations,
+  '14-sass-svg': sassSvg,
   'bonus-installfest-macos': installfestMacos,
   'bonus-installfest-windows': installfestWindows,
 };

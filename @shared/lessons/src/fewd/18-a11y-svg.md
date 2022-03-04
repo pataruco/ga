@@ -547,20 +547,6 @@ There are three possible values for `stroke-linecap`:
 
 ---
 
-## Stroke-linejoin
-
-.image-one-fourth--align-left[![](https://mdn.mozillademos.org/files/731/SVG_Stroke_Linejoin_Example.png)]
-
-[https://codepen.io/pataruco/pen/bMgXKz](https://codepen.io/pataruco/pen/bMgXKz)
-
----
-
-## Stroke-dasharray
-
-.image-one-fourth--align-left[![](https://mdn.mozillademos.org/files/729/SVG_Stroke_Dasharray_Example.png)]
-
----
-
 ## All together
 
 ### Loading spinner

@@ -270,3 +270,15 @@ También hay una sintaxis para fotogramas clave (`@keyframes`).
 # Bonus
 
 [CodePen](https://codepen.io/pataruco/pen/eYOeGrj)
+
+---
+
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Final de presentación</h1>
+</div>
+
+---
