@@ -90,7 +90,7 @@ const StyledHeader = styled.header`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     & > button {
       display: block;
     }
