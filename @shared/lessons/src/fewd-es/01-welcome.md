@@ -39,30 +39,43 @@ GA trabaja con estudiantes de manera online y presencial a través de 39 campus 
 
 ## El equipo
 
-### Instructores
+### Instructor Associate
 
 #### Alex Wheldon
 
 <img
-src="https://media-exp1.licdn.com/dms/image/C5603AQEIKw5fjbzoJQ/profile-displayphoto-shrink_800_800/0?e=1603929600&v=beta&t=Ehz9jStpFOTGl_PsvDp9mDi869mIMtfzO2JpzyIeDuI" alt="Alex Wheldon"
+src="https://ca.slack-edge.com/T018VAD0BAA-U0198M6441G-c8eab22d787a-512" alt="Alex Wheldon"
 style="max-width: 20%;">
 
 Después de más de 9 años trabajando como gerente de cuentas en el mundo de la producción publicitaria y el diseño gráfico, Alex estaba listo para encontrar un nuevo desafío alineado con sus pasiones.
 
-Completó SEI en Londres (de forma remota) en junio y le encantó cada minuto de ello.
+Completó SEI en Londres (de forma remota) en junio 2020 y tuvo la suerte de ser contratado por GA como "teaching assistant" para el curso inaugural de SEI en español en septiembre del 2020. Al terminar el curso comenzo a trabajar como desarrollador, construyendo en plantillas editables para BMW.
 
-Cuando no está reforzando sus habilidades, puedes encontrarlo jugando videojuegos con sus amigos, andando en bicicleta por el parque o en un concierto (cuando sea posible...)
+Cuando no está reforzando sus habilidades, puedes encontrarlo jugando videojuegos con sus amigos, andando en bicicleta por el parque o en un concierto.
 
 ---
 
 ## El equipo
 
-### Instructores
+### Sr Client Success Manager
+
+#### Emily Nguema
+
+<img 
+src="https://ca.slack-edge.com/T018VAD0BAA-U0318CZH8UF-3ccd0ed931fd-512" 
+alt="Emily Nguema" 
+style="max-width: 20%;">
+
+---
+
+## El equipo
+
+### Instructor Associate
 
 #### Gabriel Goiri
 
 <img
-src="https://media-exp1.licdn.com/dms/image/C4D03AQGSg7b3gbQ_Dg/profile-displayphoto-shrink_800_800/0?e=1603929600&v=beta&t=mGqjq1jId3ceGrOkArst9b3g886bD4YjA-6pitDEcog"
+src="https://ca.slack-edge.com/T018VAD0BAA-U018UBGQU07-947424b336ed-512"
 alt="Gabriel Goiri"
 style="max-width: 20%;">
 
@@ -73,41 +86,28 @@ Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Ath
 
 ## El equipo
 
-### Instructores
+### Productores
+
+#### Mariam Hameedalden
+
+<img 
+src="https://ca.slack-edge.com/T018VAD0BAA-U032TU0HS2G-fca94904508c-512" 
+alt="Mariam Hameedalden" 
+style="max-width: 20%;">
+
+---
+
+## El equipo
+
+### Lead Instructor
 
 #### Pedro Martín
 
-Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización benéfica para mejorar la integración social en los barrios marginales de Caracas.
+Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización no gubernamental para mejorar la integración social en los barrios marginales de Caracas.
 
 Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant 👨🏻‍🏫.
 
 Todavía estoy enseñando, ahora como Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
-
----
-
-## El equipo
-
-### Productores
-
-#### Brandon Pfeiffer
-
-<img 
-src="https://ca.slack-edge.com/T018VAD0BAA-U018VPP2LKY-df0d8a115a11-512" 
-alt="Brandon Pfeiffer" 
-style="max-width: 20%;">
-
----
-
-## El equipo
-
-### Productores
-
-#### Callum Goodwilliam
-
-<img 
-src="https://ca.slack-edge.com/T018VAD0BAA-U019RT5CUEL-6449adca4819-512" 
-alt="Callum Goodwilliam" 
-style="max-width: 20%;">
 
 ---
 
@@ -120,6 +120,22 @@ style="max-width: 20%;">
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 
 > ⚠️ El equipo instruccional está basado en Londres 🇬🇧 (GMT 0)
+
+---
+
+## Office hours
+
+Espacio de consulta fuera de clases con el equipo instruccional
+
+| Instructor | Fecha y hora                                        | Link para calendario           |
+| ---------- | --------------------------------------------------- | ------------------------------ |
+| Pedro      | Todos los viernes **12:00 M** a **1:00PM** (GMT +1) | [Calendario][calendario-pedro] |
+
+> ⚠️ _Los horarios son GMT +1_ 🌎 🕰
+
+> ⚠️ El equipo instruccional está basado en Londres 🇬🇧 (GMT 0)
+
+[calendario-pedro]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUZqSk9WQTNvb244fGRlZmF1bHR8Y2EzOWQ4YTk0ZWMxZmYwNmUzYzFlZDhmOWJkZDMzZjQ
 
 ---
 
@@ -137,11 +153,11 @@ class: table
 
 Una semana normal
 
-| Día       | Actividad                                   |
-| --------- | ------------------------------------------- |
-| Lunes     | Clases 🎓                                   |
-| Martes    | Clases 🎓 / Asignación de tarea 📓          |
-| Miércoles | Lab / Code Along 🧪 / Ayuda para las tareas |
+| Día    | Actividad                                   |
+| ------ | ------------------------------------------- |
+| Lunes  | Clases 🎓                                   |
+| Martes | Clases 🎓 / Asignación de tarea 📓          |
+| Jueves | Lab / Code Along 🧪 / Ayuda para las tareas |
 
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 

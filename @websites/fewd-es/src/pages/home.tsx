@@ -5,6 +5,7 @@ import Header from '../components/header';
 import styled from 'styled-components';
 import Page from '../components/page';
 import ResourcesPerWeekTableRow from '../components/resources-per-week-table-row';
+import ResourcesPerWeekDatails from '../components/resources-per-week-details';
 import { routesByWeek } from '../routes/config';
 
 const StyledMain = styled.main`
@@ -26,9 +27,15 @@ const StyledMain = styled.main`
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    table {
+      display: none;
+    }
+  }
 `;
 
-const tableHeaders = ['Semana', 'Lección', 'Lección', 'Taller', 'Tarea'];
+const tableHeaders = ['Semana', 'Lección', 'Lección', 'Taller(es)', 'Tarea(s)'];
 
 const TableHeaders = tableHeaders.map((header, i) => (
   <th key={`${header}` + i}>{header}</th>
@@ -50,6 +57,9 @@ const Home: React.FC = () => (
           ))}
         </tbody>
       </table>
+      {routesByWeek.map((routeByWeek, i) => (
+        <ResourcesPerWeekDatails {...routeByWeek} key={i} />
+      ))}
     </StyledMain>
     <Footer />
   </Page>

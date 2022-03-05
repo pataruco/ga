@@ -67,7 +67,7 @@ const StyledNav = styled.nav`
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     & {
       display: none;
     }
