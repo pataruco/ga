@@ -34,10 +34,10 @@ export const week7Route: RoutesByWeek = {
     name: 'Bike Wheels 🚴🏻‍♀️, Animations with Sass 💅🏻',
     path: `/lessons/sass-svg/#42`,
   },
-  // homework: {
-  //   name: 'Huddle',
-  //   path: `/lessons/forms#17`,
-  // },
+  homework: {
+    name: 'Clipboard 📋',
+    path: `/lessons/forms#43`,
+  },
   resources: [
     ['Animation', 'https://css-tricks.com/almanac/properties/a/animation/'],
     [
@@ -72,34 +72,4 @@ export const week7Route: RoutesByWeek = {
     ['Advanced SCSS', 'https://gist.github.com/jareware/4738651'],
     ['SASS Style Guide', 'https://css-tricks.com/sass-style-guide/'],
   ],
-  // bonuses: [
-  //   [
-  //     "Read through Shay Howe's Responsive Web Design",
-  //     'http://learn.shayhowe.com/advanced-html-css/responsive-web-design',
-  //   ],
-  //   [
-  //     'Watch Part 1 Mobile Design Essentials',
-  //     'https://www.youtube.com/watch?v=ZhnN1CdwvTs',
-  //   ],
-  //   [
-  //     'Watch Part 2 Mobile Design Essentials',
-  //     'https://www.youtube.com/watch?v=br_szl80J1M',
-  //   ],
-  //   [
-  //     "Read Shay Howe's Building Forms",
-  //     'http://learn.shayhowe.com/html-css/building-forms/',
-  //   ],
-  //   [
-  //     "Read MDN's Your First HTML Form article",
-  //     'https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form',
-  //   ],
-  //   [
-  //     'Read through Writing your best code',
-  //     'http://learn.shayhowe.com/html-css/writing-your-best-code/',
-  //   ],
-  //   [
-  //     "Complete Code Academy's  Make a website course",
-  //     'https://www.codecademy.com/learn/make-a-website',
-  //   ],
-  // ],
 };
