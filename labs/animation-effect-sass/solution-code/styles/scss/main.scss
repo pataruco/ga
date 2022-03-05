@@ -5,25 +5,11 @@
 body {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  text-align: center;
-}
-
-main {
-  flex: 1 auto;
+  padding: 1.25rem;
 }
 
 .animation-wrapper {
-  width: fit-content;
   position: relative;
-  margin: auto;
 }
 
 .circle {
