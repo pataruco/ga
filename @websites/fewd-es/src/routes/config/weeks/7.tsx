@@ -31,7 +31,7 @@ export const week7Route: RoutesByWeek = {
     ),
   },
   workshops: {
-    name: 'Bike Wheels',
+    name: 'Bike Wheels 🚴🏻‍♀️, Animations with Sass 💅🏻',
     path: `/lessons/sass-svg/#42`,
   },
   // homework: {

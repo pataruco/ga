@@ -590,6 +590,7 @@ class: labs
 # Labs
 
 - [Bike wheels 🚴🏻‍♀️](https://github.com/pataruco/ga/raw/main/labs/bike-wheels/bike-wheels-starter-code.zip)
+- [Animations with Sass 💅🏻](https://github.com/pataruco/ga/raw/main/labs/animation-effect-sass/animation-effect-sass-starter-code.zip)
 
 ---
 
