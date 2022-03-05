@@ -49,9 +49,9 @@ style="max-width: 20%;">
 
 Después de más de 9 años trabajando como gerente de cuentas en el mundo de la producción publicitaria y el diseño gráfico, Alex estaba listo para encontrar un nuevo desafío alineado con sus pasiones.
 
-Completó SEI en Londres (de forma remota) en junio y le encantó cada minuto de ello.
+Completó SEI en Londres (de forma remota) en junio 2020 y tuvo la suerte de ser contratado por GA como "teaching assistant" para el curso inaugural de SEI en español en septiembre del 2020. Al terminar el curso comenzo a trabajar como desarrollador, construyendo en plantillas editables para BMW.
 
-Cuando no está reforzando sus habilidades, puedes encontrarlo jugando videojuegos con sus amigos, andando en bicicleta por el parque o en un concierto (cuando sea posible...)
+Cuando no está reforzando sus habilidades, puedes encontrarlo jugando videojuegos con sus amigos, andando en bicicleta por el parque o en un concierto.
 
 ---
 
