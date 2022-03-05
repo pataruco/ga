@@ -43,15 +43,18 @@ GA trabaja con estudiantes de manera online y presencial a través de 39 campus 
 
 #### Alex Wheldon
 
-<img
-src="https://ca.slack-edge.com/T018VAD0BAA-U0198M6441G-c8eab22d787a-512" alt="Alex Wheldon"
-style="max-width: 20%;">
-
+.row[
+.col[
+<img src="https://ca.slack-edge.com/T018VAD0BAA-U0198M6441G-c8eab22d787a-512" alt="Alex Wheldon" style="max-width: 60%;">
+]
+.col[
 Después de más de 9 años trabajando como gerente de cuentas en el mundo de la producción publicitaria y el diseño gráfico, Alex estaba listo para encontrar un nuevo desafío alineado con sus pasiones.
 
 Completó SEI en Londres (de forma remota) en junio 2020 y tuvo la suerte de ser contratado por GA como "teaching assistant" para el curso inaugural de SEI en español en septiembre del 2020. Al terminar el curso comenzo a trabajar como desarrollador, construyendo en plantillas editables para BMW.
 
 Cuando no está reforzando sus habilidades, puedes encontrarlo jugando videojuegos con sus amigos, andando en bicicleta por el parque o en un concierto.
+]
+]
 
 ---
 
@@ -61,10 +64,15 @@ Cuando no está reforzando sus habilidades, puedes encontrarlo jugando videojueg
 
 #### Emily Nguema
 
-<img 
-src="https://ca.slack-edge.com/T018VAD0BAA-U0318CZH8UF-3ccd0ed931fd-512" 
-alt="Emily Nguema" 
-style="max-width: 20%;">
+.row[
+.col[
+<img
+src="https://ca.slack-edge.com/T018VAD0BAA-U0318CZH8UF-3ccd0ed931fd-512"
+alt="Emily Nguema"
+style="max-width: 60%;">
+]
+.col[]
+]
 
 ---
 
@@ -74,13 +82,17 @@ style="max-width: 20%;">
 
 #### Gabriel Goiri
 
+.row[
+.col[
 <img
 src="https://ca.slack-edge.com/T018VAD0BAA-U018UBGQU07-947424b336ed-512"
 alt="Gabriel Goiri"
-style="max-width: 20%;">
-
+style="max-width: 60%;">
+]
+.col[
 Soy de Bilbao, tengo 26 años, soy un apasionado de la tecnología, he estudiado 2 Grados Superiores, Telecomunicaciones y Robótica. Hice un curso intensivo de 3 meses de Software Development en Londres, donde me encuentro ahora mismo.
-Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Athletic Club de Bilbao)
+Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Athletic Club de Bilbao)]
+]
 
 ---
 
@@ -90,10 +102,16 @@ Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Ath
 
 #### Mariam Hameedalden
 
+.row[
+.col[
 <img 
 src="https://ca.slack-edge.com/T018VAD0BAA-U032TU0HS2G-fca94904508c-512" 
 alt="Mariam Hameedalden" 
-style="max-width: 20%;">
+style="max-width: 60%;">
+
+]
+.col[]
+]
 
 ---
 
@@ -103,11 +121,21 @@ style="max-width: 20%;">
 
 #### Pedro Martín
 
+.row[
+.col[
+<img
+src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/7/20/1437405084174/3e782722-ff07-4a19-8031-22a7e92c7921-2060x1373.jpeg?width=620&quality=45&auto=format&fit=max&dpr=2&s=3f6d5ddd4fafa7a2d874d3a48c91dbd9"
+alt="Mariam Hameedalden"
+style="max-width: 100%;">
+]
+.col[
 Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización no gubernamental para mejorar la integración social en los barrios marginales de Caracas.
 
 Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant 👨🏻‍🏫.
 
 Todavía estoy enseñando, ahora como Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
+]
+]
 
 ---
 
