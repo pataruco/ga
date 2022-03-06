@@ -550,7 +550,7 @@ class: lab
 
 # Labs
 
-- Bifurcar (_fork_) el repositorio de tareas y seguir las instrucciones de instalación
+- Bifurcar (_fork_) el [repositorio de tareas](https://git.generalassemb.ly/fewd-es/01-homework) y seguir las instrucciones de instalación
 - Completar el laboratorio <a href="https://github.com/pataruco/ga/raw/main/labs/cookie-recipe/cookie-recipe-starter-code.zip" class="download-link">receta de galletas</a>
 - Iniciar la tarea
 
