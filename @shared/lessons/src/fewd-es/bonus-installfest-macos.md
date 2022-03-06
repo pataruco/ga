@@ -24,7 +24,7 @@ Identifica qué versión de MacOS estás utilizando: idealmente debería tener B
 1. Descarga Visual Studio
 2. Mueve la aplicación de la carpeta de descargas a la carpeta de aplicaciones
 3. Abre Visual Studio
-4. Habilita syncronización ![](https://code.visualstudio.com/assets/docs/editor/settings-sync/turn-on-sync.png)
+4. Habilita sincronización ![](https://code.visualstudio.com/assets/docs/editor/settings-sync/turn-on-sync.png)
 
 ---
 

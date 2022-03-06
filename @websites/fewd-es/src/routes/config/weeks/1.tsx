@@ -8,7 +8,7 @@ export const week1Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
     name: 'Bienvenida y orientación',
-    path: `/lessons/intro-to-html`,
+    path: `/lessons/welcome`,
     element: () => (
       <>
         <Title
