@@ -53,4 +53,40 @@ export const bonusLessonRoutes: LessonRoute[] = [
       );
     },
   },
+  {
+    name: 'HTML Table',
+    path: '/bonus-lessons/tables',
+    element() {
+      return (
+        <>
+          <Title courseName={COURSE_NAME} title="Bonus Lesson | HTML Table" />
+          <SlidesDeck slidesDeckPath={getLessonPath('bonus-tables')} />
+        </>
+      );
+    },
+  },
+  {
+    name: 'EcmaScript 6',
+    path: '/bonus-lessons/ecmascript',
+    element() {
+      return (
+        <>
+          <Title courseName={COURSE_NAME} title="Bonus Lesson | EcmaScript 6" />
+          <SlidesDeck slidesDeckPath={getLessonPath('bonus-ecmascrip')} />
+        </>
+      );
+    },
+  },
+  {
+    name: 'Accesibility',
+    path: '/bonus-lessons/a11y',
+    element() {
+      return (
+        <>
+          <Title courseName={COURSE_NAME} title="Bonus Lesson | Accesibility" />
+          <SlidesDeck slidesDeckPath={getLessonPath('bonus-a11y')} />
+        </>
+      );
+    },
+  },
 ];
