@@ -12,7 +12,11 @@ class: frontpage
 
 JavaScript admite un conjunto compacto de declaraciones, específicamente declaraciones de control de flujo, que se pueden utilizar para incorporar una gran cantidad de interactividad en tu aplicación.
 
-### Declaración de bloque (_block statement_)
+---
+
+## Declaración de bloque
+
+(_block statement_)
 
 Las declaraciones destinadas a ejecutarse después de una operación de control de flujo se agrupará en lo que se denomina **declaración de bloque**. Estas declaraciones están envueltas en un par de llaves:
 
@@ -25,9 +29,9 @@ Las declaraciones destinadas a ejecutarse después de una operación de control 
 
 ---
 
-## Operadores lógicos
+## Alcance del bloque
 
-#### Alcance del bloque (_Block scope_)
+(_Block scope_)
 
 Hemos visto que el alcance (_scope_) en JavaScript cambia con frecuencia. En el caso de **declaración de bloque**, el alcance se crea pero solo con `let` y `const`.
 
@@ -41,11 +45,15 @@ console.log(name); // outputs pedro
 
 ---
 
-## Declaraciones condicionales (_Conditional statements_)
+## Declaraciones condicionales
+
+(_Conditional statements_)
 
 Las declaraciones condicionales son una forma de omitir esencialmente un bloque de código si no pasa una expresión booleana. JavaScript admite dos declaraciones condicionales: `if` ...`else` y `switch`.
 
-#### Declaraciones `if`...`else`
+---
+
+## Declaraciones `if`...`else`
 
 `if(expr) { code }`
 
@@ -60,15 +68,18 @@ if (1 > 0) {
 
 ---
 
-## Declaraciones condicionales (_Conditional statements_)
+## Declaraciones condicionales
+
+(_Conditional statements_)
 
 Cuando necesites probar más de un caso, puede usar `else if`:
 
 ```javascript
 let name = 'gaticos';
+
 if (name === 'cachorros') {
   name += '!';
-} else if (name == 'gaticos') {
+} else if (name === 'gaticos') {
   name += '!!';
 } else {
   name = '!' + name;
@@ -79,11 +90,13 @@ name === 'gaticos!!';
 
 ---
 
-## Declaraciones condicionales (_Conditional statements_)
+## Declaraciones condicionales
 
-### Operador condicional (ternario) (_Ternary Operator_)
+(_Conditional statements_)
 
-JavaScript tiene un operador ternario para expresiones condicionales. Puede pensar en el operador ternario como un conciso "if-elseno en una línea":
+Operador condicional (ternario) (_Ternary Operator_)
+
+JavaScript tiene un operador ternario para expresiones condicionales. Puede pensar en el operador ternario como un conciso "`if-else` en una línea":
 
 ```javascript
 const edad = 12;
@@ -100,22 +113,35 @@ permitido;
 
 ## Verdadero & Falso
 
-### Lo siguientes se vuelven falso (`false`) cuando se convierte en un booleano
+Lo siguientes se vuelven falso (`false`) cuando se convierte en un booleano
 
-- `false`
-- `0`
-- `''` (empty string)
-- `NaN`
-- `null`
-- `undefined`
+```js
+Boolean(false);
+//=> false
+
+Boolean(0);
+//=> false
+
+Boolean('');
+//=> false
+
+Boolean(NaN);
+//=> false
+
+Boolean(null);
+//=> false
+
+Boolean(undefined);
+//=> false
+```
 
 ---
 
 ## Verdadero & Falso
 
-#### Todos los demás valores se vuelven verdaderos (`true`) cuando se convierten a booleanos
+Todos los demás valores se vuelven verdaderos (`true`) cuando se convierten a booleanos
 
-Existe una forma sencilla de verificar la veracidad o falsedad de un valor. Cuando agregas `!` Delante de un valor, el valor devuelto será el inverso del valor en un booleano. Entonces, si agrega dos `!`, Obtendrá el valor booleano del original:
+Existe una forma sencilla de verificar la veracidad o falsedad de un valor. Cuando agregas `!` Delante de un valor, el valor devuelto será el inverso del valor en un booleano. Entonces, si agrega dos `!`, Obtendrás el valor booleano del original:
 
 ```javascript
 !!1;
@@ -136,7 +162,9 @@ Existe una forma sencilla de verificar la veracidad o falsedad de un valor. Cuan
 
 ---
 
-## Operadores lógicos (_Boolean/Logical Operators_)
+## Operadores lógicos
+
+(_Boolean/Logical Operators_)
 
 [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
 
@@ -153,7 +181,9 @@ Un tercer operador "unario" que requiere solo un valor:
 
 ---
 
-## Operadores lógicos (_Boolean/Logical Operators_)
+## Operadores lógicos
+
+(_Boolean/Logical Operators_)
 
 #### `&&` (Y)
 
@@ -166,7 +196,9 @@ true && true;
 
 ---
 
-## Operadores lógicos (_Boolean/Logical Operators_)
+## Operadores lógicos
+
+(_Boolean/Logical Operators_)
 
 #### `&&` (Y)
 
@@ -182,7 +214,9 @@ false && false;
 
 ---
 
-## Operadores lógicos (_Boolean/Logical Operators_)
+## Operadores lógicos
+
+(_Boolean/Logical Operators_)
 
 #### `||` (O)
 
@@ -201,7 +235,9 @@ false || false;
 
 ---
 
-## Operadores lógicos (_Boolean/Logical Operators_)
+## Operadores lógicos
+
+(_Boolean/Logical Operators_)
 
 #### `||` (O)
 
@@ -214,6 +250,12 @@ El `!` toma un valor y devuelve el valor booleano opuesto, es decir,
 //=> false
 ```
 
+---
+
+## Operadores lógicos
+
+(_Boolean/Logical Operators_)
+
 Los operadores `&&` y `||` usan lógica de cortocircuito, lo que significa que la ejecución del segundo del primero. Esto es útil para establecer valores predeterminados:
 
 ```javascript
@@ -225,7 +267,9 @@ En este caso, si el primer operando `otherName` es _falsy_, entonces veremos que
 
 ---
 
-## Operadores relacionales (_Comparison Operators_)
+## Operadores relacionales
+
+(_Comparison Operators_)
 
 Las [comparaciones](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) en JavaScript se pueden hacer usando `<`, `>`, `<=` y `>=`.
 
@@ -247,9 +291,11 @@ Funcionan tanto para _strings_ como para números. Es útil y puede ser una fuen
 
 ---
 
-## Operadores relacionales (_Comparison Operators_)
+## Operadores relacionales
 
-### Operador de igualdad (`Equality operator`) `==`
+(_Comparison Operators_)
+
+Operador de igualdad (`Equality operator`) `==`
 
 La igualdad es un poco más compleja. Hay 2 formas en JavaScript para verificar igualdad.
 
@@ -265,9 +311,11 @@ Cuando se verifica la igualdad usando doble igual `==`, JavaScript hace una gran
 
 ---
 
-## Operadores relacionales (_Comparison Operators_)
+## Operadores relacionales
 
-### Operador de igualdad (`Equality operator`) `===`
+(_Comparison Operators_)
+
+Operador de igualdad (`Equality operator`) `===`
 
 Para evitar la coerción de tipos y medir la igualdad de manera más estricta, **usa el operador triple-igual**. Debido a que `===` chequea que el tipo y el valor sean el mismo más verdaderamente la igualdad real, usaremos esto mucho más a menudo cuando verifiquemos si también las cosas son, de hecho, lo mismo.
 
@@ -286,9 +334,11 @@ true === true;
 
 ---
 
-## Operadores relacionales (_Comparison Operators_)
+## Operadores relacionales
 
-### Operador de igualdad (`Equality operator`) `===`
+(_Comparison Operators_)
+
+Operador de igualdad (`Equality operator`) `===`
 
 Sin embargo, hay algunos incidentes cuando no hace lo que esperamos, por ejemplo cuando se trabaja con objetos vacíos o _arrays_;
 
@@ -305,7 +355,9 @@ Sin embargo, hay algunos incidentes cuando no hace lo que esperamos, por ejemplo
 
 ---
 
-## Operadores relacionales (_Comparison Operators_)
+## Operadores relacionales
+
+(_Comparison Operators_)
 
 **Explicación**
 
