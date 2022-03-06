@@ -14,11 +14,9 @@ class: frontpage
 - El equipo
 - Sobre FEWD-ES
 - Cómo tener éxito en este programa
-- Cosas administrativas
-- Preguntas y respuestas
+- La letra pequeña
 - Break
 - Presentaciones aleatorias
-- Contrato de valor agregado
 - Preguntas y respuestas
 
 ---
@@ -347,11 +345,21 @@ El equipo instruccional creó este [seleccionador aleatorio 🎲](https://pataru
 
 Sobre tu experiencia vital sin decirnos cuales son
 
-- 2 verdades
-- 1 mentira
+- **2 verdades**
+- **1 mentira**
 
   ]
   ]
+
+---
+
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>AMA</h1>
+</div>
 
 ---
 
