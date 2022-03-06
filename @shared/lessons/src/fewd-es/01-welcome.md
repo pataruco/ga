@@ -126,14 +126,14 @@ style="max-width: 60%;">
 <img
 src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/7/20/1437405084174/3e782722-ff07-4a19-8031-22a7e92c7921-2060x1373.jpeg?width=620&quality=45&auto=format&fit=max&dpr=2&s=3f6d5ddd4fafa7a2d874d3a48c91dbd9"
 alt="Mariam Hameedalden"
-style="max-width: 100%;">
+style="max-width: 90%;">
 ]
 .col[
 Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización no gubernamental para mejorar la integración social en los barrios marginales de Caracas.
 
-Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant 👨🏻‍🏫.
+Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant.
 
-Todavía estoy enseñando, ahora como Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
+Todavía estoy enseñando, ahora como Lead Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
 ]
 ]
 
@@ -224,19 +224,70 @@ Una semana normal
 ## Lo que utilizaremos
 
 .row[
-.col[### Herramientas
+.col[
 
-- Slack
-- Zoom
-- Chrome / Firefox Developer Edition
-- VSCode]
-  .col[### Servicios
+### Herramientas
 
-- Slack
-- Zoom
-- GitHub Enterprise
-- GitHub]
-  ]
+<ul>
+  <li>
+    <a href="https://slack.com/intl/en-gb/downloads" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">Slack</a>
+  </li>
+  <li>
+    <a href="https://zoom.us/download" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">Zoom</a>
+  </li>
+  <li>
+    <a href="https://www.google.co.uk/chrome/" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">Chrome</a> / 
+    <a href="https://www.mozilla.org/en-GB/firefox/developer/" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">Firefox Developer Edition</a>
+  </li>
+  <li>
+    <a href="https://code.visualstudio.com/Download" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">Visual Studio Code</a>
+  </li>
+<ul>
+
+]
+.col[
+
+### Servicios
+
+<ul>
+  <li>
+    <a href="https://git.generalassemb.ly/" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">General Assembly GitHub Enterprise</a>
+  </li>
+  <li>
+    <a href="https://github.com/" 
+      class="external-link"
+      target="_blank"
+      rel="noreferrer"
+      rel="noopener">GitHub</a>
+  </li>
+<ul>
+
+]
+]
 
 ---
 
@@ -253,6 +304,8 @@ Una semana normal
 
 ## ¿Cómo tener éxito en este programa?
 
+¿Qué estadio de aprendizaje crees que vas a llegar?
+
 1. No sé que no sé
 2. **Sé que no sé**
 3. **Sé que sé**
@@ -260,7 +313,7 @@ Una semana normal
 
 ---
 
-## Cosas administrativas
+## La letra pequeña
 
 - Los estudiantes deben tratar a todos los miembros del personal y otros estudiantes con respeto y dignidad.
 - Si un estudiante es disruptivo con a la comunidad, se le pedirá que se retire.
