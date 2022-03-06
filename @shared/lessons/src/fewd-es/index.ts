@@ -13,7 +13,9 @@ import * as positioning from './10-positioning.md';
 import * as responsive from './11-responsive-web-development.md';
 import * as forms from './12-forms.md';
 import * as animations from './13-animations.md';
+import * as introToJs from './15-intro-to-js.md';
 import * as sassSvg from './14-sass-svg.md';
+import * as controlFlow from './16-control-flow.md';
 
 export const fewdEs = {
   '01-welcome': welcome,
@@ -30,6 +32,8 @@ export const fewdEs = {
   '12-forms': forms,
   '13-animations': animations,
   '14-sass-svg': sassSvg,
+  '15-intro-to-js': introToJs,
+  '16-control-flow': controlFlow,
   'bonus-installfest-macos': installfestMacos,
   'bonus-installfest-windows': installfestWindows,
 };

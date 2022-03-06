@@ -27,7 +27,7 @@ console.log('working!');
 
 // 13. re-assign the value of changeNumber to 300 and print it to the console
 
-// 14. uncomment the variables below, concatonate them and print the result to the console
+// 14. uncomment the variables below, concatinate them and print the result to the console
 
 // const fruit = 'Oranges'
 // const vegetable = 'potatos'

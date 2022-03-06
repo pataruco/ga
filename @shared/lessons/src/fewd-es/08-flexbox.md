@@ -346,7 +346,7 @@ class: lab
 # Labs
 
 - [Flex Froggy](https://flexboxfroggy.com/)
-- [Relaxr 2](https://github.com/pataruco/ga/raw/mainhomeworks/relaxr-2/relaxr-2-starter-code.zip)
+- [Relaxr 2](https://github.com/pataruco/ga/raw/main/homeworks/relaxr-2/relaxr-2-starter-code.zip)
 
 ---
 
@@ -354,4 +354,4 @@ class: code-along
 
 # Homework
 
-- [Relaxr 2](https://github.com/pataruco/ga/raw/mainhomeworks/relaxr-2/relaxr-2-starter-code.zip)
+- [Relaxr 2](https://github.com/pataruco/ga/raw/main/homeworks/relaxr-2/relaxr-2-starter-code.zip)
