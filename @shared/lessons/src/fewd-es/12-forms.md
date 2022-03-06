@@ -223,7 +223,7 @@ class: lab
 
 [Forms](https://github.com/pataruco/ga/raw/main/labs/forms/forms-starter-code.zip)
 
-[Huddle](https://github.com/pataruco/ga/raw/mainhomeworks/huddle/huddle-starter-code.zip)
+[Huddle](https://github.com/pataruco/ga/raw/main/homeworks/huddle/huddle-starter-code.zip)
 
 ---
 
@@ -231,4 +231,4 @@ class: code-along
 
 ## Tarea
 
-[Huddle](https://github.com/pataruco/ga/raw/mainhomeworks/huddle/huddle-starter-code.zip)
+[Huddle](https://github.com/pataruco/ga/raw/main/homeworks/huddle/huddle-starter-code.zip)

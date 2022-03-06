@@ -34,4 +34,18 @@ export const week1Route: RoutesByWeek = {
     name: 'Installfest',
     path: `/lessons/installfest`,
   },
+  resources: [
+    [
+      'Visual Studio Code, Getting Started ',
+      'https://code.visualstudio.com/docs',
+    ],
+    [
+      'Invention of Internet',
+      'https://www.history.com/topics/inventions/invention-of-the-internet',
+    ],
+    [
+      'An overview of HTTP',
+      'https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview',
+    ],
+  ],
 };

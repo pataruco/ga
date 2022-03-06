@@ -598,4 +598,4 @@ class: code-along
 
 # Homeworks
 
-- [Clipbboard 📋 landing page](https://github.com/pataruco/ga/raw/mainhomeworks/clipboard-landing-page/clipboard-landing-page-starter-code.zip)
+- [Clipbboard 📋 landing page](https://github.com/pataruco/ga/raw/main/homeworks/clipboard-landing-page/clipboard-landing-page-starter-code.zip)

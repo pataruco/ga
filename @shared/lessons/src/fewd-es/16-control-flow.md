@@ -513,3 +513,23 @@ class: frontpage
 </div>
 
 ---
+
+class: lab
+
+# Labs
+
+-[Intro to JavaScript lab 🧪](https://github.com/pataruco/ga/raw/main/homeworks/intro-to-js/intro-to-js-starter-code.zip)
+
+-[JavaScript Calculator 🧮][js-calc]
+
+---
+
+class: code-along
+
+# Homework
+
+-[JavaScript Calculator 🧮][js-calc]
+
+---
+
+[js-calc]: https://github.com/pataruco/ga/raw/main/homeworks/javascript-calculator/javascript-calculator-starter-code.zip

@@ -220,7 +220,7 @@ class: lab
 
 # Relaxr
 
-[Download](https://github.com/pataruco/ga/raw/mainhomeworks/relaxr-1/relaxr-1-starter-code.zip)
+[Download](https://github.com/pataruco/ga/raw/main/homeworks/relaxr-1/relaxr-1-starter-code.zip)
 
 ---
 
@@ -228,4 +228,4 @@ class: code-along
 
 # Relaxr
 
-[Download](https://github.com/pataruco/ga/raw/mainhomeworks/relaxr-1/relaxr-1-starter-code.zip)
+[Download](https://github.com/pataruco/ga/raw/main/homeworks/relaxr-1/relaxr-1-starter-code.zip)

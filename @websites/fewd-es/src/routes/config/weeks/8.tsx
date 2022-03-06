@@ -34,46 +34,50 @@ export const week8Route: RoutesByWeek = {
       </>
     ),
   },
-  // workshops: {
-  //   name: 'Bike Wheels 🚴🏻‍♀️, Animations with Sass 💅🏻',
-  //   path: `/lessons/sass-svg/#42`,
-  // },
-  // homework: {
-  //   name: 'Clipboard 📋',
-  //   path: `/lessons/forms#43`,
-  // },
-  // resources: [
-  //   ['Animation', 'https://css-tricks.com/almanac/properties/a/animation/'],
-  //   [
-  //     'CSS Animation for Beginners',
-  //     'https://robots.thoughtbot.com/css-animation-for-beginners',
-  //   ],
-  //   [
-  //     '15 Inspiring Examples of CSS Animation on CodePen',
-  //     'https://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937',
-  //   ],
-  //   [
-  //     'Transitions Docs',
-  //     'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions',
-  //   ],
-  //   [
-  //     'Transition vs. Animation',
-  //     'https://cssanimation.rocks/transition-vs-animation/',
-  //   ],
-  //   [
-  //     'CSS Animation Support - caniuse.com',
-  //     'https://caniuse.com/#search=animation',
-  //   ],
-  //   ['SASS Basics', 'http://sass-lang.com/guide'],
-  //   [
-  //     'An Absolute Beginners Guide To SASS',
-  //     'http://blog.teamtreehouse.com/the-absolute-beginners-guide-to-sass',
-  //   ],
-  //   [
-  //     'Getting Started With SASS (with Interactive Examples)',
-  //     'https://scotch.io/tutorials/getting-started-with-sass',
-  //   ],
-  //   ['Advanced SCSS', 'https://gist.github.com/jareware/4738651'],
-  //   ['SASS Style Guide', 'https://css-tricks.com/sass-style-guide/'],
-  // ],
+  workshops: {
+    name: 'Intro to JavaScript',
+    path: `/lessons/control-flow#29`,
+  },
+  homework: {
+    name: 'JavaScript Calculator 🧮',
+    path: `/lessons/control-flow#30`,
+  },
+  resources: [
+    [
+      'What is Pseudocode? How to Use Pseudocode to Solve Coding Problems',
+      'https://www.freecodecamp.org/news/what-is-pseudocode-in-programming',
+    ],
+    [
+      'MDN: JavaScript data types and data structures',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures',
+    ],
+    [
+      'MDN: Expressions and operators',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators',
+    ],
+    [
+      'MDN: Arithmetic operators',
+      'https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators',
+    ],
+    [
+      'MDN: Working with objects',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects',
+    ],
+    [
+      'Tuts+: What is type coercion?',
+      'http://code.tutsplus.com/articles/the-beginners-guide-to-type-coercion-what-is-coercion--cms-21917',
+    ],
+    [
+      'MDN: JavaScript Introduction',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction',
+    ],
+    [
+      'MDN: Learning JavaScript',
+      'https://developer.mozilla.org/en-US/Learn/JavaScript',
+    ],
+    [
+      'Stack Overflow: When should I use a semicolon after curly braces?',
+      'http://stackoverflow.com/questions/2717949/when-should-i-use-a-semicolon-after-curly-braces',
+    ],
+  ],
 };
