@@ -163,12 +163,14 @@ Espacio de consulta fuera de clases con el equipo instruccional
 | Instructor | Fecha y hora                                        | Link para calendario           |
 | ---------- | --------------------------------------------------- | ------------------------------ |
 | Pedro      | Todos los viernes **1:00 PM** a **2:00PM** (GMT +1) | [Calendario][calendario-pedro] |
+| Alex       | Distribuidos en 18 semanas (chequear calendario)    | [Calendario][calendario-alex]  |
 
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 
 > ⚠️ El equipo instruccional está basado en Londres 🇬🇧 (GMT 0)
 
 [calendario-pedro]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUZqSk9WQTNvb244fGRlZmF1bHR8Y2EzOWQ4YTk0ZWMxZmYwNmUzYzFlZDhmOWJkZDMzZjQ
+[calendario-alex]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UU5YdHdxT3dGNjFffGRlZmF1bHR8MTExMWZhZmQyNDFhNWRkMWI0MjY5ODg4ZDQ2MDlmNGQ
 
 ---
 
