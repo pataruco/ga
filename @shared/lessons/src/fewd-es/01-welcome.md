@@ -69,7 +69,11 @@ src="https://ca.slack-edge.com/T018VAD0BAA-U0318CZH8UF-3ccd0ed931fd-512"
 alt="Emily Nguema"
 style="max-width: 60%;">
 ]
-.col[]
+.col[
+Responsible for managing client relationships and strategy, pre + post class communications and general logistics.
+I have been with General Assembly for a little over 3 months and prior to joining was working in Client Success in the world of Ecommerce.
+
+]
 ]
 
 ---
@@ -88,7 +92,10 @@ alt="Gabriel Goiri"
 style="max-width: 60%;">
 ]
 .col[
-Soy de Bilbao, tengo 26 años, soy un apasionado de la tecnología, he estudiado 2 Grados Superiores, Telecomunicaciones y Robótica. Hice un curso intensivo de 3 meses de Software Development en Londres, donde me encuentro ahora mismo.
+Soy de Bilbao, tengo 28 años, soy un apasionado de la tecnología, he estudiado 2 Grados Superiores, Telecomunicaciones y Robótica. Hice un curso intensivo de 3 meses de Software Development en Londres, donde me encuentro ahora mismo.
+
+Llevo 10 meses trabajando como Junior front end developer con React, Azure, Cosmos y ahora estoy aprendiendo backend con CSharp
+
 Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Athletic Club de Bilbao)]
 ]
 
@@ -127,11 +134,11 @@ alt="Mariam Hameedalden"
 style="max-width: 90%;">
 ]
 .col[
-Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización no gubernamental para mejorar la integración social en los barrios marginales de Caracas.
+Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a ONG para mejorar la integración social en los barrios pobres de Caracas.
 
-Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant.
+Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻 en General Assembly (2015). Desde que me gradué trabajo como instructor.
 
-Todavía estoy enseñando, ahora como Lead Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
+Todavía sigo enseñando, ahora como Lead Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
 ]
 ]
 
@@ -153,22 +160,37 @@ Todavía estoy enseñando, ahora como Lead Instructor ( y _Distinguished Faculty
 
 Espacio de consulta fuera de clases con el equipo instruccional
 
-| Instructor | Fecha y hora                                        | Link para calendario           |
-| ---------- | --------------------------------------------------- | ------------------------------ |
-| Pedro      | Todos los viernes **12:00 M** a **1:00PM** (GMT +1) | [Calendario][calendario-pedro] |
+| Instructor | Fecha y hora                                        | Link para calendario             |
+| ---------- | --------------------------------------------------- | -------------------------------- |
+| Alex       | Distribuidos en 18 semanas (chequear calendario)    | [Calendario][calendario-alex]    |
+| Gabriel    | Cada otro viernes (chequear calendario)             | [Calendario][calendario-gabriel] |
+| Pedro      | Todos los viernes **1:00 PM** a **2:00PM** (GMT +1) | [Calendario][calendario-pedro]   |
 
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 
 > ⚠️ El equipo instruccional está basado en Londres 🇬🇧 (GMT 0)
 
 [calendario-pedro]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUZqSk9WQTNvb244fGRlZmF1bHR8Y2EzOWQ4YTk0ZWMxZmYwNmUzYzFlZDhmOWJkZDMzZjQ
+[calendario-alex]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UU5YdHdxT3dGNjFffGRlZmF1bHR8MTExMWZhZmQyNDFhNWRkMWI0MjY5ODg4ZDQ2MDlmNGQ
+[calendario-gabriel]: https://calendar.google.com/calendar/u/0/r?_x_zm_rtaid=H7dakzQXTZSHX7dusyJXkw.1646664869263.069f08c8a800b874936967a493505724&_x_zm_rhtaid=667&pli=1
+
+---
+
+## En clase
+
+Por favor:
+
+- Mantén tu cámara encendida 📹
+- Mantén tu microfóno enmudecido 🚫🎤
+- Actualiza tu nombre en Slack y Zoom
+- Levanta la mano (en Zoom) si quieres intervenir
 
 ---
 
 ## Para la obtención de certificado 🔖
 
 1. Completa el 80% de las tareas
-2. No pierdas mas de **3** clases
+2. No pierdas más de **3** clases
 3. Presenta tus proyectos (mitad y final de curso)
 
 ---
@@ -201,11 +223,21 @@ Una semana normal
 
 ---
 
+## Exit tickets
+
+Cada jueves, antes de terminar la jornada, pediremos que tomen 5 minutos para llenar un formulario sobre la semana.
+
+El link será distribuido por Alex y Gabriel.
+
+---
+
 ## Sugerencias para el éxito de este programa
 
 - Pregunta todo lo que quieras, no hay preguntas tontas
 - Retate a ti mismo
 - Completa las tareas a tiempo
+- Se curioso
+- Este curso retorna el tiempo extra que le inviertas
 
 ---
 
@@ -314,8 +346,8 @@ Una semana normal
 ## La letra pequeña
 
 - Los estudiantes deben tratar a todos los miembros del personal y otros estudiantes con respeto y dignidad.
-- Si un estudiante es disruptivo con a la comunidad, se le pedirá que se retire.
-- Asegúrate de haber leído y formado el Código de conducta para estudiantes y <a href="https://fundacionadecco.org/wp-content/uploads/2021/12/bases-becas-fundacion-adecco-ga-2022.pdf" class="external-link">las bases de la convocatoria de la beca</a>
+- Si un estudiante es disruptivo con la comunidad, se le pedirá que se retire.
+- Asegúrate de haber leído y firmado el Código de conducta para estudiantes y <a href="https://fundacionadecco.org/wp-content/uploads/2021/12/bases-becas-fundacion-adecco-ga-2022.pdf" class="external-link">las bases de la convocatoria de la beca</a>
 
   - Se admitirá un máximo de 3 faltas debidamente justificadas. Superada las 3 faltas se considera falta de aprovechamiento del curso y se anulará la inscripción.
   - Además de las conexiones a las clases, para el correcto aprovechamiento del curso es necesario un estimado de 2 horas de trabajo personal para complementar las tareas complementarias
@@ -324,7 +356,7 @@ Una semana normal
 
 ---
 
-## Presentaciones aletorias
+## Presentaciones aleatorias
 
 El equipo instruccional creó este [seleccionador aleatorio 🎲](https://pataruco.github.io/random-picker/?), aquí sortearemos quien será el próximo responder lo siguiente
 
