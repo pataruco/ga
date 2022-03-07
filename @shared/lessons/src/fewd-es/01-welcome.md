@@ -160,10 +160,11 @@ Todavía sigo enseñando, ahora como Lead Instructor ( y _Distinguished Faculty 
 
 Espacio de consulta fuera de clases con el equipo instruccional
 
-| Instructor | Fecha y hora                                        | Link para calendario           |
-| ---------- | --------------------------------------------------- | ------------------------------ |
-| Pedro      | Todos los viernes **1:00 PM** a **2:00PM** (GMT +1) | [Calendario][calendario-pedro] |
-| Alex       | Distribuidos en 18 semanas (chequear calendario)    | [Calendario][calendario-alex]  |
+| Instructor | Fecha y hora                                        | Link para calendario             |
+| ---------- | --------------------------------------------------- | -------------------------------- |
+| Alex       | Distribuidos en 18 semanas (chequear calendario)    | [Calendario][calendario-alex]    |
+| Gabriel    | Cada otro viernes (chequear calendario)             | [Calendario][calendario-gabriel] |
+| Pedro      | Todos los viernes **1:00 PM** a **2:00PM** (GMT +1) | [Calendario][calendario-pedro]   |
 
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 
@@ -171,6 +172,7 @@ Espacio de consulta fuera de clases con el equipo instruccional
 
 [calendario-pedro]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUZqSk9WQTNvb244fGRlZmF1bHR8Y2EzOWQ4YTk0ZWMxZmYwNmUzYzFlZDhmOWJkZDMzZjQ
 [calendario-alex]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UU5YdHdxT3dGNjFffGRlZmF1bHR8MTExMWZhZmQyNDFhNWRkMWI0MjY5ODg4ZDQ2MDlmNGQ
+[calendario-gabriel]: https://calendar.google.com/calendar/u/0/r?_x_zm_rtaid=H7dakzQXTZSHX7dusyJXkw.1646664869263.069f08c8a800b874936967a493505724&_x_zm_rhtaid=667&pli=1
 
 ---
 
