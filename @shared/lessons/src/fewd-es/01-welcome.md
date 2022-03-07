@@ -105,17 +105,24 @@ Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Ath
 
 ### Productores
 
-#### Mariam Hameedalden
+#### Mariam Alabbas
 
 .row[
 .col[
 <img 
 src="https://ca.slack-edge.com/T018VAD0BAA-U032TU0HS2G-fca94904508c-512" 
-alt="Mariam Hameedalden" 
+alt="Mariam Alabbas" 
 style="max-width: 60%;">
 
 ]
-.col[]
+.col[
+
+- 2+ years working with General Assembly
+- Founded a community center ‘Humming Tree’ in 2016 centered around creative expression and belonging
+- Background in social entrepreneurship & passionate about learning and development
+- Hobbies include visiting art galleries, walking, journaling, cooking & going on road trips
+
+]
 ]
 
 ---
