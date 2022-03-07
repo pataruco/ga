@@ -35,7 +35,7 @@ const resources = [
   ],
   [
     'Tuts+: What is type coercion?',
-    'http://code.tutsplus.com/articles/the-beginners-guide-to-type-coercion-what-is-coercion--cms-21917',
+    'https://code.tutsplus.com/articles/the-beginners-guide-to-type-coercion-what-is-coercion--cms-21917',
   ],
 ];
 

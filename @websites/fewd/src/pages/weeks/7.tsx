@@ -15,7 +15,7 @@ const resources = [
   ],
   [
     'CSS3 = Awesome: Transitions',
-    'http://css3.bradshawenterprises.com/transitions/',
+    'https://css3.bradshawenterprises.com/transitions/',
   ],
   [
     'CSS Animations Guide: CSS animations guide',
@@ -35,11 +35,11 @@ const resources = [
 const bonuses = [
   [
     "Read Shay Howe's CSS Transforms",
-    'http://learn.shayhowe.com/advanced-html-css/css-transforms/',
+    'https://learn.shayhowe.com/advanced-html-css/css-transforms/',
   ],
   [
     "Read Shay Howe's transitions and animations",
-    'http://learn.shayhowe.com/advanced-html-css/transitions-animations/',
+    'https://learn.shayhowe.com/advanced-html-css/transitions-animations/',
   ],
 ];
 

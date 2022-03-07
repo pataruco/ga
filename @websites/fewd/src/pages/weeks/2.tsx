@@ -58,7 +58,7 @@ const resources = [
 const bonuses = [
   [
     'Read through opening the Box Model',
-    'http://learn.shayhowe.com/html-css/opening-the-box-model/',
+    'https://learn.shayhowe.com/html-css/opening-the-box-model/',
   ],
 ];
 

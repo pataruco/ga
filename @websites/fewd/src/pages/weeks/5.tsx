@@ -11,7 +11,7 @@ const resources = [
   ],
   [
     'Stack Overflow: When should I use a semicolon after curly braces?',
-    'http://stackoverflow.com/questions/2717949/when-should-i-use-a-semicolon-after-curly-braces',
+    'https://stackoverflow.com/questions/2717949/when-should-i-use-a-semicolon-after-curly-braces',
   ],
   [
     'MDN: Document',

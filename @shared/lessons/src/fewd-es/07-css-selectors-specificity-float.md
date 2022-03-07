@@ -346,7 +346,7 @@ Podemos despejar hacia los lados `izquierdo`, `derecho` o `ambos`. Lo que borrar
 
 En el pasado, `floats` eran la única forma de introducir columnas, pero debido a que un contenedor con elementos flotantes pierde su altura, debemos eliminar ese efecto de inmediato.
 
-### [Clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
+### [Clearfix hack](https://nicolasgallagher.com/micro-clearfix-hack/)
 
 ```css
 .cf:before,

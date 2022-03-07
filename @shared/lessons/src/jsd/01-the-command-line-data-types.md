@@ -400,7 +400,7 @@ The `Math` built-in object has properties and methods for mathematical constant
 - **`Math.max()`**: returns the largest of zero or more numbers
 - **`Math.random()`**: returns a pseudo-random number between 0 and 1
 
-### Oficial documentation: [http://mdn.io/Global_Objects/Math](http://mdn.io/Global_Objects/Math)
+### Oficial documentation: [https://mdn.io/Global_Objects/Math](https://mdn.io/Global_Objects/Math)
 
 ---
 

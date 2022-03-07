@@ -176,7 +176,7 @@ Son paquetes de código fuente distribuidos por desarrolladores de software, que
 
 El administrador de paquetes nos permite instalar y actualizar software (como Ruby, Git, MongoDB, etc.) desde la línea de comandos:
 
-1. Abre [http://brew.sh/](http://brew.sh/), desplásate hacia abajo, copia y pega el comando en el terminal.
+1. Abre [https://brew.sh/](https://brew.sh/), desplásate hacia abajo, copia y pega el comando en el terminal.
 2. Asegúrate de que Homebrew está preparado para preparar y solucionar cualquier problema: `brew doctor`
 3. Actualiza Homebrew: `brew update`
 

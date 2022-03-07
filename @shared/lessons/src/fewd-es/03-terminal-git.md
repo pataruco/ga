@@ -106,10 +106,10 @@ En el terminal completa las siguientes instrucciones a
   <head> </head>
   <body>
     <a href="goals.html">
-      <img src="http://i.imgur.com/dosK05U.gif" />
+      <img src="https://i.imgur.com/dosK05U.gif" />
     </a>
     <a href="worries.html">
-      <img src="http://i.imgur.com/2s0HwpM.gif" />
+      <img src="https://i.imgur.com/2s0HwpM.gif" />
     </a>
   </body>
 </html>

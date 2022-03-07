@@ -9,7 +9,7 @@ const resources = [
 
   [
     'Treehouse: Beginners guide to responsive web design',
-    'http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design',
+    'https://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design',
   ],
   [
     'Smashing Magazine: Fixed vs Fluid layout (old article)',
@@ -21,7 +21,7 @@ const resources = [
   ],
   [
     'A list apart: How to size text in CSS',
-    'http://alistapart.com/articles/howtosizetextincss',
+    'https://alistapart.com/articles/howtosizetextincss',
   ],
   ['W3C: Media queries', 'https://www.w3.org/TR/css3-mediaqueries/'],
   [
@@ -30,7 +30,7 @@ const resources = [
   ],
   [
     "Blast: 3 Reasons You Shouldn't Build a Mobile Website",
-    'http://www.blastam.com/blog/3-reasons-you-shouldnt-build-mobile-website',
+    'https://www.blastam.com/blog/3-reasons-you-shouldnt-build-mobile-website',
   ],
   [
     'Mobile friendly images',
@@ -49,7 +49,7 @@ const resources = [
 const bonuses = [
   [
     "Read through Shay Howe's Responsive Web Design",
-    'http://learn.shayhowe.com/advanced-html-css/responsive-web-design',
+    'https://learn.shayhowe.com/advanced-html-css/responsive-web-design',
   ],
   [
     'Watch Part 1 Mobile Design Essentials',

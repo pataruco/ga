@@ -30,7 +30,7 @@ const resources = [
   ],
   [
     "The Difference Between 'Block' and 'Inline'",
-    'http://www.impressivewebs.com/difference-block-inline-css/',
+    'https://www.impressivewebs.com/difference-block-inline-css/',
   ],
   [
     'MDN: Block-level elements',

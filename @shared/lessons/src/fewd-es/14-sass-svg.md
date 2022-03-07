@@ -117,8 +117,8 @@ Sass a menudo se compila a través de la línea de comandos, pero esto es bastan
 Aquí hay algunas aplicaciones gratuitas que puede usar en su lugar:
 
 - [Scout](https://scout-app.io/)
-- [Koala](http://koala-app.com/)
-- [Compass](http://compass-style.org/)
+- [Koala](https://koala-app.com/)
+- [Compass](https://compass-style.org/)
 
 ---
 

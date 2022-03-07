@@ -20,11 +20,11 @@ const resources = [
   ['Flexbox Froggy 🐸', 'http://flexboxfroggy.com/'],
   [
     'Detailed CSS positioning',
-    'http://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/',
+    'https://learn.shayhowe.com/advanced-html-css/detailed-css-positioning/',
   ],
   [
     'A List Apart: CSS positioning 101',
-    'http://alistapart.com/article/css-positioning-101',
+    'https://alistapart.com/article/css-positioning-101',
   ],
 ];
 

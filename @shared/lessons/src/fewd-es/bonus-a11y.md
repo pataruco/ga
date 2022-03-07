@@ -27,7 +27,7 @@ Accessibility and the best practices it entails can benefit everyone:
 - Semantic HTML (which improves accessibility) also improves SEO, making your site more findable/marketable.
 - Caring about accessibility demonstrates good ethics/morals, which improves your public image.
 - Other good practices that improve accessibility also make your site more usable by other groups, such as mobile phone users, those on a low network speed, etc.
-- [EU](http://eur-lex.europa.eu/eli/dir/2016/2102/oj) and [UK Law](http://www.legislation.gov.uk/ukpga/2010/15/contents)
+- [EU](https://eur-lex.europa.eu/eli/dir/2016/2102/oj) and [UK Law](https://www.legislation.gov.uk/ukpga/2010/15/contents)
 
 ---
 

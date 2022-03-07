@@ -189,7 +189,7 @@ Fuentes de Google es un servicio gratuito que brinda acceso a una amplia gama de
 
 ## Fuentes de Google
 
-1. Dirígete a http://www.google.com/fonts.
+1. Dirígete a https://www.google.com/fonts.
 2. Busca una fuente
 3. Haga clic en el icono de "uso rápido" (icono del medio a la derecha
    lado)

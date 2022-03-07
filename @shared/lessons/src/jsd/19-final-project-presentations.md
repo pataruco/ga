@@ -88,7 +88,7 @@ Do code free courses
 
 ## Final Presentations
 
-I create this [randomniser](http://pataruco.github.io/random-picker/) to be sort out how is going to present
+I create this [randomniser](https://pataruco.github.io/random-picker/) to be sort out how is going to present
 
 ---
 
