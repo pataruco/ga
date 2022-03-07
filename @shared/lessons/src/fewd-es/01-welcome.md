@@ -127,11 +127,11 @@ alt="Mariam Hameedalden"
 style="max-width: 90%;">
 ]
 .col[
-Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a una organización no gubernamental para mejorar la integración social en los barrios marginales de Caracas.
+Nacido y criado en Caracas, Venezuela 🇻🇪. Comencé como maestro de ciencias 🧪 y director de programas en campamentos de verano 🏕, luego salté a ONG para mejorar la integración social en los barrios pobres de Caracas.
 
-Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻, que terminé en General Assembly en el 2015 y ellos estuvieron suficientemente locos como para contratarme como Teacher Assistant.
+Llegué a Londres 🇬🇧 en 2013 y trabajé como [técnico de acceso con cuerdas (RAT por sus siglas en inglés)🐀](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing) para ahorrar dinero para hacer un curso de Desarrollo Web 👨🏻‍💻 en General Assembly (2015). Desde que me gradué trabajo como instructor.
 
-Todavía estoy enseñando, ahora como Lead Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
+Todavía sigo enseñando, ahora como Lead Instructor ( y _Distinguished Faculty Member_ ✨), por lo que el círculo se completa.
 ]
 ]
 
@@ -162,6 +162,17 @@ Espacio de consulta fuera de clases con el equipo instruccional
 > ⚠️ El equipo instruccional está basado en Londres 🇬🇧 (GMT 0)
 
 [calendario-pedro]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUZqSk9WQTNvb244fGRlZmF1bHR8Y2EzOWQ4YTk0ZWMxZmYwNmUzYzFlZDhmOWJkZDMzZjQ
+
+---
+
+## En clase
+
+Por favor:
+
+- Mantén tu cámara encendida 📹
+- Mantén tu microfóno enmudecido 🚫🎤
+- Actualiza tu nombre en Slack y Zoom
+- Levanta la mano (en Zoom) si quieres intervenir
 
 ---
 
@@ -201,11 +212,21 @@ Una semana normal
 
 ---
 
+## Exit tickets
+
+Cada jueves, antes de terminar la jornada, pediremos que tomen 5 minutos para llenar un formulario sobre la semana.
+
+El link será distribuido por Alex y Gabriel.
+
+---
+
 ## Sugerencias para el éxito de este programa
 
 - Pregunta todo lo que quieras, no hay preguntas tontas
 - Retate a ti mismo
 - Completa las tareas a tiempo
+- Se curioso
+- Este curso retorna el tiempo extra que le inviertas
 
 ---
 
@@ -314,8 +335,8 @@ Una semana normal
 ## La letra pequeña
 
 - Los estudiantes deben tratar a todos los miembros del personal y otros estudiantes con respeto y dignidad.
-- Si un estudiante es disruptivo con a la comunidad, se le pedirá que se retire.
-- Asegúrate de haber leído y formado el Código de conducta para estudiantes y <a href="https://fundacionadecco.org/wp-content/uploads/2021/12/bases-becas-fundacion-adecco-ga-2022.pdf" class="external-link">las bases de la convocatoria de la beca</a>
+- Si un estudiante es disruptivo con la comunidad, se le pedirá que se retire.
+- Asegúrate de haber leído y firmado el Código de conducta para estudiantes y <a href="https://fundacionadecco.org/wp-content/uploads/2021/12/bases-becas-fundacion-adecco-ga-2022.pdf" class="external-link">las bases de la convocatoria de la beca</a>
 
   - Se admitirá un máximo de 3 faltas debidamente justificadas. Superada las 3 faltas se considera falta de aprovechamiento del curso y se anulará la inscripción.
   - Además de las conexiones a las clases, para el correcto aprovechamiento del curso es necesario un estimado de 2 horas de trabajo personal para complementar las tareas complementarias
@@ -324,7 +345,7 @@ Una semana normal
 
 ---
 
-## Presentaciones aletorias
+## Presentaciones aleatorias
 
 El equipo instruccional creó este [seleccionador aleatorio 🎲](https://pataruco.github.io/random-picker/?), aquí sortearemos quien será el próximo responder lo siguiente
 
