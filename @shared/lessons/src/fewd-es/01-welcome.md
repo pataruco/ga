@@ -92,7 +92,10 @@ alt="Gabriel Goiri"
 style="max-width: 60%;">
 ]
 .col[
-Soy de Bilbao, tengo 26 años, soy un apasionado de la tecnología, he estudiado 2 Grados Superiores, Telecomunicaciones y Robótica. Hice un curso intensivo de 3 meses de Software Development en Londres, donde me encuentro ahora mismo.
+Soy de Bilbao, tengo 28 años, soy un apasionado de la tecnología, he estudiado 2 Grados Superiores, Telecomunicaciones y Robótica. Hice un curso intensivo de 3 meses de Software Development en Londres, donde me encuentro ahora mismo.
+
+Llevo 10 meses trabajando como Junior front end developer con React, Azure, Cosmos y ahora estoy aprendiendo backend con CSharp
+
 Mis hobbies son leer libros, la historia antigua y el futbol (aficionado del Athletic Club de Bilbao)]
 ]
 
