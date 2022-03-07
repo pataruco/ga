@@ -69,7 +69,11 @@ src="https://ca.slack-edge.com/T018VAD0BAA-U0318CZH8UF-3ccd0ed931fd-512"
 alt="Emily Nguema"
 style="max-width: 60%;">
 ]
-.col[]
+.col[
+Responsible for managing client relationships and strategy, pre + post class communications and general logistics.
+I have been with General Assembly for a little over 3 months and prior to joining was working in Client Success in the world of Ecommerce.
+
+]
 ]
 
 ---
@@ -155,7 +159,7 @@ Espacio de consulta fuera de clases con el equipo instruccional
 
 | Instructor | Fecha y hora                                        | Link para calendario           |
 | ---------- | --------------------------------------------------- | ------------------------------ |
-| Pedro      | Todos los viernes **12:00 M** a **1:00PM** (GMT +1) | [Calendario][calendario-pedro] |
+| Pedro      | Todos los viernes **1:00 PM** a **2:00PM** (GMT +1) | [Calendario][calendario-pedro] |
 
 > ⚠️ _Los horarios son GMT +1_ 🌎 🕰
 
@@ -179,7 +183,7 @@ Por favor:
 ## Para la obtención de certificado 🔖
 
 1. Completa el 80% de las tareas
-2. No pierdas mas de **3** clases
+2. No pierdas más de **3** clases
 3. Presenta tus proyectos (mitad y final de curso)
 
 ---
