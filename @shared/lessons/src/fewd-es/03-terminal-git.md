@@ -58,13 +58,13 @@ Continuación
 ### macOS
 
 - Abre la aplicación `Terminal` (Aplicaciones> Utilidades> Terminal)
-- Opcionalmente, descarga e instala [iTerm 2](https://www.iterm2.com/)  
-   ]
+- Opcionalmente, descarga e instala <a href="https://www.iterm2.com" class="download-link">iTerm 2</a>
+  ]
   .col[
 
   ### Windows
 
-- Abre PowerShell
+- Descarga e instala <a href="https://gitforwindows.org" class="download-link">Windows Git SCM</a>
   ]
   ]
 

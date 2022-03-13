@@ -42,7 +42,7 @@ Por favor, explica la diferencia entre:
 
 El proceso de desarrollo se puede dividir en dos áreas:
 
-.fila[
+.row[
 .columna[
 
 ### Interfaz
@@ -281,9 +281,11 @@ Son elementos de cierre automático
 
 ---
 
-## Código junto
+class: code-along
 
-## [Ejercicio de comunicado de prensa](https://raw.githubusercontent.com/pataruco/ga-fewd-assets/master/press-release/starter/press-release.txt)
+# Code along
+
+- <a href="https://raw.githubusercontent.com/pataruco/ga-fewd-assets/master/press-release/starter/press-release.txt" class="external-link" target="_blank" rel="noreferer">Ejercicio de comunicado de prensa </a>
 
 ---
 
