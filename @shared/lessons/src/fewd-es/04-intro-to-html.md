@@ -569,7 +569,6 @@ Elige una película que te guste y crea una página web sobre el CV de uno de lo
 Aquí hay unos ejemplos
 
 - [Darth Vader](https://www.giraffecvs.co.uk/wp-content/uploads/2013/05/CVDarthVader_rev8-page-001.jpg)
-- [Disney](https://ohmy.disney.com/movies/2017/02/27/imaginary-disney-character-resumes/)
 
 ---
 
