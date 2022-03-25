@@ -179,7 +179,7 @@ Espacio de consulta fuera de clases con el equipo instruccional
 
 [calendario-pedro]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUZqSk9WQTNvb244fGRlZmF1bHR8Y2EzOWQ4YTk0ZWMxZmYwNmUzYzFlZDhmOWJkZDMzZjQ
 [calendario-alex]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UU5YdHdxT3dGNjFffGRlZmF1bHR8MTExMWZhZmQyNDFhNWRkMWI0MjY5ODg4ZDQ2MDlmNGQ
-[calendario-gabriel]: https://calendar.google.com/calendar/u/0/r?_x_zm_rtaid=H7dakzQXTZSHX7dusyJXkw.1646664869263.069f08c8a800b874936967a493505724&_x_zm_rhtaid=667&pli=1
+[calendario-gabriel]: https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUY1M052bGJhZF9ifGRlZmF1bHR8OTc1ZTk3NzkzMGNiZmEwMjgyZWYzZmYyYThiMGY5NmE
 
 ---
 
