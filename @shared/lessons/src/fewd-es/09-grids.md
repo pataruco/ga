@@ -34,9 +34,14 @@ Imagina hojas de cálculos donde puedes colocar contenido en columnas y filas. L
 
 ## Grid tracks
 
+.row[
+.col[
+
 > (Así se llaman las filas y las columnas).
 
 ![grid tracks](https://media.prod.mdn.mozit.cloud/attachments/2016/09/22/13899/fd498c7d62dfe4dc56ee32e85b9b5801/grid.png)
+]
+.col[
 
 **Usa `display: grid` en el elemento contenedor**
 
@@ -46,7 +51,12 @@ Imagina hojas de cálculos donde puedes colocar contenido en columnas y filas. L
 }
 ```
 
-A diferencia de `display: flex`, Grid no nos da mucho por defecto. Tendremos que definir la plantilla para nuestra cuadrícula de acuerdo con las filas y columnas que queramos.
+]
+]
+
+A diferencia de `display: flex`, Grid no nos da mucho por defecto.
+
+Teneemos que definir la plantilla para nuestra cuadrícula de acuerdo con las filas y columnas que queramos.
 
 ---
 
@@ -92,15 +102,13 @@ Usa la propiedad **`grid-template-columns`**.
 
 Consulta este ejemplo como referencia para usar las propiedades Grid
 
+<iframe height="300" style="width: 100%;" scrolling="no" title="CSS Grid - Basic Grid" src="https://codepen.io/GAmarketing/embed/preview/GRRNgzJ?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/GAmarketing/pen/GRRNgzJ">
+  CSS Grid - Basic Grid</a> by General Assembly (<a href="https://codepen.io/GAmarketing">@GAmarketing</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
 [CodePen](https://codepen.io/GAmarketing/pen/GRRNgzJ)
-
----
-
-## Un ejemplo básico de Grid
-
-Ahora repliquemos lo que vimos solo usando propiedades de flexbox
-
-[Código inicial](https://codepen.io/GAmarketing/pen/yLLRQga) ➡️ [Código final](https://codepen.io/GAmarketing/pen/jOOeQLq)
 
 ---
 
@@ -117,6 +125,7 @@ Si no sabemos cuántas filas ocupará nuestro contenido, ¿podemos definir su al
 .container {
   display: grid;
   grid-template-columns: 100px 100px;
+  grid-auto-rows: auto;
 }
 
 .item {
@@ -128,7 +137,7 @@ Si no sabemos cuántas filas ocupará nuestro contenido, ¿podemos definir su al
 
 ## `grid-gap`
 
-**`grid-gap`** es el margen (`margin`) / relleno (`padding`) de CSS Grid. Si desea espacio entre los elementos de la cuadrícula, aplica `grid-gap`.
+**`grid-gap`** es el margen (`margin`) de CSS Grid. Si deseas espacio entre los elementos de la cuadrícula, aplica `grid-gap`.
 
 Cuando **`grid-gap`** se le da un valor se aplica una cantidad igual de espacio entre filas y columnas.
 
@@ -136,7 +145,7 @@ Cuando **`grid-gap`** se le da un valor se aplica una cantidad igual de espacio 
 
 ## `grid-gap`
 
-Tenga en cuenta: `grid-gap puede` tomar dos valores, que establecen el relleno de columna y fila (respectivamente).
+Ten en cuenta: `grid-gap` puede tomar dos valores, que establecen el relleno de columna y fila (respectivamente).
 
 ```css
 .grid01 {
@@ -194,7 +203,7 @@ Puede usar CSS Grid con `flexbox` e incluso con `floats`.
 
 Todos tienen un papel que desempeñar y un propósito en su caja de herramientas.
 
-- Haga flotar `float` una imagen cuando desee que el texto la rodee.
+- Haz flotar `float` una imagen cuando desee que el texto la rodee.
 - `Flexbox` funciona muy bien para la navegación de sitios web y grandes secciones horizontales.
 - `Grid` es una gran herramienta para patrones de visualización grandes y repetitivos.
 
