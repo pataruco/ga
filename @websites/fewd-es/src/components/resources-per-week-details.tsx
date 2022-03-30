@@ -40,8 +40,8 @@ const StyleDetails = styled.details`
 
 const ResourcesPerWeekDatails: React.FC<RoutesByWeek> = ({
   weekNumber,
-  lesson1: { name: firstLessonPath, name: firstLessonTitle },
-  lesson2: { name: secondLessonPath, name: secondLessonTitle },
+  lesson1: { path: firstLessonPath, name: firstLessonTitle },
+  lesson2: { path: secondLessonPath, name: secondLessonTitle },
   workshops,
   homework,
 }) => {
