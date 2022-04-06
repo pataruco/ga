@@ -39,5 +39,9 @@ export const week5Route: RoutesByWeek = {
       'A List Apart: CSS positioning 101',
       'http://alistapart.com/article/css-positioning-101',
     ],
+    [
+      'Mozilla: Introduction to CSS Grid Layout',
+      'https://mozilladevelopers.github.io/playground/css-grid',
+    ],
   ],
 };
