@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Header from './header';
 import { Footer } from '@shared/components';
 import Page from './page';
+import ReactGA from 'react-ga';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -49,12 +50,18 @@ const StyledMain = styled.main`
   }
 `;
 
-const WeekPage: React.FC = ({ children }) => (
-  <Page>
-    <Header />
-    <StyledMain>{children}</StyledMain>
-    <Footer />
-  </Page>
-);
+const WeekPage: React.FC = ({ children }) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
+
+  return (
+    <Page>
+      <Header />
+      <StyledMain>{children}</StyledMain>
+      <Footer />
+    </Page>
+  );
+};
 
 export default WeekPage;
