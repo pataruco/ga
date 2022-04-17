@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { selectNavigationMenu } from '../redux/navigation-menu';
@@ -30,6 +31,10 @@ const StyledDiv = styled.div`
 
 const Page: React.FC = ({ children }) => {
   const { mobileMenuIsOpen } = useSelector(selectNavigationMenu);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
 
   return (
     <StyledDiv>

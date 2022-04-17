@@ -1,5 +1,6 @@
 import '@shared/styles/dist/slides';
 import React, { memo, useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 interface SlidesDeckProps {
   slidesDeckPath: string;
@@ -89,6 +90,10 @@ const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckPath }) => {
   useEffect(() => {
     instantiateSlides(slidesDeckPath);
   }, [slidesDeckPath]);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  });
 
   return null;
 };

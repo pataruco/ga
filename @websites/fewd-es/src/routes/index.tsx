@@ -11,17 +11,13 @@ import {
 } from './config';
 
 import { BonusLessonsRoute } from './config/bonus-lessons';
-import { useEffect } from 'react';
+
+const GA_TRACK_ID = 'G-48TLZ9CMME';
+ReactGA.initialize(GA_TRACK_ID, { standardImplementation: true });
 
 const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
 
-export const GA_TRACK_ID = 'G-48TLZ9CMME';
-
 const Router = () => {
-  useEffect(() => {
-    ReactGA.initialize(GA_TRACK_ID);
-  });
-
   return (
     <BrowserRouter>
       <Routes>
