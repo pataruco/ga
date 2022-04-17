@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import ReactGA from 'react-ga';
 
 interface TitleProps {
   week?: number;
@@ -48,12 +47,8 @@ const Title = ({ week, lesson, title, courseName }: TitleProps) => {
       );
       break;
   }
-  return () => {
-    useEffect(() => {
-      ReactGA.pageview(window.location.pathname + window.location.search);
-    });
-    return component;
-  };
+
+  return component;
 };
 
 export default Title;
