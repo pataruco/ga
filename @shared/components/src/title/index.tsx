@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 interface TitleProps {
   week?: number;
@@ -8,8 +9,8 @@ interface TitleProps {
   courseName: string;
 }
 
-const Title: React.FC<TitleProps> = ({ week, lesson, title, courseName }) => {
-  let component;
+const Title = ({ week, lesson, title, courseName }: TitleProps) => {
+  let component: JSX.Element;
   switch (true) {
     case week && Number.isFinite(week) && lesson && Number.isFinite(lesson):
       component = (
@@ -47,7 +48,12 @@ const Title: React.FC<TitleProps> = ({ week, lesson, title, courseName }) => {
       );
       break;
   }
-  return component;
+  return () => {
+    useEffect(() => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+    });
+    return component;
+  };
 };
 
 export default Title;
