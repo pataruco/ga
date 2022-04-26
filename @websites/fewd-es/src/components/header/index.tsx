@@ -9,10 +9,13 @@ import {
   openWeekMenu,
   selectNavigationMenu,
   openMobileMenu,
+  openProjectMenu,
+  closeProjectMenu,
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
 import { routesByWeek } from '../../routes/config';
 import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
+import { projectRoutes } from '../../routes/config/projects';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -59,7 +62,8 @@ const StyledHeader = styled.header`
   nav > ul > li {
     margin-left: 1.25rem;
     &:first-of-type > ul > li,
-    &:nth-of-type(2) > ul > li {
+    &:nth-of-type(2) > ul > li,
+    &:nth-of-type(3) > ul > li {
       background-color: var(--black);
       padding: 0.75rem 0.5rem;
     }
@@ -107,8 +111,8 @@ export const Weeks: React.FC = () => {
 
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
-    dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   return (
@@ -131,11 +135,37 @@ const BonusLessons: React.FC = () => {
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   return (
     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
       {bonusLessonRoutes.map(({ name, path }, i) => {
+        return (
+          <li key={i}>
+            <Link to={path} key={i}>
+              <span onClick={close}>{name}</span>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+const Projects: React.FC = () => {
+  const { projectsMenuIsOpen } = useSelector(selectNavigationMenu);
+  const dispatch = useDispatch();
+
+  const close = (event: React.MouseEvent) => {
+    dispatch(closeWeekMenu());
+    dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
+  };
+
+  return (
+    <ul className={projectsMenuIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+      {projectRoutes.map(({ name, path }, i) => {
         return (
           <li key={i}>
             <Link to={path} key={i}>
@@ -154,6 +184,7 @@ const Header: React.FC = () => {
   const dispatchClose = () => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   const close = (event: React.MouseEvent) => {
@@ -168,6 +199,11 @@ const Header: React.FC = () => {
   const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
     dispatchClose();
     dispatch(openBonusLessonMenu());
+  };
+
+  const handleOnProjectsMouseEnter = (event: React.MouseEvent) => {
+    dispatchClose();
+    dispatch(openProjectMenu());
   };
 
   const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
@@ -193,9 +229,10 @@ const Header: React.FC = () => {
             </button>
             <BonusLessons />
           </li>
-          {/* <li>
-            <Link to="/final-project-brief">Final project</Link>
-          </li> */}
+          <li>
+            <button onMouseEnter={handleOnProjectsMouseEnter}>Proyectos</button>
+            <Projects />
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>
