@@ -56,7 +56,7 @@ const StyledHeader = styled.header`
     border: none;
     color: var(--white);
     margin-bottom: 0.75rem;
-    padding: 0;
+    padding: 0 0.5rem;
   }
 
   nav > ul > li {
