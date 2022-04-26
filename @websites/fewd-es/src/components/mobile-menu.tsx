@@ -8,6 +8,7 @@ import {
 } from '../redux/navigation-menu';
 import { routesByWeek } from '../routes/config';
 import { bonusLessonRoutes } from '../routes/config/bonus-lessons';
+import { projectRoutes } from '../routes/config/projects';
 
 const width = '250px';
 
@@ -117,6 +118,20 @@ const BonusLessons: React.FC = () => (
   </ul>
 );
 
+const Projects: React.FC = () => (
+  <ul>
+    {projectRoutes.map(({ name, path }, i) => {
+      return (
+        <li key={i}>
+          <CloseLink to={path} key={i}>
+            {name}
+          </CloseLink>
+        </li>
+      );
+    })}
+  </ul>
+);
+
 const MobileMenu: React.FC = () => {
   const { mobileMenuIsOpen } = useSelector(selectNavigationMenu);
   const dispatch = useDispatch();
@@ -139,6 +154,12 @@ const MobileMenu: React.FC = () => {
           <details>
             <summary>Lecciones adicionales</summary>
             <BonusLessons />
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Proyectos</summary>
+            <Projects />
           </details>
         </li>
         {/* <li>
