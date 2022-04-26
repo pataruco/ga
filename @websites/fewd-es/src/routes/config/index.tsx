@@ -13,6 +13,7 @@ import { week8Route } from './weeks/8';
 import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { Route } from 'react-router-dom';
 import { bonusLessonRoutes } from './bonus-lessons';
+import { projectRoutes } from './projects';
 
 // Final project
 // Path: /final-project-brief
@@ -93,6 +94,12 @@ export const LessonRouteComponents = routesByWeek
   .flat();
 
 export const BonusLessonsRouteComponents = bonusLessonRoutes.map(
+  ({ path, element: Element }, key) => (
+    <Route path={path} element={<Element />} key={key} />
+  ),
+);
+
+export const ProjectRouteComponents = projectRoutes.map(
   ({ path, element: Element }, key) => (
     <Route path={path} element={<Element />} key={key} />
   ),
