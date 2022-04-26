@@ -12,7 +12,7 @@ export const BonusLessonsRoute = {
     const Content = lazy(() => import('../../../pages/bonus-lessons'));
     return (
       <>
-        <Title courseName="JSD" title="Bonus Lessons" />
+        <Title courseName={COURSE_NAME} title="Bonus Lessons" />
         <Suspense fallback={<Loading />}>
           <Content />
         </Suspense>

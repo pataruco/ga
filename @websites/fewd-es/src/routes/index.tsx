@@ -7,11 +7,14 @@ import {
   WeekRouteComponents,
   LessonRouteComponents,
   BonusLessonsRouteComponents,
+  ProjectRouteComponents,
 } from './config';
 
 import { BonusLessonsRoute } from './config/bonus-lessons';
+import { ProjectsRoute } from './config/projects';
 
 const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
+const { path: projectsRoute, element: Projects } = ProjectsRoute;
 
 const Router = () => {
   return (
@@ -21,9 +24,11 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/lessons" element={<LessonsPage />} />
         <Route path={bonusLessonsRoute} element={<BonusLessons />} />
+        <Route path={projectsRoute} element={<Projects />} />
         {WeekRouteComponents}
         {LessonRouteComponents}
         {BonusLessonsRouteComponents}
+        {ProjectRouteComponents}
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
