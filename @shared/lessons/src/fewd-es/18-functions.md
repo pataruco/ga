@@ -439,6 +439,16 @@ Para más detalles sobre funciones y _scope_ [aquí](https://developer.mozilla.o
 
 ---
 
+class: code-along
+
+# Homework
+
+[Problemas de funciones y arrays][array-func]
+
+[array-func]: https://github.com/pataruco/ga/raw/main/homeworks/filter-map-problems/filter-map-problems-starter-code.zip
+
+---
+
 class: frontpage
 
 <div>
