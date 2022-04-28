@@ -439,6 +439,16 @@ Para más detalles sobre funciones y _scope_ [aquí](https://developer.mozilla.o
 
 ---
 
+class: lab
+
+# Lab
+
+[Fizz buzz, 99 bottles, random address generator][lab]
+
+[lab]: https://github.com/pataruco/ga/raw/main/homeworks/week-2/week-2-starter-code.zip
+
+---
+
 class: code-along
 
 # Homework

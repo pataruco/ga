@@ -26,4 +26,12 @@ export const week9Route: RoutesByWeek = {
       </>
     ),
   },
+  homework: {
+    name: 'Problemas de funciones y arrays',
+    path: '',
+  },
+  workshops: {
+    name: 'Fizz buzz, 99 bottles, random address',
+    path: '',
+  },
 };
