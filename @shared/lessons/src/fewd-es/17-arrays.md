@@ -559,5 +559,3 @@ class: frontpage
   <hr/>
   <h1>Final de presentación</h1>
 </div>
-
----

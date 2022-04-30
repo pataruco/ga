@@ -28,10 +28,36 @@ export const week9Route: RoutesByWeek = {
   },
   homework: {
     name: 'Problemas de funciones y arrays',
-    path: '',
+    path: '/lessons/functions#28',
   },
   workshops: {
     name: 'Fizz buzz, 99 bottles, random address',
-    path: '',
+    path: '/lessons/functions#27',
   },
+  resources: [
+    [
+      'MDN: Array',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array',
+    ],
+    [
+      'MDN: Expressions and operators',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators',
+    ],
+    [
+      'MDN: Equality comparisons and sameness',
+      'https://developer.mozilla.org/en/docs/Web/JavaScript/Equality_comparisons_and_sameness',
+    ],
+    [
+      'JavaScript equality table',
+      'https://dorey.github.io/JavaScript-Equality-Table/',
+    ],
+    [
+      'MDN: Logical operators',
+      'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators',
+    ],
+    [
+      'Tuts+: What is type coercion?',
+      'http://code.tutsplus.com/articles/the-beginners-guide-to-type-coercion-what-is-coercion--cms-21917',
+    ],
+  ],
 };
