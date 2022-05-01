@@ -24,6 +24,43 @@ Cada elemento está vinculado a su padre mediante propiedades y métodos. Si tuv
 
 ---
 
+## El DOM
+
+Una página web es solo un montón de objetos
+
+.image-third[
+![The DOM](https://pataruco.s3.amazonaws.com/ga/fewd/dom-optimised.svg)
+]
+
+Todo lo que ves en el navegador se representa como un objeto en JavaScript
+
+---
+
+## El DOM, Los tres grandes objetos
+
+.row[
+.column[
+
+### `window`
+
+Todo el navegador web; se usa principalmente para configuraciones a nivel de navegador como la URL actual. Todas las variables globales se almacenan aquí también.
+]
+.column[
+
+### `document`
+
+La página web actual. Este objeto tiene la funcionalidad que usaremos para acceder a elementos (otros objetos) en la página.
+]
+.column[
+
+### `console`
+
+Un bloc de notas para mensajes relacionados con el desarrollo; muy útil en la depuración.
+]
+]
+
+---
+
 ## Interactuando con el DOM
 
 Cuando un navegador lee un archivo HTML, crea el DOM, convirtiendo cada elemento en un objeto. Una vez creado el DOM podemos acceder a cualquier elemento con JavaScript. Podemos almacenar el elemento en una variable y luego modificar sus propiedades y métodos, al igual que podemos hacerlo con un objeto estándar de JavaScript.
@@ -103,7 +140,7 @@ Y el nuevo elemento `h2` ha aparecido en la pantalla.
 
 ## Propiedades y métodos comunes
 
-A continuación se muestra una lista de las propiedades y métodos más comunes que utilizará en este curso:
+A continuación se muestra una lista de las propiedades y métodos más comunes que utilizarás en este curso:
 
 | **Property / Method**        | **Description**                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------- |
@@ -117,9 +154,22 @@ A continuación se muestra una lista de las propiedades y métodos más comunes 
 | `element.offsetHeight`       | Returns the height of an element, including padding, border and scrollbar             |
 | `element.offsetWidth`        | Returns the width of an element, including padding, border and scrollbar              |
 | `element.textContent`        | Sets or returns the textual content of a node and its descendants                     |
-| `element.innerHTML`          | Sets or returns the content of an element                                             |
-| `element.parentElement`      | Returns the parent element node of an element                                         |
-| `element.style`              | Sets or returns the value of the style attribute of an element                        |
+
+---
+
+## Propiedades y métodos comunes
+
+| **Property / Method**           | **Description**                                                                  |
+| ------------------------------- | -------------------------------------------------------------------------------- |
+| `element.innerHTML`             | Sets or returns the content of an element                                        |
+| `element.parentElement`         | Returns the parent element node of an element                                    |
+| `element.style`                 | Sets or returns the value of the style attribute of an element                   |
+| `element.click()`               | Simulates a mouse-click on an element                                            |
+| `element.cloneNode()`           | Clones an element                                                                |
+| `element.addEventListener()`    | Attaches an event handler to the specified element                               |
+| `element.removeEventListener()` | Removes an event handler that has been attached with the addEventListener method |
+| `element.appendChild()`         | Adds a new child node, to an element, as the last child node                     |
+| `element.removeChild()`         | Removes a child node from an element                                             |
 
 ---
 
@@ -127,12 +177,6 @@ A continuación se muestra una lista de las propiedades y métodos más comunes 
 
 | **Property / Method**              | **Description**                                                                     |
 | ---------------------------------- | ----------------------------------------------------------------------------------- |
-| `element.click()`                  | Simulates a mouse-click on an element                                               |
-| `element.cloneNode()`              | Clones an element                                                                   |
-| `element.addEventListener()`       | Attaches an event handler to the specified element                                  |
-| `element.removeEventListener()`    | Removes an event handler that has been attached with the addEventListener method    |
-| `element.appendChild()`            | Adds a new child node, to an element, as the last child node                        |
-| `element.removeChild()`            | Removes a child node from an element                                                |
 | `element.replaceChild()`           | Replaces a child node in an element                                                 |
 | `element.insertBefore()`           | Inserts a new child node before a specified, existing, child node                   |
 | `element.getAttribute()`           | Returns the specified attribute value of an element node                            |
@@ -144,3 +188,27 @@ A continuación se muestra una lista de las propiedades y métodos más comunes 
 | `element.querySelectorAll()`       | Returns all child elements that matches a specified CSS selector of an element      |
 
 ---
+
+class: lab
+
+## Lab
+
+Utiliza este tiempo para tu proyecto de mitad de curso
+
+---
+
+class: code-along
+
+## Homework
+
+[Ejercicios con objetos](https://github.com/pataruco/ga/raw/main/homeworks/week-3/week-3-starter-code.zip)
+
+---
+
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Final de presentación</h1>
+</div>

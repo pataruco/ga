@@ -7,32 +7,36 @@ const weekNumber = 10;
 export const week10Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
-    name: 'Arrays',
-    path: `/lessons/arrays`,
+    name: 'Objetos y Clases',
+    path: `/lessons/objects-classes`,
     element: () => (
       <>
-        <Title courseName={COURSE_NAME} week={weekNumber} title="Arrays" />
-        <SlidesDeck slidesDeckPath={getLessonPath('17-arrays')} />
+        <Title
+          courseName={COURSE_NAME}
+          week={weekNumber}
+          title="Objetos y Clases"
+        />
+        <SlidesDeck slidesDeckPath={getLessonPath('19-objects-classes')} />
       </>
     ),
   },
   lesson2: {
-    name: 'Funciones',
-    path: `/lessons/functions`,
+    name: 'El DOM',
+    path: `/lessons/dom`,
     element: () => (
       <>
-        <Title courseName={COURSE_NAME} week={weekNumber} title="Funciones" />
-        <SlidesDeck slidesDeckPath={getLessonPath('18-functions')} />
+        <Title courseName={COURSE_NAME} week={weekNumber} title="El DOM" />
+        <SlidesDeck slidesDeckPath={getLessonPath('20-intro-to-dom')} />
       </>
     ),
   },
   homework: {
-    name: 'Problemas de funciones y arrays',
-    path: '/lessons/functions#28',
+    name: 'Ejercicio de objetos',
+    path: '/lessons/dom#14',
   },
   workshops: {
-    name: 'Fizz buzz, 99 bottles, random address',
-    path: '/lessons/functions#27',
+    name: 'Tiempo para proyecto y/o tarea',
+    path: '/lessons/dom#13',
   },
   resources: [
     [
