@@ -51,5 +51,14 @@ export const week10Route: RoutesByWeek = {
       'MDN: ES6 Classes',
       'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes',
     ],
+    ['CSS Tricks: Qué es el DOM', 'https://css-tricks.com/dom/'],
+    [
+      'MDN: Introducción al DOM',
+      'https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction',
+    ],
+    [
+      'Entender y modificar el DOM en JavaScript',
+      'https://www.digitalocean.com/community/tutorials/introduction-to-the-dom',
+    ],
   ],
 };
