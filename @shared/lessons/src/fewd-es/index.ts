@@ -16,6 +16,8 @@ import * as introToJs from './15-intro-to-js.md';
 import * as controlFlow from './16-control-flow.md';
 import * as arrays from './17-arrays.md';
 import * as functions from './18-functions.md';
+import * as objectsAndClasses from './19-objects-classes.md';
+import * as dom from './20-intro-to-dom.md';
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -42,6 +44,8 @@ export const fewdEs = {
   '16-control-flow': controlFlow,
   '17-arrays': arrays,
   '18-functions': functions,
+  '19-objects-classes': objectsAndClasses,
+  '20-intro-to-dom': dom,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,
