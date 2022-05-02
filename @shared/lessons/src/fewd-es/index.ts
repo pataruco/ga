@@ -18,6 +18,8 @@ import * as arrays from './17-arrays.md';
 import * as functions from './18-functions.md';
 import * as objectsAndClasses from './19-objects-classes.md';
 import * as dom from './20-intro-to-dom.md';
+import * as events from './21-dom-events.md';
+import * as htmlAudio from './22-html-audio.md';
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -46,6 +48,8 @@ export const fewdEs = {
   '18-functions': functions,
   '19-objects-classes': objectsAndClasses,
   '20-intro-to-dom': dom,
+  '21-dom-events': events,
+  '22-html-audio': htmlAudio,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,
