@@ -88,7 +88,7 @@ class: lab
 
 ## Lab
 
-Utiliza este tiempo para tu proyecto de mitad de curso
+[RESTful Countries 🇺🇳]()
 
 ---
 
@@ -96,7 +96,7 @@ class: code-along
 
 ## Homework
 
-[Drum Kit 🥁](https://github.com/pataruco/ga/raw/main/labs/drum-kit/drum-kit-starter-code.zip)
+[RESTful Countries 🇺🇳](https://github.com/pataruco/ga/raw/main/labs/drum-kit/drum-kit-starter-code.zip)
 
 ---
 

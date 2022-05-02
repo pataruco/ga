@@ -20,6 +20,8 @@ import * as objectsAndClasses from './19-objects-classes.md';
 import * as dom from './20-intro-to-dom.md';
 import * as events from './21-dom-events.md';
 import * as htmlAudio from './22-html-audio.md';
+import * as asyncJs from './23-async-js.md';
+import * as midCoursePresentations from './24-mid-course-presentations.md';
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -50,6 +52,8 @@ export const fewdEs = {
   '20-intro-to-dom': dom,
   '21-dom-events': events,
   '22-html-audio': htmlAudio,
+  '23-async-js': asyncJs,
+  '24-mid-course-presentations': midCoursePresentations,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,

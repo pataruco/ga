@@ -13,6 +13,7 @@ import { week8Route } from './weeks/8';
 import { week9Route } from './weeks/9';
 import { week10Route } from './weeks/10';
 import { week11Route } from './weeks/11';
+import { week12Route } from './weeks/12';
 import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { Route } from 'react-router-dom';
 import { bonusLessonRoutes } from './bonus-lessons';
@@ -48,6 +49,7 @@ export const routesByWeek: RoutesByWeek[] = [
   week9Route,
   week10Route,
   week11Route,
+  week12Route,
 ];
 
 export const WeekRouteComponents = routesByWeek.map(

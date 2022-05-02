@@ -74,7 +74,7 @@ Practice with code katas
 Do code free courses
 
 - [FreeCodeCamp](https://www.freecodecamp.org/)
-- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn)
+- [Mozila Developer Network](https://developer.mozilla.org/en-US/docs/Learn)
 
 ---
 
