@@ -12,10 +12,6 @@ class: frontpage
 
 **Qué sabías sobre HTML, CSS y JavaScript anstes del curso?**
 
-**Qu?**
-
-Let's list that, shall we?!
-
 [Technologies we learnt](https://pataruco.github.io/ga-technologies/)
 
 ---
@@ -23,6 +19,22 @@ Let's list that, shall we?!
 ## Presentations
 
 [randomniser 🎲](https://pataruco.github.io/random-picker/)
+
+---
+
+class: lab
+
+# Lab
+
+[Banderas de paises 🇺🇳](https://github.com/pataruco/ga/raw/main/homeworks/country-flags/country-flags-starter-code.zip)
+
+---
+
+class: code-along
+
+# Homework
+
+[Banderas de paises 🇺🇳](https://github.com/pataruco/ga/raw/main/homeworks/country-flags/country-flags-starter-code.zip)
 
 ---
 

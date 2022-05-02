@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+}
+
+select,
+input {
+  font-size: 16px;
+}
+
+input {
+  padding: 1px 5px 2px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+h4,
+h6 {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+h4 + h6 {
+  margin-top: -1em;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.countries div {
+  width: calc(100% / 4 - 20px);
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.countries div img {
+  width: 100%;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
