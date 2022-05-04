@@ -518,7 +518,7 @@ class: lab
 
 # Labs
 
--[Intro to JavaScript lab 🧪](https://github.com/pataruco/ga/raw/main/homeworks/intro-to-js/intro-to-js-starter-code.zip)
+-[Intro to JavaScript lab 🧪](https://github.com/pataruco/ga/raw/main/labs/intro-to-js/intro-to-js-starter-code.zip)
 
 -[JavaScript Calculator 🧮][js-calc]
 
