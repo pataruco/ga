@@ -96,7 +96,7 @@ const FinalProjectBrief: React.FC = () => (
             </li>
             <li>
               <span className="bold">Semana 5</span>: Presentaciones{' '}
-              <time dateTime="2022-05-25">25/05/2022</time>.
+              <time dateTime="2022-05-31">31/05/2022</time>.
             </li>
           </ol>
         </section>
