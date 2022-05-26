@@ -88,7 +88,7 @@ class: lab
 
 ## Lab
 
-[RESTful Countries 🇺🇳]()
+[Drumkit 🥁](https://github.com/pataruco/ga/raw/main/labs/drum-kit/drum-kit-starter-code.zip)
 
 ---
 
@@ -96,7 +96,7 @@ class: code-along
 
 ## Homework
 
-[RESTful Countries 🇺🇳](https://github.com/pataruco/ga/raw/main/labs/drum-kit/drum-kit-starter-code.zip)
+[Drumkit 🥁](https://github.com/pataruco/ga/raw/main/labs/drum-kit/drum-kit-starter-code.zip)
 
 ---
 
