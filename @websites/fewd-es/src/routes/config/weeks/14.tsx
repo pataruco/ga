@@ -7,42 +7,42 @@ const weekNumber = 14;
 export const week14Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
-    name: 'Inmutabilidad y plantillas',
-    path: `/lessons/immutability-templating`,
+    name: 'Componentes de React',
+    path: `/lessons/react-components`,
     element: () => (
       <>
         <Title
           courseName={COURSE_NAME}
           week={weekNumber}
-          title="Inmutabilidad y plantillas"
+          title="Componentes de React"
         />
-        <SlidesDeck
-          slidesDeckPath={getLessonPath('25-immutability-templating')}
-        />
+        <SlidesDeck slidesDeckPath={getLessonPath('27-react-components')} />
       </>
     ),
   },
   lesson2: {
-    name: 'Intro a React',
-    path: `/lessons/intro-to-react`,
+    name: 'Country flags lab 🧪',
+    path: `/lessons/react-country-flags-lab`,
     element: () => (
       <>
         <Title
           courseName={COURSE_NAME}
           week={weekNumber}
-          title="Intro a React"
+          title="Country flags lab 🧪"
         />
-        <SlidesDeck slidesDeckPath={getLessonPath('26-intro-to-react')} />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('28-react-country-flags-lab')}
+        />
       </>
     ),
   },
   workshops: {
-    name: 'React static page ⚛',
-    path: '/lessons/intro-to-react#29',
+    name: 'React 🪨, 📃, ✂️',
+    path: '/lessons/react-country-flags-lab#3',
   },
   homework: {
-    name: 'React static page ⚛',
-    path: '/lessons/intro-to-react#30',
+    name: 'React 🪨, 📃, ✂️',
+    path: '/lessons/react-country-flags-lab#4',
   },
   resources: [
     [
