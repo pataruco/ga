@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const App = () => {
-  const [content, setContent] = useState({
+  const [content] = useState({
     about: {
       text: [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus magna id quam euismod, quis consectetur augue malesuada. Aenean et libero elementum, consequat eros in, vehicula risus. Phasellus imperdiet pretium massa, ut tincidunt neque mollis sed',
@@ -17,7 +17,7 @@ const App = () => {
       ],
     },
     footer: {
-      text: '© General Assembly 2017',
+      text: `© General Assembly ${new Date().getFullYear()}`,
     },
   });
 
