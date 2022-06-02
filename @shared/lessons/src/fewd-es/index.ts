@@ -22,6 +22,8 @@ import * as events from './21-dom-events.md';
 import * as htmlAudio from './22-html-audio.md';
 import * as asyncJs from './23-async-js.md';
 import * as midCoursePresentations from './24-mid-course-presentations.md';
+import * as immutabilityAndTemplate from './25-immutability-templating.md';
+import * as introToReact from './26-intro-to-react.md';
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -54,6 +56,8 @@ export const fewdEs = {
   '22-html-audio': htmlAudio,
   '23-async-js': asyncJs,
   '24-mid-course-presentations': midCoursePresentations,
+  '25-immutability-templating': immutabilityAndTemplate,
+  '26-intro-to-react': introToReact,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,

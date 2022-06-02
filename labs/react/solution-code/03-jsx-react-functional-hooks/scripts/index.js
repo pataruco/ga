@@ -10,18 +10,18 @@
 
 //   render() {
 //     if (this.state.liked) {
-//       return 'Hello JSD 14 👋';
+//       return 'Hola  👋';
 //     }
 
 //     // return element(
 //     //   'button',
 //     //   { onClick: () => this.setState({ liked: true }) },
-//     //   'Click me JSD 14',
+//     //   'Click me ',
 //     // );
 
 //     return (
 //       <button onClick={() => this.setState({ liked: true })}>
-//         Click me JSD 14
+//         Click me
 //       </button>
 //     );
 //   }
@@ -32,9 +32,9 @@ const LikeButton = () => {
   const [liked, setLiked] = useState(false);
 
   return liked ? (
-    'Hello JSD 14 👋'
+    'Hola 👋'
   ) : (
-    <button onClick={() => setLiked(true)}>Click me JSD 14</button>
+    <button onClick={() => setLiked(true)}>Click me </button>
   );
 };
 
