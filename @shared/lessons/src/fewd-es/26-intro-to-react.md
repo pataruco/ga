@@ -589,6 +589,22 @@ React no es adecuado para todos los proyectos, pero es extremadamente popular en
 
 ---
 
+class: lab
+
+## Lab
+
+[React static page ⚛](https://github.com/pataruco/ga/raw/main/homeworks/react-static/react-static-starter-code.zip)
+
+---
+
+class: code-along
+
+## Homework
+
+[React static page ⚛](https://github.com/pataruco/ga/raw/main/homeworks/react-static/react-static-starter-code.zip)
+
+---
+
 class: frontpage
 
 <div>

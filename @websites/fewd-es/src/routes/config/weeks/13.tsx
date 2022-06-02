@@ -37,12 +37,12 @@ export const week13Route: RoutesByWeek = {
     ),
   },
   workshops: {
-    name: 'Bandera de paises 🇺🇳',
-    path: '/lessons/mid-course-presentations#4',
+    name: 'React static page ⚛',
+    path: '/lessons/intro-to-react#29',
   },
   homework: {
-    name: 'Bandera de paises 🇺🇳',
-    path: '/lessons/mid-course-presentations#5',
+    name: 'React static page ⚛',
+    path: '/lessons/intro-to-react#30',
   },
   resources: [
     [
