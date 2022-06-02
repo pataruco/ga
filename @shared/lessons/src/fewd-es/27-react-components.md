@@ -61,121 +61,153 @@ Puedes pensar en ello como el cuerpo humano. Los pulmones solo saben cómo pasar
 
 ## Creando un componente en React
 
-## La capa de datos
+### La capa de datos
 
 Cada componente en una aplicación React en algún momento necesita mostrar algo al usuario en forma de HTML renderizado al DOM. Exactamente lo que muestran generalmente depende de algunos datos.
 
 Puede ser una matriz de pájaros o los datos de un usuario en forma de objeto. Sea lo que sea, un componente de React maneja estos datos en forma de `state` o `props`.
 
+---
+
 ### `state`
 
-`state` son datos que viven dentro de un componente. Podemos agregar el estado a nuestro componente ʻApp` así:
+`state` son datos que viven dentro de un componente. Podemos agregar el estado a nuestro componente `App` así:
 
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
+.row[
+.col[
 
-class App extends React.Component {
-  constructor() {
-    super();
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
-    this.state = { message: 'Hello World!' };
-  }
+const App = () => {
+  const [message] = setState('Hello World!');
 
-  render() {
-    return <h1>{this.state.message}</h1>;
-  }
+  return(
+    <h1>{message}</h1>;
+  )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App />);
 ```
 
+]
+.col[
 Este componente ahora muestra datos que se almacenan en el `state` del componente.
 
-#### `constructor()` & `super()`
+]
+]
 
-Para crear este objeto de estado en nuestro componente, necesitamos agregarlo cuando el componente es _instalado_ o creado. Recuerde que una clase en JavaScript es una función constructora. Cuando le indicamos a React que use este componente, primero creará una instancia del mismo. Algo como esto:
-
-```js
-const app = new App();
-```
-
-Aunque debido a que usamos JSX, lo que escribimos _actualmente_ es esto:
-
-```js
-ReactDOM.render(
-  <App />, // new App() is called here in the background
-  document.getElementById('root'),
-);
-```
-
-Cuando esto sucede, se llama al método `constructor()`, que luego crea nuestro objeto de `state`.
-
-El componente `extends` la clase `React.Component`. La clase `React.Component` contiene mucha funcionalidad extra que permite que nuestra clase se comporte como un componente. Llamar a `super()` llamará a la función `constructor()` en la clase padre, asegurando que se ejecute cualquier lógica.
+---
 
 ### `props`
 
-Podemos pasar datos a un componente usando `props`. Actualicemos nuestro componente ʻApp` para permitirle recibir datos a través de accesorios:
+Podemos pasar datos a un componente usando `props`. Actualicemos nuestro componente `App` para permitirle recibir datos a través de `props`:
 
-```js
-import React from 'react'
-import ReactDOM from 'react-dom'
+.row[
+.col[
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 
-    this.state = { message: 'Hello World!' }
-  }
+const App = (props) => {
+  const [message] = setState('Hello World!');
 
-  render() {
-    return (
-      <h1>{this.state.message}</h1>
-      <h2>Welcome, {this.props.name}!</h2>
-    )
-  }
+  return(
+    <h1>{message}</h1>;
+    <h2>Welcome, {this.props.name}!</h2>
+  )
 }
 
-ReactDOM.render(
-  <App name="Mike" />,
-  document.getElementById('root')
-)
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App name="Mike" />);
 ```
 
+]
+.col[
 Si miramos el navegador veremos un mensaje de error:
 
+`Error in ./src/index.js Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag`
+
+]
+]
+
+---
+
+### `props`
+
+Podemos pasar datos a un componente usando `props`. Actualicemos nuestro componente `App` para permitirle recibir datos a través de `props`:
+
+.row[
+.col[
+
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+
+const App = (props) => {
+  const [message] = setState('Hello World!');
+
+  return (
+    <header>
+      <h1>{message}</h1>
+      <h2>Welcome, {this.props.name}!</h2>
+    </header>
+  );
+};
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App name="Mike" />);
 ```
-Error in ./src/index.js Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag
-```
+
+]
+.col[
 
 React se queja porque tenemos etiquetas JSX adyacentes, básicamente React solo puede representar un solo elemento, con elementos secundarios anidados dentro. Envuelva todo en un elemento `<header>`:
 
-```js
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+]
+]
 
-    this.state = { message: 'Hello World!' };
-  }
+---
 
-  render() {
-    return (
-      <header>
-        <h1>{this.state.message}</h1>
-        <h2>Welcome, {this.props.name}!</h2>
-      </header>
-    );
-  }
-}
+### `props`
 
-ReactDOM.render(<App name="Mike" />, document.getElementById('root'));
+.row[
+.col[
+
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+
+const App = (props) => {
+  const [message] = setState('Hello World!');
+
+  return (
+    <header>
+      <h1>{message}</h1>
+      <h2>Welcome, {this.props.name}!</h2>
+    </header>
+  );
+};
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App name="Mike" />);
 ```
 
-Hemos agregado una propiedad `name` al componente `<App />`en el método `ReactDOM.render`. Parece un atributo en un elemento HTML, por ejemplo: `<input name="Mike">` donde el atributo es `name`.
+]
+.col[
 
-Cuando agregamos un atributo a un componente de React, nos referimos a él como un `prop`, y se puede acceder a los datos dentro del componente a través de` this.props`.
+Hemos agregado una propiedad `name` al componente `<App />`en el método `root.render`. Parece un atributo en un elemento HTML, por ejemplo: `<input name="Mike">` donde el atributo es `name`.
 
-Observe que hemos tenido que actualizar los métodos `constructor` y `super`. El método `constructor` obtiene los accesorios de React. En segundo plano, React está convirtiendo los atributos en el JSX en un objeto:
+Cuando agregamos un atributo a un componente de React, nos referimos a él como un `prop`, y se puede acceder a los datos dentro del componente a través de ` props`.
+
+En segundo plano, React está convirtiendo los atributos en el JSX en un objeto:
 
 ```js
 <App name="Mike" />;
@@ -183,9 +215,18 @@ Observe que hemos tenido que actualizar los métodos `constructor` y `super`. El
 new App({ name: 'Mike' });
 ```
 
+]
+]
+
+---
+
+## Actualización de componente
+
 Cuando cambien `props` o `state`, React volverá a renderizar el componente, actualizando la vista.
 
 ![Changing state or props updates a react component](https://discoversdkcdn.azureedge.net/postscontent/react%20native/how%20it%20works/image5.png)
+
+---
 
 ## Anidando componentes
 
@@ -193,188 +234,249 @@ Bien, veamos cómo ahora podemos combinar componentes para crear una aplicación
 
 Crearemos dos nuevos componentes `Header` y `Footer` y los anidaremos dentro de nuestro componente `App`.
 
-#### Header
+### Header
 
 ```js
 import React from 'react';
 
-class Header extends React.Component {
-  render() {
-    return (
-      <header>
-        <h1>{this.props.message}</h1>
-        <h2>Welcome, {this.props.name}!</h2>
-      </header>
-    );
-  }
-}
+const Header = (props) => {
+  return (
+    <header>
+      <h1>{props.message}</h1>
+      <h2>Welcome, {props.name}!</h2>
+    </header>
+  );
+};
 
 export default Header;
 ```
 
+---
+
+## Anidando componentes
+
 Ahora podemos importarlo en nuestro archivo `src/index.js` y anidarlo dentro de `App`:
 
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
 import Header from './components/Header';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+const App = (props) => {
+  const [message] = setState('Hello World!');
 
-    this.state = { message: 'Hello World!' };
-  }
+  return <Header name="Mike" message={message} />;
+};
 
-  render() {
-    return <Header name="Mike" message={this.state.message} />;
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App name="Mike" />);
 ```
 
-Vea cómo hemos pasado el mensaje del `estado` de nuestro componente `App` al componente` Header` a través de accesorios.
+Observa cómo hemos pasado el mensaje del `estado` de nuestro componente `App` al componente `Header` a través de `props`.
 
-#### Footer
+---
 
-```js
+## Anidando componentes
+
+### Footer
+
+```jsx
 import React from 'react';
 
-class Footer extends React.Component {
-  render() {
-    return (
-      <footer>
-        <p>Made with &hearts; at GA London</p>
-      </footer>
-    );
-  }
-}
+const Footer = () => {
+  return (
+    <footer>
+      <p>Made with &hearts; at GA London</p>
+    </footer>
+  );
+};
 
 export default Footer;
 ```
 
-Una vez más, importemos esto en nuestro archivo `src/index.js` y agréguelo al método `render` de nuestro componente `App`:
+---
 
-```js
-import React from 'react'
-import ReactDOM from 'react-dom'
+## Anidando componentes
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+Una vez más, importemos esto en nuestro archivo `src/index.js` y agreguemoslo de nuestro componente `App`:
 
-class App extends React.Component {
+.row[
+.col[
 
-  constructor(props) {
-    super(props)
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import Footer from './components/footer';
 
-    this.state = { message: 'Hello World!' }
-  }
+const App = (props) => {
+  const [message] = setState('Hello World!');
 
-  render() {
-    <Header name="Mike" message={this.state.message} />
+  return (
+    <Header name="Mike" message={message} />
     <Footer />
-  }
-}
+  );
+};
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App name="Mike" />);
 ```
+
+]
+.col[
 
 Si miramos el navegador veremos un mensaje de error:
 
-```
-Error in ./src/index.js Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag
-```
+`Error in ./src/index.js Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag`
 
-Este es el mismo error que vimos anteriormente. React se queja porque tenemos etiquetas JSX adyacentes, así que envolvemos todo en un elemento `main`:
+]
+]
 
-```js
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+---
 
-    this.state = { message: 'Hello World!' };
-  }
+## Anidando componentes
 
-  render() {
-    <main>
-      <Header name="Mike" message={this.state.message} />
+Una vez más, importemos esto en nuestro archivo `src/index.js` y agreguemoslo de nuestro componente `App`:
+
+.row[
+.col[
+
+```jsx
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import Footer from './components/footer';
+
+const App = (props) => {
+  const [message] = setState('Hello World!');
+
+  return (
+    <>
+      <Header name="Mike" message={message} />
       <Footer />
-    </main>;
-  }
-}
+    </>
+  );
+};
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App name="Mike" />);
 ```
 
-#### `children`
+]
+.col[
+
+Este es el mismo error que vimos anteriormente. React se queja porque tenemos etiquetas JSX adyacentes, así que envolvemos todo en un elemento fragmento `<></>`:
+
+]
+]
+
+---
+
+## `children`
 
 Finalmente, podemos anidar componentes colocándolos entre las etiquetas de apertura y cierre del componente. Creemos un tercer componente que simplemente mostrará una imagen y un título:
 
 ```js
 import React from 'react';
 
-class Hero extends React.Component {
-  render() {
-    return (
-      <section className="hero">
-        <img
-          src="https://laracasts.com/images/series/squares/do-you-react.jpg"
-          alt="React"
-        />
-        <p>A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES</p>
-      </section>
-    );
-  }
-}
+const Hero = () => {
+  return (
+    <section className="hero">
+      <img
+        src="https://laracasts.com/images/series/squares/do-you-react.jpg"
+        alt="React"
+      />
+      <p>A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES</p>
+    </section>
+  );
+};
 
 export default Hero;
 ```
 
 De nuevo, importemos nuestro componente, pero esta vez lo incluiremos dentro del elemento JSX `<App />`:
 
+---
+
+## `children`
+
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import Footer from './components/footer';
+import Hero from './components/hero';
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
+const App = (props) => {
+  //
+};
 
-class App extends React.Component {
-.
-.
-.
-}
-
-ReactDOM.render(
-  <App>
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
+  <App name="Mike">
     <Hero />
   </App>,
-  document.getElementById('root')
-)
+);
 ```
 
-El componente `Hero` se ha pasado al componente `App` a través de "accesorios" y se ha almacenado en un elemento llamado `children`. Cualquier cosa entre las etiquetas de apertura y cierre de un componente se pasará al componente como `props.children`.
+---
 
-Para renderizarlo necesitamos agregarlo al método `render ()` de `App`:
+## `children`
+
+.row[
+.col[
+El componente `Hero` se ha pasado al componente `App` a través de `props` y se ha almacenado en un elemento llamado `children`. Cualquier cosa entre las etiquetas de apertura y cierre de un componente se pasará al componente como `props.children`.
+
+]
+.col[
 
 ```js
-render() {
-  <main>
-    <Header name="Mike" message={this.state.message} />
-    {this.props.children}
-    <Footer />
-  </main>
-}
+import React, { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Header from './components/header';
+import Footer from './components/footer';
+import Hero from './components/hero';
+
+const App = (props) => {
+  const [message] = setState('Hello World!');
+
+  return (
+    <>
+      <Header name="Mike" message={message} />
+      {props.children}
+      <Footer />
+    </>
+  );
+};
+
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
+  <App name="Mike">
+    <Hero />
+  </App>,
+);
 ```
 
-Es importante tener en cuenta que es difícil pasar datos de `App` a `Hero` de esta manera. Aunque es posible pasar datos desde el `state` en la aplicación a Hero a través de `props` usando este método, es complejo y requiere técnicas avanzadas de React. En términos generales,`this.props.children` solo debe usarse con componentes y elementos DOM que no necesitan recibir accesorios en sí mismos.
+]
+]
 
-## Otras lecturas
+---
 
-- [React JS Tutorial - Nesting Components #6](https://www.youtube.com/watch?v=7VOko6eXb8s)
-- [A quick intro to React's props.children](https://codeburst.io/a-quick-intro-to-reacts-props-children-cb3d2fce4891)
-- [Thinking In React - ReactJS](https://reactjs.org/docs/thinking-in-react.html)
+## `children`
+
+Es importante tener en cuenta que es difícil pasar datos de `App` a `Hero` de esta manera. Aunque es posible pasar datos desde el `state` en la aplicación a Hero a través de `props` usando este método, es complejo y requiere técnicas avanzadas de React. En términos generales, `props.children` solo debe usarse con componentes y elementos DOM que no necesitan recibir `props` en sí mismos.
+
+---
+
+class: frontpage
+
+<div>
+  <h2>Front-End Web Development</h2>
+  <hr/>
+  <h1>Final de presentación</h1>
+</div>

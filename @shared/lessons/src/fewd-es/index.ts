@@ -24,6 +24,7 @@ import * as asyncJs from './23-async-js.md';
 import * as midCoursePresentations from './24-mid-course-presentations.md';
 import * as immutabilityAndTemplate from './25-immutability-templating.md';
 import * as introToReact from './26-intro-to-react.md';
+import * as reactComponents from './27-react-components.md';
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -58,6 +59,7 @@ export const fewdEs = {
   '24-mid-course-presentations': midCoursePresentations,
   '25-immutability-templating': immutabilityAndTemplate,
   '26-intro-to-react': introToReact,
+  '27-react-components': reactComponents,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,
