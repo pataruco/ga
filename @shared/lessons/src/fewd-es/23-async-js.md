@@ -209,7 +209,7 @@ setTimeout(helloWorld, 1000);
 
 ## Promesas `Promises`
 
-### Infieron de callbacks 🔥 👹
+### Infierno de callbacks 🔥 👹
 
 ```js
 doSomething(function (result) {
