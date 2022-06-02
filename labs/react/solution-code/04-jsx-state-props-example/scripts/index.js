@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 'use strict';
 
 const { useState } = React;
@@ -22,7 +23,6 @@ const Counter = () => {
   return (
     <div>
       <h1>React Counter</h1>
-      {/* <h2>Count: {count}</h2> */}
       <Count count={count} />
       <menu className="buttons">
         <button type="button" onClick={handleOnClickAdd}>
@@ -37,4 +37,5 @@ const Counter = () => {
 };
 
 const domContainer = document.querySelector('#root');
+// eslint-disable-next-line no-undef
 ReactDOM.render(<Counter />, domContainer);
