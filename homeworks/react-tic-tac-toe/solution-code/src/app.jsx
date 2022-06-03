@@ -51,9 +51,11 @@ const App = () => {
 
   const winner = calculateWinner(current.squares);
 
-  const moves = history.map((_step, move) => {
-    const desc = move ? 'Move #' + move : 'Game start';
-    return <li key={move}>{desc}</li>;
+  const moves = history.map(({ squares }, move) => {
+    const desc = move
+      ? `Move #: ${move}, Board: ${squares.toString()}`
+      : 'Game start';
+    return <li key={move}>{desc},</li>;
   });
 
   let status;
