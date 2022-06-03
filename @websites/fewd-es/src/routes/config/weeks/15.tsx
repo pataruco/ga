@@ -49,7 +49,6 @@ export const week14Route: RoutesByWeek = {
       'React Router v6 Tutorial',
       'https://reactrouter.com/docs/en/v6/getting-started/tutorial',
     ],
-
     [
       'Practical Guide to React and CSS Modules',
       'https://www.triplet.fi/blog/practical-guide-to-react-and-css-modules/',
@@ -57,6 +56,10 @@ export const week14Route: RoutesByWeek = {
     [
       'Styled Components: Enforcing Best Practices In Component-Based Systems',
       'https://www.smashingmagazine.com/2017/01/styled-components-enforcing-best-practices-component-based-systems/',
+    ],
+    [
+      'Cartoon intro to Redux',
+      'https://code-cartoons.com/articles/a-cartoon-intro-to-redux/',
     ],
   ],
 };
