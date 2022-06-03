@@ -2,37 +2,33 @@ import { SlidesDeck, Title } from '@shared/components';
 import { RoutesByWeek } from '../../../@types/routes';
 import { COURSE_NAME, getLessonPath } from '../../../lib/get-lesson-path';
 
-const weekNumber = 14;
+const weekNumber = 15;
 
-export const week14Route: RoutesByWeek = {
+export const week15Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
-    name: 'Componentes de React',
-    path: `/lessons/react-components`,
+    name: 'Enrutado 🚦 y estilos en React 💅',
+    path: `/lessons/react-routing-styled-components`,
     element: () => (
       <>
         <Title
           courseName={COURSE_NAME}
           week={weekNumber}
-          title="Componentes de React"
+          title="Enrutado 🚦 y estilos en React 💅"
         />
-        <SlidesDeck slidesDeckPath={getLessonPath('27-react-components')} />
+        <SlidesDeck
+          slidesDeckPath={getLessonPath('29-react-routing-styled-components')}
+        />
       </>
     ),
   },
   lesson2: {
-    name: 'Country flags lab 🧪',
-    path: `/lessons/react-country-flags-lab`,
+    name: 'Redux',
+    path: `/lessons/redux`,
     element: () => (
       <>
-        <Title
-          courseName={COURSE_NAME}
-          week={weekNumber}
-          title="Country flags lab 🧪"
-        />
-        <SlidesDeck
-          slidesDeckPath={getLessonPath('28-react-country-flags-lab')}
-        />
+        <Title courseName={COURSE_NAME} week={weekNumber} title="Redux" />
+        <SlidesDeck slidesDeckPath={getLessonPath('30-redux')} />
       </>
     ),
   },
