@@ -33,12 +33,12 @@ export const week15Route: RoutesByWeek = {
     ),
   },
   workshops: {
-    name: 'React 🪨, 📃, ✂️',
-    path: '/lessons/react-country-flags-lab#3',
+    name: 'React Tic-tac-toe ❌ ⭕️',
+    path: '/lessons/redux#9',
   },
   homework: {
-    name: 'React 🪨, 📃, ✂️',
-    path: '/lessons/react-country-flags-lab#4',
+    name: 'React Tic-tac-toe ❌ ⭕️',
+    path: '/lessons/redux#10',
   },
   resources: [
     [

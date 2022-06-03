@@ -94,6 +94,22 @@ yarn create react-app my-app --template redux
 
 ---
 
+class: lab
+
+## Lab
+
+[React Tic-tac-toe ❌ ⭕️](https://github.com/pataruco/ga/raw/main/homeworks/react-tic-tac-toe/react-tic-tac-toe-starter-code.zip)
+
+---
+
+class: code-along
+
+## Homework
+
+[React Tic-tac-toe ❌ ⭕️](https://github.com/pataruco/ga/raw/main/homeworks/react-tic-tac-toe/react-tic-tac-toe-starter-code.zip)
+
+---
+
 class: frontpage
 
 <div>
