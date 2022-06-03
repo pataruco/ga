@@ -26,6 +26,7 @@ import * as immutabilityAndTemplate from './25-immutability-templating.md';
 import * as introToReact from './26-intro-to-react.md';
 import * as reactComponents from './27-react-components.md';
 import * as reactCountryFlagsLab from './28-react-country-flags-lab.md';
+import * as reactRoutingAndStyledComponents from './29-react-routing-styled-components.md';
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -62,6 +63,7 @@ export const fewdEs = {
   '26-intro-to-react': introToReact,
   '27-react-components': reactComponents,
   '28-react-country-flags-lab': reactCountryFlagsLab,
+  '29-react-routing-styled-components': reactRoutingAndStyledComponents,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,
