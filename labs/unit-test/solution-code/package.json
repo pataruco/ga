@@ -1,0 +1,14 @@
+{
+  "name": "unit-test-lab",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
