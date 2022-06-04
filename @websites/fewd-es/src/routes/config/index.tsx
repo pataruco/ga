@@ -27,7 +27,7 @@ import { projectRoutes } from './projects';
 export const FinalProjectRoute = {
   path: '/final-project-brief',
   element: () => {
-    const Content = lazy(() => import('../../pages/final-project-brief'));
+    const Content = lazy(() => import('../../pages/final-project'));
     return (
       <>
         <Title courseName="JSD" title="Final project brief" />
