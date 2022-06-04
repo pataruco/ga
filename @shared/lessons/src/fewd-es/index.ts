@@ -30,6 +30,8 @@ import * as reactRoutingAndStyledComponents from './29-react-routing-styled-comp
 import * as redux from './30-redux.md';
 import * as testing from './31-testing.md';
 import * as e2etesting from './32-e2e-testing.md';
+import * as nextJs from './33-nextjs.md';
+import * as typeScript from './34-typescript.md';
 
 // Bonus
 import * as a11y from './bonus-a11y.md';
@@ -71,6 +73,8 @@ export const fewdEs = {
   '30-redux': redux,
   '31-testing': testing,
   '32-e2e-testing': e2etesting,
+  '33-nextjs': nextJs,
+  '34-typescript': typeScript,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,

@@ -7,36 +7,32 @@ const weekNumber = 17;
 export const week17Route: RoutesByWeek = {
   weekNumber,
   lesson1: {
-    name: 'Tests',
-    path: `/lessons/testing`,
+    name: 'NextJS',
+    path: `/lessons/nextjs`,
     element: () => (
       <>
-        <Title courseName={COURSE_NAME} week={weekNumber} title="Tests" />
-        <SlidesDeck slidesDeckPath={getLessonPath('31-testing')} />
+        <Title courseName={COURSE_NAME} week={weekNumber} title="NextJS" />
+        <SlidesDeck slidesDeckPath={getLessonPath('33-nextjs')} />
       </>
     ),
   },
   lesson2: {
-    name: 'E2E testing lab',
-    path: `/lessons/e2e-testing`,
+    name: 'TypeScript',
+    path: `/lessons/typescript`,
     element: () => (
       <>
-        <Title
-          courseName={COURSE_NAME}
-          week={weekNumber}
-          title="E2E testing lab"
-        />
-        <SlidesDeck slidesDeckPath={getLessonPath('32-e2e-testing')} />
+        <Title courseName={COURSE_NAME} week={weekNumber} title="TypeScript" />
+        <SlidesDeck slidesDeckPath={getLessonPath('34-typescript')} />
       </>
     ),
   },
   workshops: {
     name: '	Tiempo para proyecto final',
-    path: '/lessons/e2e-testing#3',
+    path: '/lessons/typescript#40',
   },
   homework: {
     name: 'Tiempo para proyecto final',
-    path: '/lessons/e2e-testing#4',
+    path: '/lessons/typescript#41',
   },
   resources: [
     ['Learn TypeScript', 'https://www.tutorialspoint.com/typescript/index.htm'],

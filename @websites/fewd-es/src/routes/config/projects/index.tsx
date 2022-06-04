@@ -34,16 +34,16 @@ export const projectRoutes: LessonRoute[] = [
       );
     },
   },
-  {
-    name: 'Final de curso',
-    path: '/projects/final-course',
-    element() {
-      const Content = lazy(() => import('../../../pages/final-project'));
-      return (
-        <Suspense fallback={<Loading />}>
-          <Content />
-        </Suspense>
-      );
-    },
-  },
+  // {
+  //   name: 'Final de curso',
+  //   path: '/projects/final-course',
+  //   element() {
+  //     const Content = lazy(() => import('../../../pages/final-project'));
+  //     return (
+  //       <Suspense fallback={<Loading />}>
+  //         <Content />
+  //       </Suspense>
+  //     );
+  //   },
+  // },
 ];
