@@ -24,9 +24,9 @@ const StyledMain = styled.main`
   }
 `;
 
-const FinalProjectBrief: React.FC = () => (
+const MidCourseProjectBrief: React.FC = () => (
   <Page>
-    <Title courseName={COURSE_NAME} title="Proyecto de mitad de curs" />
+    <Title courseName={COURSE_NAME} title="Proyecto de mitad de curso" />
     <Header />
     <StyledMain>
       <article>
@@ -158,4 +158,4 @@ const FinalProjectBrief: React.FC = () => (
   </Page>
 );
 
-export default FinalProjectBrief;
+export default MidCourseProjectBrief;

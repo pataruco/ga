@@ -17,6 +17,7 @@ import { week12Route } from './weeks/12';
 import { week13Route } from './weeks/13';
 import { week14Route } from './weeks/14';
 import { week15Route } from './weeks/15';
+import { week16Route } from './weeks/16';
 import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { Route } from 'react-router-dom';
 import { bonusLessonRoutes } from './bonus-lessons';
@@ -27,7 +28,7 @@ import { projectRoutes } from './projects';
 export const FinalProjectRoute = {
   path: '/final-project-brief',
   element: () => {
-    const Content = lazy(() => import('../../pages/final-project-brief'));
+    const Content = lazy(() => import('../../pages/final-project'));
     return (
       <>
         <Title courseName="JSD" title="Final project brief" />
@@ -56,6 +57,7 @@ export const routesByWeek: RoutesByWeek[] = [
   week13Route,
   week14Route,
   week15Route,
+  week16Route,
 ];
 
 export const WeekRouteComponents = routesByWeek.map(

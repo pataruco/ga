@@ -28,6 +28,9 @@ import * as reactComponents from './27-react-components.md';
 import * as reactCountryFlagsLab from './28-react-country-flags-lab.md';
 import * as reactRoutingAndStyledComponents from './29-react-routing-styled-components.md';
 import * as redux from './30-redux.md';
+import * as testing from './31-testing.md';
+import * as e2etesting from './32-e2e-testing.md';
+
 // Bonus
 import * as a11y from './bonus-a11y.md';
 import * as ecmascript from './bonus-ecmascript.md';
@@ -66,6 +69,8 @@ export const fewdEs = {
   '28-react-country-flags-lab': reactCountryFlagsLab,
   '29-react-routing-styled-components': reactRoutingAndStyledComponents,
   '30-redux': redux,
+  '31-testing': testing,
+  '32-e2e-testing': e2etesting,
   'bonus-a11y': a11y,
   'bonus-ecmascrip': ecmascript,
   'bonus-installfest-macos': installfestMacos,
