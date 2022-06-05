@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>RESTCountries</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <div class="container">
-      <select>
-        <option>All</option>
-        <option>Africa</option>
-        <option>Americas</option>
-        <option>Asia</option>
-        <option>Europe</option>
-        <option>Oceania</option>
-      </select>
-      <input placeholder="Search...">
+      <form action="">
+        <label for="regions">Regions </label>
+        <select id="regions">
+          <option>All</option>
+          <option>Africa</option>
+          <option>Americas</option>
+          <option>Asia</option>
+          <option>Europe</option>
+          <option>Oceania</option>
+        </select>
+        <label for="search">Search</label>
+        <input
+          type=" search"
+          name="search"
+          id="search"
+          placeholder="Search..."
+        />
+      </form>
     </div>
     <div class="container">
-      <div class="countries"></div>
+      <article class="countries"></article>
     </div>
+    <script src="scripts/app.js" charset="utf-8"></script>
   </body>
 </html>
