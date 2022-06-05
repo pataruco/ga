@@ -17,14 +17,9 @@ input {
   outline: none;
 }
 
-h4,
-h6 {
+h2 {
   margin-bottom: 1em;
   margin-top: 0;
-}
-
-h4 + h6 {
-  margin-top: -1em;
 }
 
 .container {
@@ -37,14 +32,14 @@ h4 + h6 {
   flex-wrap: wrap;
 }
 
-.countries div {
+.countries section {
   width: calc(100% / 4 - 20px);
   padding: 10px;
   margin: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.countries div img {
+.countries section img {
   width: 100%;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
