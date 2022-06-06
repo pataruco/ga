@@ -48,7 +48,8 @@ function handleSelectInput(event) {
   displayCountries();
 }
 
-function handleTextInput(e) {
+
+function handleTextInput(event) {
   search = event.target.value;
   displayCountries();
 }
