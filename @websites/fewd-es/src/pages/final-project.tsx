@@ -56,7 +56,7 @@ const FinalProjectBrief: React.FC = () => (
               Incluir wireframes que diseñaste antes de crear la aplicación.
             </li>
             <li>Estar en línea y accessible al público</li>
-            <li>Tener tests unitarios (unit) y e2e.</li>
+            <li>Tener tests unitarios (unit).</li>
           </ul>
         </section>
         <section>
