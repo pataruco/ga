@@ -1,8 +1,11 @@
 import { lazy, Suspense } from 'react';
+import { Route } from 'react-router-dom';
 import { Title } from '@shared/components';
 
-import Loading from '../../pages/loading';
+import { bonusLessonRoutes } from './bonus-lessons';
+import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { RoutesByWeek } from '../../@types/routes';
+import { week10Route } from './weeks/10';
 import { week1Route } from './weeks/1';
 import { week2Route } from './weeks/2';
 import { week3Route } from './weeks/3';
@@ -12,29 +15,7 @@ import { week6Route } from './weeks/6';
 import { week7Route } from './weeks/7';
 import { week8Route } from './weeks/8';
 import { week9Route } from './weeks/9';
-import { week10Route } from './weeks/10';
-
-import { COURSE_NAME } from '../../lib/get-lesson-path';
-import { Route } from 'react-router-dom';
-import { bonusLessonRoutes } from './bonus-lessons';
-// import { projectRoutes } from './projects';
-
-// Final project
-// Path: /final-project-brief
-// export const FinalProjectRoute = {
-//   path: '/final-project-brief',
-//   element: () => {
-//     const Content = lazy(() => import('../../pages/final-project'));
-//     return (
-//       <>
-//         <Title courseName="JSD" title="Final project brief" />
-//         <Suspense fallback={<Loading />}>
-//           <Content />
-//         </Suspense>
-//       </>
-//     );
-//   },
-// };
+import Loading from '../../pages/loading';
 
 // Instructional resources by week
 export const routesByWeek: RoutesByWeek[] = [
@@ -105,8 +86,20 @@ export const BonusLessonsRouteComponents = bonusLessonRoutes.map(
   ),
 );
 
-// export const ProjectRouteComponents = projectRoutes.map(
-//   ({ path, element: Element }, key) => (
-//     <Route path={path} element={<Element />} key={key} />
-//   ),
-// );
+// Final project
+// Path: /final-project-brief
+
+export const FinalProjectRoute = {
+  path: '/final-project',
+  element: () => {
+    const Content = lazy(() => import('../../pages/final-project-brief'));
+    return (
+      <>
+        <Title courseName="FEWD" title="Final project brief" />
+        <Suspense fallback={<Loading />}>
+          <Content />
+        </Suspense>
+      </>
+    );
+  },
+};

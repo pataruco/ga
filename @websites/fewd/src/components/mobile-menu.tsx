@@ -6,9 +6,8 @@ import {
   selectNavigationMenu,
   closeMobileMenu,
 } from '../redux/navigation-menu';
-import { routesByWeek } from '../routes/config';
-// import { bonusLessonRoutes } from '../routes/config/bonus-lessons';
-// import { projectRoutes } from '../routes/config/projects';
+import { FinalProjectRoute, routesByWeek } from '../routes/config';
+import { bonusLessonRoutes } from '../routes/config/bonus-lessons';
 
 const width = '250px';
 
@@ -104,33 +103,19 @@ const Weeks: React.FC = () => (
   </ul>
 );
 
-// const BonusLessons: React.FC = () => (
-//   <ul>
-//     {bonusLessonRoutes.map(({ name, path }, i) => {
-//       return (
-//         <li key={i}>
-//           <CloseLink to={path} key={i}>
-//             {name}
-//           </CloseLink>
-//         </li>
-//       );
-//     })}
-//   </ul>
-// );
-
-// const Projects: React.FC = () => (
-//   <ul>
-//     {projectRoutes.map(({ name, path }, i) => {
-//       return (
-//         <li key={i}>
-//           <CloseLink to={path} key={i}>
-//             {name}
-//           </CloseLink>
-//         </li>
-//       );
-//     })}
-//   </ul>
-// );
+const BonusLessons: React.FC = () => (
+  <ul>
+    {bonusLessonRoutes.map(({ name, path }, i) => {
+      return (
+        <li key={i}>
+          <CloseLink to={path} key={i}>
+            {name}
+          </CloseLink>
+        </li>
+      );
+    })}
+  </ul>
+);
 
 const MobileMenu: React.FC = () => {
   const { mobileMenuIsOpen } = useSelector(selectNavigationMenu);
@@ -146,25 +131,19 @@ const MobileMenu: React.FC = () => {
       <ul>
         <li>
           <details>
-            <summary>Semanas</summary>
+            <summary>Weeks</summary>
             <Weeks />
           </details>
         </li>
-        {/* <li>
+        <li>
           <details>
-            <summary>Lecciones adicionales</summary>
+            <summary>Bonus lessons</summary>
             <BonusLessons />
           </details>
-        </li> */}
-        {/* <li>
-          <details>
-            <summary>Proyectos</summary>
-            <Projects />
-          </details>
-        </li> */}
-        {/* <li>
-          <CloseLink to="/final-project-brief">Proyecto final</CloseLink>
-        </li> */}
+        </li>
+        <li>
+          <CloseLink to={FinalProjectRoute.path}>Final projects</CloseLink>
+        </li>
         <li>
           <CloseLink to="/about">About</CloseLink>
         </li>

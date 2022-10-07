@@ -9,13 +9,11 @@ import {
   openWeekMenu,
   selectNavigationMenu,
   openMobileMenu,
-  openProjectMenu,
   closeProjectMenu,
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
-import { routesByWeek } from '../../routes/config';
+import { routesByWeek, FinalProjectRoute } from '../../routes/config';
 import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
-// import { projectRoutes } from '../../routes/config/projects';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -153,31 +151,6 @@ const BonusLessons: React.FC = () => {
   );
 };
 
-// const Projects: React.FC = () => {
-//   const { projectsMenuIsOpen } = useSelector(selectNavigationMenu);
-//   const dispatch = useDispatch();
-
-//   const close = (event: React.MouseEvent) => {
-//     dispatch(closeWeekMenu());
-//     dispatch(closeBonusLessonMenu());
-//     dispatch(closeProjectMenu());
-//   };
-
-//   return (
-//     <ul className={projectsMenuIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-//       {projectRoutes.map(({ name, path }, i) => {
-//         return (
-//           <li key={i}>
-//             <Link to={path} key={i}>
-//               <span onClick={close}>{name}</span>
-//             </Link>
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// };
-
 const Header: React.FC = () => {
   const dispatch = useDispatch();
 
@@ -199,11 +172,6 @@ const Header: React.FC = () => {
   const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
     dispatchClose();
     dispatch(openBonusLessonMenu());
-  };
-
-  const handleOnProjectsMouseEnter = (event: React.MouseEvent) => {
-    dispatchClose();
-    dispatch(openProjectMenu());
   };
 
   const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
@@ -229,10 +197,9 @@ const Header: React.FC = () => {
             </button>
             <BonusLessons />
           </li>
-          {/* <li>
-            <button onMouseEnter={handleOnProjectsMouseEnter}>Proyectos</button>
-            <Projects />
-          </li> */}
+          <li>
+            <Link to={FinalProjectRoute.path}>Final project</Link>
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>
