@@ -23,10 +23,10 @@ const Lessons = bonusLessonRoutes.map(({ name, path }, key) => (
 
 const About: React.FC = () => (
   <Page>
-    <Title courseName={COURSE_NAME} title="Lecciones adicionales" />
+    <Title courseName={COURSE_NAME} title="Bonus lessons" />
     <Header />
     <StyledMain>
-      <h1>Lecciones adicionales</h1>
+      <h1>Bonus lessons</h1>
       <ul>{Lessons}</ul>
     </StyledMain>
     <Footer />

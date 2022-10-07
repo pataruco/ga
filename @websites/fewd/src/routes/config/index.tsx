@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Title } from '@shared/components';
+
 import Loading from '../../pages/loading';
 import { RoutesByWeek } from '../../@types/routes';
 import { week1Route } from './weeks/1';
@@ -12,16 +13,10 @@ import { week7Route } from './weeks/7';
 import { week8Route } from './weeks/8';
 import { week9Route } from './weeks/9';
 import { week10Route } from './weeks/10';
-// import { week11Route } from './weeks/11';
-// import { week12Route } from './weeks/12';
-// import { week13Route } from './weeks/13';
-// import { week14Route } from './weeks/14';
-// import { week15Route } from './weeks/15';
-// import { week16Route } from './weeks/16';
-// import { week17Route } from './weeks/17';
+
 import { COURSE_NAME } from '../../lib/get-lesson-path';
 import { Route } from 'react-router-dom';
-// import { bonusLessonRoutes } from './bonus-lessons';
+import { bonusLessonRoutes } from './bonus-lessons';
 // import { projectRoutes } from './projects';
 
 // Final project
@@ -53,13 +48,6 @@ export const routesByWeek: RoutesByWeek[] = [
   week8Route,
   week9Route,
   week10Route,
-  // week11Route,
-  // week12Route,
-  // week13Route,
-  // week14Route,
-  // week15Route,
-  // week16Route,
-  // week17Route,
 ];
 
 export const WeekRouteComponents = routesByWeek.map(
@@ -111,11 +99,11 @@ export const LessonRouteComponents = routesByWeek
   )
   .flat();
 
-// export const BonusLessonsRouteComponents = bonusLessonRoutes.map(
-//   ({ path, element: Element }, key) => (
-//     <Route path={path} element={<Element />} key={key} />
-//   ),
-// );
+export const BonusLessonsRouteComponents = bonusLessonRoutes.map(
+  ({ path, element: Element }, key) => (
+    <Route path={path} element={<Element />} key={key} />
+  ),
+);
 
 // export const ProjectRouteComponents = projectRoutes.map(
 //   ({ path, element: Element }, key) => (

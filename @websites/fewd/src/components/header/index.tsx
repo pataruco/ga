@@ -14,7 +14,7 @@ import {
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
 import { routesByWeek } from '../../routes/config';
-// import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
+import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
 // import { projectRoutes } from '../../routes/config/projects';
 
 const StyledHeader = styled.header`
@@ -128,30 +128,30 @@ export const Weeks: React.FC = () => {
   );
 };
 
-// const BonusLessons: React.FC = () => {
-//   const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
-//   const dispatch = useDispatch();
+const BonusLessons: React.FC = () => {
+  const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
+  const dispatch = useDispatch();
 
-//   const close = (event: React.MouseEvent) => {
-//     dispatch(closeWeekMenu());
-//     dispatch(closeBonusLessonMenu());
-//     dispatch(closeProjectMenu());
-//   };
+  const close = (event: React.MouseEvent) => {
+    dispatch(closeWeekMenu());
+    dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
+  };
 
-//   return (
-//     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-//       {bonusLessonRoutes.map(({ name, path }, i) => {
-//         return (
-//           <li key={i}>
-//             <Link to={path} key={i}>
-//               <span onClick={close}>{name}</span>
-//             </Link>
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// };
+  return (
+    <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+      {bonusLessonRoutes.map(({ name, path }, i) => {
+        return (
+          <li key={i}>
+            <Link to={path} key={i}>
+              <span onClick={close}>{name}</span>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 // const Projects: React.FC = () => {
 //   const { projectsMenuIsOpen } = useSelector(selectNavigationMenu);
@@ -223,13 +223,13 @@ const Header: React.FC = () => {
             <button onMouseEnter={handleWeeksOnMouseEnter}>Semanas</button>
             <Weeks />
           </li>
-          {/* <li>
+          <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
-              Lecciones adicionales
+              Bonus lessons
             </button>
             <BonusLessons />
           </li>
-          <li>
+          {/* <li>
             <button onMouseEnter={handleOnProjectsMouseEnter}>Proyectos</button>
             <Projects />
           </li> */}

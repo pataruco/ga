@@ -5,16 +5,18 @@ import LessonsPage from '../pages/lessons';
 import {
   WeekRouteComponents,
   LessonRouteComponents,
-  // BonusLessonsRouteComponents,
+  BonusLessonsRouteComponents,
   // ProjectRouteComponents,
 } from './config';
 import ErrorPage from '../pages/404';
 import About from '../pages/about';
 
+import { BonusLessonsRoute } from './config/bonus-lessons';
+
 // import { BonusLessonsRoute } from './config/bonus-lessons';
 // import { ProjectsRoute } from './config/projects';
 
-// const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
+const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
 // const { path: projectsRoute, element: Projects } = ProjectsRoute;
 
 const Router = () => (
@@ -23,10 +25,9 @@ const Router = () => (
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/lessons" element={<LessonsPage />} />
-      {/* <Route path={finalProjectRoute} element={<FinalProject />} /> */}
-      {/* <Route path={bonusLessonsRoute} element={<BonusLessons />} /> */}
+      <Route path={bonusLessonsRoute} element={<BonusLessons />} />
       {WeekRouteComponents}
-      {/* {BonusLessonsComponents} */}
+      {BonusLessonsRouteComponents}
       {LessonRouteComponents}
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
