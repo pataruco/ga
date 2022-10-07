@@ -41,7 +41,7 @@ const LessonsPage: React.FC = () => {
       <Title courseName={COURSE_NAME} title="Lecciones" />
       <Header />
       <StyledMain>
-        <h1>Lecciones</h1>
+        <h1>Lessons</h1>
         <ol>{Lessons}</ol>
       </StyledMain>
       <Footer />

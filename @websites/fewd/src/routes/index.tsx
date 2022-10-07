@@ -1,9 +1,10 @@
 import '@shared/styles/dist/site';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../pages/home';
+import LessonsPage from '../pages/lessons';
 import {
   WeekRouteComponents,
-  // LessonRouteComponents,
+  LessonRouteComponents,
   // BonusLessonsRouteComponents,
   // ProjectRouteComponents,
 } from './config';
@@ -21,11 +22,12 @@ const Router = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      <Route path="/lessons" element={<LessonsPage />} />
       {/* <Route path={finalProjectRoute} element={<FinalProject />} /> */}
       {/* <Route path={bonusLessonsRoute} element={<BonusLessons />} /> */}
       {WeekRouteComponents}
       {/* {BonusLessonsComponents} */}
-      {/* {LessonsRouteComponents} */}
+      {LessonRouteComponents}
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>
