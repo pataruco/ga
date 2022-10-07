@@ -87,7 +87,9 @@ const instantiateSlides = async (slidesDeckPath: string) => {
 
 const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckPath }) => {
   useEffect(() => {
-    instantiateSlides(slidesDeckPath);
+    return () => {
+      instantiateSlides(slidesDeckPath);
+    };
   }, [slidesDeckPath]);
 
   return null;
