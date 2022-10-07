@@ -36,10 +36,10 @@ export const week1Route: RoutesByWeek = {
       </>
     ),
   },
-  // workshops: {
-  //   name: 'Installfest',
-  //   path: `/lessons/installfest`,
-  // },
+  homework: {
+    name: 'Fictional CV',
+    path: `/lessons/advanced-html-intro-to-css#43`,
+  },
   resources: [
     ['Intro to HTML', 'https://developer.mozilla.org/en-US/docs/Web/HTML'],
     [
