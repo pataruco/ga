@@ -2,46 +2,30 @@ import '@shared/styles/dist/site';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../pages/home';
 import {
-  lessonRoutes,
-  weekRoutes,
-  FinalProjectRoute,
-  BonusLessonsRoute,
-  bonusLessonRoutes,
+  WeekRouteComponents,
+  // LessonRouteComponents,
+  // BonusLessonsRouteComponents,
+  // ProjectRouteComponents,
 } from './config';
 import ErrorPage from '../pages/404';
 import About from '../pages/about';
 
-const LessonsRouteComponents = lessonRoutes.map(
-  ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
-  ),
-);
+// import { BonusLessonsRoute } from './config/bonus-lessons';
+// import { ProjectsRoute } from './config/projects';
 
-const WeekRouteComponents = weekRoutes.map(
-  ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
-  ),
-);
-
-const BonusLessonsComponents = bonusLessonRoutes.map(
-  ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
-  ),
-);
-
-const { path: finalProjectRoute, element: FinalProject } = FinalProjectRoute;
-const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
+// const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
+// const { path: projectsRoute, element: Projects } = ProjectsRoute;
 
 const Router = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path={finalProjectRoute} element={<FinalProject />} />
-      <Route path={bonusLessonsRoute} element={<BonusLessons />} />
+      {/* <Route path={finalProjectRoute} element={<FinalProject />} /> */}
+      {/* <Route path={bonusLessonsRoute} element={<BonusLessons />} /> */}
       {WeekRouteComponents}
-      {BonusLessonsComponents}
-      {LessonsRouteComponents}
+      {/* {BonusLessonsComponents} */}
+      {/* {LessonsRouteComponents} */}
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>

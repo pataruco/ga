@@ -9,9 +9,13 @@ import {
   openWeekMenu,
   selectNavigationMenu,
   openMobileMenu,
+  openProjectMenu,
+  closeProjectMenu,
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
-import { weeks } from '../../routes/config';
+import { routesByWeek } from '../../routes/config';
+// import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
+// import { projectRoutes } from '../../routes/config/projects';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -30,10 +34,6 @@ const StyledHeader = styled.header`
     padding: 0;
     margin: 0;
     list-style: none;
-  }
-
-  nav {
-    min-width: 25%;
   }
 
   nav > ul {
@@ -56,13 +56,14 @@ const StyledHeader = styled.header`
     border: none;
     color: var(--white);
     margin-bottom: 0.75rem;
-    padding: 0;
+    padding: 0 0.5rem;
   }
 
   nav > ul > li {
     margin-left: 1.25rem;
     &:first-of-type > ul > li,
-    &:nth-of-type(2) > ul > li {
+    &:nth-of-type(2) > ul > li,
+    &:nth-of-type(3) > ul > li {
       background-color: var(--black);
       padding: 0.75rem 0.5rem;
     }
@@ -93,7 +94,7 @@ const StyledHeader = styled.header`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     & > button {
       display: block;
     }
@@ -104,26 +105,22 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const weeksIterator = weeks.fill('Week');
-
 export const Weeks: React.FC = () => {
   const { weekIsOpen } = useSelector(selectNavigationMenu);
   const dispatch = useDispatch();
 
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
-    dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   return (
     <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {weeksIterator.map((week, i) => (
+      {routesByWeek.map(({ weekNumber }, i) => (
         <li key={i}>
-          <Link to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
-            <span onClick={close}>
-              {week} {i + 1}
-            </span>
+          <Link to={`/week-${weekNumber}`} key={i}>
+            <span onClick={close}>Semana {i + 1}</span>
           </Link>
         </li>
       ))}
@@ -131,36 +128,55 @@ export const Weeks: React.FC = () => {
   );
 };
 
-export const bonusLessons = [
-  ['CSS grids', '/bonus-lessons/grids'],
-  ['HTML tables', '/bonus-lessons/tables'],
-  ['JavaScript history', '/bonus-lessons/javascript-history'],
-];
+// const BonusLessons: React.FC = () => {
+//   const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
+//   const dispatch = useDispatch();
 
-const BonusLessons: React.FC = () => {
-  const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
-  const dispatch = useDispatch();
+//   const close = (event: React.MouseEvent) => {
+//     dispatch(closeWeekMenu());
+//     dispatch(closeBonusLessonMenu());
+//     dispatch(closeProjectMenu());
+//   };
 
-  const close = (event: React.MouseEvent) => {
-    dispatch(closeWeekMenu());
-    dispatch(closeBonusLessonMenu());
-  };
+//   return (
+//     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+//       {bonusLessonRoutes.map(({ name, path }, i) => {
+//         return (
+//           <li key={i}>
+//             <Link to={path} key={i}>
+//               <span onClick={close}>{name}</span>
+//             </Link>
+//           </li>
+//         );
+//       })}
+//     </ul>
+//   );
+// };
 
-  return (
-    <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {bonusLessons.map((lesson, i) => {
-        const [name, path] = lesson;
-        return (
-          <li key={i}>
-            <Link to={path} key={i}>
-              <span onClick={close}>{name}</span>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
+// const Projects: React.FC = () => {
+//   const { projectsMenuIsOpen } = useSelector(selectNavigationMenu);
+//   const dispatch = useDispatch();
+
+//   const close = (event: React.MouseEvent) => {
+//     dispatch(closeWeekMenu());
+//     dispatch(closeBonusLessonMenu());
+//     dispatch(closeProjectMenu());
+//   };
+
+//   return (
+//     <ul className={projectsMenuIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+//       {projectRoutes.map(({ name, path }, i) => {
+//         return (
+//           <li key={i}>
+//             <Link to={path} key={i}>
+//               <span onClick={close}>{name}</span>
+//             </Link>
+//           </li>
+//         );
+//       })}
+//     </ul>
+//   );
+// };
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
@@ -168,6 +184,7 @@ const Header: React.FC = () => {
   const dispatchClose = () => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   const close = (event: React.MouseEvent) => {
@@ -184,6 +201,11 @@ const Header: React.FC = () => {
     dispatch(openBonusLessonMenu());
   };
 
+  const handleOnProjectsMouseEnter = (event: React.MouseEvent) => {
+    dispatchClose();
+    dispatch(openProjectMenu());
+  };
+
   const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
     dispatch(openMobileMenu());
   };
@@ -198,18 +220,19 @@ const Header: React.FC = () => {
       <nav onMouseLeave={close}>
         <ul>
           <li>
-            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
+            <button onMouseEnter={handleWeeksOnMouseEnter}>Semanas</button>
             <Weeks />
           </li>
-          <li>
+          {/* <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
-              Bonus lessons
+              Lecciones adicionales
             </button>
             <BonusLessons />
           </li>
           <li>
-            <Link to="/final-project-brief">Final project</Link>
-          </li>
+            <button onMouseEnter={handleOnProjectsMouseEnter}>Proyectos</button>
+            <Projects />
+          </li> */}
           <li>
             <Link to="/about">About</Link>
           </li>

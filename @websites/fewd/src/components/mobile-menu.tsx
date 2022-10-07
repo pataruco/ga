@@ -6,7 +6,9 @@ import {
   selectNavigationMenu,
   closeMobileMenu,
 } from '../redux/navigation-menu';
-import { weeksIterator, bonusLessons } from './header';
+import { routesByWeek } from '../routes/config';
+// import { bonusLessonRoutes } from '../routes/config/bonus-lessons';
+// import { projectRoutes } from '../routes/config/projects';
 
 const width = '250px';
 
@@ -66,7 +68,7 @@ const StyledNav = styled.nav`
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     & {
       display: none;
     }
@@ -92,32 +94,43 @@ const CloseLink: React.FC<{ to: string; children: React.ReactNode }> = ({
 
 const Weeks: React.FC = () => (
   <ul>
-    {weeksIterator.map((week: string, i) => (
+    {routesByWeek.map(({ weekNumber }, i) => (
       <li key={i}>
-        <CloseLink to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
-          <span>
-            {week} {i + 1}
-          </span>
+        <CloseLink to={`week-${weekNumber}`} key={i}>
+          <span>Semana {i + 1}</span>
         </CloseLink>
       </li>
     ))}
   </ul>
 );
 
-const BonusLessons: React.FC = () => (
-  <ul>
-    {bonusLessons.map((lesson, i) => {
-      const [name, path] = lesson;
-      return (
-        <li key={i}>
-          <CloseLink to={path} key={i}>
-            {name}
-          </CloseLink>
-        </li>
-      );
-    })}
-  </ul>
-);
+// const BonusLessons: React.FC = () => (
+//   <ul>
+//     {bonusLessonRoutes.map(({ name, path }, i) => {
+//       return (
+//         <li key={i}>
+//           <CloseLink to={path} key={i}>
+//             {name}
+//           </CloseLink>
+//         </li>
+//       );
+//     })}
+//   </ul>
+// );
+
+// const Projects: React.FC = () => (
+//   <ul>
+//     {projectRoutes.map(({ name, path }, i) => {
+//       return (
+//         <li key={i}>
+//           <CloseLink to={path} key={i}>
+//             {name}
+//           </CloseLink>
+//         </li>
+//       );
+//     })}
+//   </ul>
+// );
 
 const MobileMenu: React.FC = () => {
   const { mobileMenuIsOpen } = useSelector(selectNavigationMenu);
@@ -133,19 +146,25 @@ const MobileMenu: React.FC = () => {
       <ul>
         <li>
           <details>
-            <summary>Weeks</summary>
+            <summary>Semanas</summary>
             <Weeks />
           </details>
         </li>
-        <li>
+        {/* <li>
           <details>
-            <summary>Bonus Lessons</summary>
+            <summary>Lecciones adicionales</summary>
             <BonusLessons />
           </details>
-        </li>
-        <li>
-          <CloseLink to="/final-project-brief">Final Project</CloseLink>
-        </li>
+        </li> */}
+        {/* <li>
+          <details>
+            <summary>Proyectos</summary>
+            <Projects />
+          </details>
+        </li> */}
+        {/* <li>
+          <CloseLink to="/final-project-brief">Proyecto final</CloseLink>
+        </li> */}
         <li>
           <CloseLink to="/about">About</CloseLink>
         </li>
