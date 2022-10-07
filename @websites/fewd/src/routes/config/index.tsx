@@ -4,7 +4,7 @@ import Loading from '../../pages/loading';
 import { RoutesByWeek } from '../../@types/routes';
 import { week1Route } from './weeks/1';
 import { week2Route } from './weeks/2';
-// import { week3Route } from './weeks/3';
+import { week3Route } from './weeks/3';
 // import { week4Route } from './weeks/4';
 // import { week5Route } from './weeks/5';
 // import { week6Route } from './weeks/6';
@@ -45,7 +45,7 @@ import { Route } from 'react-router-dom';
 export const routesByWeek: RoutesByWeek[] = [
   week1Route,
   week2Route,
-  // week3Route,
+  week3Route,
   // week4Route,
   // week5Route,
   // week6Route,
