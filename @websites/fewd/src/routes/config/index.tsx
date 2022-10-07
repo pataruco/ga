@@ -7,7 +7,7 @@ import { week2Route } from './weeks/2';
 import { week3Route } from './weeks/3';
 import { week4Route } from './weeks/4';
 import { week5Route } from './weeks/5';
-// import { week6Route } from './weeks/6';
+import { week6Route } from './weeks/6';
 // import { week7Route } from './weeks/7';
 // import { week8Route } from './weeks/8';
 // import { week9Route } from './weeks/9';
@@ -48,7 +48,7 @@ export const routesByWeek: RoutesByWeek[] = [
   week3Route,
   week4Route,
   week5Route,
-  // week6Route,
+  week6Route,
   // week7Route,
   // week8Route,
   // week9Route,
