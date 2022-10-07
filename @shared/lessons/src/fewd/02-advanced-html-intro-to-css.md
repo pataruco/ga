@@ -285,7 +285,7 @@ p {
 
 # How does CSS actually work?
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works/rendering.svg)
 
 ---
 
@@ -384,25 +384,26 @@ Using inline styles
 
 ## CSS Building blocks
 
-### Declarations
-
-![](https://mdn.mozillademos.org/files/3665/css%20syntax%20-%20declaration.png)
-
----
-
-## CSS Building blocks
-
-### Declarations block
-
-![](https://mdn.mozillademos.org/files/3667/css%20syntax%20-%20declarations%20block.png)
-
----
-
-## CSS Building blocks
-
-### Rule
-
-![](https://mdn.mozillademos.org/files/3668/css%20syntax%20-%20ruleset.png)
+<div class="row">
+  <section>
+    <h3>Declarations</h3>
+    <picture>
+      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax/css_syntax_-_declaration.png" alt="CSS syntax declaration" />
+    </picture>
+  </section>
+  <section>
+    <h3>Blocks</h3>
+    <picture>
+      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax/css_syntax_-_block.png" alt="CSS syntax block" />
+    </picture>
+  </section>
+  <section>
+    <h3>Rules</h3>
+    <picture>
+      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax/ruleset.png" alt="CSS syntax ruleset" />
+    </picture>
+  </section>
+</div>
 
 ---
 
@@ -414,9 +415,7 @@ Using inline styles
 
 ---
 
-## CSS ~~Colours~~
-
-## CSS Colors
+## CSS ~~Colours~~ Colors
 
 There are many ways to specify color in CSS. The same color values
 can be used everywhere in CSS, whether you are specifying text color,
