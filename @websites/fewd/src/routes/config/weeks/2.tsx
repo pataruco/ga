@@ -33,7 +33,7 @@ export const week2Route: RoutesByWeek = {
     ),
   },
   homework: {
-    name: 'Fictional CV',
+    name: 'Relaxr',
     path: `/lessons/css-selectors-specificity-float#22`,
   },
   resources: [
