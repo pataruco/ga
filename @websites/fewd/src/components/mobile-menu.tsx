@@ -6,7 +6,8 @@ import {
   selectNavigationMenu,
   closeMobileMenu,
 } from '../redux/navigation-menu';
-import { weeksIterator, bonusLessons } from './header';
+import { FinalProjectRoute, routesByWeek } from '../routes/config';
+import { bonusLessonRoutes } from '../routes/config/bonus-lessons';
 
 const width = '250px';
 
@@ -66,7 +67,7 @@ const StyledNav = styled.nav`
     }
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     & {
       display: none;
     }
@@ -92,12 +93,10 @@ const CloseLink: React.FC<{ to: string; children: React.ReactNode }> = ({
 
 const Weeks: React.FC = () => (
   <ul>
-    {weeksIterator.map((week: string, i) => (
+    {routesByWeek.map(({ weekNumber }, i) => (
       <li key={i}>
-        <CloseLink to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
-          <span>
-            {week} {i + 1}
-          </span>
+        <CloseLink to={`week-${weekNumber}`} key={i}>
+          <span>Semana {i + 1}</span>
         </CloseLink>
       </li>
     ))}
@@ -106,8 +105,7 @@ const Weeks: React.FC = () => (
 
 const BonusLessons: React.FC = () => (
   <ul>
-    {bonusLessons.map((lesson, i) => {
-      const [name, path] = lesson;
+    {bonusLessonRoutes.map(({ name, path }, i) => {
       return (
         <li key={i}>
           <CloseLink to={path} key={i}>
@@ -139,12 +137,12 @@ const MobileMenu: React.FC = () => {
         </li>
         <li>
           <details>
-            <summary>Bonus Lessons</summary>
+            <summary>Bonus lessons</summary>
             <BonusLessons />
           </details>
         </li>
         <li>
-          <CloseLink to="/final-project-brief">Final Project</CloseLink>
+          <CloseLink to={FinalProjectRoute.path}>Final projects</CloseLink>
         </li>
         <li>
           <CloseLink to="/about">About</CloseLink>

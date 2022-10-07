@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/header';
+import { Footer, Title } from '@shared/components';
 import Page from '../components/page';
 import { Link } from 'react-router-dom';
-import { bonusLessons } from '../components/header';
-import { Title, Footer } from '@shared/components';
+import { bonusLessonRoutes } from '../routes/config/bonus-lessons';
+import { COURSE_NAME } from '../lib/get-lesson-path';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -14,7 +15,7 @@ const StyledMain = styled.main`
   }
 `;
 
-const Lessons = bonusLessons.map(([name, path], key) => (
+const Lessons = bonusLessonRoutes.map(({ name, path }, key) => (
   <li key={key}>
     <Link to={path}>{name}</Link>
   </li>
@@ -22,10 +23,10 @@ const Lessons = bonusLessons.map(([name, path], key) => (
 
 const About: React.FC = () => (
   <Page>
-    <Title courseName="FEWD" title="About" />
+    <Title courseName={COURSE_NAME} title="Bonus lessons" />
     <Header />
     <StyledMain>
-      <h1>Bonus Lessons</h1>
+      <h1>Bonus lessons</h1>
       <ul>{Lessons}</ul>
     </StyledMain>
     <Footer />

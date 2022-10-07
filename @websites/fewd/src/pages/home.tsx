@@ -1,22 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { memo } from 'react';
+import { Footer, Title } from '@shared/components';
+
 import Header from '../components/header';
 import styled from 'styled-components';
 import Page from '../components/page';
-import { Title, Footer } from '@shared/components';
-
-const Weeks = [
-  'HTML & CSS Basics',
-  'Box Model, CSS Selectors, Specificity & Floats',
-  'Flexbox & Positioning',
-  'Responsive Web development',
-  'Intro to JavaScript & Document Object Model (DOM)',
-  'Conditional statements, arrays & loops',
-  'CSS animations & JavaScript plugins',
-  `Forms & API Requests and Responses`,
-  'Git, Sass, Accessibility and SVG',
-  'UI libraries & Final Presentations',
-];
+import ResourcesPerWeekTableRow from '../components/resources-per-week-table-row';
+import ResourcesPerWeekDatails from '../components/resources-per-week-details';
+import { routesByWeek } from '../routes/config';
 
 const StyledMain = styled.main`
   padding: 1.25rem;
@@ -24,29 +14,55 @@ const StyledMain = styled.main`
   li {
     margin-bottom: 0.5rem;
   }
+
+  table tbody {
+    tr {
+      &:nth-of-type(even):hover {
+        background-color: var(--inline-code-grey);
+      }
+
+      & td:first-of-type {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    table {
+      display: none;
+    }
+  }
 `;
+
+const tableHeaders = ['Week', 'Lesson', 'Lesson', 'Homework'];
+
+const TableHeaders = tableHeaders.map((header, i) => (
+  <th key={`${header}` + i}>{header}</th>
+));
 
 const Home: React.FC = () => (
   <Page>
-    <Title courseName="FEWD" title="Home" />
+    <Title courseName="FEWD ES" title="Home" />
     <Header />
     <StyledMain>
       <h1>Welcome to FEWD London 🇬🇧 </h1>
-      <nav>
-        <ul>
-          {Weeks.map((week, i) => (
-            <li key={i}>
-              Week {i + 1}:{' '}
-              <Link key={i} to={`week-${i + 1}`}>
-                {week}
-              </Link>
-            </li>
+      <table>
+        <thead>
+          <tr>{TableHeaders}</tr>
+        </thead>
+        <tbody>
+          {routesByWeek.map((routeByWeek, i) => (
+            <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
           ))}
-        </ul>
-      </nav>
+        </tbody>
+      </table>
+      {routesByWeek.map((routeByWeek, i) => (
+        <ResourcesPerWeekDatails {...routeByWeek} key={i} />
+      ))}
     </StyledMain>
     <Footer />
   </Page>
 );
 
-export default Home;
+export default memo(Home);

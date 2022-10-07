@@ -1,36 +1,20 @@
 import '@shared/styles/dist/site';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
 import Home from '../pages/home';
+import LessonsPage from '../pages/lessons';
 import {
-  lessonRoutes,
-  weekRoutes,
+  WeekRouteComponents,
+  LessonRouteComponents,
+  BonusLessonsRouteComponents,
   FinalProjectRoute,
-  BonusLessonsRoute,
-  bonusLessonRoutes,
 } from './config';
-import ErrorPage from '../pages/404';
+import { BonusLessonsRoute } from './config/bonus-lessons';
 import About from '../pages/about';
+import ErrorPage from '../pages/404';
 
-const LessonsRouteComponents = lessonRoutes.map(
-  ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
-  ),
-);
-
-const WeekRouteComponents = weekRoutes.map(
-  ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
-  ),
-);
-
-const BonusLessonsComponents = bonusLessonRoutes.map(
-  ({ path, element: Component }, key) => (
-    <Route path={path} element={<Component />} key={key} />
-  ),
-);
-
-const { path: finalProjectRoute, element: FinalProject } = FinalProjectRoute;
 const { path: bonusLessonsRoute, element: BonusLessons } = BonusLessonsRoute;
+const { path: finalProjectRoute, element: FinalProject } = FinalProjectRoute;
 
 const Router = () => (
   <BrowserRouter>
@@ -38,10 +22,11 @@ const Router = () => (
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path={finalProjectRoute} element={<FinalProject />} />
+      <Route path="/lessons" element={<LessonsPage />} />
       <Route path={bonusLessonsRoute} element={<BonusLessons />} />
       {WeekRouteComponents}
-      {BonusLessonsComponents}
-      {LessonsRouteComponents}
+      {BonusLessonsRouteComponents}
+      {LessonRouteComponents}
       <Route path="/*" element={<ErrorPage />} />
     </Routes>
   </BrowserRouter>

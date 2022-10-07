@@ -9,9 +9,11 @@ import {
   openWeekMenu,
   selectNavigationMenu,
   openMobileMenu,
+  closeProjectMenu,
 } from '../../redux/navigation-menu';
 import { GALogoTextWhite } from '@shared/components';
-import { weeks } from '../../routes/config';
+import { routesByWeek, FinalProjectRoute } from '../../routes/config';
+import { bonusLessonRoutes } from '../../routes/config/bonus-lessons';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -30,10 +32,6 @@ const StyledHeader = styled.header`
     padding: 0;
     margin: 0;
     list-style: none;
-  }
-
-  nav {
-    min-width: 25%;
   }
 
   nav > ul {
@@ -56,13 +54,14 @@ const StyledHeader = styled.header`
     border: none;
     color: var(--white);
     margin-bottom: 0.75rem;
-    padding: 0;
+    padding: 0 0.5rem;
   }
 
   nav > ul > li {
     margin-left: 1.25rem;
     &:first-of-type > ul > li,
-    &:nth-of-type(2) > ul > li {
+    &:nth-of-type(2) > ul > li,
+    &:nth-of-type(3) > ul > li {
       background-color: var(--black);
       padding: 0.75rem 0.5rem;
     }
@@ -93,7 +92,7 @@ const StyledHeader = styled.header`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     & > button {
       display: block;
     }
@@ -104,38 +103,28 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const weeksIterator = weeks.fill('Week');
-
 export const Weeks: React.FC = () => {
   const { weekIsOpen } = useSelector(selectNavigationMenu);
   const dispatch = useDispatch();
 
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
-    dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   return (
     <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {weeksIterator.map((week, i) => (
+      {routesByWeek.map(({ weekNumber }, i) => (
         <li key={i}>
-          <Link to={`/${week.toLowerCase()}-${i + 1}`} key={i}>
-            <span onClick={close}>
-              {week} {i + 1}
-            </span>
+          <Link to={`/week-${weekNumber}`} key={i}>
+            <span onClick={close}>Semana {i + 1}</span>
           </Link>
         </li>
       ))}
     </ul>
   );
 };
-
-export const bonusLessons = [
-  ['CSS grids', '/bonus-lessons/grids'],
-  ['HTML tables', '/bonus-lessons/tables'],
-  ['JavaScript history', '/bonus-lessons/javascript-history'],
-];
 
 const BonusLessons: React.FC = () => {
   const { bonusLessonsIsOpen } = useSelector(selectNavigationMenu);
@@ -144,12 +133,12 @@ const BonusLessons: React.FC = () => {
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   return (
     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
-      {bonusLessons.map((lesson, i) => {
-        const [name, path] = lesson;
+      {bonusLessonRoutes.map(({ name, path }, i) => {
         return (
           <li key={i}>
             <Link to={path} key={i}>
@@ -168,6 +157,7 @@ const Header: React.FC = () => {
   const dispatchClose = () => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
   const close = (event: React.MouseEvent) => {
@@ -198,7 +188,7 @@ const Header: React.FC = () => {
       <nav onMouseLeave={close}>
         <ul>
           <li>
-            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
+            <button onMouseEnter={handleWeeksOnMouseEnter}>Semanas</button>
             <Weeks />
           </li>
           <li>
@@ -208,7 +198,7 @@ const Header: React.FC = () => {
             <BonusLessons />
           </li>
           <li>
-            <Link to="/final-project-brief">Final project</Link>
+            <Link to={FinalProjectRoute.path}>Final project</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
