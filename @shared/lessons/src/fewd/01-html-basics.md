@@ -19,43 +19,9 @@ In this lesson, you will:
 
 ---
 
-## Meet the Team - Abigail Coe
-
-- <a href="https://red-badger.com/people/abigail-coe/" class='external-link' target="_blank" rel="noreferrer">Software Engineer at Red Badger</a>
-- Former Antiques Conservator
-- General Assembly 2016
-- World’s second best crochet artist
-- Humble
-- English Lit graduate
-- <a class='external-link' target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Oolong">Oolong</a> nerd
-- Not as much of a dork as that all sounds
-
----
-
-## Meet the Team - Alex Wheldon
-
-- Automation Engineer at <a href="https://www.splashworldwide.com/" class='external-link' target="_blank" rel="noreferrer">Splash</a>
-- Used to work in account management at advertising production agencies
-- GA Alumni 2020
-- Unashamedly love Lego
-- Crossing all fingers that I can finally go see live music again this year
-
----
-
-## Meet the Team - Declan Slevin
-
-- <a href="https://red-badger.com/people/declan-slevin/" class='external-link' target="_blank" rel="noreferrer">Test Lead at Red Badger</a>
-- Currently transitioning to become a Junior Software Engineer
-- Fun fact: Pedro and I joined Red Badger a week apart and worked together on the RB internal site as our first project
-- Completed the FEWD course at General Assembly in 2019
-- Studied digital film-making, animation and visual effects at university
-- Unabashed emo-kid/metalhead and video/board game nerd
-
----
-
 ## Meet the Team - Pedro Martin
 
-- [Software engineer at Red Badger.](https://red-badger.com/people/pedro-martin/)
+- [Senior Software engineer at Red Badger.](https://red-badger.com/people/pedro-martin/)
 - Former science teacher.
 - General Assembly alumni 2015.
 - [Teaching courses and workshops at General Assembly since 2015.](https://generalassemb.ly/instructors/pedro-martin/7012)
@@ -182,7 +148,7 @@ In this lesson, you will:
   <div>
     <picture>
       <img
-        src="https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png"
+        src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview/web_application_with_html_and_steps.png"
         alt="Request and response cycle"
       />
     </picture>
@@ -248,15 +214,15 @@ Please, tell us the difference between:
 <div class="row">
   <div>
     <picture>
-      <img src="https://mdn.mozillademos.org/files/13502/cake.png" alt="3 layers of the web">
+      <img src="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/cake.png" alt="3 layers of the web" class="image-half">
     </picture>
   </div>
   <div>
-    <ul>
+    <ol>
       <li>HTML is the markup language that we use to structure and give meaning to our web content.</li>
       <li>CSS is a language of style rules that we use to apply styling to our HTML content.</li>
       <li>JavaScript is a scripting language that enables you to manipulate dynamically content and style.</li>
-    </ul>
+    </ol>
   </div>
 </div>
 
@@ -276,7 +242,7 @@ Please, tell us the difference between:
 
 ## Anatomy of an HTML element
 
-![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+![](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
 
 ---
 
@@ -356,8 +322,8 @@ Are self closing elements
 
 ```html
 <img
-  src="https://api.peteroftheday.com/random"
-  alt="A random Picture of Peter Martin"
+  src="https://source.unsplash.com/1600x900/?beach"
+  alt="A random beach picture"
 />
 <hr />
 <input type="color" id="color" />

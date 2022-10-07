@@ -40,6 +40,7 @@ const resources = [
     'MDN: Inline elements',
     'https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements',
   ],
+  ['MDN: CSS is weird 📽', 'https://youtu.be/aHUtMbJw8iA'],
 ];
 
 const bonuses = [
