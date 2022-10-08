@@ -17,12 +17,3 @@ Agenda:
 
 ==============================================
 ```
-
-## Q&A
-
-```md
-===============================================
-:parking: :car: Parking Lot :parking: :car:
-If you have questions that you want to ask in advance, please post it here
-===============================================
-```
