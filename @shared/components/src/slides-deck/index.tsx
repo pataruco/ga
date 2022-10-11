@@ -48,6 +48,22 @@ const createAnchor = () => {
   return anchor;
 };
 
+const deleteDuplicates = () => {
+  [
+    '.remark-notes-area',
+    '.remark-slides-area',
+    '.remark-preview-area',
+    '.remark-backdrop',
+    '.remark-pause',
+    '.remark-help',
+  ].map((classSelector) => {
+    const remarkElements = Array.from(document.querySelectorAll(classSelector));
+    if (remarkElements.length > 1) {
+      remarkElements.splice(1).map((element) => element.remove());
+    }
+  });
+};
+
 const createSlideNavigation = (slide: Slide) => {
   const slideIndex = slide.getSlideIndex();
 
@@ -79,17 +95,19 @@ const instantiateSlides = async (slidesDeckPath: string) => {
   });
 
   // listening on slide show
-  slides.on('showSlide', (slide: Slide) =>
+  slides.on(
+    'showSlide',
+    (slide: Slide) => {
+      deleteDuplicates();
+      createSlideNavigation(slide);
+    },
     // Injecting navigation to menu
-    createSlideNavigation(slide),
   );
 };
 
 const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckPath }) => {
   useEffect(() => {
-    return () => {
-      instantiateSlides(slidesDeckPath);
-    };
+    instantiateSlides(slidesDeckPath);
   }, [slidesDeckPath]);
 
   return null;
