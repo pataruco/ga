@@ -188,7 +188,7 @@ const Header: React.FC = () => {
       <nav onMouseLeave={close}>
         <ul>
           <li>
-            <button onMouseEnter={handleWeeksOnMouseEnter}>Semanas</button>
+            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
             <Weeks />
           </li>
           <li>

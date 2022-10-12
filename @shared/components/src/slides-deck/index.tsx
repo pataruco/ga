@@ -56,6 +56,7 @@ const deleteDuplicates = () => {
     '.remark-backdrop',
     '.remark-pause',
     '.remark-help',
+    '.remark-visible',
   ].map((classSelector) => {
     const remarkElements = Array.from(document.querySelectorAll(classSelector));
     if (remarkElements.length > 1) {
