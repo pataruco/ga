@@ -28,15 +28,15 @@ class: frontpage
 
 ## Let's talk about Space Jam
 
-![space jam](https://upload.wikimedia.org/wikipedia/en/1/14/Space_jam.jpg)
+<img src="https://upload.wikimedia.org/wikipedia/en/1/14/Space_jam.jpg" alt="Space Jam movie poster" class="image-third">
 
-> [Official website](https://spacejam.com/)
+> [Official website](https://www.spacejam.com/1996/)
 
 ---
 
 ## Let's talk about Ling Cars
 
-![Ling face](https://images.lingscars.com/images/index/ling-face.png)
+<img src="https://images.lingscars.com/images/index/ling-face.png" alt="Ling cars " class="image-one-fourth">
 
 > [Website](https://www.lingscars.com/)
 
@@ -91,7 +91,8 @@ Let's talk about `direction` & `align`
 }
 ```
 
-![Flex axes](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flex_terms.png)
+<img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flex_terms.png" alt="flex terms" class="image-half">
+
 [Flex box sandbox](https://codepen.io/pataruco/pen/XBPmqj)
 
 ---
@@ -237,6 +238,25 @@ Handles the remaining space between and around content items along the **cross-a
   align-content: space-around;
   align-content: space-evenly;
   align-content: stretch;
+}
+```
+
+---
+
+## Flex container
+
+### `gap`, `row-gap`, `column-gap`
+
+Handles the space between flex items. It applies that spacing only between items not on the outer edges.
+
+```css
+.container {
+  display: flex;
+
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
 }
 ```
 
