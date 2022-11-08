@@ -3,7 +3,7 @@ class: frontpage
 <div>
   <h2>Front-End Web Development</h2>
   <hr/>
-  <h1>Boostrap</h1>
+  <h1>Bootstrap</h1>
 </div>
 
 ---
