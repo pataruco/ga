@@ -43,6 +43,8 @@
 @media screen and (max-width: 600px) {
   .quote .content-wrapper {
     position: static;
+    background-size: auto 50%;
+    background-position: bottom;
   }
   .quote blockquote {
     position: static;
