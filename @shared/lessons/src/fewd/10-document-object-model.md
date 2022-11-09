@@ -342,7 +342,7 @@ There are many events that occur in the browser as the user interacts with the p
 
 ## Final project brief
 
-- [Link to brief](/final-project-brief)
+- [Link to brief](/final-project)
 
 ---
 
