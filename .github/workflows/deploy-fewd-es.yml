@@ -15,7 +15,7 @@ jobs:
       - name: Set Node version 📦
         uses: actions/setup-node@v2
         with:
-          node-version: 'lts/gallium'
+          node-version: 'lts/hydrogen'
           check-latest: true
 
       - name: Install and Build 🔧
