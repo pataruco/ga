@@ -84,8 +84,8 @@ Do code free courses
 
 Dive into JavaScript
 
-[JavaScript was the MOST popular technology so far in 2020](https://insights.stackoverflow.com/survey/2020/#most-popular-technologies)
-and it's [very well](https://insights.stackoverflow.com/survey/2020/#top-paying-technologies) payed
+[JavaScript was the MOST popular technology so far in 2022](https://survey.stackoverflow.co/2022/#technology)
+and it's [very well](https://survey.stackoverflow.co/2022/#work-salary) payed
 
 ---
 
