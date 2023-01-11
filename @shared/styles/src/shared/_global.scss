@@ -19,10 +19,10 @@ svg {
 
 a {
   color: var(--black);
-  text-decoration-line: underline;
   text-decoration-color: var(--ga-red);
-  text-underline-offset: 2px;
+  text-decoration-line: underline;
   text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
 
   &:hover {
     color: var(--ga-red);
