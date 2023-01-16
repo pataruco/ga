@@ -8,29 +8,6 @@ class: frontpage
 
 ---
 
-## Learning Objectives
-
-- Explain the problems that Docker solves.
-- Differentiate between VMs and containers.
-- Explain how a Docker image relates to a container.
-- Describe how Docker works at a high level.
-- Identify when (and when not) to use Docker.
-
----
-
-## Lesson Overview
-
-| Topic                | Type     | Timing |
-| -------------------- | -------- | ------ |
-| Opening              | Opening  | 5 min  |
-| Why use Docker?      | Lecture  | 10 min |
-| How's Docker Work?   | Lecture  | 15 min |
-| Research             | Exercise | 15 min |
-| What is a Container? | Lecture  | 15 min |
-| Debate and Defend    | Exercise | 20 min |
-
----
-
 ## Docker
 
 .row[
@@ -240,6 +217,328 @@ As mentioned earlier, a Docker image is nothing more than a filesystem snapshot,
 So when you run a container from an image, the filesystem snapshot of that image is placed into a section of the hard drive that can only be accessed by the running container. In our case, when the startup command executes it will start Chrome and only utilize the resources that are segmented specifically for this container.
 
 > Note:Only the Linux operating system uses a kernel and namespacing. So how do Windows and macOS machines use Docker then? A Linux virtual machine is installed as part of the Docker installation. As long as Docker is running it also runs a Linux VM. All of your containers will be created inside of this VM and it hosts a Linux kernel that limits access and segments resources for the different containers.
+
+---
+
+## Install Docker
+
+To begin, we're going to install Docker Desktop, which includes everything we'll need for our lessons: Docker Engine, the Docker CLI client and Docker Compose.
+
+---
+
+## Docker Desktop on Mac
+
+[Follow these instructions](https://docs.docker.com/docker-for-mac/install/) to install Docker for your Mac. The process is pretty straightforward but keep in mind that support for Apple chips (e.g. M1) is still relatively new, and if your Mac is using it you'll need to make sure to correctly select that option while downloading for it to work correctly.
+
+**Tip**: If you're unsure which processor your computer uses, you can identify whether your Mac is powered by an Intel processor or Apple silicon by using the **About This Mac** feature that's available under the Apple menu. Click the Apple menu and select the option **About This Mac**. In the About This Mac window, look for an item labeled **Processor** or **Chip**.
+
+---
+
+## Docker Hub
+
+Docker Hub is a repository of free public images that can be downloaded and run. According to [Docker](https://www.docker.com/), it is the world's largest library and community for container images. You can access and create an account on Docker Hub [here](https://hub.docker.com/).
+
+---
+
+## Hello world
+
+.row[
+.col[
+
+### Run
+
+Let's run our first docker command. Open terminal, make sure `docker-daemon` is running.
+
+```sh
+docker run hello-world
+```
+
+Scroll up, look for the text `Unable to find image 'hello-world:latest' locally`.
+]
+.col[
+
+### What this means?
+
+1. When the command is run, it starts up docker client/docker CLI.
+2. Which in turn takes commands from you and communicates command to docker server.
+3. Docker server checks to see if this image exists locally in image cache.
+4. For the first run of this image cache will be empty and this is where docker hub comes in.
+5. Docker server checks with docker hub which has the image
+6. The image will be downloaded and stored in the image cache.
+7. Now docker server will use this image to create an instance of a container.
+   ]
+   ]
+
+---
+
+## Hello world
+
+.row[
+.col[
+Run the same command a second time. Notice anything different from the first run?
+
+The second time you will not see the message `Unable to find image 'hello-world:latest' locally`. Why's that? Think about it.
+
+]
+.col[
+<img src="https://i.redd.it/jlui6uo24vk21.jpg" alt="hackerman" class="image-half">
+
+]
+]
+
+---
+
+## Docker Desktop
+
+You've just successfully pulled your first Docker image and started a container using the command line! The Docker images you pull and the containers you create can all be managed by the command line but if you have multiple images and containers to manage you might want to consider using Docker Desktop to manage them. Let's take a look at how it works.
+
+1. Start the Docker Desktop application if it's not already open.
+2. Double-click `Docker.app` in the `Applications` folder to start Docker.
+3. The Docker menu in the top status bar indicates that Docker Desktop is running, and accessible from a terminal.
+
+---
+
+## Navigating Docker Desktop
+
+After Docker Desktop has started, you'll notice in the default **Containers / Apps** section that you already have a couple of running containers. Where do you think they came from? If you said from the two containers you started from the command line then you'd be correct!
+
+> Note: Your container names will differ from the ones in the following screenshot. You have the option to specifiy a name for your containers when you start them but if you don't provide a name then Docker will generate a random one like the one you have now.
+
+- Now click on one of the container title bars to expand the console, notice the log output. It should look familiar, it's the same output we saw from the command line from running the containers the first time.
+
+- Next, let's start a brand new container from our `hello-world` image. Click on the **Images** tab, hover over the `hello-world` image and click on the **RUN** button that appears. In the dialog box that pops up, expand the **Optional Settings** button and give your new container the name "docker-desktop-test" and finally click on the **Run** button to start the new container.
+
+- A new container has been started! Click on the **Containers / Apps** tab and now you'll see three separate containers generated from the same Docker image now, one of which should be named "docker-desktop-test".
+
+---
+
+## Navigating Docker Desktop
+
+- Great work! Now that we're done, let's do some clean up and delete all 3 running containers since they're still running and we no longer need them. Hover over each individual container and click on the delete icon to stop and remove each one.
+
+- You should now see a screen confirming that you don't have any containers currently running.
+
+- We're not done yet! Go back to the **Images** tab, notice the Docker image the containers were created from is still there and you can still generate a new container from it in the future if needed.
+
+---
+
+## Container lifecycle
+
+.row[
+.col[
+
+To start up a new container from an image we use `docker run` command. `docker run` creates a new container and starts it. But creating a container and starting it up are 2 different processes.
+
+> docker run = docker create + docker start
+
+When a container is created the file system is prepped for use in the new container. To start the container means executing the startup command that comes with the image.
+
+]
+.col[
+
+<img src="https://miro.medium.com/max/720/0*3_uIz_YMiyZxMwKn" alt="container lifecycle" class=""/>
+
+]
+]
+
+---
+
+## Container lifecycle
+
+Lets see it in action. Open terminal and create hello-world image.
+
+```sh
+docker create hello-world
+```
+
+This will output an id something like this, `2ce9bdb14238e8a6ba2ac68964ee8ca48e93e9cbf90d0c2c3f441d6be279e8b4`. This is the id of the container that just executed.
+
+Now run `docker start` with the container id.
+
+```sh
+docker start -a 2ce9bdb14238e8a6ba2ac68964ee8ca48e93e9cbf90d0c2c3f441d6be279e8b4
+```
+
+> `-a` makes docker watch for output from the container and print it out to the terminal.
+
+---
+
+## Docker Commands
+
+### `docker run`
+
+We have already run this command before, it runs a container
+
+We can also give another command with run to override the startup command.
+
+`docker run <image name> <command-to-override>`
+
+Example, `docker run busybox ls` will list all the files in `busybox` image.
+
+---
+
+## Docker Commands
+
+### `docker ps`
+
+Lists all the different currently running containers.
+
+Go ahead run `docker ps` on the terminal. You may not see anything right now as there are no active containers. Lets run `docker run busybox ping google.com`, this will keep pinging `google.com` for us and on another terminal run `docker ps`,
+
+Now you will see something like,
+
+```sh
+CONTAINER ID   IMAGE     COMMAND             CREATED         STATUS         PORTS     NAMES
+f7eea52fa97e   busybox   "ping google.com"   7 seconds ago   Up 6 seconds             jovial_nash
+```
+
+> Status shows the status of the container, if it is still up or exited.
+> jovial_nash is a randomly generated name to identify this container.
+
+Now `ctrl-c` on the terminal which is running the container and run `docker ps` again. You will again get no output.
+
+`docker ps --all` will list all the containers you ever ran.
+
+---
+
+## Docker Commands
+
+### `docker start`
+
+Starts the docker container after it has been created. We can also start an exited container.
+
+Run `docker ps --all`.
+
+```sh
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS                       PORTS                    NAMES
+2ce9bdb14238   hello-world                           "/hello"                 52 minutes ago   Created                                               vibrant_benz
+f7eea52fa97e   busybox                               "ping google.com"        17 hours ago     Exited (0) 17 hours ago                               jovial_nash
+570646e6503c   busybox                               "ls"                     17 hours ago     Exited (0) 17 hours ago                               intelligent_lederberg
+
+```
+
+Find the hello-world container id. Use this id to restart the exited container.
+
+`docker start -a 2ce9bdb14238`
+
+---
+
+## Docker Commands
+
+### `docker logs`
+
+To retrieve logs of an exited or up container. All you need is the container id.
+
+You can use the container id used previously or get a new one by running `docker ps --all`.
+
+`docker logs 2ce9bdb14238`
+
+This will print all the logs emitted from that container.
+
+---
+
+## Docker Commands
+
+### `docker stop` OR `docker kill`
+
+If `ctrl-c` is not an option or even otherwise, in order to stop a running container we can use stop or kill command. They both stop the container with just one key difference. `docker stop` sends a signal _SIGTERM_ (short for terminate signal) to process in a container to shut down on its own time. Gives process time to do any clean up activities. `docker kill` issues a _SIGKILL_ (kill signal) message to the primary running process inside the container which means stop right now with no time for any clean up activity.
+
+If the container doesn't stop with `docker stop` you can always run `docker kill` instead.
+
+Lets try it. Run the ping command.
+
+`docker run busybox ping google.com`
+
+---
+
+## Docker Commands
+
+### `docker stop` OR `docker kill`
+
+This will keep the container running. Run `docker ps` to get its container id and use that id to stop the container.
+
+`docker stop 3ddc6041a39d`
+
+It may take couple of seconds to stop the server. Now run the ping command again but this time use kill to stop the container.
+
+Docker internally uses kill to stop the process if stop command automatically is unable to in 10 seconds.
+
+> Note: You can also give first few characters of the container id so long as it can uniquely identify the container. For instance you could also run the above command as `docker stop 3dd`.
+
+---
+
+## Docker Commands
+
+### `docker image ls`
+
+Lists all images in local image cache.
+
+---
+
+## Docker Commands
+
+### `docker exec`
+
+Another very useful command. This command runs a command in a running container. The command started using `docker exec` only runs while the container’s primary process is running, and it is not restarted if the container is restarted.
+
+As it says we need to have a running conatiner so start pinging google.com again
+
+`docker run busybox ping google.com`
+
+Find the container id `docker ps`
+
+```sh
+CONTAINER ID   IMAGE     COMMAND             CREATED          STATUS          PORTS                    NAMES
+56379bf033ff   busybox   "ping google.com"   27 seconds ago   Up 26 seconds                            upbeat_allen
+```
+
+---
+
+## Docker Commands
+
+### `docker exec`
+
+We will use this command to acess
+
+```
+docker exec -it 56379bf033ff /bin/sh
+```
+
+> `-it` is for interactive terminal
+
+Now try `ls` or `cd`, whatever shell commands you want to try. Whenever you're done enter the command `exit` to leave the shell associated with your container.
+
+---
+
+## Docker Commands
+
+### `docker rm`
+
+Removes one or more stopped container. Run `docker ps --all` to get the container id of a stopped container. Use any id to run `docker rm CONTAINERID`
+
+To remove a running conatiner use flag `-f` or `--force`. Go ahead try it.
+
+---
+
+## Docker Commands
+
+### `docker system prune`
+
+This will delete all stopped containers and your image cache among other things. If run you will have to redownload images from docker hub the first time they are run.
+
+Run `docker system prune` on the terminal. You will see something like,
+
+```sh
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all dangling images
+  - all dangling build cache
+
+Are you sure you want to continue? [y/N]
+```
+
+Be very sure before running this command.
 
 ---
 
