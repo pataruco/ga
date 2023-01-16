@@ -4,6 +4,7 @@ import { unit1 } from './sei-es/unit-1';
 import { unit2 } from './sei-es/unit-2';
 import { unit4 } from './sei-es/unit-4';
 import { fewdEs } from './fewd-es';
+import { bonus } from './bonus';
 
 const seiEs = {
   unit1,
@@ -29,4 +30,7 @@ export type SEIESLesson = keyof SEIESUnit;
 export type FEWDESCourse = typeof fewdEs;
 export type FEWDESLesson = keyof FEWDESCourse;
 
-export { fewd, jsd, seiEs, fewdEs };
+export type bonusCourse = typeof bonus;
+export type bonusLesson = keyof bonusCourse;
+
+export { fewd, jsd, seiEs, fewdEs, bonus };
