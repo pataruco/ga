@@ -72,3 +72,5 @@ Read more about in the readme of each [website][@websites]
 [site-jsd]: https://jsd.pataruco.dev/
 [@websites]: ./@websites/readme.md
 [@shared/lessons]: ./@shared/lessons/readme.md
+
+Daisy, Catie and Nas are here
