@@ -392,11 +392,9 @@ console.log(employee.sayHi());
 
 ---
 
-<!-- TODO: -->
-
 ## Interfaces
 
-Y, al igual que las clases, las interfaces también pueden heredar de otras interfaces.
+And, much like classes, interfaces can inherit from other interfaces as well.
 
 ```ts
 interface Person {
@@ -418,11 +416,11 @@ console.log(`Instrument: ${drummer.instrument}`);
 
 ---
 
-## Clases
+## Classes
 
-Las clases de TypeScript se verán similares a las clases de ES6, pero las declaraciones de tipos de datos son una posible inclusión.
+TypeScript classes will look similar to ES6 classes, but with data type declarations being a possible inclusion.
 
-En ES6, podríamos escribir
+In ES6, we might write:
 
 .row[
 .col[
@@ -459,7 +457,7 @@ accord.display();
 
 ---
 
-## Clases
+## Classes
 
 .row[
 .col[
@@ -496,9 +494,9 @@ camry.display();
 
 ---
 
-## Clases
+## Classes
 
-Y, la herencia de clases también se verá similar:
+And, class inheritance will look similar as well:
 
 ```ts
 class Shape {
@@ -523,7 +521,7 @@ obj.display();
 
 ## Type Casting
 
-Echemos un vistazo a una situación un poco más realista.
+Let's take a look at a little more realistic situation.
 
 ```ts
 const button = document.querySelector('button');
@@ -544,20 +542,20 @@ button.addEventListener('click', () => {
 
 ## Type Casting
 
-Notamos que las claves `.value` no están contentas, obteniendo un error de `Property 'value' does not exist on type 'Element'`. La propiedad `value` solo existe en ciertos _tipos_ de elementos HTML, por lo que TS quiere que seamos más específicos, así que emitamos el tipo `HTMLInputElement` ya que sabemos que este tipo de elemento tiene una propiedad `value`.
+We notice that the `.value` keys are unhappy, getting an error of `Property 'value' does not exist on type 'Element'`. The `value` property only exists on certain _types_ of HTML elements, so TS wants us to be more specific, so let's cast the type `HTMLInputElement` since we know that this element type does have a `value` property.
 
 ```ts
 const input1 = document.querySelector('#num1') as HTMLInputElement;
 const input2 = document.querySelector('#num2') as HTMLInputElement;
 ```
 
-Debido a que TS tiene opiniones al respecto, nos vemos obligados a escribir un código mejor, más limpio y menos propenso a errores.
+Because TS is opinionated about this, we are forced to write better, cleaner, and less error-prone code.
 
 ---
 
 ## Type Casting
 
-Ahora asegurémonos de que `add` solo acepte números usando la anotación de tipo.
+Now let's make sure that `add` will only accept numbers using type annotation.
 
 ```ts
 function add(num1: number, num2: number) {
@@ -565,7 +563,7 @@ function add(num1: number, num2: number) {
 }
 ```
 
-Tenemos otro error en las expresiones de valor. Esto se debe a que los valores que recuperamos de los elementos `<input>` son cadenas. Por lo tanto, debemos asegurarnos de que esos argumentos se modifiquen antes de pasarlos a `add`. Podríamos usar `parseInt()`, pero usemos un **operador unario**.
+We have another error on the value expressions. This is because the values we retrieve from `<input>` elements are strings. So, we'll need to make sure those arguments are modified before passing them to `add`. We could use `parseInt()`, but let's use a **unary operator**.
 
 ---
 
@@ -577,7 +575,7 @@ button.addEventListener('click', () => {
 });
 ```
 
-Finalmente, aprobemos la función `add` anotando su tipo de retorno:
+Finally, let's approve the `add` function by annotating its return type:
 
 ```ts
 function add(num1: number, num2: number): number {
@@ -597,7 +595,7 @@ userInput = 5;
 userInput = 'Sade';
 ```
 
-Esto funcionará, lo que parece que realmente no hace nada. Pero, si tratamos de reasignar nuestra variable a una variable con una anotación de tipo más específica, obtendremos un error.
+This will work, which seems like it doesn't really do anything. But, if we try to reassign our variable to a variable with has a more specific type annotation, we'll get an error.
 
 ---
 
@@ -613,13 +611,13 @@ userInput = 'Sade';
 userName = userInput;
 ```
 
-Esto causará un error (`Type 'unknown' is not assignable to type 'string'.`) porque `unknown` no permite la especificidad mientras que el tipo `any` sí. Tan pronto como intente precisar `unknown` en un tipo, arrojará un error.
+This will cause an error (`Type 'unknown' is not assignable to type 'string'.`)k because `unknown` doesn't allow for specificity whereas the `any` type does. As soon as you try to nail `unknown` down to one type, it will throw an error.
 
 ---
 
 ## Never
 
-Si tuviéramos que pensar en una función de utilidad cuyo objetivo es arrojar objetos de error, cualquier función que esté destinada a ejecutarse después del punto donde se arroja el error no se ejecutará. Por lo tanto, _nunca_ devolverán sus valores porque no tendrán la oportunidad.
+If we were to think about a utility function whose objective it is to throw error objects, any functions that are meant to run after the point where the error is thrown are prevented from running. Thus, they will _never_ return their values because they won't get the chance.
 
 ```ts
 function generateError(message: string, code: number): never {
@@ -630,51 +628,35 @@ generateError('An error occurred', 500);
 console.log('after error');
 ```
 
-En el código anterior, `console.log` nunca se ejecutará porque el error generado bloqueó todo el programa. Claro, también puede usar `void` como el tipo de función ya que no devuelve nada, pero el tipo `never` es más preciso.
+In the above code, the `console.log` will never run because the thrown error crashed the whole program. Sure, you can also use `void` as the function type since it's not returning anything, but the `never` type is more accurate.
 
 ---
 
-## El compilador
+## The Compiler
 
-Puede ser tedioso ejecutar `tsc fileName.ts` cada vez que hacemos cambios. Podemos decirle al compilador que mire un archivo y ejecutar automáticamente el compilador cada vez que guardemos nuevos cambios en un archivo.
+It can be tedious to run `tsc fileName.ts` every time we make changes. We can tell the compiler to watch a file and automatically run the compiler every time we save new changes to a file.
 
-Esto se puede hacer con `tsc fileName.ts --watch` o `tsc fileName.ts -w`
+This can be done with `tsc fileName.ts --watch` or `tsc fileName.ts -w`
 
-Y, si estamos trabajando en varios archivos `.ts`, sería bueno si pudiéramos ejecutar `tsc` para ejecutar todos los archivos TypeScript a través del compilador.
+And, if we're working in multiple `.ts` files, it would be nice if we can just run `tsc` in order to run all the TypeScript files through the compiler.
 
 ---
 
-## El compilador
+## The Compiler
 
-Primero, necesitamos crear el archivo `.json` que leerá el compilador.
+First, we need to create the `.json` file that the compiler will read.
 
 ```bash
 tsc --init
 ```
 
-Esto crea un archivo `tsconfig.json`. En su interior, encontrarás muchas opciones de configuración.
+This creates a `tsconfig.json` file. Inside, you'll find many configuration options.
 
-Ahora, si ejecutamos `tsc` cada vez que hacemos cambios, compilará todos los archivos `.ts`.
+Now, if we run `tsc` each time we make changes, it will compile all `.ts` files.
 
-Y, si ejecutamos `tsc -w` o `tsc --watch`, el compilador se ejecutará automáticamente cada vez que guardemos uno de estos archivos.
+And, if we run `tsc -w` or `tsc --watch`, the compiler will automatically run each time we save one of these files.
 
-El proceso de observación puede, por supuesto, detenerse usando `ctrl + c` o lo que sea que use para detener normalmente estos procesos.
-
----
-
-class: lab
-
-# Lab
-
-Utiliza este tiempo para tu proyecto de final de curso
-
----
-
-class: code-along
-
-## Homework
-
-Utiliza este tiempo para tu proyecto de final de curso
+The watch process can, of course, be stopped using `ctrl + c` or whatever you use to normally stop these processes.
 
 ---
 
@@ -683,5 +665,5 @@ class: frontpage
 <div>
   <h2>Front-End Web Development</h2>
   <hr/>
-  <h1>Final de presentación</h1>
+  <h1>End of presentation</h1>
 </div>
