@@ -1,14 +1,36 @@
-name: New Feature
-description: Set a story
-title: 'Feature: '
-labels: ['feature']
+name: Feature
+description: File a Feature
+title: 'Feature'
+labels: ['💫 Feature']
 body:
-  - type: textarea
-    id: Description
+  - type: markdown
     attributes:
-      label: Description
-      description: Describe what you want to see
-      placeholder: what you see!
-      value: User story
+      value: |
+        Thanks for taking the time to fill out this feature request
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User story
+      description: A user story is an informal, general explanation of a software feature written from the perspective of the end user. Its purpose is to articulate how a software feature will provide value to the customer
+      placeholder: Tell us what is need it
+      value: 'As a [persona], I [want to], [so that]'
     validations:
       required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Tell us what is need it
+      placeholder: Tell us what is need it
+      value: 'A new service'
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Write any dependencies (if any)
+      placeholder: Write any dependencies (if any)
+      value: 'A new service'
+    validations:
+      required: false
