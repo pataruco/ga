@@ -1,0 +1,27 @@
+{
+  "name": "shared/components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/components/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/components",
+        "main": "shared/components/src/index.ts",
+        "tsConfig": "shared/components/tsconfig.lib.json",
+        "assets": ["shared/components/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/shared/components"
+      }
+    }
+  },
+  "tags": []
+}

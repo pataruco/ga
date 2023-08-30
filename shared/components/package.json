@@ -1,0 +1,14 @@
+{
+  "name": "@ga/components",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.15.0",
+    "styled-components": "^6.0.7"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}

@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ga/components": ["shared/components/src/index.ts"],
+      "@ga/styles": ["shared/styles/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

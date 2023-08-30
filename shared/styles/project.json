@@ -1,0 +1,37 @@
+{
+  "name": "shared/styles",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/styles/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/styles",
+        "main": "shared/styles/src/index.ts",
+        "tsConfig": "shared/styles/tsconfig.lib.json",
+        "assets": ["shared/styles/**/*.(scss)"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "shared/styles/**/*.ts",
+          "shared/styles/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/shared/styles"
+      }
+    }
+  },
+  "tags": []
+}
