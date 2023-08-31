@@ -1,0 +1,43 @@
+.remark-container {
+  position: relative;
+  html {
+    overflow-y: scroll;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    font-size: 100%;
+    font-family: var(--sans-serif);
+  }
+
+  p,
+  li {
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 0;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  .slide-navigation {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.75rem;
+  }
+}

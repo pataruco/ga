@@ -1,0 +1,24 @@
+{
+  "name": "styles",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "styles/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["styles/**/*.ts", "styles/package.json"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/styles"
+      }
+    }
+  },
+  "tags": []
+}
