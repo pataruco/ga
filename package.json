@@ -57,11 +57,13 @@
   "dependencies": {
     "add": "^2.0.6",
     "next": "13.4.1",
+    "normalize.css": "^8.0.1",
     "pnpm": "^8.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-is": "18.2.0",
+    "sass": "^1.66.1",
     "styled-components": "^6.0.7"
   }
 }
