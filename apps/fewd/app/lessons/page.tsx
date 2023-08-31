@@ -2,6 +2,7 @@
 
 import { Footer } from '@ga/components';
 import { SiteStyles } from '@ga/styles';
+import Link from 'next/link';
 import 'normalize.css';
 SiteStyles;
 
@@ -20,27 +21,20 @@ const StyledPage = styled.div`
   }
 `;
 
-const TableHeaders = ['Week', 'Lesson', 'Lesson', 'Homework'].map(
-  (header, i) => <th key={`${header}` + i}>{header}</th>
-);
-
 export default async function Index() {
   return (
     <StyledPage>
       <header>header</header>
       <main>
-        <h1>Welcome to FEWD London 🇬🇧 </h1>
+        <h1>Lessons</h1>
+        <ol>
+          <li>
+            <Link href="/lessons/html-basics">
+              Orientation and introduction to HTML
+            </Link>
+          </li>
+        </ol>
       </main>
-      <table>
-        <thead>
-          <tr>{TableHeaders}</tr>
-        </thead>
-        <tbody>
-          {/* {routesByWeek.map((routeByWeek, i) => (
-            <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
-          ))} */}
-        </tbody>
-      </table>
 
       <Footer />
     </StyledPage>
