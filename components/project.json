@@ -1,14 +1,16 @@
 {
-  "name": "styles",
+  "name": "components",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "styles/src",
+  "sourceRoot": "components/src",
   "projectType": "library",
+  "implicitDependencies": ["styles"],
+
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["styles/**/*.ts", "styles/package.json"]
+        "lintFilePatterns": ["components/**/*.ts", "components/package.json"]
       }
     },
     "test": {
@@ -16,7 +18,7 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../coverage/styles"
+        "reportsDirectory": "../coverage/components"
       }
     }
   },

@@ -4,6 +4,20 @@
   "sourceRoot": "styles/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/styles",
+        "main": "styles/src/index.ts",
+        "tsConfig": "styles/tsconfig.lib.json",
+        "assets": ["styles/*.md", "styles/**/*.scss"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs styles {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],

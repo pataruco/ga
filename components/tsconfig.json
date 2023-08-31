@@ -9,8 +9,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "types": ["vitest"],
-    "declaration": true
+    "jsx": "react-jsx",
+    "esModuleInterop": true
   },
+  "files": [],
+  "include": [],
   "references": [
     {
       "path": "./tsconfig.lib.json"
