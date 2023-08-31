@@ -11,9 +11,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "@recharge/backend/libs": ["libs/backend/src"],
-      "ui-components": ["libs/ui-components/src/index.ts"]
+      "@ga/styles": ["styles/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp", "dist"]
+  "exclude": ["node_modules", "tmp"]
 }
