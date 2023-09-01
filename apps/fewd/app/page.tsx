@@ -59,17 +59,17 @@ export default async function Index() {
       <Header />
       <main>
         <h1>Welcome to FEWD London 🇬🇧 </h1>
+        <table>
+          <thead>
+            <tr>{TableHeaders}</tr>
+          </thead>
+          <tbody>
+            {routesByWeek.map((routeByWeek, i) => (
+              <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
+            ))}
+          </tbody>
+        </table>
       </main>
-      <table>
-        <thead>
-          <tr>{TableHeaders}</tr>
-        </thead>
-        <tbody>
-          {routesByWeek.map((routeByWeek, i) => (
-            <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
-          ))}
-        </tbody>
-      </table>
 
       <Footer />
     </StyledPage>

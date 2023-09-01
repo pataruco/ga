@@ -6,6 +6,6 @@ export const getLessonsHomeworksLinks = (weekNumber: number) => {
   return {
     lesson1: lessons[index],
     lesson2: lessons[index + 1],
-    homework: homeworks[index] ?? null,
+    homework: homeworks[weekNumber - 1] ?? null,
   };
 };

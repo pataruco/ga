@@ -13,10 +13,10 @@ const ResourcesPerWeekTableRow: React.FC<Week> = ({
         <Link href={`week/${weekNumber}`}>{weekNumber}</Link>
       </td>
       <td>
-        <Link href={lesson1.link}>{lesson1.content}</Link>
+        <Link href={`/lessons/${lesson1.link}`}>{lesson1.content}</Link>
       </td>
       <td>
-        <Link href={lesson2.link}>{lesson2.content}</Link>
+        <Link href={`/lessons/${lesson2.link}`}>{lesson2.content}</Link>
       </td>
       <td>
         {homework ? <Link href={homework.link}>{homework.content}</Link> : ''}

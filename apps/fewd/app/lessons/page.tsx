@@ -39,7 +39,7 @@ export default async function Index() {
         <ol>
           {lessons.map(({ link, content }, i) => (
             <li>
-              <Link href={`/lessons/${link}`} key={i}>
+              <Link href={`/lessons/${link}`} key={link + i}>
                 {content}
               </Link>
             </li>
