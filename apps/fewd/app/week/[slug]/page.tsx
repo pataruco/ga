@@ -150,11 +150,15 @@ const Page: React.FC<WeekPageProps> = ({ params: { slug } }) => {
               <ul>
                 <li>
                   Lesson {week.weekNumber * 2 - 1}:{' '}
-                  <Link href={week.lesson1.link}>{week.lesson1.content}</Link>
+                  <Link href={`/lessons/${week.lesson1.link}`}>
+                    {week.lesson1.content}
+                  </Link>
                 </li>
                 <li>
                   Lesson {week.weekNumber * 2}:{' '}
-                  <Link href={week.lesson2.link}>{week.lesson2.content}</Link>
+                  <Link href={`/lessons/${week.lesson2.link}`}>
+                    {week.lesson2.content}
+                  </Link>
                 </li>
               </ul>
               <Note />
