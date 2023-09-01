@@ -1,14 +1,12 @@
 'use client';
-
 import 'normalize.css';
-import styled from 'styled-components';
 
 import { Footer } from '@ga/components';
 import { SiteStyles } from '@ga/styles';
+import Link from 'next/link';
+import styled from 'styled-components';
 
 import Header from '../components/header';
-
-import ResourcesPerWeekTableRow from '../components/resources-per-week-table-row';
 import week1 from '../curriculum/weeks/1';
 import week10 from '../curriculum/weeks/10';
 import week2 from '../curriculum/weeks/2';
@@ -52,6 +50,30 @@ const StyledPage = styled.div`
 const TableHeaders = ['Week', 'Lesson', 'Lesson', 'Homework'].map(
   (header, i) => <th key={`${header}` + i}>{header}</th>
 );
+
+const ResourcesPerWeekTableRow: React.FC<Week> = ({
+  weekNumber,
+  lesson1,
+  lesson2,
+  homework,
+}) => {
+  return (
+    <tr>
+      <td>
+        <Link href={`week/${weekNumber}`}>{weekNumber}</Link>
+      </td>
+      <td>
+        <Link href={`/lessons/${lesson1.link}`}>{lesson1.content}</Link>
+      </td>
+      <td>
+        <Link href={`/lessons/${lesson2.link}`}>{lesson2.content}</Link>
+      </td>
+      <td>
+        {homework ? <Link href={homework.link}>{homework.content}</Link> : ''}
+      </td>
+    </tr>
+  );
+};
 
 export default async function Index() {
   return (

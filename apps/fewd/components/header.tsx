@@ -100,6 +100,17 @@ const Header: React.FC = () => {
           <GALogoTextWhite />
         </Link>
       </picture>
+      <nav>
+        <ul>
+          <li>
+            <Link href="/final-project">Final project</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+
       {/* <nav onMouseLeave={close}>
         <ul>
           <li>
