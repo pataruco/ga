@@ -107,7 +107,7 @@ const ListOfDetails: React.FC<ListOfDetailsProps> = ({ details }) => (
   <ul>
     {details.map(({ content, link }, i) => {
       return (
-        <li key={i}>
+        <li key={link + i}>
           <Link
             href={link}
             target="_blank"

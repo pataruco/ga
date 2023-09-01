@@ -2,9 +2,7 @@ import { homeworks } from '../curriculum/homeworks';
 import { lessons } from '../curriculum/lessons';
 
 export const getLessonsHomeworksLinks = (weekNumber: number) => {
-  // FIXME: this is a hack to make the first week work
-  const index = weekNumber === 1 ? weekNumber - 1 : weekNumber;
-
+  const index = weekNumber * 2 - 2;
   return {
     lesson1: lessons[index],
     lesson2: lessons[index + 1],
