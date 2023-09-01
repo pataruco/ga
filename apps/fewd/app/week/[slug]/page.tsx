@@ -3,6 +3,7 @@
 import { Footer } from '@ga/components';
 import { SiteStyles } from '@ga/styles';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import 'normalize.css';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -122,18 +123,18 @@ const ListOfDetails: React.FC<ListOfDetailsProps> = ({ details }) => (
 );
 
 const Page: React.FC<WeekPageProps> = ({ params: { slug } }) => {
+  const router = useRouter();
   const [week, setWeek] = useState<Week>();
 
   useEffect(() => {
-    import(`../../../curriculum/weeks/${slug}`).then((week) => {
-      setWeek(week.default as Week);
-    });
+    import(`../../../curriculum/weeks/${slug}`)
+      .then((week) => {
+        setWeek(week.default as Week);
+      })
+      .catch(() => {
+        router.push('/404');
+      });
   }, []);
-
-  // const secondLesson = week?.weekNumber * 2;
-  // const firstLesson = secondLesson - 1;
-
-  // const { resources, bonuses, lesson1, lesson2, homework } = week;
 
   return (
     <StyledPage>
