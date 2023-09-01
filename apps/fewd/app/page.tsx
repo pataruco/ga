@@ -1,11 +1,13 @@
 'use client';
 
+import 'normalize.css';
+import styled from 'styled-components';
+
 import { Footer } from '@ga/components';
 import { SiteStyles } from '@ga/styles';
-import 'normalize.css';
-SiteStyles;
+import Header from '../components/header';
 
-import styled from 'styled-components';
+SiteStyles;
 
 const StyledPage = styled.div`
   display: flex;
@@ -17,6 +19,7 @@ const StyledPage = styled.div`
 
   main {
     flex: 1 auto;
+    padding: 1.25rem;
   }
 `;
 
@@ -27,7 +30,7 @@ const TableHeaders = ['Week', 'Lesson', 'Lesson', 'Homework'].map(
 export default async function Index() {
   return (
     <StyledPage>
-      <header>header</header>
+      <Header />
       <main>
         <h1>Welcome to FEWD London 🇬🇧 </h1>
       </main>

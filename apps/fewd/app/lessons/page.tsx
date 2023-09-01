@@ -2,14 +2,15 @@
 
 import { Footer } from '@ga/components';
 import { SiteStyles } from '@ga/styles';
+import Link from 'next/link';
+import 'normalize.css';
+
 import Header from '../../components/header';
 import { lessons } from '../../curriculum/lessons';
 
-import Link from 'next/link';
-import 'normalize.css';
-SiteStyles;
-
 import styled from 'styled-components';
+
+SiteStyles;
 
 const StyledPage = styled.div`
   display: flex;
