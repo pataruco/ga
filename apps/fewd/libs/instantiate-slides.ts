@@ -1,11 +1,3 @@
-import '@ga/styles';
-// import '@shared/styles/dist/slides';
-import React, { memo, useEffect } from 'react';
-
-interface SlidesDeckProps {
-  slidesDeckPath: string;
-}
-
 interface GetSlideIndex {
   (): number;
 }
@@ -77,10 +69,10 @@ const createSlideNavigation = (slide: Slide) => {
   }
 };
 
-const instantiateSlides = async (slidesDeckPath: string) => {
+export const instantiateSlides = (slidesDeckPath: string) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const slides = await window.remark.create({
+  const slides = window.remark.create({
     sourceUrl: slidesDeckPath,
     count: false,
     highlightLines: false,
@@ -97,22 +89,8 @@ const instantiateSlides = async (slidesDeckPath: string) => {
   });
 
   // listening on slide show
-  slides.on(
-    'showSlide',
-    (slide: Slide) => {
-      deleteDuplicates();
-      createSlideNavigation(slide);
-    }
-    // Injecting navigation to menu
-  );
+  slides.on('showSlide', (slide: Slide) => {
+    deleteDuplicates();
+    createSlideNavigation(slide);
+  });
 };
-
-const SlidesDeck: React.FC<SlidesDeckProps> = ({ slidesDeckPath }) => {
-  useEffect(() => {
-    instantiateSlides(slidesDeckPath);
-  }, [slidesDeckPath]);
-
-  return null;
-};
-
-export default memo(SlidesDeck);

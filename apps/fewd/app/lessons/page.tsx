@@ -29,7 +29,7 @@ export default async function Index() {
         <h1>Lessons</h1>
         <ol>
           <li>
-            <Link href="/lessons/html-basics">
+            <Link href="/lessons/01-html-basics">
               Orientation and introduction to HTML
             </Link>
           </li>
