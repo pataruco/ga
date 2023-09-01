@@ -26,6 +26,7 @@ const Page: React.FC<LessonPageProps> = ({ params: { slug } }) => {
     });
   }, [slideUrl]);
 
+  // TODO: add back to lessons here and remove from slides-deck
   return (
     <>
       <Script
