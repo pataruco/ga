@@ -2,6 +2,7 @@
 
 import { Footer } from '@ga/components';
 import { SiteStyles } from '@ga/styles';
+import Header from '../../components/header';
 import { lessons } from '../../curriculum/lessons';
 
 import Link from 'next/link';
@@ -31,7 +32,7 @@ const StyledPage = styled.div`
 export default async function Index() {
   return (
     <StyledPage>
-      <header>header</header>
+      <Header />
       <main>
         <h1>Lessons</h1>
         <ol>
