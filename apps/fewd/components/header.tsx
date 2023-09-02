@@ -1,8 +1,15 @@
+import { GALogoTextWhite } from '@ga/components';
 import Link from 'next/link';
 import React from 'react';
+import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
 
-import { GALogoTextWhite } from '@ga/components';
+import {
+  defaulState,
+  navigationMenuState,
+} from '../app/recoil-context-provider';
+import { bonusLessons } from '../curriculum/bonus-lessons';
+import { routesByWeek } from '../curriculum/weeks';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -92,7 +99,72 @@ const StyledHeader = styled.header`
   }
 `;
 
+export const Weeks: React.FC = () => {
+  const [{ weekIsOpen }, setNavigationMenuState] =
+    useRecoilState(navigationMenuState);
+
+  const close = (event: React.MouseEvent) => {
+    event.preventDefault();
+    setNavigationMenuState(defaulState);
+  };
+
+  return (
+    <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+      {routesByWeek.map(({ weekNumber }) => (
+        <li key={`/week/${weekNumber}`}>
+          <Link href={`/week/${weekNumber}`}>
+            <span onClick={close}>Week {weekNumber}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const BonusLessons: React.FC = () => {
+  const [{ bonusLessonsIsOpen }, setNavigationMenuState] =
+    useRecoilState(navigationMenuState);
+
+  const close = (event: React.MouseEvent) => {
+    event.preventDefault();
+    setNavigationMenuState(defaulState);
+  };
+
+  return (
+    <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
+      {bonusLessons.map(({ content, link }) => {
+        return (
+          <li key={link}>
+            <Link href={`/bonus-lessons/${link}`}>
+              <span onClick={close}>{content}</span>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 const Header: React.FC = () => {
+  const [
+    { bonusLessonsIsOpen, mobileMenuIsOpen, projectsMenuIsOpen, weekIsOpen },
+    setNavigationMenuState,
+  ] = useRecoilState(navigationMenuState);
+
+  const close = () => {
+    setNavigationMenuState(defaulState);
+  };
+
+  const handleWeeksOnMouseEnter = () => {
+    close();
+    setNavigationMenuState({ ...defaulState, weekIsOpen: true });
+  };
+
+  const handleOnBonusLessonsMouseEnter = () => {
+    close();
+    setNavigationMenuState({ ...defaulState, bonusLessonsIsOpen: true });
+  };
+
   return (
     <StyledHeader>
       <picture>
@@ -103,10 +175,14 @@ const Header: React.FC = () => {
       <nav>
         <ul>
           <li>
-            <button>Weeks</button>
+            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
+            <Weeks />
           </li>
           <li>
-            <button>Bonus lessons</button>
+            <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
+              Bonus lessons
+            </button>
+            <BonusLessons />
           </li>
           <li>
             <Link href="/final-project">Final project</Link>

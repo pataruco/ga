@@ -7,29 +7,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import Header from '../components/header';
-import week1 from '../curriculum/weeks/1';
-import week10 from '../curriculum/weeks/10';
-import week2 from '../curriculum/weeks/2';
-import week3 from '../curriculum/weeks/3';
-import week4 from '../curriculum/weeks/4';
-import week5 from '../curriculum/weeks/5';
-import week6 from '../curriculum/weeks/6';
-import week7 from '../curriculum/weeks/7';
-import week8 from '../curriculum/weeks/8';
-import week9 from '../curriculum/weeks/9';
-
-const routesByWeek = [
-  week1,
-  week2,
-  week3,
-  week4,
-  week5,
-  week6,
-  week7,
-  week8,
-  week9,
-  week10,
-];
+import { routesByWeek } from '../curriculum/weeks';
 
 SiteStyles;
 
@@ -86,8 +64,8 @@ export default async function Index() {
             <tr>{TableHeaders}</tr>
           </thead>
           <tbody>
-            {routesByWeek.map((routeByWeek, i) => (
-              <ResourcesPerWeekTableRow {...routeByWeek} key={i} />
+            {routesByWeek.map((routeByWeek) => (
+              <ResourcesPerWeekTableRow {...routeByWeek} key={Math.random()} />
             ))}
           </tbody>
         </table>
