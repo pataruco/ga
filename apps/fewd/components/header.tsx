@@ -103,6 +103,12 @@ const Header: React.FC = () => {
       <nav>
         <ul>
           <li>
+            <button>Weeks</button>
+          </li>
+          <li>
+            <button>Bonus lessons</button>
+          </li>
+          <li>
             <Link href="/final-project">Final project</Link>
           </li>
           <li>
