@@ -1,4 +1,3 @@
-import RecoidContextProvider from './recoil-context-provider';
 import { StyledComponentsRegistry } from './registry';
 
 export const metadata = {
@@ -14,9 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>
-          <RecoidContextProvider>{children}</RecoidContextProvider>
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

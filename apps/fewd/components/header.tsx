@@ -1,13 +1,8 @@
 import { GALogoTextWhite } from '@ga/components';
 import Link from 'next/link';
-import React from 'react';
-import { useRecoilState } from 'recoil';
+import React, { useReducer } from 'react';
 import styled from 'styled-components';
 
-import {
-  defaulState,
-  navigationMenuState,
-} from '../app/recoil-context-provider';
 import { bonusLessons } from '../curriculum/bonus-lessons';
 import { routesByWeek } from '../curriculum/weeks';
 
@@ -99,15 +94,12 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const Weeks: React.FC = () => {
-  const [{ weekIsOpen }, setNavigationMenuState] =
-    useRecoilState(navigationMenuState);
+interface WeekProps {
+  close: () => void;
+  weekIsOpen: boolean;
+}
 
-  const close = (event: React.MouseEvent) => {
-    event.preventDefault();
-    setNavigationMenuState(defaulState);
-  };
-
+export const Weeks: React.FC<WeekProps> = ({ close, weekIsOpen }) => {
   return (
     <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
       {routesByWeek.map(({ weekNumber }) => (
@@ -121,15 +113,15 @@ export const Weeks: React.FC = () => {
   );
 };
 
-const BonusLessons: React.FC = () => {
-  const [{ bonusLessonsIsOpen }, setNavigationMenuState] =
-    useRecoilState(navigationMenuState);
+interface BonusLessonsProps {
+  close: () => void;
+  bonusLessonsIsOpen: boolean;
+}
 
-  const close = (event: React.MouseEvent) => {
-    event.preventDefault();
-    setNavigationMenuState(defaulState);
-  };
-
+const BonusLessons: React.FC<BonusLessonsProps> = ({
+  close,
+  bonusLessonsIsOpen,
+}) => {
   return (
     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
       {bonusLessons.map(({ content, link }) => {
@@ -145,24 +137,59 @@ const BonusLessons: React.FC = () => {
   );
 };
 
+interface State {
+  bonusLessonsIsOpen: boolean;
+  weekIsOpen: boolean;
+}
+
+interface Action {
+  type: string;
+  payload?: boolean;
+}
+
+const defaultState: State = {
+  bonusLessonsIsOpen: false,
+  weekIsOpen: false,
+};
+
+const reducer = (state: State, action: Action) => {
+  switch (action.type) {
+    case 'close':
+      return defaultState;
+    case 'openWeekMenu':
+      return { ...state, weekIsOpen: true };
+    case 'closeWeekMenu':
+      return { ...state, weekIsOpen: false };
+    case 'openBonusLessonMenu':
+      return { ...state, bonusLessonsIsOpen: true };
+    case 'closeBonusLessonMenu':
+      return { ...state, bonusLessonsIsOpen: false };
+  }
+  throw Error('Unknown action: ' + action.type);
+};
+
 const Header: React.FC = () => {
-  const [
-    { bonusLessonsIsOpen, mobileMenuIsOpen, projectsMenuIsOpen, weekIsOpen },
-    setNavigationMenuState,
-  ] = useRecoilState(navigationMenuState);
+  const [{ bonusLessonsIsOpen, weekIsOpen }, dispatch] = useReducer(
+    reducer,
+    defaultState
+  );
 
   const close = () => {
-    setNavigationMenuState(defaulState);
+    dispatch({ type: 'close' });
   };
 
   const handleWeeksOnMouseEnter = () => {
     close();
-    setNavigationMenuState({ ...defaulState, weekIsOpen: true });
+    dispatch({ type: 'openWeekMenu' });
   };
 
   const handleOnBonusLessonsMouseEnter = () => {
     close();
-    setNavigationMenuState({ ...defaulState, bonusLessonsIsOpen: true });
+    dispatch({ type: 'openBonusLessonMenu' });
+  };
+
+  const handleOnOpenMobileMenuClick = () => {
+    document.body.classList.toggle('menu-open');
   };
 
   return (
@@ -176,13 +203,16 @@ const Header: React.FC = () => {
         <ul>
           <li>
             <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
-            <Weeks />
+            <Weeks close={close} weekIsOpen={weekIsOpen} />
           </li>
           <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
               Bonus lessons
             </button>
-            <BonusLessons />
+            <BonusLessons
+              close={close}
+              bonusLessonsIsOpen={bonusLessonsIsOpen}
+            />
           </li>
           <li>
             <Link href="/final-project">Final project</Link>
@@ -192,28 +222,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-
-      {/* <nav onMouseLeave={close}>
-        <ul>
-          <li>
-            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
-            <Weeks />
-          </li>
-          <li>
-            <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
-              Bonus lessons
-            </button>
-            <BonusLessons />
-          </li>
-          <li>
-            <Link to={FinalProjectRoute.path}>Final project</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <button onClick={handleOnOpenMobileMenuClick}>Menu</button> */}
+      <button onClick={handleOnOpenMobileMenuClick}>Menu</button>
     </StyledHeader>
   );
 };

@@ -38,10 +38,8 @@ export default async function Index() {
         <h1>Bonus Lessons</h1>
         <ol>
           {bonusLessons.map(({ link, content }, i) => (
-            <li>
-              <Link href={`/bonus-lessons/${link}`} key={link + i}>
-                {content}
-              </Link>
+            <li key={link + i}>
+              <Link href={`/bonus-lessons/${link}`}>{content}</Link>
             </li>
           ))}
         </ol>
