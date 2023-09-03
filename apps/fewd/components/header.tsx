@@ -1,10 +1,20 @@
 import { GALogoTextWhite } from '@ga/components';
 import Link from 'next/link';
-import React, { useReducer } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { bonusLessons } from '../curriculum/bonus-lessons';
 import { routesByWeek } from '../curriculum/weeks';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import {
+  closeBonusLessonMenu,
+  closeProjectMenu,
+  closeWeekMenu,
+  openBonusLessonMenu,
+  openMobileMenu,
+  openWeekMenu,
+  selectNavigationMenu,
+} from '../redux/navigation-menu';
 
 const StyledHeader = styled.header`
   padding: 1.25rem;
@@ -94,12 +104,16 @@ const StyledHeader = styled.header`
   }
 `;
 
-interface WeekProps {
-  close: () => void;
-  weekIsOpen: boolean;
-}
+export const Weeks: React.FC = () => {
+  const { weekIsOpen } = useAppSelector(selectNavigationMenu);
+  const dispatch = useAppDispatch();
 
-export const Weeks: React.FC<WeekProps> = ({ close, weekIsOpen }) => {
+  const close = (event: React.MouseEvent) => {
+    dispatch(closeWeekMenu());
+    dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
+  };
+
   return (
     <ul className={weekIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
       {routesByWeek.map(({ weekNumber }) => (
@@ -113,15 +127,16 @@ export const Weeks: React.FC<WeekProps> = ({ close, weekIsOpen }) => {
   );
 };
 
-interface BonusLessonsProps {
-  close: () => void;
-  bonusLessonsIsOpen: boolean;
-}
+const BonusLessons: React.FC = () => {
+  const { bonusLessonsIsOpen } = useAppSelector(selectNavigationMenu);
+  const dispatch = useAppDispatch();
 
-const BonusLessons: React.FC<BonusLessonsProps> = ({
-  close,
-  bonusLessonsIsOpen,
-}) => {
+  const close = (event: React.MouseEvent) => {
+    dispatch(closeWeekMenu());
+    dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
+  };
+
   return (
     <ul className={bonusLessonsIsOpen ? 'menu-open' : ''} onMouseLeave={close}>
       {bonusLessons.map(({ content, link }) => {
@@ -137,59 +152,31 @@ const BonusLessons: React.FC<BonusLessonsProps> = ({
   );
 };
 
-interface State {
-  bonusLessonsIsOpen: boolean;
-  weekIsOpen: boolean;
-}
-
-interface Action {
-  type: string;
-  payload?: boolean;
-}
-
-const defaultState: State = {
-  bonusLessonsIsOpen: false,
-  weekIsOpen: false,
-};
-
-const reducer = (state: State, action: Action) => {
-  switch (action.type) {
-    case 'close':
-      return defaultState;
-    case 'openWeekMenu':
-      return { ...state, weekIsOpen: true };
-    case 'closeWeekMenu':
-      return { ...state, weekIsOpen: false };
-    case 'openBonusLessonMenu':
-      return { ...state, bonusLessonsIsOpen: true };
-    case 'closeBonusLessonMenu':
-      return { ...state, bonusLessonsIsOpen: false };
-  }
-  throw Error('Unknown action: ' + action.type);
-};
-
 const Header: React.FC = () => {
-  const [{ bonusLessonsIsOpen, weekIsOpen }, dispatch] = useReducer(
-    reducer,
-    defaultState
-  );
+  const dispatch = useAppDispatch();
 
-  const close = () => {
-    dispatch({ type: 'close' });
+  const dispatchClose = () => {
+    dispatch(closeWeekMenu());
+    dispatch(closeBonusLessonMenu());
+    dispatch(closeProjectMenu());
   };
 
-  const handleWeeksOnMouseEnter = () => {
-    close();
-    dispatch({ type: 'openWeekMenu' });
+  const close = (event: React.MouseEvent) => {
+    dispatchClose();
   };
 
-  const handleOnBonusLessonsMouseEnter = () => {
-    close();
-    dispatch({ type: 'openBonusLessonMenu' });
+  const handleWeeksOnMouseEnter = (event: React.MouseEvent) => {
+    dispatchClose();
+    dispatch(openWeekMenu());
   };
 
-  const handleOnOpenMobileMenuClick = () => {
-    document.body.classList.toggle('menu-open');
+  const handleOnBonusLessonsMouseEnter = (event: React.MouseEvent) => {
+    dispatchClose();
+    dispatch(openBonusLessonMenu());
+  };
+
+  const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
+    dispatch(openMobileMenu());
   };
 
   return (
@@ -199,20 +186,17 @@ const Header: React.FC = () => {
           <GALogoTextWhite />
         </Link>
       </picture>
-      <nav>
+      <nav onMouseLeave={close}>
         <ul>
           <li>
             <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
-            <Weeks close={close} weekIsOpen={weekIsOpen} />
+            <Weeks />
           </li>
           <li>
             <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
               Bonus lessons
             </button>
-            <BonusLessons
-              close={close}
-              bonusLessonsIsOpen={bonusLessonsIsOpen}
-            />
+            <BonusLessons />
           </li>
           <li>
             <Link href="/final-project">Final project</Link>
