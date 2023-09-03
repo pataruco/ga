@@ -6,7 +6,9 @@ import { SiteStyles } from '@ga/styles';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import { useEffect, useState } from 'react';
 import Header from '../components/header';
+import MobileMenu from '../components/mobile-menu';
 import { routesByWeek } from '../curriculum/weeks';
 
 SiteStyles;
@@ -54,6 +56,14 @@ const ResourcesPerWeekTableRow: React.FC<Week> = ({
 };
 
 export default async function Index() {
+  const [mobileMenuIsOpen, setMobileMenuIsopen] = useState(false);
+
+  useEffect(() => {
+    setMobileMenuIsopen(document.body.classList.contains('menu-open'));
+  }, [mobileMenuIsOpen]);
+
+  console.log({ mobileMenuIsOpen });
+
   return (
     <StyledPage>
       <Header />
@@ -70,7 +80,7 @@ export default async function Index() {
           </tbody>
         </table>
       </main>
-
+      {mobileMenuIsOpen ? <MobileMenu /> : null}
       <Footer />
     </StyledPage>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -112,11 +112,16 @@ const BonusLessons: React.FC = () => (
 );
 
 const MobileMenu: React.FC = () => {
-  const mobileMenuIsOpen = document.body.classList.contains('menu-open');
+  const [mobileMenuIsOpen, setMobileMenuIsopen] = useState(false);
+
+  useEffect(() => {
+    setMobileMenuIsopen(document.body.classList.contains('menu-open'));
+  }, [mobileMenuIsOpen]);
 
   const handleOnClick = (event: React.MouseEvent) => {
     event.preventDefault();
     document.body.classList.remove('menu-open');
+    setMobileMenuIsopen(false);
   };
 
   return (
