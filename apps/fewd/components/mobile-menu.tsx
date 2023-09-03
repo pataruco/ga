@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import Link from 'next/link';
 import styled from 'styled-components';
 
 import { bonusLessons } from '../curriculum/bonus-lessons';
 import { routesByWeek } from '../curriculum/weeks';
+import { useAppDispatch, useAppSelector } from '../redux/hooks';
+import {
+  closeMobileMenu,
+  selectNavigationMenu,
+} from '../redux/navigation-menu';
 
 const width = '250px';
 
@@ -75,9 +80,10 @@ const CloseLink: React.FC<{ href: string; children: React.ReactNode }> = ({
   href,
   children,
 }) => {
+  const dispatch = useAppDispatch();
+
   const handleOnClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-    document.body.classList.remove('menu-open');
+    dispatch(closeMobileMenu());
   };
 
   return (
@@ -112,16 +118,11 @@ const BonusLessons: React.FC = () => (
 );
 
 const MobileMenu: React.FC = () => {
-  const [mobileMenuIsOpen, setMobileMenuIsopen] = useState(false);
-
-  useEffect(() => {
-    setMobileMenuIsopen(document.body.classList.contains('menu-open'));
-  }, [mobileMenuIsOpen]);
+  const { mobileMenuIsOpen } = useAppSelector(selectNavigationMenu);
+  const dispatch = useAppDispatch();
 
   const handleOnClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-    document.body.classList.remove('menu-open');
-    setMobileMenuIsopen(false);
+    dispatch(closeMobileMenu());
   };
 
   return (

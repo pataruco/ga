@@ -20,29 +20,41 @@ export const navigationMenuSlice = createSlice({
   initialState,
   reducers: {
     openWeekMenu: (state) => {
-      state.weekIsOpen = true;
+      return {
+        ...state,
+        weekIsOpen: true,
+      };
     },
     closeWeekMenu: (state) => {
-      state.weekIsOpen = false;
+      return {
+        ...state,
+        weekIsOpen: false,
+      };
     },
 
     openBonusLessonMenu: (state) => {
-      state.bonusLessonsIsOpen = true;
+      return {
+        ...state,
+        bonusLessonsIsOpen: true,
+      };
     },
     closeBonusLessonMenu: (state) => {
-      state.bonusLessonsIsOpen = false;
+      return {
+        ...state,
+        bonusLessonsIsOpen: false,
+      };
     },
     openMobileMenu: (state) => {
-      state.mobileMenuIsOpen = true;
+      return {
+        ...state,
+        mobileMenuIsOpen: true,
+      };
     },
     closeMobileMenu: (state) => {
-      state.mobileMenuIsOpen = false;
-    },
-    closeProjectMenu: (state) => {
-      state.projectsMenuIsOpen = false;
-    },
-    openProjectMenu: (state) => {
-      state.projectsMenuIsOpen = true;
+      return {
+        ...state,
+        mobileMenuIsOpen: false,
+      };
     },
   },
 });
@@ -54,8 +66,6 @@ export const {
   openWeekMenu,
   openMobileMenu,
   closeMobileMenu,
-  closeProjectMenu,
-  openProjectMenu,
 } = navigationMenuSlice.actions;
 
 export const selectNavigationMenu = (state: RootState) =>

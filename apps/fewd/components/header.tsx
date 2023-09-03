@@ -8,7 +8,6 @@ import { routesByWeek } from '../curriculum/weeks';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import {
   closeBonusLessonMenu,
-  closeProjectMenu,
   closeWeekMenu,
   openBonusLessonMenu,
   openMobileMenu,
@@ -111,7 +110,6 @@ export const Weeks: React.FC = () => {
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
-    dispatch(closeProjectMenu());
   };
 
   return (
@@ -134,7 +132,6 @@ const BonusLessons: React.FC = () => {
   const close = (event: React.MouseEvent) => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
-    dispatch(closeProjectMenu());
   };
 
   return (
@@ -158,7 +155,6 @@ const Header: React.FC = () => {
   const dispatchClose = () => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
-    dispatch(closeProjectMenu());
   };
 
   const close = (event: React.MouseEvent) => {
