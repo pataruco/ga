@@ -5,12 +5,12 @@ import '../../../styles/site/index.scss';
 
 import { Footer } from '@ga/components';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import { memo } from 'react';
 import Header from '../../../components/header';
 import MobileMenu from '../../../components/mobile-menu';
+import { routesByWeek } from '../../../curriculum/weeks';
 
 const StyledPage = styled.div`
   display: flex;
@@ -123,18 +123,24 @@ const ListOfDetails: React.FC<ListOfDetailsProps> = ({ details }) => (
 );
 
 async function Index({ params: { slug } }: WeekPageProps) {
-  const router = useRouter();
-  const [week, setWeek] = useState<Week>();
+  // const router = useRouter();
+  // const [week, setWeek] = useState<Week>();
 
-  useEffect(() => {
-    import(`../../../curriculum/weeks/${slug}`)
-      .then((week) => {
-        setWeek(week.default as Week);
-      })
-      .catch(() => {
-        router.push('/404');
-      });
-  }, []);
+  // console.log({ week });
+
+  // useEffect(() => {
+  //   import(`../../../curriculum/weeks/${slug}`)
+  //     .then((week) => {
+  //       setWeek(week.default as Week);
+  //     })
+  //     .catch(() => {
+  //       router.push('/404');
+  //     });
+  // }, []);
+
+  const { default: week } = await import(`../../../curriculum/weeks/${slug}`);
+
+  console.log({ week, slug });
 
   return (
     <StyledPage>
@@ -196,5 +202,13 @@ async function Index({ params: { slug } }: WeekPageProps) {
   );
 }
 
-// export default memo(Index);
-export default Index;
+export async function generateStaticParams() {
+  return routesByWeek.map(({ weekNumber }) => ({
+    params: {
+      slug: `${weekNumber}`,
+    },
+  }));
+}
+
+export default memo(Index);
+// export default Index;
