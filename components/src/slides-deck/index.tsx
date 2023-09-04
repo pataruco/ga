@@ -1,4 +1,4 @@
-import '@ga/styles';
+// import '@ga/styles';
 // import '@shared/styles/dist/slides';
 import React, { memo, useEffect } from 'react';
 

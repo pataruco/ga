@@ -1,16 +1,15 @@
 'use client';
 
+import 'normalize.css';
+import '../../../styles/site/index.scss';
+
 import { Footer } from '@ga/components';
-import { SiteStyles } from '@ga/styles';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import 'normalize.css';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Header from '../../../components/header';
-
-SiteStyles;
 
 const StyledPage = styled.div`
   display: flex;

@@ -1,8 +1,9 @@
 'use client';
+
 import 'normalize.css';
+import '../styles/site/index.scss';
 
 import { Footer } from '@ga/components';
-import { SiteStyles } from '@ga/styles';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -11,8 +12,6 @@ import MobileMenu from '../components/mobile-menu';
 import { routesByWeek } from '../curriculum/weeks';
 import { useAppSelector } from '../redux/hooks';
 import { selectNavigationMenu } from '../redux/navigation-menu';
-
-SiteStyles;
 
 const StyledPage = styled.div`
   display: flex;

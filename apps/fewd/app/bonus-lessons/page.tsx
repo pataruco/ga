@@ -1,16 +1,14 @@
 'use client';
 
-import { Footer } from '@ga/components';
-import { SiteStyles } from '@ga/styles';
-import Link from 'next/link';
 import 'normalize.css';
+import '../../styles/site/index.scss';
+
+import { Footer } from '@ga/components';
+import Link from 'next/link';
+import styled from 'styled-components';
 
 import Header from '../../components/header';
 import { bonusLessons } from '../../curriculum/bonus-lessons';
-
-import styled from 'styled-components';
-
-SiteStyles;
 
 const StyledPage = styled.div`
   display: flex;

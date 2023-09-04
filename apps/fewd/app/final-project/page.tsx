@@ -1,15 +1,12 @@
 'use client';
 
 import 'normalize.css';
+import '../../styles/site/index.scss';
 
 import { Footer } from '@ga/components';
-import { SiteStyles } from '@ga/styles';
-
-import Header from '../../components/header';
-
 import styled from 'styled-components';
 
-SiteStyles;
+import Header from '../../components/header';
 
 const StyledPage = styled.div`
   display: flex;

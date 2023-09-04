@@ -1,12 +1,13 @@
 'use client';
 
-import Script from 'next/script';
+import 'normalize.css';
+import '../../../styles/slides/index.scss';
 
-import { SlideStyles } from '@ga/styles';
 import { useRouter } from 'next/navigation';
+import Script from 'next/script';
 import { useEffect } from 'react';
+
 import { instantiateSlides } from '../../../libs/instantiate-slides';
-SlideStyles;
 
 interface LessonPageProps {
   params: {
