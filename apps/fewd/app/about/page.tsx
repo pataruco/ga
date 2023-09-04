@@ -6,7 +6,9 @@ import '../../styles/site/index.scss';
 import { Footer, GitHubLogo, LinkedinLogo, TwitterLogo } from '@ga/components';
 import styled from 'styled-components';
 
+import { memo } from 'react';
 import Header from '../../components/header';
+import MobileMenu from '../../components/mobile-menu';
 
 const StyledPage = styled.div`
   display: flex;
@@ -40,7 +42,7 @@ const StyledPage = styled.div`
   }
 `;
 
-export default async function Index() {
+function Index() {
   return (
     <StyledPage>
       <Header />
@@ -163,8 +165,10 @@ export default async function Index() {
           </small>
         </p>
       </main>
-
+      <MobileMenu />
       <Footer />
     </StyledPage>
   );
 }
+
+export default memo(Index);

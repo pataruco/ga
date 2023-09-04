@@ -4,7 +4,7 @@ import Script from 'next/script';
 import '../../../styles/slides/index.scss';
 
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { instantiateSlides } from '../../../libs/instantiate-slides';
 
 interface LessonPageProps {
@@ -13,7 +13,7 @@ interface LessonPageProps {
   };
 }
 
-const Page: React.FC<LessonPageProps> = ({ params: { slug } }) => {
+function Page({ params: { slug } }: LessonPageProps) {
   const router = useRouter();
   const slideUrl = `https://pataruco.s3.amazonaws.com/ga/lessons/fewd/${slug}.md`;
 
@@ -36,6 +36,6 @@ const Page: React.FC<LessonPageProps> = ({ params: { slug } }) => {
       />
     </>
   );
-};
+}
 
-export default Page;
+export default memo(Page);

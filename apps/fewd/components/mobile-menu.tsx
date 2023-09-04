@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -109,8 +109,8 @@ const BonusLessons: React.FC = () => (
   <ul>
     {bonusLessons.map(({ content, link }, i) => {
       return (
-        <li key={Math.random() * i}>
-          <CloseLink href={link}>{content}</CloseLink>
+        <li key={link}>
+          <CloseLink href={`/bonus-lessons/${link}`}>{content}</CloseLink>
         </li>
       );
     })}
@@ -152,4 +152,4 @@ const MobileMenu: React.FC = () => {
   );
 };
 
-export default MobileMenu;
+export default memo(MobileMenu);

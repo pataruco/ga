@@ -1,6 +1,6 @@
 import { GALogoTextWhite } from '@ga/components';
 import Link from 'next/link';
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 
 import { bonusLessons } from '../curriculum/bonus-lessons';
@@ -149,7 +149,7 @@ const BonusLessons: React.FC = () => {
   );
 };
 
-const Header: React.FC = () => {
+function Header() {
   const dispatch = useAppDispatch();
 
   const dispatchClose = () => {
@@ -205,6 +205,6 @@ const Header: React.FC = () => {
       <button onClick={handleOnOpenMobileMenuClick}>Menu</button>
     </StyledHeader>
   );
-};
+}
 
-export default Header;
+export default memo(Header);

@@ -7,11 +7,10 @@ import { Footer } from '@ga/components';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import { memo } from 'react';
 import Header from '../components/header';
 import MobileMenu from '../components/mobile-menu';
 import { routesByWeek } from '../curriculum/weeks';
-import { useAppSelector } from '../redux/hooks';
-import { selectNavigationMenu } from '../redux/navigation-menu';
 
 const StyledPage = styled.div`
   display: flex;
@@ -55,11 +54,7 @@ const ResourcesPerWeekTableRow: React.FC<Week> = ({
   );
 };
 
-export default async function Index() {
-  const { mobileMenuIsOpen } = useAppSelector(selectNavigationMenu);
-
-  console.log({ mobileMenuIsOpen });
-
+function Index() {
   return (
     <StyledPage>
       <Header />
@@ -71,15 +66,17 @@ export default async function Index() {
           </thead>
           <tbody>
             {routesByWeek.map((routeByWeek) => (
-              <ResourcesPerWeekTableRow {...routeByWeek} key={Math.random()} />
+              <ResourcesPerWeekTableRow
+                {...routeByWeek}
+                key={routeByWeek.lesson1.link}
+              />
             ))}
           </tbody>
         </table>
       </main>
       <MobileMenu />
-      {/* {mobileMenuIsOpen ? <MobileMenu /> : null} */}
-      {mobileMenuIsOpen ? <h1>HOLA</h1> : null}
       <Footer />
     </StyledPage>
   );
 }
+export default memo(Index);

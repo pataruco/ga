@@ -7,6 +7,7 @@ import { Footer } from '@ga/components';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import { memo } from 'react';
 import Header from '../../components/header';
 import { lessons } from '../../curriculum/lessons';
 
@@ -28,7 +29,7 @@ const StyledPage = styled.div`
   }
 `;
 
-export default async function Index() {
+async function Index() {
   return (
     <StyledPage>
       <Header />
@@ -47,3 +48,5 @@ export default async function Index() {
     </StyledPage>
   );
 }
+
+export default memo(Index);

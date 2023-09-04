@@ -6,7 +6,9 @@ import '../../styles/site/index.scss';
 import { Footer } from '@ga/components';
 import styled from 'styled-components';
 
+import { memo } from 'react';
 import Header from '../../components/header';
+import MobileMenu from '../../components/mobile-menu';
 
 const StyledPage = styled.div`
   display: flex;
@@ -34,7 +36,7 @@ const StyledPage = styled.div`
   }
 `;
 
-export default async function Index() {
+async function Index() {
   return (
     <StyledPage>
       <Header />
@@ -44,7 +46,7 @@ export default async function Index() {
           <p>
             The final project for FEWD will be to design and build a website of
             your choice. This project will test your knowledge of front-end web
-            development, and it encapsulates everything you’ve learned in this
+            development, and it encapsulates everything you've learned in this
             course. The result will be a site that can be used in your
             portfolio.
           </p>
@@ -146,8 +148,10 @@ export default async function Index() {
           </section>
         </article>
       </main>
-
+      <MobileMenu />
       <Footer />
     </StyledPage>
   );
 }
+
+export default memo(Index);

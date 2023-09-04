@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Header from '../../../components/header';
+import MobileMenu from '../../../components/mobile-menu';
 
 const StyledPage = styled.div`
   display: flex;
@@ -121,7 +122,7 @@ const ListOfDetails: React.FC<ListOfDetailsProps> = ({ details }) => (
   </ul>
 );
 
-const Page: React.FC<WeekPageProps> = ({ params: { slug } }) => {
+async function Index({ params: { slug } }: WeekPageProps) {
   const router = useRouter();
   const [week, setWeek] = useState<Week>();
 
@@ -189,9 +190,11 @@ const Page: React.FC<WeekPageProps> = ({ params: { slug } }) => {
           </>
         ) : null}
       </main>
+      <MobileMenu />
       <Footer />
     </StyledPage>
   );
-};
+}
 
-export default Page;
+// export default memo(Index);
+export default Index;

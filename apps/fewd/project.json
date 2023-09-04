@@ -23,12 +23,12 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "fewd:build",
-        "dev": false
+        "dev": true
       },
       "configurations": {
         "development": {
           "buildTarget": "fewd:build:development",
-          "dev": false
+          "dev": true
         },
         "production": {
           "buildTarget": "fewd:build:production",

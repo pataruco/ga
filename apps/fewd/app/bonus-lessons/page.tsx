@@ -5,9 +5,11 @@ import '../../styles/site/index.scss';
 
 import { Footer } from '@ga/components';
 import Link from 'next/link';
+import { memo } from 'react';
 import styled from 'styled-components';
 
 import Header from '../../components/header';
+import MobileMenu from '../../components/mobile-menu';
 import { bonusLessons } from '../../curriculum/bonus-lessons';
 
 const StyledPage = styled.div`
@@ -28,7 +30,7 @@ const StyledPage = styled.div`
   }
 `;
 
-export default async function Index() {
+async function Index() {
   return (
     <StyledPage>
       <Header />
@@ -42,8 +44,10 @@ export default async function Index() {
           ))}
         </ol>
       </main>
-
+      <MobileMenu />
       <Footer />
     </StyledPage>
   );
 }
+
+export default memo(Index);
