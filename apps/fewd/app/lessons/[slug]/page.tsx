@@ -1,10 +1,12 @@
 'use client';
 
-import Script from 'next/script';
 import '../../../styles/slides/index.scss';
 
 import { useRouter } from 'next/navigation';
+import Script from 'next/script';
 import { memo, useEffect } from 'react';
+
+import { routesByWeek } from '../../../curriculum/weeks';
 import { instantiateSlides } from '../../../libs/instantiate-slides';
 
 interface LessonPageProps {
@@ -36,6 +38,18 @@ function Page({ params: { slug } }: LessonPageProps) {
       />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return routesByWeek
+    .flatMap(({ lesson1: { link: link1 }, lesson2: { link: link2 } }) => {
+      return [link1, link2];
+    })
+    .map((slug) => ({
+      params: {
+        slug,
+      },
+    }));
 }
 
 export default memo(Page);
