@@ -1,0 +1,25 @@
+{
+  "name": "components",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "components/src",
+  "projectType": "library",
+  "implicitDependencies": ["styles"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["components/**/*.ts", "components/package.json"]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../coverage/components"
+      }
+    }
+  },
+  "tags": []
+}

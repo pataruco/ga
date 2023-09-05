@@ -1,0 +1,20 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": ["es2020", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "@ga/components": ["components/src/index.ts"],
+      "@ga/styles": ["styles/src/index.ts"],
+      "@ga/lessons": ["lessons/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
