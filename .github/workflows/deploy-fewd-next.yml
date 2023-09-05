@@ -36,13 +36,13 @@ jobs:
       #     corepack prepare pnpm@latest --activate
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install -r
 
       - name: Build project artifacts for preview
         run: pnpm nx run fewd:build:production
 
-      - name: Install Vercel CLI
-        run: pnpm install --global vercel@canary
+      # - name: Install Vercel CLI
+      #   run: pnpm install --global vercel@canary
 
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
