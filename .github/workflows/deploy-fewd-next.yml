@@ -44,12 +44,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: pnpm install
-        working-directory: ${{ inputs.working-directory }}
+      - name: Install Vercel CLI
+        run: pnpm install --global vercel@canary
 
       - name: Install dependencies
         run: pnpm install
+        working-directory: ${{ inputs.working-directory }}
 
       - name: Build project artifacts for preview
         run: pnpm nx run fewd:build:production
