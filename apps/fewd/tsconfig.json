@@ -16,10 +16,7 @@
         "name": "next"
       }
     ],
-    "types": [
-      "jest",
-      "node"
-    ],
+    "types": ["jest", "node"],
     "skipLibCheck": true
   },
   "include": [
@@ -29,7 +26,8 @@
     "**/*.jsx",
     "../../apps/fewd/.next/types/**/*.ts",
     "../../dist/apps/fewd/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "../../.vercel/output/.next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

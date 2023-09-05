@@ -1,0 +1,59 @@
+name: FEWD preview deployment
+run-name: ${{ github.actor }} is deploying to FEWD preview
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_FEWD_ID }}
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - apps/fewd/**
+      - .github/workflows/deploy-fewd-next.yml
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/hydrogen
+          cache: 'pnpm'
+
+      # - name: Install pnpm
+      #   id: pnpm-install
+      #   run: |
+      #     corepack enable
+      #     corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies
+        run: pnpm install -r
+
+      - name: Build project artifacts for preview
+        run: pnpm nx run fewd:build:production
+
+      # - name: Install Vercel CLI
+      #   run: pnpm install --global vercel@canary
+
+      - name: Pull Vercel environment information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      # - name: Build project artifacts
+
+      #   run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      #     vercel deploy -cwd ./dist/apps/fewd/.next --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy project artifacts to Vercel
+        run: |
+          vercel --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
