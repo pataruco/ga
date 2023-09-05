@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - apps/fewd/**
+      - .github/workflows/deploy-fewd-next.yml
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
