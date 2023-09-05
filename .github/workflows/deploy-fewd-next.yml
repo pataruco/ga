@@ -26,6 +26,7 @@ jobs:
 
       - name: Install pnpm
         id: pnpm-install
+        shell: bash
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
