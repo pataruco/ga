@@ -25,7 +25,6 @@ jobs:
           node-version: lts/hydrogen
 
       - name: Install pnpm
-        shell: bash
         id: pnpm-install
         run: |
           corepack enable
@@ -34,7 +33,6 @@ jobs:
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
-        working-directory: .
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
@@ -47,7 +45,6 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        shell: bash
         run: pnpm install
         working-directory: ${{ inputs.working-directory }}
 
