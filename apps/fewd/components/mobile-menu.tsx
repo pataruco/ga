@@ -96,7 +96,7 @@ const CloseLink: React.FC<{ href: string; children: React.ReactNode }> = ({
 const Weeks: React.FC = () => (
   <ul>
     {routesByWeek.map(({ weekNumber }, i) => (
-      <li key={Math.random() * i}>
+      <li key={`routesByWeek-${i}`}>
         <CloseLink href={`/week/${weekNumber}`}>
           <span>Week {weekNumber}</span>
         </CloseLink>

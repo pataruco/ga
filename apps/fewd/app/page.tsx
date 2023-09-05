@@ -8,9 +8,11 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { memo } from 'react';
+import { Course, WithContext } from 'schema-dts';
 import Header from '../components/header';
 import MobileMenu from '../components/mobile-menu';
 import { routesByWeek } from '../curriculum/weeks';
+import { about, author } from '../utils/metadata';
 
 const StyledPage = styled.div`
   display: flex;
@@ -55,8 +57,26 @@ const ResourcesPerWeekTableRow: React.FC<Week> = ({
 };
 
 function Index() {
+  const jsonLd: WithContext<Course> = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Front End Web Development',
+    about,
+    author,
+    courseCode: 'FEWD',
+    maintainer: author,
+    creator: {
+      '@type': 'Organization',
+      name: 'General Assembly',
+    },
+  };
+
   return (
     <StyledPage>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <h1>Welcome to FEWD London 🇬🇧 </h1>

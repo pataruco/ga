@@ -7,6 +7,7 @@ import { Footer, GitHubLogo, LinkedinLogo, TwitterLogo } from '@ga/components';
 import styled from 'styled-components';
 
 import { memo } from 'react';
+import { Article, WithContext } from 'schema-dts';
 import Header from '../../components/header';
 import MobileMenu from '../../components/mobile-menu';
 
@@ -43,6 +44,18 @@ const StyledPage = styled.div`
 `;
 
 function Index() {
+  const jsonLd: WithContext<Article> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    name: 'About',
+    description: 'About Pedro Martin teaching experience',
+  };
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  />;
+
   return (
     <StyledPage>
       <Header />
