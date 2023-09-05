@@ -19,10 +19,37 @@ jobs:
         with:
           fetch-depth: 0
 
-      # - name: Lint 🔎 & Format ✅
-      #   uses: ./.github/actions/lint-format
-      #   with:
-      #     working-directory: ./
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/hydrogen
+
+      - name: Install pnpm
+        shell: bash
+        id: pnpm-install
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        working-directory: .
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        shell: bash
+        run: pnpm install
+        working-directory: ${{ inputs.working-directory }}
 
       - name: Install dependencies
         run: pnpm install
