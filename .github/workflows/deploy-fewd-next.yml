@@ -52,5 +52,5 @@ jobs:
 
       - name: Deploy project artifacts to Vercel
         run: |
-          vercel --cwd ./dist/apps/fewd/.next --token=${{ secrets.VERCEL_TOKEN }}
-          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+          vercel --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy -cwd ./dist/apps/fewd/.next --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
