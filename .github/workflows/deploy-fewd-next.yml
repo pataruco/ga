@@ -30,7 +30,7 @@ jobs:
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
-          SHELL=$SHELL pnpm setup
+          pnpm setup --force
 
       - name: Get pnpm store directory
         id: pnpm-cache
