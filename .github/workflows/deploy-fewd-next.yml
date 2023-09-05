@@ -19,17 +19,21 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: lts/hydrogen
           cache: 'pnpm'
 
-      - name: Install pnpm
-        id: pnpm-install
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
+      # - name: Install pnpm
+      #   id: pnpm-install
+      #   run: |
+      #     corepack enable
+      #     corepack prepare pnpm@latest --activate
 
       - name: Install dependencies
         run: pnpm install
