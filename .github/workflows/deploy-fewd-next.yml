@@ -26,11 +26,9 @@ jobs:
 
       - name: Install pnpm
         id: pnpm-install
-        shell: bash
         run: |
           corepack enable
           corepack prepare pnpm@latest --activate
-          pnpm setup --force
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -47,7 +45,9 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install Vercel CLI
-        run: pnpm install --global vercel@canary
+        run: |
+          pnpm setup
+          pnpm install --global vercel@canary
 
       - name: Install dependencies
         run: pnpm install
