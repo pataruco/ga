@@ -4,7 +4,6 @@
   "sourceRoot": "components/src",
   "projectType": "library",
   "implicitDependencies": ["styles"],
-
   "targets": {
     "lint": {
       "executor": "@nx/linter:eslint",

@@ -1,4 +1,4 @@
-import '@ga/styles';
+// import '@ga/styles';
 // import '@shared/styles/dist/slides';
 import React, { memo, useEffect } from 'react';
 
@@ -80,7 +80,7 @@ const createSlideNavigation = (slide: Slide) => {
 const instantiateSlides = async (slidesDeckPath: string) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  const slides = await remark.create({
+  const slides = await window.remark.create({
     sourceUrl: slidesDeckPath,
     count: false,
     highlightLines: false,
