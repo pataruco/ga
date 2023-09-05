@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/fewd"
+        "outputPath": ".vercel/output"
       },
       "configurations": {
         "development": {
