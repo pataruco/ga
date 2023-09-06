@@ -1,17 +1,16 @@
-name: FEWD preview deployment
-run-name: ${{ github.actor }} is deploying to FEWD preview
+name: FEWD production deployment
+run-name: ${{ github.actor }} is deploying to FEWD production
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_FEWD_ID }}
 on:
   push:
-    branches-ignore:
-      - main
+    tags:
+      - 'FEWD*'
     paths:
-      - apps/fewd/**
-      - .github/workflows/deploy-fewd-next.yml
+      - .github/workflows/deploy-fewd-production.yml
 jobs:
-  deploy-preview:
+  deploy-production:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repo
@@ -33,14 +32,14 @@ jobs:
         run: pnpm install
         # TODO: add linters and tests
 
-      - name: Build project artifacts for preview
+      - name: Build project artifacts for production
         run: pnpm nx run fewd:build:production
 
       - name: Pull Vercel environment information
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build project artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy project artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
