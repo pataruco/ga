@@ -9,7 +9,7 @@ on:
       - main
     paths:
       - apps/fewd/**
-      - .github/workflows/deploy-fewd-next.yml
+      - .github/workflows/deploy-fewd-preview.yml
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
@@ -29,31 +29,18 @@ jobs:
           node-version: lts/hydrogen
           cache: 'pnpm'
 
-      # - name: Install pnpm
-      #   id: pnpm-install
-      #   run: |
-      #     corepack enable
-      #     corepack prepare pnpm@latest --activate
-
       - name: Install dependencies
-        run: pnpm install -r
+        run: pnpm install
+        # TODO: add linters and tests
 
       - name: Build project artifacts for preview
         run: pnpm nx run fewd:build:production
 
-      # - name: Install Vercel CLI
-      #   run: pnpm install --global vercel@canary
-
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-      # - name: Build project artifacts
-
-      #   run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-
-      #     vercel deploy -cwd ./dist/apps/fewd/.next --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build project artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy project artifacts to Vercel
-        run: |
-          vercel --token=${{ secrets.VERCEL_TOKEN }}
-          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
