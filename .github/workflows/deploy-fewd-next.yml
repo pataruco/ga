@@ -31,6 +31,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+        # TODO: add linters and tests
 
       - name: Build project artifacts for preview
         run: pnpm nx run fewd:build:production
