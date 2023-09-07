@@ -1,5 +1,8 @@
 # GA
 
+> [!WARNING]
+> This code is in active development, beware, dragons 🐉 are around
+
 ## What is it
 
 Is a **monorepo** with content for all the courses that I teach at [General Assembly London][ga] 🇬🇧
