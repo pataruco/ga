@@ -1,3 +1,6 @@
+import '@ga/styles/site/index.scss';
+import 'normalize.css';
+
 interface SlideSettings {
   count: boolean;
   highlightLines?: boolean;
