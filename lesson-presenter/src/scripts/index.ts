@@ -1,0 +1,1 @@
+console.log('INSIDE INDEX');
