@@ -22,8 +22,6 @@ export async function* getFilePaths(dir: string): AsyncGenerator<string> {
 
 const isMd = (file: string) => extname(file) === '.md';
 
-const toDistFolder = (file: string) => file.replace('/src', '/dist');
-
 let choices: Choice[] = [];
 
 const getName = (file: string) => {

@@ -1,23 +1,24 @@
 import select from '@inquirer/select';
 
+import { copyLessonToPublic } from './libs/copy-lesson-to-public';
+import { deleteLesson } from './libs/delete-lesson';
 import { getLessonsAsChoices } from './libs/get-lessons';
 import { getServer } from './libs/get-server';
 
 const main = async () => {
   const choices = await getLessonsAsChoices();
-  const answer = await select({
+  const lesson = await select({
     message: 'Select lesson',
     choices,
   });
 
-  console.log({ answer });
+  // delete public/lesson
+  await deleteLesson();
+  // copy lesson to public/lesson
+  await copyLessonToPublic(lesson);
 
   const server = await getServer();
-
   await server.listen();
-
-  console.log({ server: server.config.root });
-
   server.printUrls();
 };
 
