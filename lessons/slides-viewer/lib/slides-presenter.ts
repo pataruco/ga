@@ -1,6 +1,6 @@
-import 'normalize.css';
 import '@shared/styles/dist/site';
 import '@shared/styles/dist/slides';
+import 'normalize.css';
 
 interface SlideSettings {
   count: boolean;
