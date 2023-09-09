@@ -43,7 +43,7 @@ const getValue = (file: string) => {
 };
 
 export const getLessonsAsChoices = async () => {
-  for await (const file of getFilePaths('./lesson-presenter/src/lessons')) {
+  for await (const file of getFilePaths('./lessons/src/lessons')) {
     if (isMd(file)) {
       choices.push({
         name: getName(file),
