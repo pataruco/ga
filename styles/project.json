@@ -5,11 +5,10 @@
   "projectType": "library",
   "targets": {
     "copyStylesToLessons": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": ["cp -R styles/src/** lessons/src/styles"],
-        "parallel": true
-      }
+      "command": "cp -R styles/src/** lessons/src/styles"
+    },
+    "copyStylesToFewd": {
+      "command": "cp -R styles/src/** apps/fewd/styles"
     }
   }
 }
