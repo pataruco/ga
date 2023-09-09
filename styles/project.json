@@ -4,13 +4,12 @@
   "sourceRoot": "styles/src",
   "projectType": "library",
   "targets": {
-    "build": {
-      "commands": [
-        {
-          "command": "node ../node_modules/@angular/cli/bin/ng build styles --prod"
-        }
-      ]
+    "copyStylesToLessons": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["cp -R styles/src/** lessons/src/styles"],
+        "parallel": true
+      }
     }
-  },
-  "tags": []
+  }
 }
