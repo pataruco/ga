@@ -5,21 +5,11 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/styles",
-        "main": "styles/src/index.ts",
-        "tsConfig": "styles/tsconfig.lib.json",
-        "assets": ["styles/*.md", "styles/**/*.scss"]
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["styles/**/*.ts", "styles/package.json"]
-      }
+      "commands": [
+        {
+          "command": "node ../node_modules/@angular/cli/bin/ng build styles --prod"
+        }
+      ]
     }
   },
   "tags": []
