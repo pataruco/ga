@@ -15,7 +15,6 @@
         "bundle": false,
         "main": "lesson-presenter/src/main.ts",
         "tsConfig": "lesson-presenter/tsconfig.app.json",
-        "assets": ["lesson-presenter/src/assets"],
         "esbuildOptions": {
           "sourcemap": true,
           "outExtension": {

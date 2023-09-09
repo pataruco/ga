@@ -13,7 +13,7 @@
     "paths": {
       "@ga/components": ["components/src/index.ts"],
       "@ga/lessons": ["lessons/src/index.ts"],
-      "@ga/styles": ["styles/src"]
+      "@ga/styles": ["styles/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

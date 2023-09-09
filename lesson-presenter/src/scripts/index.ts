@@ -1,5 +1,7 @@
-import '@ga/styles/site/index.scss';
 import 'normalize.css';
+
+import '../styles/site/index.scss';
+import '../styles/slides/index.scss';
 
 interface SlideSettings {
   count: boolean;
