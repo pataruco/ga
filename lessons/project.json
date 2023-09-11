@@ -70,7 +70,7 @@
         }
       }
     },
-    "publishToS3": {
+    "publish": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
