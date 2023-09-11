@@ -20,7 +20,7 @@ export async function* getFilePaths(dir: string): AsyncGenerator<string> {
   }
 }
 
-const isMd = (file: string) => extname(file) === '.md';
+export const isMd = (file: string) => extname(file) === '.md';
 
 let choices: Choice[] = [];
 
