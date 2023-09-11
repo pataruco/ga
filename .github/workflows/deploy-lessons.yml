@@ -1,0 +1,40 @@
+name: Deploy lessons to S3
+run-name: ${{ github.actor }} is deploying lessons to S3
+on:
+  push:
+    tags:
+      - 'lesson.*'
+    paths:
+      - .github/workflows/infradeploy-lessonsstructure.yml
+jobs:
+  deploy-lesson-to-s3:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3.3.0
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.7.4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/hydrogen
+          cache: pnpm
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github_actions_role
+
+      - name: Install dependencies 📦
+        run: pnpm install
+
+      - name: Publish lessons to S3
+        run: pnpm nx run lessons:publish
