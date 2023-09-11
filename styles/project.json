@@ -5,22 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "options": {
-        "outputPath": "dist/styles",
-        "main": "styles/src/index.ts",
-        "tsConfig": "styles/tsconfig.lib.json",
-        "assets": ["styles/*.md", "styles/**/*.scss"]
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["styles/**/*.ts", "styles/package.json"]
+        "commands": [
+          "cp -R styles/src/** lessons/src/styles",
+          "cp -R styles/src/** apps/fewd/styles"
+        ],
+        "parallel": false
       }
     }
-  },
-  "tags": []
+  }
 }
