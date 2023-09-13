@@ -2,10 +2,11 @@ name: Deploy lessons to S3
 run-name: ${{ github.actor }} is deploying lessons to S3
 on:
   push:
-    tags:
-      - 'lesson.*'
+    # branches:
+    #   - main
     paths:
       - .github/workflows/deploy-lessons.yml
+      - lessons/src/lessons
 jobs:
   deploy-lesson-to-s3:
     runs-on: ubuntu-latest
