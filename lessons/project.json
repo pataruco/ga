@@ -69,6 +69,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm ts-node --project lessons/tsconfig.publish.json lessons/src/utils/publish-to-s3.ts"
+        ]
+      }
     }
   },
   "tags": []

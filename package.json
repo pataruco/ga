@@ -1,6 +1,7 @@
 {
   "author": "Pedro Martin <pataruco@gmail.com>",
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.409.0",
     "@inquirer/select": "^1.2.9",
     "@nx/esbuild": "16.8.1",
     "@nx/eslint-plugin": "16.7.4",
