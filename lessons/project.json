@@ -50,11 +50,10 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["lessons/**/*.ts"]
-      }
+      "command": "pnpm biome check lessons"
+    },
+    "format": {
+      "command": "pnpm biome format lessons"
     },
     "test": {
       "executor": "@nx/jest:jest",

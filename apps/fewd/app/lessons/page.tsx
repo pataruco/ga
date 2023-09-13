@@ -50,6 +50,7 @@ async function Index() {
     <StyledPage>
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Parse jsonLd
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />

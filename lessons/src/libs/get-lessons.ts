@@ -22,7 +22,7 @@ export async function* getFilePaths(dir: string): AsyncGenerator<string> {
 
 export const isMd = (file: string) => extname(file) === '.md';
 
-let choices: Choice[] = [];
+const choices: Choice[] = [];
 
 const getName = (file: string) => {
   const indexOfLessons = file.split('/').indexOf('lessons');

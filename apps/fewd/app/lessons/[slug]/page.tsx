@@ -47,6 +47,7 @@ function Page({ params: { slug } }: LessonPageProps) {
     <>
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: parse
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 

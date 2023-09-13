@@ -29,7 +29,7 @@ const StyledPage = styled.div`
 `;
 
 const TableHeaders = ['Week', 'Lesson', 'Lesson', 'Homework'].map(
-  (header, i) => <th key={`${header}` + i}>{header}</th>
+  (header, i) => <th key={`${header}` + i}>{header}</th>,
 );
 
 const ResourcesPerWeekTableRow: React.FC<Week> = ({
@@ -75,6 +75,7 @@ function Index() {
     <StyledPage>
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: To parse JSON-LD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
