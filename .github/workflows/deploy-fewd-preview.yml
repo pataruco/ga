@@ -1,0 +1,44 @@
+name: Deploy FEWD to Vercel preview
+run-name: ${{ github.actor }} is deploying FEWD to vercel preview
+
+on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - apps/fewd/**/*
+      - .github/workflows/deploy-fewd-preview.yml
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_FEWD_ID }}
+
+jobs:
+  deploy-fewd-to-vercel-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3.3.0
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.7.4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/hydrogen
+          cache: pnpm
+
+      - name: Install dependencies 📦
+        run: pnpm install
+
+      - name: Pull Vercel environment information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build project artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy project artifacts to Vercel
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
