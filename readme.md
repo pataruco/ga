@@ -40,13 +40,7 @@ Exercises for students outside class.
 - Install dependencies
 
   ```sh
-  yarn
-  ```
-
-- Boostrap dependencies
-
-  ```sh
-  yarn lerna bootstrap
+  pnpm
   ```
 
 ## Deployment
