@@ -3,11 +3,6 @@ description: 'Set environment and install dependencies'
 runs:
   using: composite
   steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3.3.0
-      with:
-        fetch-depth: 0
-
     - uses: pnpm/action-setup@v2.2.4
       with:
         version: 8.7.4
