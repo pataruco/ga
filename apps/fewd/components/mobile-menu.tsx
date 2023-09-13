@@ -121,13 +121,15 @@ const MobileMenu: React.FC = () => {
   const { mobileMenuIsOpen } = useAppSelector(selectNavigationMenu);
   const dispatch = useAppDispatch();
 
-  const handleOnClick = (event: React.MouseEvent) => {
+  const handleOnClick = () => {
     dispatch(closeMobileMenu());
   };
 
   return (
     <StyledNav className={mobileMenuIsOpen ? 'mobile-menu-open' : ''}>
-      <button onClick={handleOnClick}>Close</button>
+      <button onClick={handleOnClick} onKeyUp={handleOnClick} type="button">
+        Close
+      </button>
       <ul>
         <li>
           <details>

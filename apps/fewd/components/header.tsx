@@ -107,7 +107,7 @@ export const Weeks: React.FC = () => {
   const { weekIsOpen } = useAppSelector(selectNavigationMenu);
   const dispatch = useAppDispatch();
 
-  const close = (event: React.MouseEvent) => {
+  const close = () => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
   };
@@ -117,7 +117,9 @@ export const Weeks: React.FC = () => {
       {routesByWeek.map(({ weekNumber }) => (
         <li key={`/week/${weekNumber}`}>
           <Link href={`/week/${weekNumber}`}>
-            <span onClick={close}>Week {weekNumber}</span>
+            <span onClick={close} onKeyUp={close}>
+              Week {weekNumber}
+            </span>
           </Link>
         </li>
       ))}
@@ -129,7 +131,7 @@ const BonusLessons: React.FC = () => {
   const { bonusLessonsIsOpen } = useAppSelector(selectNavigationMenu);
   const dispatch = useAppDispatch();
 
-  const close = (event: React.MouseEvent) => {
+  const close = () => {
     dispatch(closeWeekMenu());
     dispatch(closeBonusLessonMenu());
   };
@@ -140,7 +142,9 @@ const BonusLessons: React.FC = () => {
         return (
           <li key={link}>
             <Link href={`/bonus-lessons/${link}`}>
-              <span onClick={close}>{content}</span>
+              <span onClick={close} onKeyUp={close}>
+                {content}
+              </span>
             </Link>
           </li>
         );
@@ -171,7 +175,7 @@ function Header() {
     dispatch(openBonusLessonMenu());
   };
 
-  const handleOnOpenMobileMenuClick = (event: React.MouseEvent) => {
+  const handleOnOpenMobileMenuClick = () => {
     dispatch(openMobileMenu());
   };
 
@@ -185,11 +189,13 @@ function Header() {
       <nav onMouseLeave={close}>
         <ul>
           <li>
-            <button onMouseEnter={handleWeeksOnMouseEnter}>Weeks</button>
+            <button onMouseEnter={handleWeeksOnMouseEnter} type="button">
+              Weeks
+            </button>
             <Weeks />
           </li>
           <li>
-            <button onMouseEnter={handleOnBonusLessonsMouseEnter}>
+            <button onMouseEnter={handleOnBonusLessonsMouseEnter} type="button">
               Bonus lessons
             </button>
             <BonusLessons />
@@ -202,7 +208,13 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <button onClick={handleOnOpenMobileMenuClick}>Menu</button>
+      <button
+        onClick={handleOnOpenMobileMenuClick}
+        onKeyUp={handleOnOpenMobileMenuClick}
+        type="button"
+      >
+        Menu
+      </button>
     </StyledHeader>
   );
 }

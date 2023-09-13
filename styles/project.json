@@ -13,6 +13,12 @@
         ],
         "parallel": false
       }
+    },
+    "lint": {
+      "command": "pnpm biome check styles"
+    },
+    "format": {
+      "command": "pnpm biome format styles"
     }
   }
 }

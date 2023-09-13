@@ -19,14 +19,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 8.7.4
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: lts/hydrogen
-          cache: pnpm
+      - name: Set environment and install dependencies
+        uses: ./.github/actions/prepare
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4

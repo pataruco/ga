@@ -2,6 +2,7 @@ import React from 'react';
 
 const GaLogo: React.FC = () => (
   <svg viewBox="0 0 502.615 209.149" xmlns="http://www.w3.org/2000/svg">
+    <title>General Assembly logo</title>
     <defs />
     <defs>
       <clipPath id="a">

@@ -42,11 +42,14 @@ const StyledFooter = styled.footer`
 `;
 
 const createTimeStamp = () => {
-  if (!process.env.REACT_APP_TIMESTAMP) {
+  // biome-ignore lint/complexity/useLiteralKeys: set to ignore this rule
+  const timeStamp = process.env['REACT_APP_TIMESTAMP'];
+
+  if (!timeStamp) {
     return null;
   }
 
-  const now = new Date(Number(process.env.REACT_APP_TIMESTAMP) * 1000);
+  const now = new Date(Number(timeStamp) * 1000);
   const locale = 'en-GB';
   const printTimeStampOptions: Intl.DateTimeFormatOptions = {
     day: 'numeric',

@@ -27,7 +27,7 @@ const main = async () => {
 
         await s3Client.send(new PutObjectCommand(params));
         console.log(
-          `Successfully uploaded file ${file} to ${buckerName}/${key}`
+          `Successfully uploaded file ${file} to ${buckerName}/${key}`,
         );
       }
     }

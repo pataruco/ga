@@ -53,6 +53,7 @@ function Index() {
 
   <script
     type="application/ld+json"
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: parse jsonLd
     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
   />;
 

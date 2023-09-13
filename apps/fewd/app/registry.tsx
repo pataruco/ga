@@ -14,6 +14,7 @@ function StyledComponentsRegistry({ children }: { children: React.ReactNode }) {
 
     // Types are out of date, clearTag is not defined.
     // See: https://github.com/DefinitelyTyped/DefinitelyTyped/issues/65021
+    // biome-ignore lint/suspicious/noExplicitAny: From Styled Components docs
     (styledComponentsStyleSheet.instance as any).clearTag();
 
     return <>{styles}</>;

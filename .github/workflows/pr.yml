@@ -1,0 +1,59 @@
+name: PR validation
+run-name: ${{ github.actor }} is running PR validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+  merge_group:
+    types: [checks_requested]
+
+concurrency:
+  cancel-in-progress: true
+  group: '${{ github.workflow }} @ ${{ github.ref }}'
+
+jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3.3.0
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/prepare
+
+  code-quality:
+    name: Code quality
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+        name: Checkout 🛎️
+        with:
+          fetch-depth: 0
+
+      - name: Prepare workspace
+        uses: ./.github/actions/prepare
+
+      - name: Run code quality
+        run: pnpm nx affected -t lint format --base=remotes/origin/main
+
+  pr-validation:
+    name: PR validation
+    needs: [prepare, code-quality]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+        name: Checkout 🛎️
+
+      - name: Check jobs for errors
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const checkJobsForErrors = require('./.github/workflows/js/check-jobs-for-errors.js');
+            const jobs = ${{ toJSON(needs) }};
+            checkJobsForErrors({ core, jobs });
