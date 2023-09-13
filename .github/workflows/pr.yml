@@ -1,5 +1,5 @@
 name: PR validation
-run-name: ${{ github.actor }} is running  ${{ github.event.merge_group.head_ref || '' }}
+run-name: ${{ github.actor }} is running PR validation
 
 on:
   pull_request:
