@@ -34,6 +34,9 @@ jobs:
       - name: Install dependencies 📦
         run: pnpm install
 
+      - name: Echo hello
+        run: echo "Hello"
+
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
