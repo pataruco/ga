@@ -9,13 +9,6 @@
       "options": {
         "config": "apps/fewd-e2e/playwright.config.ts"
       }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/fewd-e2e/**/*.{js,ts}"]
-      }
     }
   },
   "implicitDependencies": ["fewd"]
