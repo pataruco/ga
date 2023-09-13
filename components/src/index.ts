@@ -7,12 +7,6 @@ import LinkedinLogo from './icons/linkedin';
 import GaLogo from './icons/logo';
 import TwitterLogo from './icons/twitter';
 
-// Slides deck
-import SlidesDeck from './slides-deck';
-
-// Title
-import Title from './title';
-
 export {
   Footer,
   GALogoTextWhite,
@@ -20,7 +14,5 @@ export {
   GaLogo,
   GitHubLogo,
   LinkedinLogo,
-  SlidesDeck,
-  Title,
   TwitterLogo,
 };

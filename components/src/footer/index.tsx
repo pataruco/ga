@@ -62,7 +62,7 @@ const createTimeStamp = () => {
 
   const printTimestamp = new Intl.DateTimeFormat(
     locale,
-    printTimeStampOptions
+    printTimeStampOptions,
   ).format(now);
 
   const dateTimestamp = now.toISOString();

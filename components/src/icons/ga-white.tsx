@@ -7,6 +7,8 @@ const GALogoWhite: React.FC = () => (
     width="235.293"
     height="223.529"
   >
+    <title>General Assembly logo</title>
+
     <defs>
       <clipPath id="a">
         <path d="M0 167.647h176.47V0H0z" />

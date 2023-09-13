@@ -6,11 +6,7 @@
   "implicitDependencies": ["styles"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["components/**/*.ts", "components/package.json"]
-      }
+      "command": "pnpm biome check components"
     },
     "test": {
       "executor": "@nx/vite:test",
