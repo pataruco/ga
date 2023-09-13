@@ -5,7 +5,7 @@ on:
     tags:
       - 'lesson.*'
     paths:
-      - .github/workflows/infradeploy-lessonsstructure.yml
+      - .github/workflows/deploy-lessons.yml
 jobs:
   deploy-lesson-to-s3:
     runs-on: ubuntu-latest
@@ -28,10 +28,10 @@ jobs:
           cache: pnpm
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: ${{ vars.AWS_REGION }}
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github_actions_role
+          role-to-assume: arn:aws:iam::083014415996:role/github_actions_role
+          aws-region: us-east-1
 
       - name: Install dependencies 📦
         run: pnpm install
