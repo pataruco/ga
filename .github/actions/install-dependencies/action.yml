@@ -1,0 +1,17 @@
+name: 'Install dependencies'
+description: 'Set environment and install dependencies'
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@v2.2.4
+      with:
+        version: 8.7.4
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: lts/hydrogen
+        cache: pnpm
+
+    - name: Install dependencies 📦
+      shell: bash
+      run: pnpm install
