@@ -1,11 +1,38 @@
-# components
+# Components
 
-This library was generated with [Nx](https://nx.dev).
+## What is it
 
-## Building
+Nx library for shared [React][react] components for different websites in this repo.
 
-Run `nx build components` to build the library.
+## Build
 
-## Running unit tests
+```sh
+pnpm nx run components:build
+```
 
-Run `nx test components` to execute the unit tests via [Jest](https://jestjs.io).
+## Test
+
+```sh
+pnpm nx run components:test
+```
+
+## Use
+
+A TypeScript alias been created in `tsconfig.base.json` in the root of the monorepo
+
+```json
+{
+  // ...
+  "paths": {
+    "@ga/components": ["components/src/index.ts"]
+  } // ...
+}
+```
+
+and then from TypeScript file in the monorepo you can import it
+
+```ts
+import { Footer } from '@ga/components';
+```
+
+[react]: https://reactjs.org/
