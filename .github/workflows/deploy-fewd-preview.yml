@@ -17,25 +17,8 @@ jobs:
   deploy-fewd-to-vercel-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3.3.0
-        with:
-          fetch-depth: 0
-
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 8.7.4
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: lts/hydrogen
-          cache: pnpm
-
-      - name: Install dependencies 📦
-        run: pnpm install
-
-      - name: Echo hello
-        run: echo "Hello"
+      - name: Set environment and install dependencies
+        uses: ./.github/actions/install-dependencies
 
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
