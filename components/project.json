@@ -8,6 +8,9 @@
     "lint": {
       "command": "pnpm biome check components"
     },
+    "format": {
+      "command": "pnpm biome format components"
+    },
     "test": {
       "executor": "@nx/vite:test",
       "outputs": ["{options.reportsDirectory}"],
