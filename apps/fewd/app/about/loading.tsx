@@ -1,9 +1,5 @@
-import MainLayout from 'apps/fewd/components/main-layout';
+'use client';
 
-export default function Loading() {
-  return (
-    <MainLayout>
-      <h1>Loading ...</h1>
-    </MainLayout>
-  );
-}
+import Loading from 'apps/fewd/components/loading';
+
+export default Loading;
