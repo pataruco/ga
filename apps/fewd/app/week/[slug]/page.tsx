@@ -3,27 +3,15 @@
 import 'normalize.css';
 import '../../../styles/site/index.scss';
 
-import { Footer } from '@ga/components';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import MainLayout from 'apps/fewd/components/main-layout';
 import { memo } from 'react';
-import Header from '../../../components/header';
-import MobileMenu from '../../../components/mobile-menu';
 import { routesByWeek } from '../../../curriculum/weeks';
 
-const StyledPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  min-height: 100vh;
-  position: relative;
-
+const StyledMainLayout = styled(MainLayout)`
   main {
-    flex: 1 auto;
-    padding: 1.25rem;
-
     li {
       margin-bottom: 0.75rem;
     }
@@ -126,62 +114,57 @@ async function Index({ params: { slug } }: WeekPageProps) {
   const { default: week } = await import(`../../../curriculum/weeks/${slug}`);
 
   return (
-    <StyledPage>
-      <Header />
-      <main>
-        {week ? (
-          <>
-            <h1>Week: {slug}</h1>
+    <StyledMainLayout>
+      {week ? (
+        <>
+          <h1>Week: {slug}</h1>
+          <details>
+            <summary>
+              <h2>Lessons</h2>
+            </summary>
+            <ul>
+              <li>
+                Lesson {week.weekNumber * 2 - 1}:{' '}
+                <Link href={`/lessons/${week.lesson1.link}`}>
+                  {week.lesson1.content}
+                </Link>
+              </li>
+              <li>
+                Lesson {week.weekNumber * 2}:{' '}
+                <Link href={`/lessons/${week.lesson2.link}`}>
+                  {week.lesson2.content}
+                </Link>
+              </li>
+            </ul>
+            <Note />
+          </details>
+
+          {week.resources ? (
             <details>
               <summary>
-                <h2>Lessons</h2>
+                <h2>Useful resources</h2>
               </summary>
-              <ul>
-                <li>
-                  Lesson {week.weekNumber * 2 - 1}:{' '}
-                  <Link href={`/lessons/${week.lesson1.link}`}>
-                    {week.lesson1.content}
-                  </Link>
-                </li>
-                <li>
-                  Lesson {week.weekNumber * 2}:{' '}
-                  <Link href={`/lessons/${week.lesson2.link}`}>
-                    {week.lesson2.content}
-                  </Link>
-                </li>
-              </ul>
-              <Note />
+              <ListOfDetails details={week.resources} />
             </details>
+          ) : null}
 
-            {week.resources ? (
-              <details>
-                <summary>
-                  <h2>Useful resources</h2>
-                </summary>
-                <ListOfDetails details={week.resources} />
-              </details>
-            ) : null}
+          {week.bonuses ? (
+            <details>
+              <summary>
+                <h2>Bonus materials</h2>
+              </summary>
+              <ListOfDetails details={week.bonuses} />
+            </details>
+          ) : null}
 
-            {week.bonuses ? (
-              <details>
-                <summary>
-                  <h2>Bonus materials</h2>
-                </summary>
-                <ListOfDetails details={week.bonuses} />
-              </details>
-            ) : null}
-
-            {week.homework ? (
-              <p className="homework">
-                <Link href={week.homework.link}>Homework</Link>
-              </p>
-            ) : null}
-          </>
-        ) : null}
-      </main>
-      <MobileMenu />
-      <Footer />
-    </StyledPage>
+          {week.homework ? (
+            <p className="homework">
+              <Link href={week.homework.link}>Homework</Link>
+            </p>
+          ) : null}
+        </>
+      ) : null}
+    </StyledMainLayout>
   );
 }
 

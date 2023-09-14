@@ -23,11 +23,12 @@ const StyledPage = styled.div`
 
 interface MainLayoutProps {
   children: ReactNode;
+  className?: string;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, className }) => {
   return (
-    <StyledPage>
+    <StyledPage className={className}>
       <Header />
       <main>{children}</main>
       <MobileMenu />

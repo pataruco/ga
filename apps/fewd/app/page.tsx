@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import { memo } from 'react';
 import { Course, WithContext } from 'schema-dts';
+
 import MainLayout from '../components/main-layout';
 import { routesByWeek } from '../curriculum/weeks';
 import { about, author } from '../utils/metadata';
