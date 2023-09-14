@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>Hot Dang!</h1>
+      <p>Convert Farenheit to Celcius <br />with this handy tool.</p>
+      <p>
+        <small
+          >Enter a value in the fahrenheit box and click convert to see the
+          corresponding temperature in Celcius</small
+        >
+      </p>
+
+      <form id="converterForm">
+        <label for="fahrenheit"><sup>o</sup>F</label>
+        <input type="number" id="fahrenheit" value="" pattern="[0-9.]+" />
+
+        <input type="submit" id="submit" value="Convert!" />
+
+        <p class="result">
+          <span id="celcius"></span>
+        </p>
+      </form>
+    </div>
+    <img src="img/thermometer.png" alt="a thermometer" />
+
+    <!-- load the script file at the bottom to ensure the document is ready -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

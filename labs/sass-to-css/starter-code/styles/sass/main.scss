@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+$main-color: blue;
+
+.card {
+  position: relative;
+  float: left;
+  width: 48%;
+  background: #eee;
+  padding: 1em;
+  margin: 1%;
+  color: #444;
+  font-family: sans-serif;
+  border: 1px solid #f4f4f4;
+  border-top: 5px solid $main-color;
+  transition: 0.3s;
+  &:hover {
+    background: #fff;
+    box-shadow: 0 0 2em transparentize($main-color, 0.8);
+    & h2 {
+      color: #000;
+    }
+  }
+
+  & h2 {
+    margin: 0 0 1em;
+    color: #333;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+
+  &.favourite:after {
+    content: '☆';
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    color: $main-color;
+    font-size: 2em;
+  }
+  @media screen and (max-width: 500px) {
+    & {
+      width: 100%;
+      margin: 0.5em 0;
+    }
+  }
+}

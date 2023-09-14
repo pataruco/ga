@@ -1,0 +1,39 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+.card {
+  position: relative;
+  float: left;
+  width: 48%;
+  background: #eee;
+  padding: 1em;
+  margin: 1%;
+  color: #444;
+  font-family: sans-serif;
+  border: 1px solid #f4f4f4;
+  border-top: 5px solid blue;
+  transition: 0.3s; }
+  .card:hover {
+    background: #fff;
+    box-shadow: 0 0 2em rgba(0, 0, 255, 0.2); }
+    .card:hover h2 {
+      color: #000; }
+  .card h2 {
+    margin: 0 0 1em;
+    color: #333;
+    text-transform: uppercase;
+    transition: 0.3s; }
+  .card.favourite:after {
+    content: '☆';
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    color: blue;
+    font-size: 2em; }
+  @media screen and (max-width: 500px) {
+    .card {
+      width: 100%;
+      margin: 0.5em 0; } }
+
+/*# sourceMappingURL=main.css.map */
