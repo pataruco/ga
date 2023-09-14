@@ -3,13 +3,13 @@
 import 'normalize.css';
 import '../../styles/site/index.scss';
 
-import Link from 'next/link';
-import styled from 'styled-components';
-
 import MainLayout from 'apps/fewd/components/main-layout';
 import { about, author } from 'apps/fewd/utils/metadata';
+import Link from 'next/link';
 import { memo } from 'react';
 import { Course, WithContext } from 'schema-dts';
+import styled from 'styled-components';
+
 import { lessons } from '../../curriculum/lessons';
 
 const StyledMainLayout = styled(MainLayout)`
