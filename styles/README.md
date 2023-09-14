@@ -1,11 +1,19 @@
-# styles
+# Styles
 
-This library was generated with [Nx](https://nx.dev).
+## What is it
 
-## Building
+Nx library for shared styles for different websites and [lessons][@lessons] in this repo.
 
-Run `nx build styles` to build the library.
+Styles are written in Sass.
 
-## Running unit tests
+## Build
 
-Run `nx test styles` to execute the unit tests via [Jest](https://jestjs.io).
+From the root of the monorepo type on your terminal
+
+```sh
+pnpm nx run styles:build
+```
+
+[react]: https://reactjs.org/
+[@websites]: ../../@websites/readme.md
+[@lessons]: ../lessons/readme.md
