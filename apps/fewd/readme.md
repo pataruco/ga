@@ -1,14 +1,32 @@
 # FEWD
 
-It is a website built with [Next.js](https://nextjs.org/) with contents for Front-end Web Development course for [General Assembly London][ga] 🇬🇧
+It is a Nx app website built with [Next.js](https://nextjs.org/) with contents for Front-end Web Development course for [General Assembly London][ga] 🇬🇧
 
-## How to run locally
+## Development
 
 ```sh
 pnpm nx run fewd:serve
 ```
 
-## How to deploy
+## Format
+
+```sh
+pnpm nx run fewd:format
+```
+
+## Lint
+
+```sh
+pnpm nx run fewd:lint
+```
+
+## Test
+
+```sh
+pnpm nx run fewd:lint
+```
+
+## Deploy
 
 A [Github action][gh-actions] is set to deal with deployments to prod. To trigger a deployment
 

@@ -16,6 +16,12 @@ pnpm nx run components:build
 pnpm nx run components:test
 ```
 
+## Format
+
+```sh
+pnpm nx run components:format
+```
+
 ## Use
 
 A TypeScript alias been created in `tsconfig.base.json` in the root of the monorepo

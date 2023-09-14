@@ -48,7 +48,7 @@ Exercises for students outside class.
 - Install dependencies
 
   ```sh
-  pnpm
+  pnpm install
   ```
 
 ## Deployment
@@ -73,5 +73,3 @@ Read more about in the readme of each websites
 [site]: https://fewd.pataruco.dev/
 [site-fewd-es]: https://fewd-es.pataruco.dev/
 [site-jsd]: https://jsd.pataruco.dev/
-[@websites]: ./@websites/readme.md
-[@shared/lessons]: ./@shared/lessons/readme.md
