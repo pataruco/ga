@@ -1,8 +1,5 @@
 # GA
 
-> [!WARNING]
-> This code is in active development, beware, dragons 🐉 are around
-
 ## What is it
 
 Is a **monorepo** with content for all the courses that I teach at [General Assembly London][ga] 🇬🇧
@@ -17,6 +14,18 @@ Legacy code for the previous version of the monorepo
 
 Shared [React][react] components for different websites in this repo.
 
+### [homeworks/](./homeworks/readme.md)
+
+Folder with all the starter and solutions homeworks for each course.
+
+### [indfrastructure/](./infrastructure/readme.md)
+
+Folder with the [Terraform][terraform] code to provision the infrastructure.
+
+### [labs/](./homeworks/readme.md)
+
+Folder with all the starter and solutions labs for each course.
+
 ### [lessons/](./lessons/readme.md)
 
 All lessons written in Markdown formatted with Remark [syntax][remark-syntax].
@@ -28,14 +37,6 @@ Styles for for different websites and lesson slides
 ### [apps/fewd](./apps/fewd/readme.md)
 
 [React][react] app hosted in [Vercel][vercel] with the custom domain [**https://fewd.pataruco.dev**][site] for Front-end Development course.
-
-### [labs/](./labs/readme.md)
-
-Labs & exercises for each lesson.
-
-### [homeworks/](./homeworks/readme.md)
-
-Exercises for students outside class.
 
 ## How to install
 
