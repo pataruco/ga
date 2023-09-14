@@ -1,7 +1,7 @@
 'use client';
 
 import Footer from 'components/src/footer';
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import styled from 'styled-components';
 
 import Header from './header';
@@ -37,4 +37,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, className }) => {
   );
 };
 
-export default MainLayout;
+export default memo(MainLayout);
