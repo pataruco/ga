@@ -23,6 +23,7 @@ const main = async () => {
           Bucket: buckerName,
           Key: createKey(file),
           Body: (await readFile(file, 'utf8')).toString(),
+          ACL: 'public-read-write',
         };
 
         await s3Client.send(new PutObjectCommand(params));
