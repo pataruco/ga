@@ -4,10 +4,10 @@ import 'normalize.css';
 import '../../../styles/site/index.scss';
 
 import Link from 'next/link';
+import { memo } from 'react';
 import styled from 'styled-components';
 
 import MainLayout from 'apps/fewd/components/main-layout';
-import { memo } from 'react';
 import { routesByWeek } from '../../../curriculum/weeks';
 
 const StyledMainLayout = styled(MainLayout)`
