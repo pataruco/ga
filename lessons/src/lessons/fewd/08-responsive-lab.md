@@ -26,7 +26,7 @@ The instructional team will be here to help you out if you need it.
 
 **This lab will carry over as this week homework.**
 
-[Starter code](https://github.com/pataruco/fewd/raw/master/labs/responsive-lab/responsive-lab-starter-code.zip)
+<a href="https://github.com/pataruco/fewd/raw/master/labs/responsive-lab/responsive-lab-starter-code.zip" class="download-link">Starter code</a>
 
 ---
 

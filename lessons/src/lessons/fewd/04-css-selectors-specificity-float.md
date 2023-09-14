@@ -367,9 +367,9 @@ Back in the day `floats` were the only way to introduce columns, but because a c
 
 ## Homework
 
-[Relaxr](https://github.com/pataruco/fewd/raw/master/homeworks/relaxr-1/relaxr-1-starter-code.zip)
+<a href="https://github.com/pataruco/fewd/raw/master/homeworks/relaxr-1/relaxr-1-starter-code.zip" class="download-link">Relaxr</a>
 
-[Final version](https://raw.githubusercontent.com/pataruco/fewd/master/homeworks/relaxr-1/starter-code/images/relaxr-landing.jpg)
+<a href="https://raw.githubusercontent.com/pataruco/fewd/master/homeworks/relaxr-1/starter-code/images/relaxr-landing.jpg" class="download-link">Final version</a>
 
 ---
 
