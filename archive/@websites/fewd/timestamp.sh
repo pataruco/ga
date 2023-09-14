@@ -6,7 +6,7 @@ deleteEnv() {
 }
 
 createEnv() {
-  eval "echo REACT_APP_TIMESTAMP=$(date +%s) >> .env"
+  eval "echo NEXT_PUBLIC_TIMESTAMP=$(date +%s) >> .env"
 }
 
 deleteEnv

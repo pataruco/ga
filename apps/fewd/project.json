@@ -61,6 +61,17 @@
     },
     "format": {
       "command": "pnpm biome format apps/fewd"
+    },
+    "create-timestamp": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "rm apps/fewd/.env || echo 'no apps/fewd/.env'",
+          "echo NEXT_PUBLIC_TIMESTAMP=$(date +%s) >> apps/fewd/.env",
+          "echo 'Timestamp created ⏱'"
+        ],
+        "parallel": false
+      }
     }
   }
 }
