@@ -42,11 +42,13 @@ const StyledFooter = styled.footer`
 `;
 
 const createTimeStamp = () => {
-  if (!process.env.REACT_APP_TIMESTAMP) {
+  // @ts-ignore
+  if (!process.env.NEXT_PUBLIC_TIMESTAMP) {
     return null;
   }
 
-  const now = new Date(Number(process.env.REACT_APP_TIMESTAMP) * 1000);
+  // @ts-ignore
+  const now = new Date(Number(process.env.NEXT_PUBLIC_TIMESTAMP) * 1000);
   const locale = 'en-GB';
   const printTimeStampOptions: Intl.DateTimeFormatOptions = {
     day: 'numeric',

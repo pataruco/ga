@@ -7,7 +7,6 @@ export const getServer = async () => {
     configFile: false,
     base: '/public',
     server: {
-      port: 0,
       open: true,
     },
   });

@@ -21,6 +21,9 @@ jobs:
       - name: Set environment and install dependencies
         uses: ./.github/actions/prepare
 
+      - name: Create timestamp
+        run: pnpm nx run fewd:create-timestamp
+
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 

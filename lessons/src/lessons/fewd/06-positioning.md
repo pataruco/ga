@@ -251,9 +251,9 @@ Viewport-percentage lengths define the **length** value relative to the size of 
 
 Relaxr was really impressed by your work last week and wants you to continue development on their landing page.
 
-Download the [starter code](https://github.com/pataruco/fewd/raw/master/homeworks/relaxr-2/relaxr-2-starter-code.zip)
+Download the <a href="https://github.com/pataruco/fewd/raw/master/homeworks/relaxr-2/relaxr-2-starter-code.zip" class="download-link">starter code</a>
 
-[Final version](https://raw.githubusercontent.com/pataruco/fewd/master/homeworks/relaxr-2/starter-code/images/relaxr-blog.jpg)
+<a href="https://raw.githubusercontent.com/pataruco/fewd/master/homeworks/relaxr-2/starter-code/images/relaxr-blog.jpg" class="download-link">Final version</a>
 
 ---
 
