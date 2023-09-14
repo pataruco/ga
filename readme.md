@@ -18,7 +18,7 @@ Shared [React][react] components for different websites in this repo.
 
 Folder with all the starter and solutions homeworks for each course.
 
-### [indfrastructure/](./infrastructure/readme.md)
+### [infrastructure/](./infrastructure/readme.md)
 
 Folder with the [Terraform][terraform] code to provision the infrastructure.
 
