@@ -3,43 +3,12 @@
 import 'normalize.css';
 import '../../styles/site/index.scss';
 
-import { GitHubLogo, LinkedinLogo, TwitterLogo } from '@ga/components';
 import MainLayout from 'apps/fewd/components/main-layout';
 import { memo } from 'react';
 import { Article, WithContext } from 'schema-dts';
 import styled from 'styled-components';
 
-const StyledMainLayout = styled(MainLayout)`
-  display: flex;
-  flex-direction: column;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  min-height: 100vh;
-  position: relative;
-
-  main {
-    flex: 1 auto;
-    padding: 1.25rem;
-
-    ul {
-      list-style: none;
-      display: flex;
-      padding: 0;
-      margin: 0;
-      align-items: center;
-      li {
-        max-width: 20px;
-        &:nth-of-type(2) {
-          margin: 0 0.625rem;
-        }
-      }
-    }
-
-    small span {
-      font-weight: 800;
-    }
-  }
-`;
+const StyledMainLayout = styled(MainLayout)``;
 
 function Index() {
   const jsonLd: WithContext<Article> = {
@@ -62,13 +31,13 @@ function Index() {
 
       <p>
         I love passing on knowledge and seeing people grow. I've helped around
-        350+ people go from being novices to solid coders in a series of 10-week
+        450+ people go from being novices to solid coders in a series of 10-week
         courses.
       </p>
 
       <p>
-        Also, I had the fortune to learnt from amazing front-end teachers at
-        General Assembly such as{' '}
+        Also, I had the fortune to learn from fantastic front-end teachers at
+        the General Assembly, such as{' '}
         <a
           href="https://generalassemb.ly/instructors/guy-routledge/1917"
           target="_blank"
@@ -95,12 +64,12 @@ function Index() {
         >
           James
         </a>
-        . They inspired to share knowledge with kindness and compassion. This is
-        my attempt to do so.
+        . They are inspired to share knowledge with kindness and compassion.
+        This is my attempt to do so.
       </p>
 
       <p>
-        The content on the slides is my adaption from official FEWD 3.0
+        The content on the slides is my adaption from the official FEWD 3.2
         curriculum and the experiences I have had as a teacher assistant and
         lead instructor in the last {new Date().getFullYear() - 2015} years of
         teaching.
@@ -109,7 +78,7 @@ function Index() {
       <p>
         The code for this website and the content of the slides are available on{' '}
         <a
-          href="https://github.com/pataruco/fewd"
+          href="https://github.com/pataruco/ga"
           target="_blank"
           rel="noreferrer"
           className="external-link"
@@ -121,10 +90,7 @@ function Index() {
       <p>Pedro.</p>
 
       <p>
-        <small>
-          <span>P.S.</span>: If you want to contact me, these are my
-          coordinates:{' '}
-        </small>
+        <span>P.S.</span>: If you want to contact me, these are my coordinates:
       </p>
 
       <ul>
@@ -133,10 +99,9 @@ function Index() {
             href="https://github.com/pataruco"
             target="_blank"
             rel="noreferrer"
+            className="external-link"
           >
-            <picture>
-              <GitHubLogo />
-            </picture>
+            GitHub
           </a>
         </li>
         <li>
@@ -144,10 +109,9 @@ function Index() {
             href="https://www.linkedin.com/in/pataruco/"
             target="_blank"
             rel="noreferrer"
+            className="external-link"
           >
-            <picture>
-              <LinkedinLogo />
-            </picture>
+            LinkedIn
           </a>
         </li>
         <li>
@@ -155,24 +119,30 @@ function Index() {
             href="https://twitter.com/pataruco"
             target="_blank"
             rel="noreferrer"
+            className="external-link"
           >
-            <picture>
-              <TwitterLogo />
-            </picture>
+            X
           </a>
         </li>
-      </ul>
-      <p>
-        <small>
-          and{' '}
+        <li>
           <a
             href="mailto:pedro.martin@ga.co?subject=Hello Pedro &#128075;"
             rel="noreferrer"
           >
             pedro.martin@ga.co
           </a>
-        </small>
-      </p>
+        </li>
+        <li>
+          <a
+            href="https://www.pataruco.dev/blog"
+            target="_blank"
+            rel="noreferrer"
+            className="external-link"
+          >
+            Blog
+          </a>
+        </li>
+      </ul>
     </StyledMainLayout>
   );
 }
