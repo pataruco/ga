@@ -9,9 +9,6 @@ import styled from 'styled-components';
 
 const StyledMainLayout = styled(MainLayout)`
   main {
-    flex: 1 auto;
-    padding: 1.25rem;
-
     .italic {
       font-style: italic;
     }

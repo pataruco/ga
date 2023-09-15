@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - .github/workflows/deploy-lessons.yml
-      - lessons/src/lessons
+      - ./lessons/src/lessons
 jobs:
   deploy-lesson-to-s3:
     runs-on: ubuntu-latest

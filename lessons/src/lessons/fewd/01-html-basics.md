@@ -21,19 +21,19 @@ In this lesson, you will:
 
 ## Meet the Team - Pedro Martin
 
-- [Senior Software engineer at Red Badger.](https://red-badger.com/people/pedro-martin/)
+- Senior Software engineer at Red Badger.
 - Former science teacher.
 - General Assembly alumni 2015.
-- [Teaching courses and workshops at General Assembly since 2015.](https://generalassemb.ly/instructors/pedro-martin/7012)
+- <a href="https://generalassemb.ly/instructors/pedro-martin/7012" target="_blank" rel="noopener noreferrer" class="external-link">Teaching courses and workshops at General Assembly since 2015</a>
 - Originally from Caracas, Venezuela 🇻🇪.
-- [Former Rope Access Technician (RAT 🐀).](https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing)
+- <a href="https://www.theguardian.com/artanddesign/2015/jul/20/hanging-by-thread-rats-keep-skyscrapers-standing" target="_blank" rel="noopener noreferrer" class="external-link">Former Rope Access Technician (RAT 🐀)</a>
 - Hardcore Star Wars fan.
 
 ---
 
 ## Tell us a highlight from a random year
 
-- [Go to the random year generator](https://pataruco.github.io/ga-fewd-assets/random-year/index.html)
+- [Go to the random year generator](https://fewd.pataruco.dev/assets/random-year-generator)
 - Enter your year of birth
 - Tell us your name?
 - Tell us a highlight from your life that happened that year
@@ -134,7 +134,6 @@ In this lesson, you will:
 - Download and install VS Code (for Mac or Windows)
 - Install the VS Code extensions
   - [Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-  - [Bracket pair colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - Sign up for a Google Account (if you don’t have one already)
 - Send us your Google Account email via Slack
