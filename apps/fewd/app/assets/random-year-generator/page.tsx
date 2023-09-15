@@ -28,7 +28,6 @@ const randomYear = (year: number) =>
 
 async function Index() {
   const [year, setYear] = useState<number | undefined>(undefined);
-
   const yearId = 'years';
 
   const handleOnSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
