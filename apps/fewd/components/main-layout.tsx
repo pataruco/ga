@@ -13,6 +13,9 @@ const StyledPage = styled.div`
   font-family: Helvetica, Arial, sans-serif;
   font-size: 100%;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-margin-inline-end: -300px;
   position: relative;
 
   main {
