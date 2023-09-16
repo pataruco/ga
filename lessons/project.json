@@ -69,14 +69,15 @@
         }
       }
     },
-    "publish": {
+    "copyFewdLessons": {
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "pnpm ts-node --project lessons/tsconfig.publish.json lessons/src/utils/publish-to-s3.ts"
+          "rm -rf apps/fewd/public/slides",
+          "mkdir -p apps/fewd/public/slides",
+          "cp -R lessons/src/lessons/fewd/** apps/fewd/public/slides/"
         ]
       }
     }
-  },
-  "tags": []
+  }
 }
