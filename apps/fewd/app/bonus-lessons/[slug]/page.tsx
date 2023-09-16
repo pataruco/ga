@@ -19,7 +19,7 @@ interface LessonPageProps {
 
 function Page({ params: { slug } }: LessonPageProps) {
   const router = useRouter();
-  const slideUrl = `https://pataruco.s3.amazonaws.com/ga/lessons/fewd/${slug}.md`;
+  const slideUrl = `/slides/${slug}.md`;
 
   const lesson = bonusLessons.find((lesson) => lesson.link === slug);
 
