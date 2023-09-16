@@ -5,6 +5,8 @@ It is a Nx app website built with [Next.js](https://nextjs.org/) with contents f
 ## Development
 
 ```sh
+pnpm nx run lessons:copyFewdLessons
+pnpm nx run fewd:create-timestamp
 pnpm nx run fewd:serve
 ```
 

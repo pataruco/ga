@@ -22,15 +22,15 @@ Choose a folder and then create a mardown file and name it using a kebab case co
 
 Use [Remark syntax][remark-syntax] to write the slides.
 
-## How to deply
+## How to deploy
 
-To deploy the markdown slides to a AWS S3 bucket, run:
+### FEWD
+
+To deploy the markdown slides to FEWD
 
 ```sh
-pnpm nx run lessons:publish
+pnpm nx run lessons:copyFewdLessons
 ```
-
-Or make a change on this folder and a GitHub Workflow (`.github/workflows/deploy-lessons.yml`) will deploy the slides automatically.
 
 [@websites]: ../@websites/readme.md
 [remark-syntax]: https://github.com/gnab/remark/wiki/Markdown
