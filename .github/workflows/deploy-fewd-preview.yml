@@ -25,6 +25,9 @@ jobs:
       - name: Set environment and install dependencies
         uses: ./.github/actions/prepare
 
+      - name: Copy FEWD lessons
+        run: pnpm nx run lessons:copyFewdLessons
+
       - name: Create timestamp
         run: pnpm nx run fewd:create-timestamp
 
