@@ -27,4 +27,15 @@
   .remark-code-span-highlighted {
     background-color: var(--code-hightlight);
   }
+
+  .slide-navigation {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .remark-slide-number {
+    font-size: 0.75rem;
+  }
 }

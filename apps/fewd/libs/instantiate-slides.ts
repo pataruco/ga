@@ -74,7 +74,6 @@ export const instantiateSlides = (slidesDeckPath: string) => {
   // @ts-ignore
   const slides = window.remark.create({
     sourceUrl: slidesDeckPath,
-    count: false,
     highlightLines: false,
     highlightSpans: true,
     highlightStyle: 'atom-one-dark',
@@ -85,7 +84,8 @@ export const instantiateSlides = (slidesDeckPath: string) => {
     },
     ratio: '16:9',
     // ratio: '64:35', // browser aspect ratio
-    slideNumberFormat: '',
+    // slideNumberFormat: 'Slide %current% of %total%',
+    slideNumberFormat: '%current%',
   });
 
   // listening on slide show
