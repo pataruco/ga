@@ -84,8 +84,7 @@ export const instantiateSlides = (slidesDeckPath: string) => {
     },
     ratio: '16:9',
     // ratio: '64:35', // browser aspect ratio
-    // slideNumberFormat: 'Slide %current% of %total%',
-    slideNumberFormat: '%current%',
+    slideNumberFormat: 'slide %current% of %total%',
   });
 
   // listening on slide show
