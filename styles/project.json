@@ -8,8 +8,8 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "cp -R styles/src/** lessons/src/styles",
-          "cp -R styles/src/** apps/fewd/styles"
+          "cp -R styles/src/** lessons/src/styles/",
+          "cp -R styles/src/** apps/fewd/styles/"
         ],
         "parallel": false
       }
