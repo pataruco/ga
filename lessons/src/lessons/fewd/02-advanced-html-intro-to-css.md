@@ -411,7 +411,7 @@ Using inline styles
 
 ### Absolute vs relative
 
-[CodePen](https://codepen.io/pataruco/pen/vzEKOO)
+<a href="https://codepen.io/pataruco/pen/vzEKOO" class="external-link" rel="noopener noreferrer" target="_blank" >CodePen</a>
 
 ---
 
@@ -627,7 +627,7 @@ h1 {
 
 #### Instructions
 
-1. Download the starter code zip [file](https://github.com/pataruco/fewd/raw/master/labs/cookie-recipe/cookie-recipe-starter-code.zip)
+1. Download the starter code zip <a class="download-link" href="https://github.com/pataruco/fewd/raw/master/labs/cookie-recipe/cookie-recipe-starter-code.zip">file</a>
 2. Open the file **instructions.md** and follow the steps
 
 #### CSS
