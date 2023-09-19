@@ -27,6 +27,9 @@ jobs:
       - name: Create timestamp
         run: pnpm nx run fewd:create-timestamp
 
+      - name: Build styles
+        run: pnpm nx run styles:build
+
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
