@@ -5,20 +5,39 @@ import '../../../styles/site/index.scss';
 import './box-model.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
-import { memo } from 'react';
+import { memo, useReducer } from 'react';
 import styled from 'styled-components';
 
-const StyledMainLayout = styled(MainLayout)`
-  main {
-    select,
-    button {
-      display: inline-block;
-      margin-left: 0.5rem;
-    }
+const StyledMainLayout = styled(MainLayout)``;
+
+type ValueOf<T> = T[keyof T];
+
+interface State {
+  boxSizing: 'content-box' | 'border-box';
+}
+
+interface Action {
+  type: string;
+  payload: ValueOf<State>;
+}
+
+const initialState: State = {
+  boxSizing: 'content-box',
+};
+
+const reducer = (state: State, action: Action) => {
+  switch (action.type) {
+    case 'change-box-sizing':
+      return { ...state, boxSizing: action.payload };
+
+    default:
+      throw new Error(`${action.type} is not a valid action type}`);
   }
-`;
+};
 
 async function Index() {
+  const [{ boxSizing }, dispatch] = useReducer(reducer, initialState);
+
   return (
     <StyledMainLayout>
       <h1>Interactive box-model demo</h1>
@@ -114,15 +133,36 @@ async function Index() {
           </div>
         </article>
         <aside className="box-controls">
-          <form>
-            <fieldset className="box-link-properties">
-              <label htmlFor="contentBox">content-box</label>
-              <input type="radio" name="boxSizing[]" id="contentBox" checked />
-              <label htmlFor="borderBox">border-box</label>
-              <input type="radio" name="boxSizing[]" id="borderBox" />
-            </fieldset>
+          <fieldset className="box-link-properties">
+            <label htmlFor="contentBox">content-box</label>
+            <input
+              type="radio"
+              name="boxSizing[]"
+              id="contentBox"
+              onChange={() => {
+                dispatch({
+                  type: 'change-box-sizing',
+                  payload: 'content-box',
+                });
+              }}
+              checked={boxSizing === 'content-box'}
+            />
+            <label htmlFor="borderBox">border-box</label>
+            <input
+              type="radio"
+              name="boxSizing[]"
+              id="borderBox"
+              onChange={() => {
+                dispatch({
+                  type: 'change-box-sizing',
+                  payload: 'border-box',
+                });
+              }}
+              checked={boxSizing === 'border-box'}
+            />
+          </fieldset>
 
-            <fieldset>
+          {/* <fieldset>
               <legend>Dimensions</legend>
 
               <label htmlFor="boxWidth">Width:</label>
@@ -145,9 +185,9 @@ async function Index() {
                 value="200"
                 step="5"
               />
-            </fieldset>
+            </fieldset> */}
 
-            <fieldset>
+          {/* <fieldset>
               <legend>Padding</legend>
 
               <fieldset className="box-link-properties">
@@ -213,8 +253,9 @@ async function Index() {
                 value="20"
                 step="5"
               />
-            </fieldset>
-            <fieldset>
+            </fieldset> */}
+
+          {/* <fieldset>
               <legend>Margin</legend>
 
               <fieldset className="box-link-properties">
@@ -281,8 +322,9 @@ async function Index() {
                 value="20"
                 step="5"
               />
-            </fieldset>
-            <fieldset>
+            </fieldset> */}
+
+          {/* <fieldset>
               <legend>Border</legend>
 
               <fieldset className="box-link-properties">
@@ -349,8 +391,7 @@ async function Index() {
                 value="10"
                 step="5"
               />
-            </fieldset>
-          </form>
+            </fieldset> */}
         </aside>
       </div>
     </StyledMainLayout>
