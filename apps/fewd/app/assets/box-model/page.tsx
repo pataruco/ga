@@ -10,33 +10,45 @@ import styled from 'styled-components';
 
 const StyledMainLayout = styled(MainLayout)``;
 
-type ValueOf<T> = T[keyof T];
-
 interface State {
   boxSizing: 'content-box' | 'border-box';
+  width: number;
 }
 
-interface Action {
-  type: string;
-  payload: ValueOf<State>;
-}
+const px = (value: number) => `${value}px`;
+
+type Action =
+  | {
+      type: 'set-box-sizing';
+      payload: State['boxSizing'];
+    }
+  | {
+      type: 'set-width';
+      payload: State['width'];
+    };
 
 const initialState: State = {
   boxSizing: 'content-box',
+  width: 200,
 };
 
-const reducer = (state: State, action: Action) => {
+const reducer = (state: State, action: Action): State => {
   switch (action.type) {
-    case 'change-box-sizing':
+    case 'set-box-sizing':
       return { ...state, boxSizing: action.payload };
 
+    case 'set-width':
+      return { ...state, width: action.payload };
+
     default:
-      throw new Error(`${action.type} is not a valid action type}`);
+      throw new Error(`${action} is not a valid action type}`);
   }
 };
 
 async function Index() {
-  const [{ boxSizing }, dispatch] = useReducer(reducer, initialState);
+  const [{ boxSizing, width }, dispatch] = useReducer(reducer, initialState);
+
+  console.log({ boxSizing, width });
 
   return (
     <StyledMainLayout>
@@ -122,8 +134,8 @@ async function Index() {
             <div
               className="box-inner box-property"
               data-property="content"
-              style={{ width: '200px', height: '200px' }}
-              data-width="200"
+              style={{ width: px(width), height: '200px' }}
+              data-width={width}
               data-height="200"
               data-hover-property="content"
             >
@@ -141,7 +153,7 @@ async function Index() {
               id="contentBox"
               onChange={() => {
                 dispatch({
-                  type: 'change-box-sizing',
+                  type: 'set-box-sizing',
                   payload: 'content-box',
                 });
               }}
@@ -152,9 +164,9 @@ async function Index() {
               type="radio"
               name="boxSizing[]"
               id="borderBox"
-              onChange={() => {
+              onChange={(event) => {
                 dispatch({
-                  type: 'change-box-sizing',
+                  type: 'set-box-sizing',
                   payload: 'border-box',
                 });
               }}
@@ -162,30 +174,37 @@ async function Index() {
             />
           </fieldset>
 
-          {/* <fieldset>
-              <legend>Dimensions</legend>
+          <fieldset>
+            <legend>Dimensions</legend>
 
-              <label htmlFor="boxWidth">Width:</label>
-              <input
-                type="range"
-                min="0"
-                max="500"
-                name="boxWidth"
-                id="boxWidth"
-                value="200"
-                step="5"
-              />
-              <label htmlFor="boxWidth">Height:</label>
-              <input
-                type="range"
-                min="0"
-                max="500"
-                name="boxHeight"
-                id="boxHeight"
-                value="200"
-                step="5"
-              />
-            </fieldset> */}
+            <label htmlFor="boxWidth">Width:</label>
+            <input
+              type="range"
+              min="0"
+              max="500"
+              name="boxWidth"
+              id="boxWidth"
+              value={width}
+              step="5"
+              onChange={(event) => {
+                event.preventDefault();
+                dispatch({
+                  type: 'set-width',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxWidth">Height:</label>
+            {/* <input
+              type="range"
+              min="0"
+              max="500"
+              name="boxHeight"
+              id="boxHeight"
+              value="200"
+              step="5"
+            /> */}
+          </fieldset>
 
           {/* <fieldset>
               <legend>Padding</legend>
