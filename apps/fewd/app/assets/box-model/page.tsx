@@ -10,9 +10,22 @@ import styled from 'styled-components';
 
 const StyledMainLayout = styled(MainLayout)``;
 
+type PropertyLink = 'none' | 'top-bottom' | 'right-left' | 'all';
+
 interface State {
   boxSizing: 'content-box' | 'border-box';
   width: number;
+  height: number;
+  paddingPropertyLink: PropertyLink;
+  paddingTop: number;
+  paddingRight: number;
+  paddingBottom: number;
+  paddingLeft: number;
+  marginPropertyLink: PropertyLink;
+  marginTop: number;
+  marginRight: number;
+  marginBottom: number;
+  marginLeft: number;
 }
 
 const px = (value: number) => `${value}px`;
@@ -25,11 +38,60 @@ type Action =
   | {
       type: 'set-width';
       payload: State['width'];
-    };
+    }
+  | {
+      type: 'set-height';
+      payload: State['height'];
+    }
+  | {
+      type: 'set-padding-property-link';
+      payload: State['paddingPropertyLink'];
+    }
+  | {
+      type: 'set-padding-top';
+      payload: State['paddingTop'];
+    }
+  | {
+      type: 'set-padding-right';
+      payload: State['paddingRight'];
+    }
+  | {
+      type: 'set-padding-bottom';
+      payload: State['paddingBottom'];
+    }
+  | {
+      type: 'set-padding-left';
+      payload: State['paddingLeft'];
+    }
+  | {
+      type: 'set-margin-property-link';
+      payload: State['marginPropertyLink'];
+    }
+  | {
+      type: 'set-margin-top';
+      payload: State['marginTop'];
+    }
+  | {
+      type: 'set-margin-right';
+      payload: State['marginRight'];
+    }
+  | { type: 'set-margin-bottom'; payload: State['marginBottom'] }
+  | { type: 'set-margin-left'; payload: State['marginLeft'] };
 
 const initialState: State = {
   boxSizing: 'content-box',
   width: 200,
+  height: 200,
+  paddingPropertyLink: 'none',
+  paddingTop: 20,
+  paddingRight: 20,
+  paddingBottom: 20,
+  paddingLeft: 20,
+  marginPropertyLink: 'none',
+  marginTop: 20,
+  marginRight: 20,
+  marginBottom: 20,
+  marginLeft: 20,
 };
 
 const reducer = (state: State, action: Action): State => {
@@ -40,15 +102,79 @@ const reducer = (state: State, action: Action): State => {
     case 'set-width':
       return { ...state, width: action.payload };
 
+    case 'set-height':
+      return { ...state, height: action.payload };
+
+    case 'set-padding-property-link':
+      return { ...state, paddingPropertyLink: action.payload };
+
+    case 'set-padding-top':
+      return { ...state, paddingTop: action.payload };
+
+    case 'set-padding-right':
+      return { ...state, paddingRight: action.payload };
+
+    case 'set-padding-bottom':
+      return { ...state, paddingBottom: action.payload };
+
+    case 'set-padding-left':
+      return { ...state, paddingLeft: action.payload };
+
+    case 'set-margin-property-link':
+      return { ...state, marginPropertyLink: action.payload };
+
+    case 'set-margin-top':
+      return { ...state, marginTop: action.payload };
+
+    case 'set-margin-right':
+      return { ...state, marginRight: action.payload };
+
+    case 'set-margin-bottom':
+      return { ...state, marginBottom: action.payload };
+
+    case 'set-margin-left':
+      return { ...state, marginLeft: action.payload };
+
     default:
       throw new Error(`${action} is not a valid action type}`);
   }
 };
 
 async function Index() {
-  const [{ boxSizing, width }, dispatch] = useReducer(reducer, initialState);
+  const [
+    {
+      boxSizing,
+      height,
+      marginBottom,
+      marginLeft,
+      marginPropertyLink,
+      marginRight,
+      marginTop,
+      paddingBottom,
+      paddingLeft,
+      paddingPropertyLink,
+      paddingRight,
+      paddingTop,
+      width,
+    },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
-  console.log({ boxSizing, width });
+  console.table({
+    boxSizing,
+    height,
+    marginBottom,
+    marginLeft,
+    marginPropertyLink,
+    marginRight,
+    marginTop,
+    paddingBottom,
+    paddingLeft,
+    paddingPropertyLink,
+    paddingRight,
+    paddingTop,
+    width,
+  });
 
   return (
     <StyledMainLayout>
@@ -187,7 +313,6 @@ async function Index() {
               value={width}
               step="5"
               onChange={(event) => {
-                event.preventDefault();
                 dispatch({
                   type: 'set-width',
                   payload: Number((event.target as HTMLInputElement).value),
@@ -195,153 +320,267 @@ async function Index() {
               }}
             />
             <label htmlFor="boxWidth">Height:</label>
-            {/* <input
+            <input
               type="range"
               min="0"
               max="500"
               name="boxHeight"
               id="boxHeight"
-              value="200"
+              value={height}
               step="5"
-            /> */}
+              onChange={(event) => {
+                event.preventDefault();
+                dispatch({
+                  type: 'set-height',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
           </fieldset>
 
-          {/* <fieldset>
-              <legend>Padding</legend>
+          <fieldset>
+            <legend>Padding</legend>
 
-              <fieldset className="box-link-properties">
-                <label htmlFor="linkPaddingNone">Link None</label>
-                <input
-                  type="radio"
-                  name="linkPadding[]"
-                  id="linkPaddingNone"
-                  checked
-                />
-                <label htmlFor="linkPaddingTopBottom">Link T/B</label>
-                <input
-                  type="radio"
-                  name="linkPadding[]"
-                  id="linkPaddingTopBottom"
-                />
-                <label htmlFor="linkPaddingRightLeft">Link R/L</label>
-                <input
-                  type="radio"
-                  name="linkPadding[]"
-                  id="linkPaddingRightLeft"
-                />
-                <label htmlFor="linkPaddingAll">All</label>
-                <input type="radio" name="linkPadding[]" id="linkPaddingAll" />
-              </fieldset>
-              <label htmlFor="boxPaddingTop">Padding Top:</label>
+            <fieldset className="box-link-properties">
+              <label htmlFor="linkPaddingNone">Link None</label>
               <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxPaddingTop"
-                id="boxPaddingTop"
-                value="20"
-                step="5"
+                type="radio"
+                name="linkPadding[]"
+                id="linkPaddingNone"
+                checked={paddingPropertyLink === 'none'}
+                onChange={() => {
+                  dispatch({
+                    type: 'set-padding-property-link',
+                    payload: 'none',
+                  });
+                }}
               />
-              <label htmlFor="boxPaddingRight">Padding Right:</label>
+              <label htmlFor="linkPaddingTopBottom">Link T/B</label>
               <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxPaddingRight"
-                id="boxPaddingRight"
-                value="20"
-                step="5"
+                type="radio"
+                name="linkPadding[]"
+                id="linkPaddingTopBottom"
+                checked={paddingPropertyLink === 'top-bottom'}
+                onChange={() => {
+                  dispatch({
+                    type: 'set-padding-property-link',
+                    payload: 'top-bottom',
+                  });
+                }}
               />
-              <label htmlFor="boxPaddingBottom">Padding Bottom:</label>
+              <label htmlFor="linkPaddingRightLeft">Link R/L</label>
               <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxPaddingBottom"
-                id="boxPaddingBottom"
-                value="20"
-                step="5"
+                type="radio"
+                name="linkPadding[]"
+                id="linkPaddingRightLeft"
+                checked={paddingPropertyLink === 'right-left'}
+                onChange={() => {
+                  dispatch({
+                    type: 'set-padding-property-link',
+                    payload: 'right-left',
+                  });
+                }}
               />
-              <label htmlFor="boxPaddingLeft">Padding Left:</label>
+              <label htmlFor="linkPaddingAll">All</label>
               <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxPaddingLeft"
-                id="boxPaddingLeft"
-                value="20"
-                step="5"
+                type="radio"
+                name="linkPadding[]"
+                id="linkPaddingAll"
+                checked={paddingPropertyLink === 'all'}
+                onChange={() => {
+                  dispatch({
+                    type: 'set-padding-property-link',
+                    payload: 'all',
+                  });
+                }}
               />
-            </fieldset> */}
+            </fieldset>
+            <label htmlFor="boxPaddingTop">Padding Top:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxPaddingTop"
+              id="boxPaddingTop"
+              value={paddingTop}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-padding-top',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxPaddingRight">Padding Right:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxPaddingRight"
+              id="boxPaddingRight"
+              value={paddingRight}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-padding-right',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxPaddingBottom">Padding Bottom:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxPaddingBottom"
+              id="boxPaddingBottom"
+              value={paddingBottom}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-padding-bottom',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxPaddingLeft">Padding Left:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxPaddingLeft"
+              id="boxPaddingLeft"
+              value={paddingLeft}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-padding-left',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+          </fieldset>
 
-          {/* <fieldset>
-              <legend>Margin</legend>
+          <fieldset>
+            <legend>Margin</legend>
 
-              <fieldset className="box-link-properties">
-                <label htmlFor="linkMarginNone">Link None</label>
-                <input
-                  type="radio"
-                  name="linkMargin[]"
-                  id="linkMarginNone"
-                  checked
-                />
-                <label htmlFor="linkMarginTopBottom">Link T/B</label>
-                <input
-                  type="radio"
-                  name="linkMargin[]"
-                  id="linkMarginTopBottom"
-                />
-                <label htmlFor="linkMarginRightLeft">Link R/L</label>
-                <input
-                  type="radio"
-                  name="linkMargin[]"
-                  id="linkMarginRightLeft"
-                />
-                <label htmlFor="linkMarginAll">All</label>
-                <input type="radio" name="linkMargin[]" id="linkMarginAll" />
-              </fieldset>
+            <fieldset className="box-link-properties">
+              <label htmlFor="linkMarginNone">Link None</label>
+              <input
+                type="radio"
+                name="linkMargin[]"
+                id="linkMarginNone"
+                checked={marginPropertyLink === 'none'}
+                onChange={() => {
+                  dispatch({
+                    type: 'set-margin-property-link',
+                    payload: 'none',
+                  });
+                }}
+              />
+              <label htmlFor="linkMarginTopBottom">Link T/B</label>
+              <input
+                type="radio"
+                name="linkMargin[]"
+                id="linkMarginTopBottom"
+                onChange={() => {
+                  dispatch({
+                    type: 'set-margin-property-link',
+                    payload: 'top-bottom',
+                  });
+                }}
+              />
+              <label htmlFor="linkMarginRightLeft">Link R/L</label>
+              <input
+                type="radio"
+                name="linkMargin[]"
+                id="linkMarginRightLeft"
+                onChange={() => {
+                  dispatch({
+                    type: 'set-margin-property-link',
+                    payload: 'right-left',
+                  });
+                }}
+              />
+              <label htmlFor="linkMarginAll">All</label>
+              <input
+                type="radio"
+                name="linkMargin[]"
+                id="linkMarginAll"
+                onChange={() => {
+                  dispatch({
+                    type: 'set-margin-property-link',
+                    payload: 'all',
+                  });
+                }}
+              />
+            </fieldset>
 
-              <label htmlFor="boxMarginTop">Margin Top:</label>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxMarginTop"
-                id="boxMarginTop"
-                value="20"
-                step="5"
-              />
-              <label htmlFor="boxMarginRight">Margin Right:</label>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxMarginRight"
-                id="boxMarginRight"
-                value="20"
-                step="5"
-              />
-              <label htmlFor="boxMarginBottom">Margin Bottom:</label>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxMarginBottom"
-                id="boxMarginBottom"
-                value="20"
-                step="5"
-              />
-              <label htmlFor="boxMarginLeft">Margin Left:</label>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                name="boxMarginLeft"
-                id="boxMarginLeft"
-                value="20"
-                step="5"
-              />
-            </fieldset> */}
+            <label htmlFor="boxMarginTop">Margin Top:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxMarginTop"
+              id="boxMarginTop"
+              value={marginTop}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-margin-top',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxMarginRight">Margin Right:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxMarginRight"
+              id="boxMarginRight"
+              value={marginRight}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-margin-right',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxMarginBottom">Margin Bottom:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxMarginBottom"
+              id="boxMarginBottom"
+              value={marginBottom}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-margin-bottom',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+            <label htmlFor="boxMarginLeft">Margin Left:</label>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              name="boxMarginLeft"
+              id="boxMarginLeft"
+              value={marginLeft}
+              step="5"
+              onChange={(event) => {
+                dispatch({
+                  type: 'set-margin-left',
+                  payload: Number((event.target as HTMLInputElement).value),
+                });
+              }}
+            />
+          </fieldset>
 
           {/* <fieldset>
               <legend>Border</legend>
