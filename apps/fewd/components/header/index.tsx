@@ -1,3 +1,5 @@
+'use client';
+
 import './style.scss';
 
 import { GALogoTextWhite } from '@ga/components';
@@ -95,9 +97,7 @@ function Header() {
   return (
     <header>
       <picture>
-        <Link href="/">
-          <GALogoTextWhite />
-        </Link>
+        <Link href="/">{<GALogoTextWhite />}</Link>
       </picture>
       <nav onMouseLeave={close}>
         <ul>

@@ -1,5 +1,3 @@
-'use client';
-
 import 'normalize.css';
 import '../styles/site/index.scss';
 
