@@ -2,20 +2,10 @@
 
 import 'normalize.css';
 import '../../../styles/site/index.scss';
+import './style.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import { memo, useState } from 'react';
-import styled from 'styled-components';
-
-const StyledMainLayout = styled(MainLayout)`
-  main {
-    select,
-    button {
-      display: inline-block;
-      margin-left: 0.5rem;
-    }
-  }
-`;
 
 const currentYear = new Date().getFullYear();
 
@@ -38,7 +28,7 @@ async function Index() {
   };
 
   return (
-    <StyledMainLayout>
+    <MainLayout>
       <h1>Random year generator</h1>
 
       <form onSubmit={handleOnSubmit}>
@@ -55,7 +45,7 @@ async function Index() {
           <strong> {randomYear(year)}</strong>
         </p>
       ) : null}
-    </StyledMainLayout>
+    </MainLayout>
   );
 }
 

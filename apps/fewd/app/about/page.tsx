@@ -1,14 +1,9 @@
-'use client';
-
 import 'normalize.css';
 import '../../styles/site/index.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import { memo } from 'react';
 import { Article, WithContext } from 'schema-dts';
-import styled from 'styled-components';
-
-const StyledMainLayout = styled(MainLayout)``;
 
 function Index() {
   const jsonLd: WithContext<Article> = {
@@ -25,7 +20,7 @@ function Index() {
   />;
 
   return (
-    <StyledMainLayout>
+    <MainLayout>
       <h1>About</h1>
       <p>I love to teach!</p>
 
@@ -143,7 +138,7 @@ function Index() {
           </a>
         </li>
       </ul>
-    </StyledMainLayout>
+    </MainLayout>
   );
 }
 
