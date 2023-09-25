@@ -1,59 +1,12 @@
-'use client';
-
 import 'normalize.css';
 import '../../../styles/site/index.scss';
+import './style.scss';
 
 import Link from 'next/link';
 import { memo } from 'react';
-import styled from 'styled-components';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import { routesByWeek } from '../../../curriculum/weeks';
-
-const StyledMainLayout = styled(MainLayout)`
-  main {
-    li {
-      margin-bottom: 0.75rem;
-    }
-
-    summary > h2 {
-      display: inline-block;
-    }
-
-    details ul {
-      margin: 0;
-    }
-
-    .notes {
-      li,
-      p {
-        margin-bottom: 0.75em;
-        line-height: 1.1;
-      }
-
-      kbd {
-        display: inline-block;
-        padding: 3px 5px;
-        font: 11px monospace;
-        line-height: normal;
-        line-height: 10px;
-        color: #444d56;
-        vertical-align: middle;
-        background-color: #fafbfc;
-        border-bottom-color: #d1d5da;
-        border: 1px solid #d1d5da;
-        border-radius: 6px;
-        box-shadow: inset 0 -1px 0 #d1d5da;
-      }
-    }
-
-    .homework {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-top: 1.06rem;
-    }
-  }
-`;
 
 interface WeekPageProps {
   params: {
@@ -114,7 +67,7 @@ async function Index({ params: { slug } }: WeekPageProps) {
   const { default: week } = await import(`../../../curriculum/weeks/${slug}`);
 
   return (
-    <StyledMainLayout>
+    <MainLayout>
       {week ? (
         <>
           <h1>Week: {slug}</h1>
@@ -164,7 +117,7 @@ async function Index({ params: { slug } }: WeekPageProps) {
           ) : null}
         </>
       ) : null}
-    </StyledMainLayout>
+    </MainLayout>
   );
 }
 

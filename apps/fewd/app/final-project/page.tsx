@@ -1,31 +1,13 @@
-'use client';
-
 import 'normalize.css';
 import '../../styles/site/index.scss';
+import './style.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import { memo } from 'react';
-import styled from 'styled-components';
-
-const StyledMainLayout = styled(MainLayout)`
-  main {
-    .italic {
-      font-style: italic;
-    }
-
-    code {
-      padding: 0.2em 0.4em;
-      margin: 0;
-      font-size: 85%;
-      background-color: rgba(27, 31, 35, 0.05);
-      border-radius: 6px;
-    }
-  }
-`;
 
 async function Index() {
   return (
-    <StyledMainLayout>
+    <MainLayout>
       <article>
         <h1>FEWD final project brief</h1>
         <p>
@@ -131,7 +113,7 @@ async function Index() {
           </p>
         </section>
       </article>
-    </StyledMainLayout>
+    </MainLayout>
   );
 }
 

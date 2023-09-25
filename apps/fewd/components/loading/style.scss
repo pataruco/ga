@@ -1,0 +1,14 @@
+span.rotate {
+  animation: spin 2s linear infinite;
+  font-size: 2rem;
+  margin: 0 0.625rem;
+  transform-origin: center;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
