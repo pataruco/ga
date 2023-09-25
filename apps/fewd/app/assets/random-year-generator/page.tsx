@@ -11,7 +11,11 @@ const currentYear = new Date().getFullYear();
 
 const years = Array.from({ length: 80 }, (_, i) => currentYear - i - 15);
 
-const options = years.map((year) => <option value={year}>{year}</option>);
+const options = years.map((year) => (
+  <option value={year} key={year}>
+    {year}
+  </option>
+));
 
 const randomYear = (year: number) =>
   Math.floor(Math.random() * (currentYear - year + 1)) + year;
