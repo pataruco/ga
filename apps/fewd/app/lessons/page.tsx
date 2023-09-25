@@ -1,24 +1,14 @@
-'use client';
-
 import 'normalize.css';
 import '../../styles/site/index.scss';
+import './style.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import { about, author } from 'apps/fewd/utils/metadata';
 import Link from 'next/link';
 import { memo } from 'react';
 import { Course, WithContext } from 'schema-dts';
-import styled from 'styled-components';
 
 import { lessons } from '../../curriculum/lessons';
-
-const StyledMainLayout = styled(MainLayout)`
-  main {
-    li {
-      margin-bottom: 0.75rem;
-    }
-  }
-`;
 
 async function Index() {
   const jsonLd: WithContext<Course> = {
@@ -36,7 +26,7 @@ async function Index() {
   };
 
   return (
-    <StyledMainLayout>
+    <MainLayout>
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: Parse jsonLd
@@ -51,7 +41,7 @@ async function Index() {
           </li>
         ))}
       </ol>
-    </StyledMainLayout>
+    </MainLayout>
   );
 }
 
