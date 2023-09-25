@@ -2,8 +2,8 @@
 
 import './style.scss';
 
-import Footer from 'components/src/footer';
 import { ReactNode, memo } from 'react';
+import Footer from '../footer';
 
 import Header from '../header';
 import MobileMenu from '../mobile-menu';
