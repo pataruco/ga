@@ -11,9 +11,14 @@ main {
     margin: 0;
   }
 
-  .notes {
-    li,
+  footer.notes {
+    background-color: transparent;
+    display: unset;
+    color: var(--black);
+    padding: 0;
     p {
+      color: currentColor;
+      text-align: start;
       margin-bottom: 0.75em;
       line-height: 1.1;
     }
