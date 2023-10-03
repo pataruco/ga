@@ -413,9 +413,11 @@ Are self closing elements
 
 ## Code along
 
-### [Press release exercise ](https://github.com/pataruco/fewd/raw/master/labs/press-release/press-release-starter-code.zip)
+<h3>
+  <a href="https://github.com/pataruco/fewd/raw/master/labs/press-release/press-release-starter-code.zip" class="download-link">Press release exercise</a>
+</h3>
 
-> [solution](https://github.com/pataruco/fewd/raw/master/labs/press-release/press-release-solution-code.zip)
+<a href="https://github.com/pataruco/fewd/raw/master/labs/press-release/press-release-solution-code.zip" class="download-link">solution</a>
 
 ---
 

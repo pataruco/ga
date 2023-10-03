@@ -1,6 +1,6 @@
 'use client';
 
-import 'normalize.css';
+import '../../../styles/site/index.scss';
 import '../../../styles/slides/index.scss';
 
 import { useRouter } from 'next/navigation';
