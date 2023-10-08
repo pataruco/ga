@@ -11,4 +11,8 @@ export const bonusLessons = [
     content: 'HTML tables',
     link: 'bonus-lesson-tables',
   },
+  {
+    content: 'Machine learning',
+    link: 'bonus-lesson-machine-learning',
+  },
 ];
