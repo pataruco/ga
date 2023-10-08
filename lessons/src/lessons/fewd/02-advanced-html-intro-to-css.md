@@ -443,7 +443,7 @@ p {
 }
 ```
 
-[Full list of color names](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords)
+[Full list of color names](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
 
 ---
 
