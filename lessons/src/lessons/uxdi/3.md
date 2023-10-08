@@ -187,7 +187,7 @@ print(model.predict(X_new))  # Outputs [[ 5.5 ]]
 
 ---
 
-## Machine learning
+## Machine Learning
 
 Prediction with ([K Nearest Neighbour Model](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm))
 
@@ -195,7 +195,7 @@ Prediction with ([K Nearest Neighbour Model](https://en.wikipedia.org/wiki/K-nea
 
 ---
 
-## Machine learning
+## Machine Learning
 
 Let's calculate the error of our models
 
@@ -228,7 +228,7 @@ print(czech_rmse) # Outputs 1.0
 
 ---
 
-## Machine learning
+## Machine Learning
 
 Now, let's contrast the error of our models
 
@@ -310,7 +310,7 @@ Generalise the data with the model
 
 ---
 
-## Machine learning
+## Machine Learning
 
 Now, let's contrast the error of our models
 
