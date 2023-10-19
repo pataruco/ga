@@ -2,7 +2,7 @@
 
 ## Design
 
-![blog-design](./relaxr-blog.jpg)
+![blog-design](./images/relaxr-blog.jpg)
 
 ## Colours
 
