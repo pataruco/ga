@@ -1,6 +1,7 @@
 header {
   background-color: var(--dark-blue);
   padding: calc(2 * var(--base-space));
+  margin-bottom: calc(3 * var(--base-space));
 
   .wrapper {
     display: flex;
