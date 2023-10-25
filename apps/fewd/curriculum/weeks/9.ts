@@ -53,6 +53,10 @@ export const week9: Week = {
         'Complete Egghead course: Start Building Accessible Web Applications Today',
       link: 'https://egghead.io/courses/start-building-accessible-web-applications-today',
     },
+    {
+      content: "Complete Code Academy's Learn Git course",
+      link: 'https://www.codecademy.com/learn/learn-git',
+    },
   ],
 };
 

@@ -43,6 +43,10 @@ export const week5: Week = {
       content: "Start Code Academy's Introduction to JavaScript",
       link: 'https://www.codecademy.com/learn/introduction-to-javascript',
     },
+    {
+      content: 'EXplore DOM events',
+      link: 'https://domevents.dev/',
+    },
   ],
 };
 

@@ -32,8 +32,8 @@ export const week3: Week = {
       link: 'https://alistapart.com/article/css-positioning-101',
     },
     {
-      content: "Complete Code Academy's Learn Git course",
-      link: 'https://www.codecademy.com/learn/learn-git',
+      content: 'Learn CSS positioning',
+      link: 'https://ishadeed.com/article/learn-css-positioning/#demo',
     },
   ],
 };
