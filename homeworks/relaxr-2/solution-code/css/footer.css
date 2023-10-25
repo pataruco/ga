@@ -1,0 +1,30 @@
+.footer {
+  background-color: var(--almost-black);
+  padding: 70px 0 40px;
+  text-align: center;
+
+  p {
+    &:first-of-type {
+      margin-top: 0;
+      margin-bottom: 60px;
+      font-size: 3rem;
+      font-weight: var(--extra-bold);
+      color: var(--yellow);
+    }
+    &:last-of-type {
+      margin-top: 80px;
+      font-size: 1rem;
+      font-weight: var(--semi-bold);
+      color: var(--white);
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 40px;
+
+    &:first-of-type {
+      margin-right: 55px;
+    }
+  }
+}

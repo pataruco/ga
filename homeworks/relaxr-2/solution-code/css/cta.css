@@ -1,0 +1,17 @@
+.cta {
+  background-color: var(--yellow);
+  padding: 30px 0;
+
+  button {
+    display: block;
+    appearance: none;
+    margin: 0 auto;
+    padding: var(--base-space) calc(3 * var(--base-space));
+    border-radius: 5px;
+    border: 1px solid var(--dark-blue);
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: var(--semi-bold);
+  }
+}
