@@ -1,8 +1,15 @@
 main {
   flex-basis: 100%;
   max-width: 700px;
+  margin-bottom: 120px;
 
   article {
+    border-bottom: 1px solid var(--dark-blue);
+
+    &:not(:first-of-type) {
+      padding-top: 40px;
+    }
+
     h2 {
       margin-top: 0;
       font-size: 2.5rem;
@@ -15,6 +22,7 @@ main {
       font-weight: var(--light);
       color: var(--light-gray);
       line-height: 1.25;
+      margin-bottom: 60px;
       &::first-letter {
         font-size: 4rem;
         font-weight: var(--semi-bold);
@@ -30,6 +38,7 @@ main {
       color: var(--dark-blue);
       font-size: 1.5rem;
       font-weight: var(--semi-bold);
+      margin-bottom: 40px;
       &::after {
         content: ' >';
       }
@@ -50,7 +59,7 @@ aside {
     font-size: 2rem;
     font-weight: var(--extra-bold);
     margin-top: 0;
-    margin-bottom: var(--base-space);
+    margin-bottom: calc(0.75 * var(--base-space));
   }
 
   ul {
@@ -63,5 +72,19 @@ aside {
     text-decoration: none;
     color: var(--dark-blue);
     font-size: 1.5rem;
+  }
+
+  p {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  section {
+    margin-bottom: calc(2 * var(--base-space));
+    a {
+      font-weight: var(--semi-bold);
+      margin-bottom: calc(2 * var(--base-space));
+    }
   }
 }
