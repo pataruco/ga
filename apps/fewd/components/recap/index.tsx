@@ -52,10 +52,23 @@ const Recap = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="thing">thing we learnt</label>
-      <input type="text" name="thing" onChange={handleOnChange} value={thing} />
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="thing">thing we learnt</label>
+        <input
+          type="text"
+          name="thing"
+          onChange={handleOnChange}
+          value={thing}
+        />
+      </form>
+
+      <ul>
+        {things.map((item, i) => (
+          <li key={`${item}${i}`}>{item}</li>
+        ))}
+      </ul>
+    </>
   );
 };
 
