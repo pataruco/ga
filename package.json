@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "firebase": "^10.7.1",
     "next": "13.4.1",
     "normalize.css": "^8.0.1",
     "pnpm": "^8.7.0",

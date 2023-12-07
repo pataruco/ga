@@ -1,15 +1,16 @@
 'use client';
 
-import { useReducer } from 'react';
+import { db } from 'apps/fewd/libs/db';
+import { onValue, push, ref } from 'firebase/database';
+import { useEffect, useReducer } from 'react';
+
+type Thing = Record<string, string>;
 
 interface State {
-  thing: string;
-  things: string[];
+  things: Thing[];
 }
 
-type Action =
-  | { type: 'add-thing'; payload: string }
-  | { type: 'set-thing'; payload: string };
+type Action = { type: 'add-thing'; payload: Thing };
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -17,13 +18,6 @@ const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         things: [action.payload, ...state.things],
-        thing: '',
-      };
-
-    case 'set-thing':
-      return {
-        ...state,
-        thing: action.payload,
       };
 
     default:
@@ -32,42 +26,41 @@ const reducer = (state: State, action: Action): State => {
 };
 
 const initialState: State = {
-  thing: '',
   things: [],
 };
 
 const Recap = () => {
-  const [{ thing, things }, dispatch] = useReducer(reducer, initialState);
+  const thingsWeLearntDb = ref(db, 'things-we-learnt');
 
-  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      target: { value },
-    } = event;
-    dispatch({ type: 'set-thing', payload: value });
-  };
+  const [{ things }, dispatch] = useReducer(reducer, initialState);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    dispatch({ type: 'add-thing', payload: thing });
+    const formData = new FormData(event.currentTarget);
+    push(thingsWeLearntDb, formData.get('thing'));
   };
+
+  useEffect(() => {
+    return onValue(thingsWeLearntDb, (snapshot) => {
+      const data = snapshot.val();
+
+      console.log({ data });
+      if (snapshot.exists()) {
+        Object.entries(data).map(([key, value]) => {
+          dispatch({ type: 'add-thing', payload: { [key]: value } as Thing });
+        });
+      }
+    });
+  }, []);
+
+  console.log({ things });
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <label htmlFor="thing">thing we learnt</label>
-        <input
-          type="text"
-          name="thing"
-          onChange={handleOnChange}
-          value={thing}
-        />
+        <input type="text" name="thing" />
       </form>
-
-      <ul>
-        {things.map((item, i) => (
-          <li key={`${item}${i}`}>{item}</li>
-        ))}
-      </ul>
     </>
   );
 };
