@@ -1,5 +1,7 @@
 'use client';
 
+import './style.scss';
+
 import { db } from 'apps/fewd/libs/db';
 import { onValue, push, ref, set } from 'firebase/database';
 import { useEffect, useReducer } from 'react';
@@ -28,7 +30,7 @@ const ThingItem: React.FC<ThingItemProps> = ({ thing }) => {
   const [[key, value]] = Object.entries(thing);
   return (
     <li>
-      {value}
+      <span>{value}</span>
       <button type="button" onClick={handleClickDelete} data-id={key}>
         delete
       </button>
@@ -104,20 +106,24 @@ const Recap = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="thing">thing we learnt</label>
+        <label htmlFor="thing">What you learnt?</label>
         <input
           type="text"
           name="thing"
           onChange={handleOnChange}
           value={inputValue}
+          required
+          min={2}
+          id="thing"
         />
+        <button type="submit">submit</button>
       </form>
 
-      <ul>
+      <ol>
         {things.map((thing, index) => (
           <ThingItem thing={thing} key={Object.keys(thing).join() + index} />
         ))}
-      </ul>
+      </ol>
     </>
   );
 };
