@@ -38,9 +38,12 @@ const ThingItem: React.FC<ThingItemProps> = ({ thing }) => {
 
 interface State {
   things: Thing[];
+  inputValue: string;
 }
 
-type Action = { type: 'set-things'; payload: Thing[] };
+type Action =
+  | { type: 'set-things'; payload: Thing[] }
+  | { type: 'set-input-value'; payload: string };
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -50,6 +53,12 @@ const reducer = (state: State, action: Action): State => {
         things: [...action.payload],
       };
 
+    case 'set-input-value':
+      return {
+        ...state,
+        inputValue: action.payload,
+      };
+
     default:
       throw Error(`No ${JSON.stringify(action)} does not exists`);
   }
@@ -57,17 +66,26 @@ const reducer = (state: State, action: Action): State => {
 
 const initialState: State = {
   things: [],
+  inputValue: '',
 };
 
 const Recap = () => {
   const thingsWeLearntDb = ref(db, DB_NAME);
 
-  const [{ things }, dispatch] = useReducer(reducer, initialState);
+  const [{ things, inputValue }, dispatch] = useReducer(reducer, initialState);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    push(thingsWeLearntDb, formData.get('thing'));
+    push(thingsWeLearntDb, inputValue);
+    dispatch({ type: 'set-input-value', payload: '' });
+  };
+
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      currentTarget: { value },
+    } = event;
+
+    dispatch({ type: 'set-input-value', payload: value });
   };
 
   useEffect(() => {
@@ -87,7 +105,12 @@ const Recap = () => {
     <>
       <form onSubmit={handleSubmit}>
         <label htmlFor="thing">thing we learnt</label>
-        <input type="text" name="thing" />
+        <input
+          type="text"
+          name="thing"
+          onChange={handleOnChange}
+          value={inputValue}
+        />
       </form>
 
       <ul>
