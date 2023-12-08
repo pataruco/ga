@@ -4,7 +4,37 @@ import { db } from 'apps/fewd/libs/db';
 import { onValue, push, ref, set } from 'firebase/database';
 import { useEffect, useReducer } from 'react';
 
+const DB_NAME = 'things-we-learnt';
+
 type Thing = Record<string, string>;
+
+interface ThingItemProps {
+  thing: Thing;
+}
+
+const ThingItem: React.FC<ThingItemProps> = ({ thing }) => {
+  const handleClickDelete = async (
+    event: React.MouseEvent<HTMLButtonElement>,
+  ) => {
+    const {
+      currentTarget: {
+        dataset: { id },
+      },
+    } = event;
+
+    await set(ref(db, `${DB_NAME}/${id}`), null);
+  };
+
+  const [[key, value]] = Object.entries(thing);
+  return (
+    <li>
+      {value}
+      <button type="button" onClick={handleClickDelete} data-id={key}>
+        delete
+      </button>
+    </li>
+  );
+};
 
 interface State {
   things: Thing[];
@@ -30,7 +60,7 @@ const initialState: State = {
 };
 
 const Recap = () => {
-  const thingsWeLearntDb = ref(db, 'things-we-learnt');
+  const thingsWeLearntDb = ref(db, DB_NAME);
 
   const [{ things }, dispatch] = useReducer(reducer, initialState);
 
@@ -53,18 +83,6 @@ const Recap = () => {
     });
   }, [things]);
 
-  const handleClickDelete = async (
-    event: React.MouseEvent<HTMLButtonElement>,
-  ) => {
-    const {
-      currentTarget: {
-        dataset: { id },
-      },
-    } = event;
-
-    await set(ref(db, `things-we-learnt/${id}`), null);
-  };
-
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -73,17 +91,9 @@ const Recap = () => {
       </form>
 
       <ul>
-        {things.map((thing, index) => {
-          const [[key, value]] = Object.entries(thing);
-          return (
-            <li key={key + index}>
-              {value}
-              <button type="button" onClick={handleClickDelete} data-id={key}>
-                delete
-              </button>
-            </li>
-          );
-        })}
+        {things.map((thing, index) => (
+          <ThingItem thing={thing} key={Object.keys(thing).join() + index} />
+        ))}
       </ul>
     </>
   );
