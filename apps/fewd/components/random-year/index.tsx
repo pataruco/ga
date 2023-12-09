@@ -1,11 +1,6 @@
-'use client';
-
-import 'normalize.css';
-import '../../../styles/site/index.scss';
 import './style.scss';
 
-import MainLayout from 'apps/fewd/components/main-layout';
-import { memo, useState } from 'react';
+import { useState } from 'react';
 
 const currentYear = new Date().getFullYear();
 
@@ -20,7 +15,7 @@ const options = years.map((year) => (
 const randomYear = (year: number) =>
   Math.floor(Math.random() * (currentYear - year + 1)) + year;
 
-async function Index() {
+const RandomYear = () => {
   const [year, setYear] = useState<number | undefined>(undefined);
   const yearId = 'years';
 
@@ -32,9 +27,7 @@ async function Index() {
   };
 
   return (
-    <MainLayout>
-      <h1>Random year generator</h1>
-
+    <>
       <form onSubmit={handleOnSubmit}>
         <label htmlFor={yearId}>Select your year of birth</label>
         <select name={yearId} id={yearId}>
@@ -49,8 +42,8 @@ async function Index() {
           <strong> {randomYear(year)}</strong>
         </p>
       ) : null}
-    </MainLayout>
+    </>
   );
-}
+};
 
-export default memo(Index);
+export default RandomYear;

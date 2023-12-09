@@ -33,7 +33,7 @@ In this lesson, you will:
 
 ## Tell us a highlight from a random year
 
-- [Go to the random year generator](https://fewd.pataruco.dev/assets/random-year-generator)
+- [Go to the random year generator](https://fewd.pataruco.dev/resources/random-year)
 - Enter your year of birth
 - Tell us your name?
 - Tell us a highlight from your life that happened that year

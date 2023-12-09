@@ -24,7 +24,8 @@ class: frontpage
 
 Let's list that, shall we?!
 
-[Technologies we learnt](https://pataruco.github.io/ga-technologies/)
+
+- [Go to the random year generator](https://fewd.pataruco.dev/resources/things-we-learnt)
 
 ---
 
