@@ -19,9 +19,7 @@ const ThingItem: React.FC<ThingItemProps> = ({ thing }) => {
     event: React.MouseEvent<HTMLButtonElement>,
   ) => {
     const {
-      currentTarget: {
-        dataset: { id },
-      },
+      currentTarget: { dataset: { id } },
     } = event;
 
     await set(ref(db, `${DB_NAME}/${id}`), null);
