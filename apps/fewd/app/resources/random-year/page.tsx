@@ -1,16 +1,19 @@
+'use client';
+
 import 'normalize.css';
 import '../../../styles/site/index.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
-import Recap from 'apps/fewd/components/recap';
+import RandomYear from 'apps/fewd/components/random-year';
+import { memo } from 'react';
 
 async function Index() {
   return (
     <MainLayout>
-      <h1>Things we learnt</h1>
-      <Recap />
+      <h1>Random year</h1>
+      <RandomYear />
     </MainLayout>
   );
 }
 
-export default Index;
+export default memo(Index);
