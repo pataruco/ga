@@ -7,3 +7,5 @@ tmp
 # Next.js
 .next
 .vercel
+
+.nx

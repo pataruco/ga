@@ -3,13 +3,13 @@ description: 'Set environment and install dependencies'
 runs:
   using: composite
   steps:
-    - uses: pnpm/action-setup@v2.2.4
+    - uses: pnpm/action-setup@v2
       with:
-        version: 8.7.4
+        version: 8.14.1
 
     - uses: actions/setup-node@v3
       with:
-        node-version: lts/hydrogen
+        node-version: lts/iron
         cache: pnpm
 
     - name: Install dependencies 📦
