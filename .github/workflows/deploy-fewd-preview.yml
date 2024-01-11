@@ -19,6 +19,8 @@ jobs:
     environment:
       name: preview
       url: ${{ steps.deploy.outputs.url }}
+    outputs:
+      url: ${{ steps.deploy.outputs.url }}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -53,4 +55,4 @@ jobs:
 
       - name: Deploy project artifacts to Vercel
         id: deploy
-        run: echo "url=vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_OUTPUT
+        run: echo "url=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})" >> $GITHUB_OUTPUT
