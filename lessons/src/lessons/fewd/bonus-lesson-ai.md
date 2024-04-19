@@ -141,6 +141,14 @@ However, probability isn’t the only factor - often times lower probability opt
 
 ---
 
+class: bg-teal, fullscreen
+
+# What Else Can LLMs Generate?
+
+---
+
+---
+
 class: frontpage
 
 <div>
