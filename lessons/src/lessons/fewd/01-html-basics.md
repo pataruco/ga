@@ -33,7 +33,7 @@ In this lesson, you will:
 
 ## Tell us a highlight from a random year
 
-- [Go to the random year generator](https://fewd.pataruco.dev/resources/random-year)
+- <a  href="https://fewd.pataruco.dev/resources/random-year" target="_blank" rel="noopener noreferrer"  class="external-link">Go to the random year generator</a>       
 - Enter your year of birth
 - Tell us your name?
 - Tell us a highlight from your life that happened that year
@@ -120,7 +120,6 @@ In this lesson, you will:
 - [Slack](https://slack.com/intl/en-gb/downloads/) - for group communication
 - [VSCode](https://code.visualstudio.com/Download) - a code editor
 - [Google Chrome](https://www.google.com/intl/en_uk/chrome/) / [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/) - web browser
-- [Google Drive](https://drive.google.com) - for file sharing
 - [CodePen](https://codepen.io/) - online code playground
 
 ---

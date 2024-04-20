@@ -451,21 +451,34 @@ p {
 
 ### Hexadecimal values
 
+.row[
+  .col[
 Each hex value consists of a hash/pound symbol (`#`) followed by six hexadecimal numbers, each of which can take a value between 0 and f (which represents 15) — so
 **0123456789abcdef**. Each pair of values represents one of the channels — **red**, **green** and **blue** — and allows us to specify any of the 256
 available values for each (16 x 16 = 256.)
 
+  ]
+  .col[
 ```css
 p:nth-child(1) {
-  background-color: #ff0000; /* equivalent to the red keyword */
+/* equivalent to the red keyword */
+  background-color: #ff0000; 
 }
 p:nth-child(2) {
-  background-color: #0000ff; /* equivalent to the blue keyword */
+/* equivalent to the blue keyword */
+  background-color: #0000ff; 
 }
 p:nth-child(3) {
-  background-color: #e0b0ff; /* has no exact keyword equivalent */
+/* has no exact keyword equivalent */
+  background-color: #e0b0ff; 
 }
 ```
+
+  ]
+]
+
+
+
 
 ---
 
@@ -473,22 +486,34 @@ p:nth-child(3) {
 
 ### RGB
 
+.row[
+  .col[
+
 An RGB value is a function `rgb()` which is given three parameters that represent the `red`, `green` and `blue` channel values of the colors, in much the same way as hex values.
 
 The difference with RGB is that each channel is represented not by two hex
 digits, but by a decimal number between **0** and **255**.
 
+  ]
+  .col[
 ```css
 p:nth-child(1) {
-  background-color: rgb(255, 0, 0); /* equivalent to the red keyword */
+/* equivalent to the red keyword */
+  background-color: rgb(255, 0, 0); 
 }
 p:nth-child(2) {
-  background-color: rgb(0, 0, 255); /* equivalent to the blue keyword */
+/* equivalent to the blue keyword */
+  background-color: rgb(0, 0, 255); 
 }
 p:nth-child(3) {
-  background-color: rgb(224, 176, 255); /* has no exact keyword equivalent */
+/* has no exact keyword equivalent */
+  background-color: rgb(224, 176, 255); 
 }
 ```
+
+  ]
+]
+
 
 ---
 
@@ -496,6 +521,8 @@ p:nth-child(3) {
 
 ### HSL
 
+.row[
+  .col[
 The `hsl()` function accepts **hue**, **saturation**, and **lightness** values, which are used to distinguish between the 16.7 million colors, but in a different way:
 
 - **Hue**: the base shade of the color. This takes a value between 0 and
@@ -503,18 +530,29 @@ The `hsl()` function accepts **hue**, **saturation**, and **lightness** values, 
 
 - **Saturation**: how saturated is the color? This takes a value from 0-100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation
 - **Lightness**: how light or bright is the color? This takes a value from 0-100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white)
+  ]
+  .col[
 
 ```css
 p:nth-child(1) {
-  background-color: hsl(0, 100%, 50%); /* equivalent to the red keyword */
+/* equivalent to the red keyword */
+  background-color: hsl(0, 100%, 50%); 
 }
 p:nth-child(2) {
-  background-color: hsl(240, 100%, 50%); /* equivalent to the blue */
+/* equivalent to the blue */
+  background-color: hsl(240, 100%, 50%); 
 }
 p:nth-child(3) {
-  background-color: hsl(276, 100%, 85%); /* has no exact keyword equivalent */
+/* has no exact keyword equivalent */
+  background-color: hsl(276, 100%, 85%); 
 }
-```
+```    
+  ]
+]
+
+
+
+
 
 ---
 
@@ -651,7 +689,7 @@ Here are some examples
 
 - [Darth Vader](https://www.giraffecvs.co.uk/wp-content/uploads/2013/05/CVDarthVader_rev8-page-001.jpg)
 - [Darth Vader](http://uk.businessinsider.com/what-darth-vaders-resume-would-be-2015-12)
-- [Disney characters](https://ohmy.disney.com/movies/2017/02/27/imaginary-disney-character-resumes/)
+- [Disney characters](https://iletaitunepub.fr/wp/wp-content/uploads/2017/03/cv-personnages-disney-2.jpg)
 
 ---
 
@@ -682,7 +720,7 @@ Here are some examples
 ### Submission
 
 - Create a folder using the following convention `name-surename-week-1`, e.g `pedro-martin-week-1`
-- Submit your work via Google Drive (even it's not finished) by **Sunday** 11:59 PM to the instructors
+- Submit your work via Slack by **Sunday** 11:59 PM to the instructors
 
 ---
 
