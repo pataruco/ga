@@ -3,7 +3,6 @@ import '../../styles/site/index.scss';
 import './style.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
-import { memo } from 'react';
 
 async function Index() {
   return (
@@ -117,4 +116,4 @@ async function Index() {
   );
 }
 
-export default memo(Index);
+export default Index;

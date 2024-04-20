@@ -1,11 +1,12 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "nxCloudAccessToken": "MWE1MzZiNjYtZmMxNC00MGIzLTlmNDctZjEwM2NmZmIzZThlfHJlYWQtd3JpdGU=",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "MWE1MzZiNjYtZmMxNC00MGIzLTlmNDctZjEwM2NmZmIzZThlfHJlYWQtd3JpdGU="
+        "accessToken": "MWE1MzZiNjYtZmMxNC00MGIzLTlmNDctZjEwM2NmZmIzZThlfHJlYWQtd3JpdGU=",
+        "skipNxCache": true
       }
     }
   },
@@ -54,7 +55,5 @@
       }
     }
   },
-  "workspaceLayout": {
-    "projectNameAndRootFormat": "as-provided"
-  }
+  "neverConnectToCloud": true
 }

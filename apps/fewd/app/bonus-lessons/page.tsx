@@ -4,7 +4,6 @@ import './style.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import Link from 'next/link';
-import { memo } from 'react';
 
 import { bonusLessons } from '../../curriculum/bonus-lessons';
 
@@ -23,4 +22,4 @@ async function Index() {
   );
 }
 
-export default memo(Index);
+export default Index;
