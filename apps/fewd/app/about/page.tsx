@@ -2,7 +2,6 @@ import 'normalize.css';
 import '../../styles/site/index.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
-import { memo } from 'react';
 import { Article, WithContext } from 'schema-dts';
 
 function Index() {
@@ -109,16 +108,7 @@ function Index() {
             LinkedIn
           </a>
         </li>
-        <li>
-          <a
-            href="https://twitter.com/pataruco"
-            target="_blank"
-            rel="noreferrer"
-            className="external-link"
-          >
-            X
-          </a>
-        </li>
+
         <li>
           <a
             href="mailto:pedro.martin@ga.co?subject=Hello Pedro &#128075;"
@@ -142,4 +132,4 @@ function Index() {
   );
 }
 
-export default memo(Index);
+export default Index;
