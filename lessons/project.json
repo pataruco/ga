@@ -72,12 +72,7 @@
     "copyFewdLessons": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "rm -rfd apps/fewd/public",
-          "mkdir -p apps/fewd/public/slides",
-          "sleep 1",
-          "cp -R lessons/src/lessons/fewd/** apps/fewd/public/slides/ || echo 'done'"
-        ]
+        "commands": ["pnpm zx ./scripts/copy-fewd-lessons.mjs"]
       }
     }
   }
