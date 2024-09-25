@@ -21,6 +21,7 @@ In this lesson, you will:
 
 ## Meet the Team - Pedro Martin
 
+- Tech lead in previous roles.
 - Senior Software engineer at Red Badger.
 - Former science teacher.
 - General Assembly alumni 2015.
@@ -33,7 +34,7 @@ In this lesson, you will:
 
 ## Tell us a highlight from a random year
 
-- <a  href="https://fewd.pataruco.dev/resources/random-year" target="_blank" rel="noopener noreferrer"  class="external-link">Go to the random year generator</a>       
+- <a  href="https://fewd.pataruco.dev/resources/random-year" target="_blank" rel="noopener noreferrer"  class="external-link">Go to the random year generator</a>
 - Enter your year of birth
 - Tell us your name?
 - Tell us a highlight from your life that happened that year
