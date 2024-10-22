@@ -30,7 +30,7 @@ class: frontpage
 
 Checkout these **fixed** sites
 
-- [Space Jam](https://spacejam.com/)
+- [Space Jam](https://www.spacejam.com/1996/)
 - [Ling's Cars](https://www.lingscars.com/)
 
 ---
