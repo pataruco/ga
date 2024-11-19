@@ -15,4 +15,8 @@ export const bonusLessons = [
     content: 'Machine learning',
     link: 'bonus-lesson-machine-learning',
   },
+  {
+    content: 'Sass',
+    link: 'bonus-lesson-sass',
+  },
 ];

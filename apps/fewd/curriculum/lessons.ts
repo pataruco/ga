@@ -30,7 +30,7 @@ export const lessons = [
   { content: 'JavaScript plugins', link: '14-plugins' },
   { content: 'Forms', link: '15-forms' },
   { content: 'API Requests and Responses', link: '16-api' },
-  { content: 'Git & Sass', link: '17-git-sass' },
+  { content: 'Git', link: '17-git' },
   { content: 'SVG and Accessibility', link: '18-a11y-svg' },
   {
     content: 'User interface libraries and final presentations lab 🧪',
