@@ -118,8 +118,8 @@ const Recap = () => {
       </form>
 
       <ol>
-        {things.map((thing, index) => (
-          <ThingItem thing={thing} key={Object.keys(thing).join() + index} />
+        {things.map((thing) => (
+          <ThingItem thing={thing} key={crypto.randomUUID()} />
         ))}
       </ol>
     </>
