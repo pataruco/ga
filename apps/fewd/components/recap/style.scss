@@ -76,3 +76,26 @@ ol {
     }
   }
 }
+
+.delete-all {
+  appearance: none;
+  color: white;
+  background-color: $red;
+  border: 1px solid $red;
+  padding: 0.25rem 0.5rem;
+  font-size: 2rem;
+  position: absolute;
+  right: 1.25rem;
+
+  &:focus,
+  &:hover {
+    background-color: darken($red, 7%);
+    border: 1px solid darken($red, 7%);
+  }
+
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}

@@ -39,11 +39,13 @@ const ThingItem: React.FC<ThingItemProps> = ({ thing }) => {
 interface State {
   things: Thing[];
   inputValue: string;
+  isAdmin: boolean;
 }
 
 type Action =
   | { type: 'set-things'; payload: Thing[] }
-  | { type: 'set-input-value'; payload: string };
+  | { type: 'set-input-value'; payload: string }
+  | { type: 'set-is-admin'; payload: boolean };
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
@@ -59,6 +61,12 @@ const reducer = (state: State, action: Action): State => {
         inputValue: action.payload,
       };
 
+    case 'set-is-admin':
+      return {
+        ...state,
+        isAdmin: action.payload,
+      };
+
     default:
       throw Error(`No ${JSON.stringify(action)} does not exists`);
   }
@@ -67,12 +75,16 @@ const reducer = (state: State, action: Action): State => {
 const initialState: State = {
   things: [],
   inputValue: '',
+  isAdmin: false,
 };
 
 const Recap = () => {
   const thingsWeLearntDb = ref(db, DB_NAME);
 
-  const [{ things, inputValue }, dispatch] = useReducer(reducer, initialState);
+  const [{ things, inputValue, isAdmin }, dispatch] = useReducer(
+    reducer,
+    initialState,
+  );
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -99,10 +111,27 @@ const Recap = () => {
         dispatch({ type: 'set-things', payload: thingsReference as Thing[] });
       }
     });
-  }, [things]);
+  }, []);
+
+  const handleDeleteAll = async (event: React.MouseEvent) => {
+    event.preventDefault();
+    await set(ref(db, DB_NAME), null);
+  };
+
+  useEffect(() => {
+    const { searchParams } = new URL(window.location.href);
+    dispatch({ type: 'set-is-admin', payload: searchParams.has('admin') });
+  }, []);
 
   return (
     <>
+      <button
+        type="button"
+        onClick={handleDeleteAll}
+        className={isAdmin ? 'delete-all visible' : 'delete-all'}
+      >
+        Delete all
+      </button>
       <form onSubmit={handleSubmit}>
         <label htmlFor="thing">What you learnt?</label>
         <input
