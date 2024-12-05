@@ -2,6 +2,7 @@
 
 import 'normalize.css';
 import '../../../styles/site/index.scss';
+import './index.scss';
 
 import MainLayout from 'apps/fewd/components/main-layout';
 import { useReducer } from 'react';
@@ -76,11 +77,10 @@ async function Index() {
 
       {renderPlaceHolder()}
 
-      <div>
-        <button type="button" onClick={handleOnClick}>
-          Next
-        </button>
-      </div>
+      <button type="button" className="next" onClick={handleOnClick}>
+        Next
+      </button>
+
       <ul>
         {students.map((student) => (
           <li key={crypto.randomUUID()}>{student}</li>
