@@ -103,7 +103,7 @@ Read and follow front end blogs... even if you don't understand it... yet
 
 ## Final Presentations
 
-I create this [randomniser](http://pataruco.github.io/random-picker/) to be sort out how is going to present
+I create this [randomniser](https://fewd.pataruco.dev/resources/student-randomniser) to be sort out how is going to present
 
 ---
 
