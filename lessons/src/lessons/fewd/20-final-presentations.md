@@ -24,8 +24,7 @@ class: frontpage
 
 Let's list that, shall we?!
 
-
-- [Go to the random year generator](https://fewd.pataruco.dev/resources/things-we-learnt)
+- [Things we learnt](https://fewd.pataruco.dev/resources/things-we-learnt)
 
 ---
 
@@ -85,8 +84,8 @@ Do code free courses
 
 Dive into JavaScript
 
-[JavaScript was the MOST popular technology so far in 2022](https://survey.stackoverflow.co/2022/#technology)
-and it's [very well](https://survey.stackoverflow.co/2022/#work-salary) payed
+[JavaScript was the MOST popular technology so far in 2024](https://survey.stackoverflow.co/2024/technology/)
+and it's [very well](https://survey.stackoverflow.co/2024/work#salary-comp-total) payed
 
 ---
 
@@ -94,7 +93,6 @@ and it's [very well](https://survey.stackoverflow.co/2022/#work-salary) payed
 
 Read and follow front end blogs... even if you don't understand it... yet
 
-- [Alligator](https://alligator.io)
 - [Smashing Magazine](https://www.smashingmagazine.com)
 - [Codrops](https://tympanus.net/codrops/)
 - [CSS Wizardry](https://csswizardry.com/)
