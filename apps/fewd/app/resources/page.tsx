@@ -15,6 +15,14 @@ const resources = [
     content: 'Random year',
     link: 'random-year',
   },
+  {
+    content: 'Things we learnt',
+    link: 'things-we-learnt',
+  },
+  {
+    content: 'Student randomniser',
+    link: 'student-randomniser',
+  },
 ];
 
 async function Index() {
