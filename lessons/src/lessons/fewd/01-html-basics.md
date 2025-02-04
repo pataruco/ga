@@ -147,7 +147,7 @@ In this lesson, you will:
   <div>
     <picture>
       <img
-        src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview/web_application_with_html_and_steps.png"
+        src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction/web_application_with_html_and_steps.png"
         alt="Request and response cycle"
       />
     </picture>
@@ -213,7 +213,7 @@ Please, tell us the difference between:
 <div class="row">
   <div>
     <picture>
-      <img src="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript/cake.png" alt="3 layers of the web" class="image-half">
+      <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript/cake.png" alt="3 layers of the web" class="image-half">
     </picture>
   </div>
   <div>
@@ -241,7 +241,7 @@ Please, tell us the difference between:
 
 ## Anatomy of an HTML element
 
-![](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
+![](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax/grumpy-cat-small.png)
 
 ---
 
