@@ -26,6 +26,9 @@ jobs:
       - name: Set environment and install dependencies
         uses: ./.github/actions/prepare
 
+      - name: Install Vercel CLI
+        uses: ./.github/actions/install-vercel-cli
+
       - name: Copy FEWD lessons
         run: pnpm nx run lessons:copyFewdLessons
 
@@ -34,9 +37,6 @@ jobs:
 
       - name: Build styles
         run: pnpm nx run styles:build
-
-      - name: Install Vercel CLI
-        uses: ./.github/actions/install-vercel-cli
 
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
