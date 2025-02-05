@@ -285,7 +285,7 @@ p {
 
 # How does CSS actually work?
 
-![](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_works/rendering.svg)
+![](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS/rendering.svg)
 
 ---
 
