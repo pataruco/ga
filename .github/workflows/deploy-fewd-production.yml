@@ -35,6 +35,9 @@ jobs:
       - name: Build styles
         run: pnpm nx run styles:build
 
+      - name: Install Vercel CLI
+        uses: ./.github/actions/install-vercel-cli
+
       - name: Pull Vercel environment information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
