@@ -69,16 +69,6 @@ Wouldn't it be nice if we could simplify things?
 
 ---
 
-## Box Model
-
-### **Content box** vs **border box**
-
-[An interactive demo of the box model](http://guyroutledge.github.io/box-model/)
-
-[By Guy Routledge](https://github.com/guyroutledge)
-
----
-
 ## Box sizing
 
 I add this snippet on every site at the top of the CSS file
