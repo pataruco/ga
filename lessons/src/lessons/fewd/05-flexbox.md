@@ -34,14 +34,6 @@ class: frontpage
 
 ---
 
-## Let's talk about Ling Cars
-
-<img src="https://images.lingscars.com/images/index/ling-face.png" alt="Ling cars " class="image-one-fourth">
-
-> [Website](https://www.lingscars.com/)
-
----
-
 ## What is not?
 
 - CSS property
@@ -91,7 +83,7 @@ Let's talk about `direction` & `align`
 }
 ```
 
-<img src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flex_terms.png" alt="flex terms" class="image-half">
+<img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox/flex_terms.png" alt="flex terms" class="image-half">
 
 [Flex box sandbox](https://codepen.io/pataruco/pen/XBPmqj)
 
