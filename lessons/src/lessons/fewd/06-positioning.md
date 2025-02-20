@@ -187,6 +187,14 @@ CSS `position` can take 1 of 4 values.
 
 ---
 
+## `position: sticky`
+
+- Fix an element in place, regardless of scroll
+- Set co-ordinates of where to fix an element
+- Position is set relative to the `relative` positioned ancestor
+
+---
+
 ## `z-index`
 
 - `z-index` controls the stacking order.

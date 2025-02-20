@@ -31,7 +31,6 @@ class: frontpage
 Checkout these **fixed** sites
 
 - [Space Jam](https://www.spacejam.com/1996/)
-- [Ling's Cars](https://www.lingscars.com/)
 
 ---
 
@@ -71,46 +70,6 @@ The important takeaway is that a responsive site uses the same codebase to achie
 ## Relative units
 
 Further to sizing our containers in percentages, we can size other UI components (`font-size`, `margin`, `padding`, etc.) in relative units which cascade and build a system of proportions.
-
----
-
-## Relative units
-
-Common units of measurement for these components are:
-
-- `em`
-- `rem`
-- `vw` and `vh`
-
----
-
-## `em` vs `rem`
-
-### `em`
-
-- Sized based on the width of the letter "M"
-- Size is relative to the parent
-
-```css
-body {
-  font-size: 16px;
-}
-
-h1 {
-  font-size: 2em; /*font size is 32px */
-}
-```
-
-[CodePen](https://codepen.io/pataruco/pen/dxGRjM)
-
----
-
-## `em` vs `rem`
-
-### `rem`
-
-- Stands for **root** `em`.
-- Based on the font-size of html (root) element
 
 ---
 
