@@ -7,7 +7,7 @@ import './index.scss';
 import MainLayout from 'apps/fewd/components/main-layout';
 import { useReducer } from 'react';
 
-const STUDENTS = ['Bartek', 'Dan', 'Jose Luis', 'Stephanie', 'Tina', 'Zaara'];
+const STUDENTS = ['Ryan', 'Carlton', 'Athina', 'Deborah', 'Elvia', 'Forest'];
 
 interface State {
   students: string[];

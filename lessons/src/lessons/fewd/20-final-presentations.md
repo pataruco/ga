@@ -52,8 +52,7 @@ This is a good way to keep your skills ready and up to date.
 
 Go to a Web template library and build an static website
 
-- [Themeforest](https://themeforest.net/free/wordpress-themes)
-- [Boostrap Templates](https://startbootstrap.com/)
+- [Boostrap Templates](https://startbootstrap.com/templates/blog-news)
 - [Frontend Mentors](https://www.frontendmentor.io/)
 
 ---
