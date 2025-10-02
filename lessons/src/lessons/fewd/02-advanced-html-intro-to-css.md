@@ -285,7 +285,7 @@ p {
 
 # How does CSS actually work?
 
-![](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS/rendering.svg)
+![](https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/en-us/learn_web_development/getting_started/web_standards/how_browsers_load_websites/rendering.svg)
 
 ---
 
@@ -388,19 +388,19 @@ Using inline styles
   <section>
     <h3>Declarations</h3>
     <picture>
-      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax/css_syntax_-_declaration.png" alt="CSS syntax declaration" />
+      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/Syntax/css_syntax_-_declaration.png" alt="CSS syntax declaration" />
     </picture>
   </section>
   <section>
     <h3>Blocks</h3>
     <picture>
-      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax/css_syntax_-_block.png" alt="CSS syntax block" />
+      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/Syntax/css_syntax_-_block.png" alt="CSS syntax block" />
     </picture>
   </section>
   <section>
     <h3>Rules</h3>
     <picture>
-      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax/ruleset.png" alt="CSS syntax ruleset" />
+      <img src="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/Syntax/declaration-block.png" alt="CSS syntax ruleset" />
     </picture>
   </section>
 </div>
