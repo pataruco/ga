@@ -94,7 +94,7 @@ A DOM tree is a kind of tree whose nodes represent an HTML document contents. Ea
 Has a DOM tree that looks like this:
 
   <picture>
-    <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/01/29/17084/3d1185f6bd10a5e25fe475a50ebca710/dom-string.png" alt="DOM tree">
+    <img src="https://raw.githubusercontent.com/mdn/content/refs/heads/main/files/en-us/web/css/css_text/whitespace/dom-string.png" alt="DOM tree">
   </picture>
 
 </div>
