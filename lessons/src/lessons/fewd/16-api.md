@@ -20,7 +20,7 @@ class: frontpage
 
 .row[
 .column[
-![Request and response cycle](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview/web_application_with_html_and_steps.png)
+![Request and response cycle](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction/web_application_with_html_and_steps.png)
 ]
 .column[
 
@@ -41,7 +41,7 @@ class: frontpage
 
 .row[
 .column[
-![Request and response cycle](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview/web_application_with_html_and_steps.png)
+![Request and response cycle](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction/web_application_with_html_and_steps.png)
 ]
 .column[
 
