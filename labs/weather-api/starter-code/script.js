@@ -10,7 +10,7 @@ const cityElement = document.getElementById('city');
 const city = cityElement.value;
 const apiKey = '870b1b10b58578f725b70b13aff6c357';
 
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
 
 // Event
 
@@ -31,8 +31,6 @@ async function handleWeatherRequest(event) {
   // save the json in a weatherData variable
 
   // get the weather descripton from response data
-
-  // convert the temperature from kelvin to celcius
 
   // update the temperature and decription on the page
 }
