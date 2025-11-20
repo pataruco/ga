@@ -17,7 +17,7 @@ async function handleWeatherRequest(event) {
   const city = cityElement.value;
   const apiKey = '870b1b10b58578f725b70b13aff6c357';
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
   console.log(url);
 
   // get weather data from open weather map API
@@ -31,12 +31,9 @@ async function handleWeatherRequest(event) {
   // get the weather descripton from response data
   const weatherDescription = weatherData.weather[0].description;
 
-  // convert the temperature from kelvin to celcius
-  const tempCelcius = Math.floor(weatherData.main.temp - 273);
-
   // update the temperature and decription on the page
   document.querySelector('#temp').innerHTML = `
-  		${tempCelcius}<sup>o</sup>C
+  		${weatherData.main.temp}<sup>o</sup>C
   	`;
   document.querySelector('#description').innerHTML = `
   		The weather in <strong>${city}</strong> is <br>
