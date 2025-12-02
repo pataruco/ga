@@ -64,7 +64,6 @@ Learn a front end library
 - [Bootstrap](https://getbootstrap.com/)
 - [Bulma](https://bulma.io/)
 - [Materialize](https://materializecss.com/)
-- [Foundation](https://foundation.zurb.com/)
 
 ---
 
@@ -83,8 +82,8 @@ Do code free courses
 
 Dive into JavaScript
 
-[JavaScript was the MOST popular technology so far in 2024](https://survey.stackoverflow.co/2024/technology/)
-and it's [very well](https://survey.stackoverflow.co/2024/work#salary-comp-total) payed
+[JavaScript was the MOST popular technology so far in 2025](https://survey.stackoverflow.co/2025/technology/)
+and it's [very well](https://survey.stackoverflow.co/2025/work#salary-comp-total) payed
 
 ---
 
