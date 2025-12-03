@@ -9,6 +9,8 @@ import { useReducer } from 'react';
 
 const STUDENTS = ['Renata', 'Peter', 'Matej', 'Gerda', 'Jessica', 'Michael'];
 
+console.log('hello');
+
 interface State {
   students: string[];
   currentStudent: string;
